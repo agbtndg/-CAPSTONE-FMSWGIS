@@ -142,7 +142,7 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-bottom: 24px;
         }
@@ -175,10 +175,12 @@
             padding: 8px;
             border-radius: 8px;
             border: 1px solid var(--border-gray);
+            flex-wrap: wrap;
         }
 
         .tab {
             flex: 1;
+            min-width: 150px;
             padding: 12px 20px;
             border: none;
             background: transparent;
@@ -229,6 +231,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-wrap: wrap;
         }
 
         .staff-badge {
@@ -298,6 +301,10 @@
         .badge-moderate { background: #fef3c7; color: #92400e; }
         .badge-high { background: #fed7aa; color: #9a3412; }
         .badge-very-high { background: #fee2e2; color: #991b1b; }
+        
+        .badge-create { background: #dbeafe; color: #1e40af; }
+        .badge-update { background: #fef3c7; color: #92400e; }
+        .badge-delete { background: #fee2e2; color: #991b1b; }
 
         @media (max-width: 768px) {
             .header-top {
@@ -327,7 +334,7 @@
             <div class="header-top">
                 <div>
                     <h1><i class="fas fa-chart-line"></i> All Staff Activities</h1>
-                    <p>Monitor and review all assessments, reports, and certificates</p>
+                    <p>Monitor and review all assessments, reports, certificates, and flood records</p>
                 </div>
                 <a href="/" class="back-btn">
                     <i class="fas fa-arrow-left"></i> Back to Dashboard
@@ -372,6 +379,10 @@
                 <h3>Certificates Issued</h3>
                 <div class="value">{{ total_certificates }}</div>
             </div>
+            <div class="stat-card">
+                <h3>Flood Records</h3>
+                <div class="value">{{ total_flood_activities }}</div>
+            </div>
         </div>
 
         <div class="tabs">
@@ -383,6 +394,9 @@
             </button>
             <button class="tab" onclick="switchTab('certificates')">
                 <i class="fas fa-certificate"></i> Certificates ({{ total_certificates }})
+            </button>
+            <button class="tab" onclick="switchTab('flood-records')">
+                <i class="fas fa-water"></i> Flood Records ({{ total_flood_activities }})
             </button>
         </div>
 
@@ -543,6 +557,67 @@
                 <div class="empty-state">
                     <i class="fas fa-certificate"></i>
                     <p>No certificates found</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <div id="flood-records" class="content-section">
+            {% if flood_activities %}
+                {% for activity in flood_activities %}
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <div class="activity-title">
+                            <i class="fas fa-water"></i> {{ activity.event_type }}
+                            <span class="staff-badge">
+                                <i class="fas fa-user"></i> {{ activity.user.get_full_name }}
+                            </span>
+                            {% if activity.action == 'CREATE' %}
+                                <span class="badge badge-create">Created</span>
+                            {% elif activity.action == 'UPDATE' %}
+                                <span class="badge badge-update">Updated</span>
+                            {% elif activity.action == 'DELETE' %}
+                                <span class="badge badge-delete">Deleted</span>
+                            {% endif %}
+                        </div>
+                        <div class="activity-timestamp">
+                            <i class="far fa-clock"></i> {{ activity.timestamp|date:"M d, Y - h:i A" }}
+                        </div>
+                    </div>
+                    <div class="activity-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Staff Member</div>
+                            <div class="detail-value">{{ activity.user.username }} ({{ activity.user.staff_id }})</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Event Date</div>
+                            <div class="detail-value">{{ activity.event_date|date:"M d, Y - h:i A" }}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Affected Barangays</div>
+                            <div class="detail-value">{{ activity.affected_barangays }}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Casualties</div>
+                            <div class="detail-value">
+                                <strong>{{ activity.total_casualties }}</strong> total
+                                ({{ activity.casualties_dead }} dead, {{ activity.casualties_injured }} injured, {{ activity.casualties_missing }} missing)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Affected People</div>
+                            <div class="detail-value">{{ activity.affected_persons }} persons, {{ activity.affected_families }} families</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Total Damage</div>
+                            <div class="detail-value">₱{{ activity.damage_total_php|floatformat:2 }}</div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="empty-state">
+                    <i class="fas fa-water"></i>
+                    <p>No flood record activities found</p>
                 </div>
             {% endif %}
         </div>
