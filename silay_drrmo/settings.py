@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ray+$42+3p@)$4w00ul5-eftyn6%5eu$57*(y)peu=1p3!3tim'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -134,8 +134,13 @@ ADMIN_REGISTRATION_KEY = 'silay-drrmo-admin-2025'  # Change this in production!
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal310.dll"
-GEOS_LIBRARY_PATH = r"C:\OSGeo4W\bin\geos_c.dll"
+# Detect platform
+if os.name != "nt":  # not Windows
+    os.environ["GDAL_LIBRARY_PATH"] = "/usr/lib/libgdal.so"
+    os.environ["GEOS_LIBRARY_PATH"] = "/usr/lib/libgeos_c.so"
+
+#GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal310.dll"
+#GEOS_LIBRARY_PATH = r"C:\OSGeo4W\bin\geos_c.dll"
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
