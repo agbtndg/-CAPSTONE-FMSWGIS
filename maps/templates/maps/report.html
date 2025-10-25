@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flood Hazard Assessment Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            @page {
+                margin: 1cm;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .report-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #000;
+        }
+        
+        .qr-section {
+            float: left;
+            margin-right: 20px;
+        }
+        
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+        
+        .view-document {
+            font-size: 9px;
+            text-align: center;
+            margin-top: 5px;
+        }
+        
+        .header-info {
+            text-align: left;
+            padding-top: 10px;
+        }
+        
+        .header-info h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .header-info p {
+            font-size: 12px;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        
+        .title {
+            clear: both;
+            text-align: center;
+            margin: 30px 0 20px 0;
+            padding-top: 20px;
+        }
+        
+        .title h1 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .assessment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .assessment-table th,
+        .assessment-table td {
+            border: 1px solid #000;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .assessment-table th {
+            background-color: #f0f0f0;
+            font-weight: 600;
+            font-size: 13px;
+            text-align: center;
+        }
+        
+        .assessment-table td {
+            font-size: 11px;
+            line-height: 1.6;
+        }
+        
+        .hazard-col {
+            width: 15%;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .assessment-col {
+            width: 30%;
+        }
+        
+        .explanation-col {
+            width: 55%;
+        }
+        
+        .risk-level {
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .risk-low { color: #059669; }
+        .risk-moderate { color: #d97706; }
+        .risk-high { color: #dc2626; }
+        .risk-very-high { color: #991b1b; }
+        
+        .explanation-section {
+            margin-top: 20px;
+        }
+        
+        .explanation-section h3 {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .explanation-section h4 {
+            font-size: 12px;
+            font-weight: 600;
+            margin: 10px 0 5px 0;
+        }
+        
+        .explanation-section ul {
+            margin-left: 20px;
+            font-size: 11px;
+            line-height: 1.8;
+        }
+        
+        .explanation-section ul li {
+            margin-bottom: 8px;
+        }
+        
+        .print-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+        
+        .print-btn:hover {
+            background: #2563eb;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        
+        .note-text {
+            font-style: italic;
+            color: #666;
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .action-buttons {
+                flex-direction: column;
+                right: 10px;
+                top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="action-buttons no-print">
+        <button class="print-btn" onclick="window.print()">🖨️ Print Report</button>
+    </div>
+    
+    <div class="report-container">
+        <div class="header">
+            <div class="qr-section">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data={{ request.build_absolute_uri }}" alt="QR Code" class="qr-code">
+                <div class="view-document">View document<br>online</div>
+            </div>
+            
+            <div class="header-info">
+                <h3>DATE</h3>
+                <p>{{ current_date }}</p>
+                
+                <h3>LOCATION</h3>
+                <p>Silay City, Negros Occidental</p>
+                
+                <h3>COORDINATES</h3>
+                <p>{{ longitude }}, {{ latitude }}</p>
+            </div>
+            
+            <p class="note-text">
+                Note: When scanning the QR code, the assessment results in the website might vary from the results stated in this report due to updates in the data in the GeoRISKPH database. You may refer to the report available upon scanning the QR code for the updated assessment results
+            </p>
+        </div>
+        
+        <div class="title">
+            <h1>HYDRO-METEOROLOGICAL HAZARDS ASSESSMENT</h1>
+        </div>
+        
+        <table class="assessment-table">
+            <thead>
+                <tr>
+                    <th class="hazard-col">HAZARD</th>
+                    <th class="assessment-col">ASSESSMENT</th>
+                    <th class="explanation-col">EXPLANATION AND RECOMMENDATION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="hazard-col">Flood</td>
+                    <td class="assessment-col">
+                        <span class="risk-level {{ risk_class }}">{{ risk_label }}</span>
+                        <p style="margin-top: 10px; font-size: 10px;">{{ assessment_text }}</p>
+                    </td>
+                    <td class="explanation-col">{{ recommendation_text }}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="explanation-section">
+            <h3>Explanation and Recommendation:</h3>
+            <h4>Note:</h4>
+            <ul>
+                <li>All hazard assessments are based on the available susceptibility maps and the coordinates of the user's selected location.</li>
+                <li>Depending on the basemaps used and methods employed during mapping, discrepancies may be observed between location of hazards or exposure information and actual ground observations.</li>
+                <li>In some areas, hazard assessment may be updated as new data become available for interpretation or as a result of major topographic changes due to onset of natural events.</li>
+                <li>The possibility of both rain-induced landslide and flooding occurring is not disregarded. Because of the composite nature of MGB's 1:10,000-scale Rain-induced Landslide and Flood Susceptibility Maps, it spatially prioritizes the more frequently occurring and most damaging hazards in an area. Continuous updating is being done.</li>
+                <li>For site-specific evaluation or construction of critical facilities, detailed engineering assessment and onsite geotechnical engineering survey may be required.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

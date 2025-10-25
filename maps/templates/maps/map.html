@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Barangay Flood Risk Map</title>
+    {% load static %}
+    {% csrf_token %}
+    <script src="{% static 'js/ol.js' %}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            background: #f8f9fa;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 320px;
+            background: #ffffff;
+            color: #1a1a1a;
+            padding: 0;
+            overflow-y: auto;
+            box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar-header {
+            padding: 24px 24px 20px;
+            border-bottom: 1px solid #e8e8e8;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .sidebar-header h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: #f3f4f6;
+            transition: all 0.2s ease;
+        }
+        .back-link:hover {
+            background: #e5e7eb;
+            color: #374151;
+        }
+        .back-link i {
+            margin-right: 8px;
+            font-size: 12px;
+        }
+        .sidebar-subtitle {
+            font-size: 13px;
+            color: #6b7280;
+            font-weight: 400;
+        }
+        .sidebar-content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 24px;
+        }
+        .section-title {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #6b7280;
+        }
+        #barangay-select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #ffffff;
+            color: #1a1a1a;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        #barangay-select:hover {
+            border-color: #d1d5db;
+        }
+        #barangay-select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .legend {
+            background: #f9fafb;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
+        .legend-title {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #6b7280;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #374151;
+        }
+        .legend-item:last-child {
+            margin-bottom: 0;
+        }
+        .legend-color {
+            width: 32px;
+            height: 20px;
+            margin-right: 12px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        .switch-group {
+            margin-bottom: 0;
+        }
+        .switch-container {
+            display: flex;
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 4px;
+            gap: 4px;
+        }
+        .switch-btn {
+            flex: 1;
+            padding: 9px 16px;
+            border: none;
+            border-radius: 6px;
+            background: transparent;
+            color: #6b7280;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            font-family: inherit;
+        }
+        .switch-btn:hover {
+            color: #374151;
+        }
+        .switch-btn.active {
+            background: #ffffff;
+            color: #1a1a1a;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            background: #f9fafb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .toggle-switch:hover {
+            background: #f3f4f6;
+        }
+        .toggle-switch:last-child {
+            margin-bottom: 0;
+        }
+        .toggle-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #374151;
+        }
+        .toggle-input {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+        .toggle-input input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e5e7eb;
+            transition: 0.3s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #3b82f6;
+        }
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+        #map {
+            flex: 1;
+            position: relative;
+        }
+        #popup {
+            display: none;
+            position: absolute;
+            background: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            pointer-events: none;
+            font-size: 13px;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        #risk-graph, #risk-table {
+            margin-top: 0;
+            width: 100%;
+            display: block;
+        }
+        #risk-table {
+            display: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 13px;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+        }
+        td {
+            color: #1a1a1a;
+        }
+        #loading-screen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        #loading-screen.active {
+            display: flex;
+        }
+        #loading-content {
+            text-align: center;
+            color: white;
+            background: #ffffff;
+            padding: 32px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        #loading-content h3 {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        #cancel-btn, #see-result-btn {
+            margin-top: 16px;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #3b82f6;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        #cancel-btn:hover, #see-result-btn:hover {
+            background: #2563eb;
+        }
+        #see-result-btn {
+            display: none;
+            background: #10b981;
+        }
+        #see-result-btn:hover {
+            background: #059669;
+        }
+        #assessment-panel {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 400px;
+            height: 100%;
+            background: #ffffff;
+            box-shadow: -4px 0 24px rgba(0,0,0,0.15);
+            padding: 0;
+            transition: right 0.3s ease;
+            z-index: 2001;
+            display: flex;
+            flex-direction: column;
+        }
+        #assessment-panel.active {
+            right: 0;
+        }
+        .assessment-header {
+            padding: 24px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .assessment-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        #close-assessment {
+            border: none;
+            background: #f3f4f6;
+            font-size: 20px;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            transition: all 0.2s ease;
+        }
+        #close-assessment:hover {
+            background: #e5e7eb;
+            color: #374151;
+        }
+        #assessment-content {
+            padding: 24px;
+            flex: 1;
+            overflow-y: auto;
+        }
+        #assessment-content p {
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #374151;
+        }
+        #assessment-content strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        .chart-container {
+            background: #f9fafb;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 280px;
+            }
+            #assessment-panel {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <a href="/home/" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Dashboard</span>
+                </a>
+                <h2>Silay City Flood Map</h2>
+                <div class="sidebar-subtitle">Interactive Risk Assessment</div>
+            </div>
+            
+            <div class="sidebar-content">
+                <!-- Barangay Selection -->
+                <div class="section">
+                    <div class="section-title">Select Barangay</div>
+                    <select id="barangay-select">
+                        <option value="">View All Barangays</option>
+                        {% for name in barangay_names %}
+                            <option value="{{ name }}">{{ name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Map View Switch -->
+                <div class="section">
+                    <div class="section-title">Map Type</div>
+                    <div class="switch-group">
+                        <div class="switch-container">
+                            <button class="switch-btn active" id="osm-btn">Street</button>
+                            <button class="switch-btn" id="satellite-btn">Satellite</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer Settings -->
+                <div class="section">
+                    <div class="section-title">Layer Settings</div>
+                    <label class="toggle-switch">
+                        <span class="toggle-label">Flood Risk Layer</span>
+                        <div class="toggle-input">
+                            <input type="checkbox" id="flood-layer-toggle" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                    <label class="toggle-switch">
+                        <span class="toggle-label">Barangay Boundaries</span>
+                        <div class="toggle-input">
+                            <input type="checkbox" id="barangay-layer-toggle" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Graph/Table Toggle -->
+                <div class="section">
+                    <div class="section-title">Display Type</div>
+                    <div class="switch-group">
+                        <div class="switch-container">
+                            <button class="switch-btn active" id="graph-btn">Graph</button>
+                            <button class="switch-btn" id="table-btn">Table</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graph Section -->
+                <div class="section">
+                    <div class="chart-container">
+                        <canvas id="risk-graph" width="280" height="180"></canvas>
+                    </div>
+                    <div id="risk-table" style="display: none;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Risk Level</th>
+                                    <th>Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody id="risk-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Legend -->
+                <div class="legend">
+                    <div class="legend-title">Flood Susceptibility</div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #0a255b;"></div>
+                        <span>Very High Risk</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #6124d8;"></div>
+                        <span>High Risk</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #954fc9;"></div>
+                        <span>Moderate Risk</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #b9b2c8;"></div>
+                        <span>Low Risk</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Container -->
+        <div id="map" data-barangays='{{ barangays_json|safe }}' data-floods='{{ flood_areas_json|safe }}'>
+            <div id="popup"></div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading-screen">
+            <div id="loading-content">
+                <h3>Initializing Assessment...</h3>
+                <button id="cancel-btn">Cancel</button>
+                <button id="see-result-btn">See Result</button>
+            </div>
+        </div>
+
+        <!-- Assessment Panel -->
+        <div id="assessment-panel">
+            <div class="assessment-header">
+                <h2>Flood Assessment</h2>
+                <button id="close-assessment">×</button>
+            </div>
+            <div id="assessment-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Helper function to convert hex to RGB
+        function hexToRgb(hex) {
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+
+        // Create base layers
+        var osmLayer = new ol.layer.Tile({
+            source: new ol.source.OSM(),
+            visible: true
+        });
+
+        var satelliteLayer = new ol.layer.Tile({
+            source: new ol.source.XYZ({
+                url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+                maxZoom: 19
+            }),
+            visible: false
+        });
+
+        // Initialize the map
+        var map = new ol.Map({
+            target: 'map',
+            layers: [osmLayer, satelliteLayer],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([122.975, 10.787]),
+                zoom: 12
+            })
+        });
+
+        // Create vector sources for layers
+        var barangayVectorSource = new ol.source.Vector();
+        var floodVectorSource = new ol.source.Vector();
+        var pinVectorSource = new ol.source.Vector();
+
+        // Style for highlighted barangay
+        var highlightStyle = new ol.style.Style({
+            stroke: new ol.style.Stroke({ 
+                color: '#3b82f6', 
+                width: 3 
+            }),
+            fill: new ol.style.Fill({ 
+                color: 'rgba(59, 130, 246, 0.1)' 
+            })
+        });
+
+        // Default style for barangays
+        var defaultBarangayStyle = new ol.style.Style({
+            stroke: new ol.style.Stroke({ 
+                color: '#6b7280', 
+                width: 2 
+            }),
+            fill: new ol.style.Fill({ 
+                color: 'rgba(0, 0, 0, 0)' 
+            })
+        });
+
+        // Pin style
+        var pinStyle = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: 'https://openlayers.org/en/latest/examples/data/icon.png',
+                scale: 0.1,
+                anchor: [0.5, 1]
+            })
+        });
+
+        // Load barangay data
+        var barangaysData = JSON.parse(document.getElementById('map').dataset.barangays || '[]');
+        if (barangaysData.type === 'FeatureCollection' && barangaysData.features) {
+            barangaysData.features.forEach(function(feature) {
+                var barangayFeature = new ol.format.GeoJSON().readFeature(feature, {
+                    dataProjection: 'EPSG:4326',
+                    featureProjection: 'EPSG:3857'
+                });
+                barangayFeature.setStyle(defaultBarangayStyle);
+                barangayVectorSource.addFeature(barangayFeature);
+            });
+        }
+
+        // Load flood susceptibility data
+        var floodData = JSON.parse(document.getElementById('map').dataset.floods || '[]');
+        if (floodData.type === 'FeatureCollection' && floodData.features) {
+            floodData.features.forEach(function(feature) {
+                var floodFeature = new ol.format.GeoJSON().readFeature(feature, {
+                    dataProjection: 'EPSG:4326',
+                    featureProjection: 'EPSG:3857'
+                });
+                
+                // Color mapping for flood risk levels
+                var colorMap = { 
+                    'VHF': '#0a255b',
+                    'HF': '#6124d8',
+                    'MF': '#954fc9',
+                    'LF': '#b9b2c8'
+                };
+                
+                var color = colorMap[feature.properties.haz_code] || '#ffffff';
+                var rgb = hexToRgb(color);
+                
+                floodFeature.setStyle(new ol.style.Style({
+                    stroke: new ol.style.Stroke({ 
+                        color: '#000000', 
+                        width: 0.5 
+                    }),
+                    fill: new ol.style.Fill({ 
+                        color: 'rgba(' + rgb.r + ', ' + rgb.g + ', ' + rgb.b + ', 0.6)' 
+                    })
+                }));
+                
+                floodVectorSource.addFeature(floodFeature);
+            });
+        }
+
+        // Create layers
+        var floodLayer = new ol.layer.Vector({
+            source: floodVectorSource,
+            zIndex: 1
+        });
+
+        var barangayLayer = new ol.layer.Vector({
+            source: barangayVectorSource,
+            zIndex: 2
+        });
+
+        var pinLayer = new ol.layer.Vector({
+            source: pinVectorSource,
+            zIndex: 3
+        });
+
+        // Add layers to map
+        map.addLayer(floodLayer);
+        map.addLayer(barangayLayer);
+        map.addLayer(pinLayer);
+
+        // Popup element
+        var popup = document.getElementById('popup');
+
+        // Map click handler
+        map.on('click', function(evt) {
+            var coordinate = evt.coordinate;
+            var lonlat = ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326');
+            var viewResolution = map.getView().getResolution();
+
+            // Hide existing popup
+            popup.style.display = 'none';
+
+            var barangayFeature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+                return feature.get('name') ? feature : null;
+            });
+
+            var floodFeature = null;
+            if (floodLayer.getVisible()) {
+                floodFeature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+                    return feature.get('haz_code') ? feature : null;
+                });
+            }
+
+            if (barangayFeature || floodFeature) {
+                var content = '';
+                if (barangayFeature) {
+                    content += 'Barangay: ' + barangayFeature.get('name');
+                }
+                if (floodFeature) {
+                    var riskMap = {
+                        'VHF': 'Very High Risk',
+                        'HF': 'High Risk',
+                        'MF': 'Moderate Risk',
+                        'LF': 'Low Risk'
+                    };
+                    content += content ? '<br>' : '';
+                    content += 'Flood Risk: ' + (riskMap[floodFeature.get('haz_code')] || 'Unknown');
+                }
+                popup.innerHTML = content;
+                popup.style.left = (evt.pixel[0] + 10) + 'px';
+                popup.style.top = (evt.pixel[1] - 30) + 'px';
+                popup.style.display = 'block';
+            }
+        });
+
+        // Bar graph and table setup
+        var canvas = document.getElementById('risk-graph');
+        var ctx = canvas.getContext('2d');
+        var tableBody = document.getElementById('risk-table-body');
+
+        function drawBarGraph(data) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            var barWidth = (canvas.width / 4) * 0.8;
+            var maxHeight = canvas.height - 40;
+            var total = Object.values(data).reduce((a, b) => a + b, 0);
+            var x = 10;
+
+            ctx.font = '11px Inter, sans-serif';
+            ctx.fillStyle = '#1a1a1a';
+            ctx.textAlign = 'center';
+
+            ['VHF', 'HF', 'MF', 'LF'].forEach((code, index) => {
+                var height = total > 0 ? (data[code] / 100) * maxHeight : 0;
+                ctx.fillStyle = ['#0a255b', '#6124d8', '#954fc9', '#b9b2c8'][index];
+                ctx.fillRect(x, canvas.height - height - 20, barWidth, height);
+                ctx.fillStyle = '#1a1a1a';
+                ctx.fillText(`${data[code].toFixed(1)}%`, x + barWidth / 2, canvas.height - height - 25);
+                x += barWidth + 20;
+            });
+
+            ctx.fillStyle = '#6b7280';
+            ctx.font = '10px Inter, sans-serif';
+            ctx.fillText('Risk Levels', canvas.width / 2, canvas.height - 5);
+        }
+
+        function updateTable(data) {
+            tableBody.innerHTML = '';
+            ['VHF', 'HF', 'MF', 'LF'].forEach(code => {
+                var row = document.createElement('tr');
+                row.innerHTML = `<td>${code === 'VHF' ? 'Very High' : code === 'HF' ? 'High' : code === 'MF' ? 'Moderate' : 'Low'} Risk</td><td>${data[code].toFixed(1)}%</td>`;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function calculateRiskPercentages(selectedBarangay) {
+            var totalArea = 0;
+            var areas = { VHF: 0, HF: 0, MF: 0, LF: 0 };
+
+            // City-wide calculation
+            if (!selectedBarangay) {
+                floodData.features.forEach(f => {
+                    var floodGeom = new ol.format.GeoJSON().readGeometry(f.geometry, {
+                        dataProjection: 'EPSG:4326',
+                        featureProjection: 'EPSG:3857'
+                    });
+                    var area = ol.sphere.getArea(floodGeom);
+                    areas[f.properties.haz_code] = (areas[f.properties.haz_code] || 0) + area;
+                    totalArea += area;
+                });
+            } else {
+                var barangayFeature = barangaysData.features.find(f => f.properties.name === selectedBarangay);
+                if (barangayFeature) {
+                    var barangayGeom = new ol.format.GeoJSON().readGeometry(barangayFeature.geometry, {
+                        dataProjection: 'EPSG:4326',
+                        featureProjection: 'EPSG:3857'
+                    });
+                    var barangayExtent = barangayGeom.getExtent();
+                    var barangayArea = ol.sphere.getArea(barangayGeom);
+                    totalArea = barangayArea;
+
+                    floodData.features.forEach(f => {
+                        var floodGeom = new ol.format.GeoJSON().readGeometry(f.geometry, {
+                            dataProjection: 'EPSG:4326',
+                            featureProjection: 'EPSG:3857'
+                        });
+                        var floodExtent = floodGeom.getExtent();
+                        if (ol.extent.containsExtent(barangayExtent, floodExtent) || ol.extent.intersects(barangayExtent, floodExtent)) {
+                            var overlapRatio = 1;
+                            if (!ol.extent.containsExtent(barangayExtent, floodExtent)) {
+                                var overlapArea = ol.extent.getArea(ol.extent.boundingExtent([barangayExtent, floodExtent]));
+                                overlapRatio = overlapArea / ol.extent.getArea(floodExtent);
+                            }
+                            var area = ol.sphere.getArea(floodGeom) * overlapRatio;
+                            areas[f.properties.haz_code] = (areas[f.properties.haz_code] || 0) + area;
+                        }
+                    });
+                }
+            }
+
+            // Normalize percentages to sum to 100%
+            var totalRiskArea = Object.values(areas).reduce((a, b) => a + b, 0);
+            var result = {
+                VHF: totalRiskArea > 0 ? (areas.VHF / totalRiskArea * 100) : 0,
+                HF: totalRiskArea > 0 ? (areas.HF / totalRiskArea * 100) : 0,
+                MF: totalRiskArea > 0 ? (areas.MF / totalRiskArea * 100) : 0,
+                LF: totalRiskArea > 0 ? (areas.LF / totalRiskArea * 100) : 0
+            };
+
+            // Ensure sum is exactly 100% with rounding adjustments
+            var sum = Object.values(result).reduce((a, b) => a + b, 0);
+            if (sum !== 100 && sum > 0) {
+                var diff = 100 - sum;
+                result.LF = result.LF + diff;
+            }
+
+            return result;
+        }
+
+        // Initial display
+        var graphVisible = true;
+        drawBarGraph(calculateRiskPercentages(''));
+
+        // Toggle between graph and table
+        document.getElementById('graph-btn').addEventListener('click', function() {
+            graphVisible = true;
+            this.classList.add('active');
+            document.getElementById('table-btn').classList.remove('active');
+            document.getElementById('risk-graph').style.display = 'block';
+            document.getElementById('risk-table').style.display = 'none';
+            drawBarGraph(calculateRiskPercentages(document.getElementById('barangay-select').value));
+        });
+
+        document.getElementById('table-btn').addEventListener('click', function() {
+            graphVisible = false;
+            this.classList.add('active');
+            document.getElementById('graph-btn').classList.remove('active');
+            document.getElementById('risk-graph').style.display = 'none';
+            document.getElementById('risk-table').style.display = 'block';
+            updateTable(calculateRiskPercentages(document.getElementById('barangay-select').value));
+        });
+
+        // Initial graph and update on selection
+        document.getElementById('barangay-select').addEventListener('change', function() {
+            console.log('Selection changed to:', this.value);
+            var selectedBarangay = this.value;
+            barangayVectorSource.clear();
+            
+            if (selectedBarangay) {
+                var selectedFeature = barangaysData.features.find(f => f.properties.name === selectedBarangay);
+                if (selectedFeature) {
+                    var feature = new ol.format.GeoJSON().readFeature(selectedFeature, {
+                        dataProjection: 'EPSG:4326',
+                        featureProjection: 'EPSG:3857'
+                    });
+                    feature.setStyle(highlightStyle);
+                    barangayVectorSource.addFeature(feature);
+                    
+                    var extent = feature.getGeometry().getExtent();
+                    map.getView().fit(extent, { 
+                        padding: [50, 50, 50, 50], 
+                        duration: 500 
+                    });
+                }
+            } else {
+                map.getView().setCenter(ol.proj.fromLonLat([122.975, 10.787]));
+                map.getView().setZoom(12);
+                
+                barangaysData.features.forEach(function(feature) {
+                    var barangayFeature = new ol.format.GeoJSON().readFeature(feature, {
+                        dataProjection: 'EPSG:4326',
+                        featureProjection: 'EPSG:3857'
+                    });
+                    barangayFeature.setStyle(defaultBarangayStyle);
+                    barangayVectorSource.addFeature(barangayFeature);
+                });
+            }
+            if (graphVisible) {
+                drawBarGraph(calculateRiskPercentages(selectedBarangay));
+            } else {
+                updateTable(calculateRiskPercentages(selectedBarangay));
+            }
+        });
+
+        // Map type switch buttons
+        var osmBtn = document.getElementById('osm-btn');
+        var satelliteBtn = document.getElementById('satellite-btn');
+
+        osmBtn.addEventListener('click', function() {
+            osmLayer.setVisible(true);
+            satelliteLayer.setVisible(false);
+            osmBtn.classList.add('active');
+            satelliteBtn.classList.remove('active');
+        });
+
+        satelliteBtn.addEventListener('click', function() {
+            osmLayer.setVisible(false);
+            satelliteLayer.setVisible(true);
+            satelliteBtn.classList.add('active');
+            osmBtn.classList.remove('active');
+        });
+
+        // Layer toggles
+        document.getElementById('flood-layer-toggle').addEventListener('change', function() {
+            floodLayer.setVisible(this.checked);
+        });
+
+        document.getElementById('barangay-layer-toggle').addEventListener('change', function() {
+            barangayLayer.setVisible(this.checked);
+        });
+
+        // Assessment logic
+        var pinFeature = null;
+        var assessmentTimeout = null;
+
+        // Function to save assessment to database
+function saveAssessmentToDatabase(barangayName, lonlat, floodRisk) {
+    // Get CSRF token
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]')?.value || 
+                     document.cookie.split('; ').find(row => row.startsWith('csrftoken='))?.split('=')[1];
+    
+    // Prepare form data
+    const formData = new FormData();
+    formData.append('barangay', barangayName || 'Unknown');
+    formData.append('latitude', lonlat[1].toFixed(6));
+    formData.append('longitude', lonlat[0].toFixed(6));
+    formData.append('flood_risk_code', floodRisk || 'Unknown');
+    formData.append('csrfmiddlewaretoken', csrfToken);
+    
+    // Send to server
+    fetch('/maps/save-assessment/', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': csrfToken
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Assessment saved successfully:', data);
+        } else {
+            console.error('Failed to save assessment:', data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error saving assessment:', error);
+    });
+}
+
+        map.on('dblclick', function(evt) {
+            var coordinate = evt.coordinate;
+            var lonlat = ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326');
+
+            // Remove existing pin
+            pinVectorSource.clear();
+
+            // Add new pin
+            pinFeature = new ol.Feature(new ol.geom.Point(coordinate));
+            pinFeature.setStyle(pinStyle);
+            pinVectorSource.addFeature(pinFeature);
+
+            // Show loading screen
+            var loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.classList.add('active');
+            document.getElementById('cancel-btn').style.display = 'block';
+            document.getElementById('see-result-btn').style.display = 'none';
+
+            // Simulate assessment loading (2 seconds)
+            assessmentTimeout = setTimeout(function() {
+                document.getElementById('cancel-btn').style.display = 'none';
+                document.getElementById('see-result-btn').style.display = 'block';
+            }, 2000);
+        });
+
+        document.getElementById('cancel-btn').addEventListener('click', function() {
+            var loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.classList.remove('active');
+            pinVectorSource.clear();
+            clearTimeout(assessmentTimeout);
+        });
+
+        document.getElementById('see-result-btn').addEventListener('click', function() {
+    var loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.classList.remove('active');
+    var assessmentPanel = document.getElementById('assessment-panel');
+    assessmentPanel.classList.add('active');
+
+    // Determine barangay and flood risk
+    var coordinate = pinFeature.getGeometry().getCoordinates();
+    var lonlat = ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326');
+    var barangayName = null;
+    var floodRisk = null;
+
+    barangaysData.features.forEach(function(feature) {
+        var geom = new ol.format.GeoJSON().readGeometry(feature.geometry, {
+            dataProjection: 'EPSG:4326',
+            featureProjection: 'EPSG:3857'
+        });
+        if (geom.intersectsCoordinate(coordinate)) {
+            barangayName = feature.properties.name;
+        }
+    });
+
+    floodData.features.forEach(function(feature) {
+        var geom = new ol.format.GeoJSON().readGeometry(feature.geometry, {
+            dataProjection: 'EPSG:4326',
+            featureProjection: 'EPSG:3857'
+        });
+        if (geom.intersectsCoordinate(coordinate)) {
+            floodRisk = feature.properties.haz_code;
+        }
+    });
+
+    // Save assessment to database
+    saveAssessmentToDatabase(barangayName, lonlat, floodRisk);
+
+    // Generic assessment based on flood susceptibility
+    var assessmentText = '';
+    if (floodRisk) {
+        switch (floodRisk) {
+            case 'LF':
+                assessmentText = 'Low Susceptibility; less than 0.5 meters flood height and/or less than 1 day flooding';
+                break;
+            case 'MF':
+                assessmentText = 'Moderate Susceptibility; 0.5 to 1 meter flood height and/or 1 to 3 days flooding';
+                break;
+            case 'HF':
+                assessmentText = 'High Susceptibility; 1 to 2 meters flood height and/or more than 3 days flooding';
+                break;
+            case 'VHF':
+                assessmentText = 'Very High Susceptibility; more than 2 meters flood height and/or more than 3 days flooding';
+                break;
+        }
+    } else {
+        assessmentText = 'No significant flood risk detected.';
+    }
+
+    // Populate assessment content
+    var content = `
+        <p><strong>Barangay:</strong> ${barangayName || 'Unknown'}</p>
+        <p><strong>Coordinates:</strong> (${lonlat[0].toFixed(6)}, ${lonlat[1].toFixed(6)})</p>
+        <p><strong>Flood Susceptibility:</strong> ${floodRisk ? floodRisk.replace('VHF', 'Very High').replace('HF', 'High').replace('MF', 'Moderate').replace('LF', 'Low') : 'Unknown'}</p>
+        <p><strong>Flood Hazard Assessment:</strong> ${assessmentText}</p>
+        <button id="view-report-btn" style="width: 100%; padding: 12px; margin-top: 20px; border: none; border-radius: 8px; background: #3b82f6; color: white; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">View Report with Recommendations</button>
+        <button id="generate-cert-btn" style="width: 100%; padding: 12px; margin-top: 12px; border: none; border-radius: 8px; background: #10b981; color: white; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Generate Certificate</button>
+    `;
+    document.getElementById('assessment-content').innerHTML = content;
+    
+    // Add event listeners for the buttons (rest of the existing code remains the same)
+    document.getElementById('view-report-btn').addEventListener('click', function() {
+        var reportUrl = '/maps/report/?barangay=' + encodeURIComponent(barangayName || 'Unknown') + 
+                       '&lat=' + lonlat[1].toFixed(6) + 
+                       '&lon=' + lonlat[0].toFixed(6) + 
+                       '&risk=' + (floodRisk || 'Unknown');
+        window.open(reportUrl, '_blank');
+    });
+    
+    document.getElementById('view-report-btn').addEventListener('mouseenter', function() {
+        this.style.background = '#2563eb';
+    });
+    
+    document.getElementById('view-report-btn').addEventListener('mouseleave', function() {
+        this.style.background = '#3b82f6';
+    });
+    
+    document.getElementById('generate-cert-btn').addEventListener('click', function() {
+        var certUrl = '/maps/certificate/form/?barangay=' + encodeURIComponent(barangayName || 'Unknown') + 
+                     '&lat=' + lonlat[1].toFixed(6) + 
+                     '&lon=' + lonlat[0].toFixed(6) + 
+                     '&risk=' + (floodRisk || 'Unknown');
+        window.open(certUrl, '_blank');
+    });
+    
+    document.getElementById('generate-cert-btn').addEventListener('mouseenter', function() {
+        this.style.background = '#059669';
+    });
+    
+    document.getElementById('generate-cert-btn').addEventListener('mouseleave', function() {
+        this.style.background = '#10b981';
+    });
+});
+
+        document.getElementById('close-assessment').addEventListener('click', function() {
+            var assessmentPanel = document.getElementById('assessment-panel');
+            assessmentPanel.classList.remove('active');
+            pinVectorSource.clear();
+        });
+    </script>
+</body>
+</html>

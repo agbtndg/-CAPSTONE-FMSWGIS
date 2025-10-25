@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - DRRMO Silay City</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header h2 {
+            color: #1e3a8a;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #334155;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #1e3a8a;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+
+        .errorlist {
+            list-style: none;
+            color: #dc2626;
+            font-size: 13px;
+            margin-top: 6px;
+            padding-left: 0;
+        }
+
+        .errorlist li {
+            margin-bottom: 4px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 14px;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e40af;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .footer-link {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .footer-link p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .footer-link a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .header h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Register for DRRMO</h2>
+            <p>Disaster Risk Reduction and Management Office - Silay City</p>
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn-primary">Register</button>
+        </form>
+
+        <div class="footer-link">
+            <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const contactField = form.querySelector('input[name="contact_number"]');
+            
+            if (contactField) {
+                // Add input event listener for real-time validation
+                contactField.addEventListener('input', function() {
+                    validateContactNumber(this);
+                });
+
+                // Add initial validation state
+                validateContactNumber(contactField);
+            }
+
+            function validateContactNumber(field) {
+                // Remove any existing error messages
+                const existingError = field.parentNode.querySelector('.errorlist');
+                if (existingError) {
+                    existingError.remove();
+                }
+
+                // Remove any existing validation styles
+                field.style.borderColor = '#e2e8f0';
+                field.style.boxShadow = 'none';
+
+                if (field.value) {
+                    const contactPattern = /^\d{11}$/;
+                    if (!contactPattern.test(field.value)) {
+                        // Show error
+                        const errorList = document.createElement('ul');
+                        errorList.className = 'errorlist';
+                        const errorItem = document.createElement('li');
+                        errorItem.textContent = 'Contact number must be exactly 11 digits';
+                        errorList.appendChild(errorItem);
+                        field.parentNode.appendChild(errorList);
+                        
+                        // Add error styling
+                        field.style.borderColor = '#dc2626';
+                        field.style.boxShadow = '0 0 0 3px rgba(220, 38, 38, 0.1)';
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            // Add form submit validation
+            form.addEventListener('submit', function(e) {
+                const contactField = this.querySelector('input[name="contact_number"]');
+                if (contactField && !validateContactNumber(contactField)) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Flood Record</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Toast positioning */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+        }
+        
+        .toast {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-bottom: 10px;
+            min-width: 300px;
+        }
+
+        .toast-success {
+            border-left: 4px solid #10b981;
+        }
+
+        .toast-success .toast-header {
+            color: #10b981;
+            background-color: #f0fdf4;
+        }
+
+        .toast-success .success-icon {
+            color: #10b981;
+            margin-right: 8px;
+        }
+
+        .toast-error {
+            border-left: 4px solid #ef4444;
+        }
+
+        .toast-error .toast-header {
+            color: #ef4444;
+            background-color: #fef2f2;
+        }
+
+        .toast-error .error-icon {
+            color: #ef4444;
+            margin-right: 8px;
+        }
+
+        /* Required field indicator */
+        .required-field::after {
+            content: '*';
+            color: #ef4444;
+            margin-left: 4px;
+        }
+
+        /* Field validation styles */
+        .form-control.is-invalid,
+        .form-select.is-invalid {
+            border-color: #ef4444;
+            padding-right: calc(1.5em + .75rem);
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ef4444'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ef4444' stroke='none'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right calc(.375em + .1875rem) center;
+            background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+        }
+
+        .invalid-feedback {
+            display: block;
+            width: 100%;
+            margin-top: .25rem;
+            font-size: 80%;
+            color: #ef4444;
+        }
+        
+        :root {
+            --primary-blue: #1e3a5f;
+            --secondary-blue: #2563eb;
+            --light-gray: #f8fafc;
+            --border-gray: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+            background: var(--light-gray);
+            padding: 40px 20px;
+        }
+
+        /* Clean form container styling with professional appearance */
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-gray);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-container h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .form-container > p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+
+        .form-group select,
+        .form-group input[type="date"],
+        .form-group input[type="number"],
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-gray);
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--secondary-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .barangay-tags {
+            margin-top: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        /* Clean barangay tag styling with professional colors */
+        .barangay-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: var(--secondary-blue);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .remove-barangay {
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .remove-barangay:hover {
+            opacity: 1;
+        }
+
+        .errorlist {
+            color: #ef4444;
+            list-style-type: none;
+            padding: 0;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        button {
+            background-color: var(--secondary-blue);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background-color: var(--primary-blue);
+        }
+
+        small {
+            color: var(--text-muted);
+            font-size: 12px;
+            display: block;
+            margin-top: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add Flood Record</h2>
+        <p>Record flood event details and affected areas</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <!-- Event field first -->
+            <div class="form-group">
+                <label for="{{ form.event.id_for_label }}">{{ form.event.label }}</label>
+                {{ form.event }}
+                {% if form.event.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.event.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {% if form.event.help_text %}
+                    <small>{{ form.event.help_text }}</small>
+                {% endif %}
+            </div>
+
+            <!-- Barangay selection after event -->
+            <div class="form-group">
+                <label for="{{ form.affected_barangays.id_for_label }}">{{ form.affected_barangays.label }}</label>
+                <input type="text" id="id_affected_barangays" name="affected_barangays" readonly value="{{ form.affected_barangays.value|default:'' }}" />
+                {% if form.affected_barangays.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.affected_barangays.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <small>{{ form.affected_barangays.help_text }}</small>
+            </div>
+            <!-- Barangay selection dropdown -->
+            <div class="form-group">
+                <label for="barangay-select">Select Affected Barangay</label>
+                <select id="barangay-select" name="barangay-select">
+                    <option value="">-- Select Barangay --</option>
+                    {% for barangay_value, barangay_name in BARANGAYS %}
+                        <option value="{{ barangay_value }}">{{ barangay_name }}</option>
+                    {% endfor %}
+                </select>
+                <div id="barangay-tags" class="barangay-tags"></div>
+            </div>
+
+            <!-- Render remaining fields except event and affected_barangays -->
+            {% for field in form %}
+                {% if field.name != 'affected_barangays' and field.name != 'event' %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.errors %}
+                            <ul class="errorlist">
+                                {% for error in field.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if field.help_text %}
+                            <small>{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        
+            
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary flex-grow-1">Submit Record</button>
+                <a href="{% url 'monitoring_view' %}" class="btn btn-secondary flex-grow-1">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Toast container for notifications -->
+    <div class="toast-container"></div>
+    
+    <!-- Add success and error toast templates -->
+    <template id="successToastTemplate">
+        <div class="toast toast-success" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-check-circle success-icon"></i>
+                <strong class="me-auto">Success</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body"></div>
+        </div>
+    </template>
+
+    <template id="errorToastTemplate">
+        <div class="toast toast-error" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-exclamation-circle error-icon"></i>
+                <strong class="me-auto">Error</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body"></div>
+        </div>
+    </template>
+
+    <!-- Include Bootstrap JS for toasts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to show toast notification
+        function showToast(message, type = 'success') {
+            const toastContainer = document.querySelector('.toast-container');
+            const template = document.getElementById(type === 'success' ? 'successToastTemplate' : 'errorToastTemplate');
+            const toast = template.content.cloneNode(true).firstElementChild;
+            toast.querySelector('.toast-body').textContent = message;
+            
+            toastContainer.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast, { autohide: true, delay: 5000 });
+            bsToast.show();
+
+            toast.addEventListener('hidden.bs.toast', () => {
+                toast.remove();
+            });
+        }
+
+        // Function to mark required fields
+        function markRequiredFields() {
+            document.querySelectorAll('input, select, textarea').forEach(field => {
+                if (field.required || field.getAttribute('aria-required') === 'true') {
+                    const label = document.querySelector(`label[for="${field.id}"]`);
+                    if (label) {
+                        label.classList.add('required-field');
+                    }
+                }
+            });
+        }
+
+        // Function to validate form fields
+        function validateField(field) {
+            // Remove existing error states
+            field.classList.remove('is-invalid');
+            const existingFeedback = field.parentNode.querySelector('.invalid-feedback');
+            if (existingFeedback) {
+                existingFeedback.remove();
+            }
+
+            let isValid = true;
+            let errorMessage = '';
+
+            // Required field validation
+            if (field.required && !field.value.trim()) {
+                isValid = false;
+                errorMessage = 'This field is required';
+            }
+
+            // Custom validation for affected_barangays
+            if (field.id === 'id_affected_barangays' && !field.value.trim()) {
+                isValid = false;
+                errorMessage = 'Please select at least one affected barangay';
+            }
+
+            // Date validation
+            if (field.type === 'date' && field.required) {
+                const dateValue = new Date(field.value);
+                if (isNaN(dateValue.getTime())) {
+                    isValid = false;
+                    errorMessage = 'Please enter a valid date';
+                }
+            }
+
+            // Number validation
+            if (field.type === 'number') {
+                const value = parseFloat(field.value);
+                if (field.required && (isNaN(value) || field.value === '')) {
+                    isValid = false;
+                    errorMessage = 'Please enter a valid number';
+                } else if (!isNaN(value)) {
+                    if (field.min && value < parseFloat(field.min)) {
+                        isValid = false;
+                        errorMessage = `Value must be at least ${field.min}`;
+                    }
+                    if (field.max && value > parseFloat(field.max)) {
+                        isValid = false;
+                        errorMessage = `Value must be no more than ${field.max}`;
+                    }
+                }
+            }
+
+            // Add error indication if validation failed
+            if (!isValid) {
+                field.classList.add('is-invalid');
+                const feedbackDiv = document.createElement('div');
+                feedbackDiv.className = 'invalid-feedback';
+                feedbackDiv.textContent = errorMessage;
+                field.parentNode.appendChild(feedbackDiv);
+            }
+
+            return isValid;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            markRequiredFields();
+
+            const barangaySelect = document.getElementById('barangay-select');
+            const affectedInput = document.getElementById('id_affected_barangays');
+            const barangayTags = document.getElementById('barangay-tags');
+
+            if (!barangaySelect || !affectedInput || !barangayTags) {
+                console.error('One or more elements not found:', { barangaySelect, affectedInput, barangayTags });
+                return;
+            }
+
+            barangaySelect.addEventListener('change', function() {
+                if (barangaySelect.value && !affectedInput.value.includes(barangaySelect.value)) {
+                    const currentValue = affectedInput.value ? affectedInput.value + ', ' : '';
+                    affectedInput.value = currentValue + barangaySelect.value;
+                    addBarangayTag(barangaySelect.value);
+                    barangaySelect.value = '';
+                    
+                    // Remove any error state when a barangay is added
+                    affectedInput.classList.remove('is-invalid');
+                    const errorFeedback = affectedInput.parentNode.querySelector('.invalid-feedback');
+                    if (errorFeedback) {
+                        errorFeedback.remove();
+                    }
+                }
+            });
+
+            function addBarangayTag(barangay) {
+                const tag = document.createElement('span');
+                tag.className = 'barangay-tag';
+                tag.textContent = barangay;
+                const removeButton = document.createElement('span');
+                removeButton.className = 'remove-barangay';
+                removeButton.textContent = 'x';
+                removeButton.addEventListener('click', function() {
+                    tag.remove();
+                    affectedInput.value = affectedInput.value
+                        .split(', ')
+                        .filter(b => b !== barangay)
+                        .join(', ');
+                    
+                    // Validate after removal
+                    validateField(affectedInput);
+                });
+                tag.appendChild(removeButton);
+                barangayTags.appendChild(tag);
+            }
+
+            if (affectedInput.value) {
+                affectedInput.value.split(', ').forEach(barangay => {
+                    if (barangay) addBarangayTag(barangay);
+                });
+            }
+
+            // Add form submit handler
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Clear previous error states
+                form.querySelectorAll('.is-invalid').forEach(field => field.classList.remove('is-invalid'));
+                form.querySelectorAll('.invalid-feedback').forEach(feedback => feedback.remove());
+
+                // Validate all fields
+                let isValid = true;
+                form.querySelectorAll('input, select').forEach(field => {
+                    if (!validateField(field)) {
+                        isValid = false;
+                    }
+                });
+
+                if (!isValid) {
+                    showToast('Please fill in all required fields', 'error');
+                    return;
+                }
+
+                const formData = new FormData(form);
+                fetch(window.location.href, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showToast(data.message || 'Record added successfully', 'success');
+                        setTimeout(() => {
+                            window.location.href = data.redirect_url;
+                        }, 2000);
+                    } else {
+                        showToast(data.message || 'Error submitting form', 'error');
+                        if (data.errors) {
+                            Object.entries(data.errors).forEach(([field, errors]) => {
+                                const input = document.getElementById(`id_${field}`);
+                                if (input) {
+                                    input.classList.add('is-invalid');
+                                    const feedbackDiv = document.createElement('div');
+                                    feedbackDiv.className = 'invalid-feedback';
+                                    feedbackDiv.textContent = errors.join(', ');
+                                    input.parentNode.appendChild(feedbackDiv);
+                                }
+                            });
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('An unexpected error occurred', 'error');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
