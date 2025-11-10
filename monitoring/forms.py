@@ -43,15 +43,15 @@ class FloodRecordForm(forms.ModelForm):
         }
     )
     
-    date = forms.DateTimeField(
-        widget=forms.DateTimeInput(attrs={
-            'type': 'datetime-local',
-            'max': datetime.now().strftime('%Y-%m-%dT%H:%M')
+    date = forms.DateField(
+        widget=forms.DateInput(attrs={
+            'type': 'date',
+            'max': datetime.now().strftime('%Y-%m-%d')
         }),
-        help_text='Select the date and time of the flood event.',
+        help_text='Select the date of the flood event.',
         error_messages={
-            'required': 'Please provide the date and time of the flood event.',
-            'invalid': 'Please enter a valid date and time.'
+            'required': 'Please provide the date of the flood event.',
+            'invalid': 'Please enter a valid date.'
         }
     )
     
@@ -115,7 +115,7 @@ class FloodRecordForm(forms.ModelForm):
         """Validate that the date is not in the future."""
         date = self.cleaned_data.get('date')
         
-        if date and date > timezone.now():
+        if date and date > timezone.now().date():
             raise ValidationError("The flood event date cannot be in the future.")
         
         return date

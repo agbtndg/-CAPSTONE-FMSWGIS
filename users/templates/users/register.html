@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - DRRMO Silay City</title>
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <style>
+        :root {
+            --primary-blue: #1e3a5f;
+            --secondary-blue: #2563eb;
+            --light-gray: #f8fafc;
+            --border-gray: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,8 +24,8 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8fafc;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+            background-color: var(--light-gray);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -26,35 +38,96 @@
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             width: 100%;
-            max-width: 500px;
-            padding: 40px;
+            max-width: 480px;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-blue), var(--primary-blue));
         }
 
         .header {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
+        }
+
+        .logo-section {
+            margin-bottom: 24px;
+        }
+
+        .logo-section img {
+            height: 120px;
+            width: auto;
+            margin-bottom: 16px;
         }
 
         .header h2 {
-            color: #1e3a8a;
-            font-size: 28px;
+            color: var(--text-dark);
+            font-size: 32px;
             font-weight: 700;
             margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
         .header p {
-            color: #64748b;
+            color: var(--text-muted);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .welcome-text {
+            color: var(--secondary-blue);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .alert {
+            background-color: #fee2e2;
+            border-left: 4px solid #dc2626;
+            color: #991b1b;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 24px;
             font-size: 14px;
             font-weight: 500;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .form-row .form-group.half {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .form-help {
+            display: block;
+            color: var(--text-muted);
+            font-size: 12px;
+            margin-top: 4px;
+            line-height: 1.4;
         }
 
         label {
             display: block;
-            color: #334155;
+            color: var(--text-dark);
             font-weight: 600;
             margin-bottom: 8px;
             font-size: 14px;
@@ -65,12 +138,12 @@
         input[type="password"],
         select {
             width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
+            padding: 14px 16px;
+            border: 2px solid var(--border-gray);
+            border-radius: 10px;
             font-size: 15px;
             transition: all 0.3s ease;
-            background-color: #f8fafc;
+            background-color: var(--light-gray);
             font-family: inherit;
         }
 
@@ -79,9 +152,9 @@
         input[type="password"]:focus,
         select:focus {
             outline: none;
-            border-color: #1e3a8a;
+            border-color: var(--secondary-blue);
             background-color: white;
-            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
 
         .errorlist {
@@ -98,22 +171,23 @@
 
         .btn-primary {
             width: 100%;
-            padding: 14px;
-            background-color: #1e3a8a;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 10px;
+            margin-top: 8px;
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.2);
         }
 
         .btn-primary:hover {
-            background-color: #1e40af;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
         }
 
         .btn-primary:active {
@@ -122,35 +196,50 @@
 
         .footer-link {
             text-align: center;
-            margin-top: 25px;
-            padding-top: 25px;
-            border-top: 1px solid #e2e8f0;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-gray);
         }
 
         .footer-link p {
-            color: #64748b;
+            color: var(--text-muted);
             font-size: 14px;
+            margin-bottom: 8px;
         }
 
         .footer-link a {
-            color: #1e3a8a;
+            color: var(--secondary-blue);
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .footer-link a:hover {
-            color: #1e40af;
+            color: var(--primary-blue);
             text-decoration: underline;
         }
 
         @media (max-width: 480px) {
             .container {
-                padding: 30px 20px;
+                padding: 40px 24px;
+                margin: 16px;
             }
 
             .header h2 {
-                font-size: 24px;
+                font-size: 28px;
+            }
+
+            .logo-section img {
+                height: 100px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .form-row .form-group.half {
+                margin-bottom: 24px;
             }
         }
     </style>
@@ -158,14 +247,154 @@
 <body>
     <div class="container">
         <div class="header">
-            <h2>Register for DRRMO</h2>
-            <p>Disaster Risk Reduction and Management Office - Silay City</p>
+            <div class="logo-section">
+                <img src="{% static 'images/drrmo_logo.png' %}" alt="SCDRRMO Logo">
+            </div>
+            <div class="welcome-text">Create Your Account</div>
+            <h2>DRRMO Silay City</h2>
+            <p>Disaster Risk Reduction and Management Office<br>Flood Monitoring & Early Warning System</p>
         </div>
 
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn-primary">Register</button>
+            <!-- Personal Information Row -->
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="{{ form.first_name.id_for_label }}">First Name</label>
+                    {{ form.first_name }}
+                    {% if form.first_name.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.first_name.errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="form-group half">
+                    <label for="{{ form.last_name.id_for_label }}">Last Name</label>
+                    {{ form.last_name }}
+                    {% if form.last_name.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.last_name.errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Account Information Row -->
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="{{ form.username.id_for_label }}">Username</label>
+                    {{ form.username }}
+                    {% if form.username.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.username.errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <small class="form-help">Choose a unique username for your account</small>
+                </div>
+                <div class="form-group half">
+                    <label for="{{ form.email.id_for_label }}">Email Address</label>
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.email.errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <small class="form-help">Your email will be used for account verification</small>
+                </div>
+            </div>
+
+            <!-- Staff Information Row -->
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="{{ form.staff_id.id_for_label }}">Staff ID</label>
+                    {{ form.staff_id }}
+                    {% if form.staff_id.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.staff_id.errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <small class="form-help">Your official DRRMO staff identification number</small>
+                </div>
+                <div class="form-group half">
+                    <label for="{{ form.contact_number.id_for_label }}">Contact Number</label>
+                    {{ form.contact_number }}
+                    {% if form.contact_number.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.contact_number.errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <small class="form-help">11-digit mobile number (e.g., 09123456789)</small>
+                </div>
+            </div>
+
+            <!-- Department and Position Row -->
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="{{ form.department.id_for_label }}">Department</label>
+                    {{ form.department }}
+                    {% if form.department.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.department.errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="form-group half">
+                    <label for="{{ form.position.id_for_label }}">Position</label>
+                    {{ form.position }}
+                    {% if form.position.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.position.errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Password Fields -->
+            <div class="form-group">
+                <label for="{{ form.password1.id_for_label }}">Password</label>
+                {{ form.password1 }}
+                {% if form.password1.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.password1.errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <small class="form-help">Password must be at least 8 characters long and contain a mix of letters, numbers, and symbols</small>
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.password2.id_for_label }}">Confirm Password</label>
+                {{ form.password2 }}
+                {% if form.password2.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.password2.errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <small class="form-help">Re-enter your password to confirm</small>
+            </div>
+
+            <button type="submit" class="btn-primary">
+                <i class="fas fa-user-plus" style="margin-right: 8px;"></i>Create Account
+            </button>
         </form>
 
         <div class="footer-link">
@@ -179,30 +408,24 @@
             const contactField = form.querySelector('input[name="contact_number"]');
             
             if (contactField) {
-                // Add input event listener for real-time validation
                 contactField.addEventListener('input', function() {
                     validateContactNumber(this);
                 });
-
-                // Add initial validation state
                 validateContactNumber(contactField);
             }
 
             function validateContactNumber(field) {
-                // Remove any existing error messages
                 const existingError = field.parentNode.querySelector('.errorlist');
                 if (existingError) {
                     existingError.remove();
                 }
 
-                // Remove any existing validation styles
-                field.style.borderColor = '#e2e8f0';
+                field.style.borderColor = 'var(--border-gray)';
                 field.style.boxShadow = 'none';
 
                 if (field.value) {
                     const contactPattern = /^\d{11}$/;
                     if (!contactPattern.test(field.value)) {
-                        // Show error
                         const errorList = document.createElement('ul');
                         errorList.className = 'errorlist';
                         const errorItem = document.createElement('li');
@@ -210,7 +433,6 @@
                         errorList.appendChild(errorItem);
                         field.parentNode.appendChild(errorList);
                         
-                        // Add error styling
                         field.style.borderColor = '#dc2626';
                         field.style.boxShadow = '0 0 0 3px rgba(220, 38, 38, 0.1)';
                         return false;
@@ -219,7 +441,6 @@
                 return true;
             }
 
-            // Add form submit validation
             form.addEventListener('submit', function(e) {
                 const contactField = this.querySelector('input[name="contact_number"]');
                 if (contactField && !validateContactNumber(contactField)) {

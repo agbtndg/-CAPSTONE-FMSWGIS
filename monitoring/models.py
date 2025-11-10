@@ -19,7 +19,7 @@ class TideLevelData(models.Model):
 
 class FloodRecord(models.Model):
     event = models.CharField(max_length=200)
-    date = models.DateTimeField()
+    date = models.DateField()
     affected_barangays = models.CharField(max_length=500)
     casualties_dead = models.IntegerField(default=0)
     casualties_injured = models.IntegerField(default=0)

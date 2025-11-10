@@ -126,6 +126,7 @@
         }
 
         .form-group select,
+        .form-group input[type="date"],
         .form-group input[type="datetime-local"],
         .form-group input[type="number"],
         .form-group input[type="text"] {
@@ -144,6 +145,85 @@
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
 
+        .barangay-input-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            min-height: 48px;
+        }
+
+        .barangay-input-container input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.2s ease;
+            background-color: var(--light-gray);
+            font-family: inherit;
+            cursor: default;
+            color: transparent;
+            min-height: 48px;
+            height: auto;
+            resize: none;
+            overflow: hidden;
+        }
+
+        .barangay-input-container input:focus {
+            outline: none;
+            border-color: var(--secondary-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Tags positioned absolutely inside the input area */
+        .barangay-input-container .barangay-tags {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: auto;
+            padding: 12px 16px;
+            pointer-events: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+            border-radius: 8px;
+            min-height: 48px;
+            z-index: 2;
+            max-height: none;
+            overflow: visible;
+        }
+
+        .barangay-input-container .barangay-tags .barangay-tag {
+            pointer-events: auto;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+            white-space: nowrap;
+        }
+
+        .barangay-input-container .barangay-tags .remove-barangay {
+            cursor: pointer;
+            opacity: 0.9;
+            transition: opacity 0.2s ease;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1;
+            margin-left: 4px;
+        }
+
+        .barangay-input-container .barangay-tags .remove-barangay:hover {
+            opacity: 1;
+        }
+
         .barangay-tags {
             margin-top: 8px;
             display: flex;
@@ -155,7 +235,7 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background-color: var(--secondary-blue);
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
             color: white;
             padding: 6px 12px;
             border-radius: 6px;
@@ -181,24 +261,6 @@
             margin-top: 6px;
         }
 
-        button {
-            background-color: var(--secondary-blue);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.2s;
-            width: 100%;
-            margin-top: 8px;
-        }
-
-        button:hover {
-            background-color: var(--primary-blue);
-        }
-
         small {
             color: var(--text-muted);
             font-size: 12px;
@@ -207,21 +269,106 @@
         }
 
         .btn-secondary {
-            background-color: #6b7280;
-            text-align: center;
-            display: inline-block;
-            text-decoration: none;
+            flex: 1;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
             color: white;
+            border: 1px solid #ef4444;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15);
         }
 
         .btn-secondary:hover {
-            background-color: #4b5563;
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
             color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+            text-decoration: none;
+        }
+
+        .btn-secondary:active {
+            transform: translateY(0);
+        }
+
+        .btn-wrapper {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .btn-primary {
+            flex: 1;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #059669, #047857);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
         }
 
         @media (max-width: 768px) {
             .form-container {
                 padding: 24px;
+            }
+
+            .btn-wrapper {
+                flex-direction: column-reverse;
+                gap: 8px;
+            }
+
+            .form-container h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .form-container h2 {
+                font-size: 18px;
+            }
+
+            .form-group select,
+            .form-group input {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 10px 16px;
+                font-size: 13px;
             }
         }
     </style>
@@ -252,7 +399,10 @@
             <!-- Barangay selection after event -->
             <div class="form-group">
                 <label for="{{ form.affected_barangays.id_for_label }}">{{ form.affected_barangays.label }}</label>
-                <input type="text" id="id_affected_barangays" name="affected_barangays" readonly value="{{ form.affected_barangays.value|default:'' }}" />
+                <div class="barangay-input-container">
+                    <input type="text" id="id_affected_barangays" name="affected_barangays" readonly value="{{ form.affected_barangays.value|default:'' }}" />
+                    <div id="barangay-tags" class="barangay-tags"></div>
+                </div>
                 {% if form.affected_barangays.errors %}
                     <ul class="errorlist">
                         {% for error in form.affected_barangays.errors %}
@@ -271,7 +421,6 @@
                         <option value="{{ barangay_value }}">{{ barangay_name }}</option>
                     {% endfor %}
                 </select>
-                <div id="barangay-tags" class="barangay-tags"></div>
             </div>
 
             <!-- Render remaining fields except event and affected_barangays -->
@@ -295,9 +444,15 @@
             {% endfor %}
         
             
-            <div class="d-flex gap-2">
-                <button type="submit" class="btn btn-primary flex-grow-1">Update Record</button>
-                <a href="{% url 'monitoring_view' %}" class="btn btn-secondary flex-grow-1">Cancel</a>
+            <div class="btn-wrapper">
+                <a href="{% url 'monitoring_view' %}" class="btn-secondary">
+                    <i class="fas fa-times"></i>
+                    Cancel
+                </a>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i>
+                    Update Record
+                </button>
             </div>
         </form>
     </div>
@@ -384,7 +539,7 @@
             }
 
             // Date validation
-            if (field.type === 'datetime-local' && field.required) {
+            if (field.type === 'date' && field.required) {
                 const dateValue = new Date(field.value);
                 if (isNaN(dateValue.getTime())) {
                     isValid = false;
@@ -453,22 +608,34 @@
             function addBarangayTag(barangay) {
                 const tag = document.createElement('span');
                 tag.className = 'barangay-tag';
-                tag.textContent = barangay;
+                
+                const tagText = document.createElement('span');
+                tagText.textContent = barangay;
+                tag.appendChild(tagText);
+                
                 const removeButton = document.createElement('span');
                 removeButton.className = 'remove-barangay';
-                removeButton.textContent = 'x';
-                removeButton.addEventListener('click', function() {
+                removeButton.textContent = '×';
+                removeButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
                     tag.remove();
                     affectedInput.value = affectedInput.value
                         .split(', ')
                         .filter(b => b !== barangay)
                         .join(', ');
                     
-                    // Validate after removal
+                    resizeInput();
                     validateField(affectedInput);
                 });
                 tag.appendChild(removeButton);
                 barangayTags.appendChild(tag);
+                resizeInput();
+            }
+
+            function resizeInput() {
+                // Get the height of the tags container
+                const tagsHeight = barangayTags.scrollHeight;
+                affectedInput.style.height = Math.max(48, tagsHeight) + 'px';
             }
 
             // Load existing barangays

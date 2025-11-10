@@ -22,7 +22,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, sans-serif;
             background: var(--light-gray);
             padding: 40px 20px;
         }
@@ -33,9 +33,9 @@
             margin: 0 auto;
             background: white;
             padding: 40px;
-            border-radius: 8px;
+            border-radius: 12px;
             border: 1px solid var(--border-gray);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
 
         .form-header {
@@ -49,6 +49,14 @@
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .form-header h1 i {
+            color: var(--secondary-blue);
+            font-size: 28px;
         }
 
         .form-header p {
@@ -62,23 +70,26 @@
 
         .form-group label {
             display: block;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--text-dark);
             margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 10px 12px;
-            border: 1px solid var(--border-gray);
-            border-radius: 6px;
+            padding: 12px 16px;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
             font-size: 14px;
             font-family: inherit;
             color: var(--text-dark);
             transition: all 0.2s ease;
+            background-color: #ffffff;
         }
 
         .form-group input:focus,
@@ -109,26 +120,30 @@
         .readonly-info {
             background: var(--light-gray);
             padding: 16px;
-            border-radius: 6px;
+            border-radius: 8px;
             margin-bottom: 20px;
             border: 1px solid var(--border-gray);
         }
 
         .readonly-info h3 {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--text-dark);
             margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .readonly-info p {
             font-size: 13px;
             color: var(--text-muted);
             margin-bottom: 6px;
+            line-height: 1.5;
         }
 
         .readonly-info strong {
             color: var(--text-dark);
+            font-weight: 600;
         }
 
         .button-group {
@@ -139,45 +154,46 @@
 
         .btn {
             flex: 1;
-            padding: 12px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             font-family: inherit;
             transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .btn-primary {
-            background: var(--secondary-blue);
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
             color: white;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
         }
 
         .btn-primary:hover {
-            background: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
         }
 
         .btn-secondary {
-            background: var(--light-gray);
+            background: var(--border-gray);
             color: var(--text-dark);
             border: 1px solid var(--border-gray);
         }
 
         .btn-secondary:hover {
-            background: var(--border-gray);
+            background: #cbd5e1;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
 
-        @media (max-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .form-container {
-                padding: 24px;
-            }
-        }
-    /* Error message styling */
+        /* Error message styling */
         .error-message {
             color: #dc2626;
             font-size: 12px;
@@ -185,12 +201,16 @@
             display: none;
         }
 
-        .form-group input.error {
+        .form-group input.error,
+        .form-group select.error,
+        .form-group textarea.error {
             border-color: #dc2626;
             background-color: #fff5f5;
         }
 
-        .form-group input.error:focus {
+        .form-group input.error:focus,
+        .form-group select.error:focus,
+        .form-group textarea.error:focus {
             box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
         }
 
@@ -207,7 +227,7 @@
             background: #dc2626;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             display: none;
-            z-index: 1000;
+            z-index: 1050;
             animation: slideIn 0.3s ease-out;
         }
 
@@ -221,6 +241,47 @@
                 opacity: 1;
             }
         }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                padding: 24px;
+            }
+
+            .button-group {
+                flex-direction: column-reverse;
+                gap: 8px;
+            }
+
+            .form-header h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .form-header h1 {
+                font-size: 18px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 13px;
+                padding: 10px 12px;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -229,7 +290,10 @@
 
     <div class="form-container">
         <div class="form-header">
-            <h1>Generate Flood Hazard Certificate</h1>
+            <h1>
+                <i class="fas fa-certificate"></i>
+                Generate Flood Hazard Certificate
+            </h1>
             <p>Complete the form to generate an automated certificate</p>
         </div>
 
@@ -319,8 +383,14 @@
 
             <!-- Buttons -->
             <div class="button-group">
-                <button type="button" class="btn btn-secondary" onclick="window.close()">Cancel</button>
-                <button type="submit" class="btn btn-primary">Generate Certificate</button>
+                <button type="button" class="btn btn-secondary" onclick="window.close()">
+                    <i class="fas fa-times"></i>
+                    Cancel
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-file-pdf"></i>
+                    Generate Certificate
+                </button>
             </div>
         </form>
     </div>

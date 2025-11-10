@@ -1,7 +1,7 @@
 from django.core.serializers import serialize
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Barangay, FloodSusceptibility, AssessmentRecord, ReportRecord, CertificateRecord
+from .models import Barangay, FloodSusceptibility, AssessmentRecord, ReportRecord, CertificateRecord, FloodRecordActivity
 from datetime import datetime
 
 @login_required
@@ -236,14 +236,17 @@ def my_activity(request):
     assessments = AssessmentRecord.objects.filter(user=request.user)
     reports = ReportRecord.objects.filter(user=request.user)
     certificates = CertificateRecord.objects.filter(user=request.user)
+    flood_activities = FloodRecordActivity.objects.filter(user=request.user)
     
     context = {
         'assessments': assessments,
         'reports': reports,
         'certificates': certificates,
+        'flood_activities': flood_activities,
         'total_assessments': assessments.count(),
         'total_reports': reports.count(),
         'total_certificates': certificates.count(),
+        'total_flood_activities': flood_activities.count(),
     }
     
     return render(request, 'maps/my_activity.html', context)

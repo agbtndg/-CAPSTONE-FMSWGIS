@@ -1,174 +1,275 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Logs - DRRMO Silay City</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        :root {
-            --primary-blue: #1e3a5f;
-            --secondary-blue: #2563eb;
-            --light-gray: #f8fafc;
-            --border-gray: #e2e8f0;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
+{% extends 'users/base.html' %}
+
+{% block title %}User Activity Logs - DRRMO{% endblock %}
+
+{% block header_title %}SCDRRMO - FMSWGIS{% endblock %}
+
+{% block styles %}
+<style>
+    /* Enhanced User Logs Styles */
+    .logs-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .page-header {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        border: 1px solid var(--border-gray);
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-header h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 4px;
+    }
+
+    .page-header p {
+        font-size: 14px;
+        color: var(--text-muted);
+    }
+
+    .back-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s;
+        border: 1px solid var(--secondary-blue);
+    }
+
+    .back-btn:hover {
+        background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+        text-decoration: none;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(30, 58, 95, 0.4);
+    }
+
+    .logs-card {
+        background: white;
+        border-radius: 12px;
+        border: 1px solid var(--border-gray);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+    }
+
+    .logs-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .log-item {
+        padding: 20px 24px;
+        border-bottom: 1px solid var(--border-gray);
+        transition: all 0.3s ease;
+    }
+
+    .log-item:last-child {
+        border-bottom: none;
+    }
+
+    .log-item:hover {
+        background-color: var(--light-gray);
+        transform: translateX(2px);
+    }
+
+    .log-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .log-username {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-dark);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .log-username i {
+        color: var(--secondary-blue);
+        font-size: 14px;
+    }
+
+    .log-timestamp {
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--light-gray);
+        padding: 4px 10px;
+        border-radius: 16px;
+        border: 1px solid var(--border-gray);
+        font-weight: 500;
+    }
+
+    .log-action {
+        font-size: 14px;
+        color: var(--text-muted);
+        line-height: 1.4;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .log-action i {
+        color: var(--secondary-blue);
+        font-size: 12px;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 64px 24px;
+        color: var(--text-muted);
+    }
+
+    .empty-state i {
+        font-size: 56px;
+        color: var(--border-gray);
+        margin-bottom: 20px;
+        opacity: 0.6;
+    }
+
+    .empty-state h3 {
+        color: var(--text-dark);
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .empty-state p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* Override base template constraints for full-width content like other pages */
+    .main-content {
+        padding: 0 !important;
+        max-width: none !important;
+        margin: 0 !important;
+    }
+
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* Add reasonable content constraints for readability */
+    .logs-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .page-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .back-btn {
+            width: 100%;
+            justify-content: center;
         }
 
-        body {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
-            background-color: white;
-            min-height: 100vh;
-            padding: 24px 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* Clean header styling with professional appearance */
-        .header {
-            background: white;
-            padding: 20px 0;
-            margin-bottom: 24px;
-            border-bottom: 1px solid var(--border-gray);
-        }
-
-        .header h1 {
-            color: var(--text-dark);
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .header p {
-            color: var(--text-muted);
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .content {
-            background: white;
-            border-radius: 8px;
-            border: 1px solid var(--border-gray);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-        }
-
-        .logs-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .log-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
         }
 
         .log-item {
             padding: 16px 20px;
-            border-bottom: 1px solid var(--border-gray);
-            transition: all 0.2s;
-        }
-
-        .log-item:last-child {
-            border-bottom: none;
-        }
-
-        .log-item:hover {
-            background-color: var(--light-gray);
         }
 
         .log-username {
-            color: var(--text-dark);
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 4px;
+            font-size: 15px;
         }
 
         .log-action {
-            color: var(--text-muted);
             font-size: 13px;
-            margin-bottom: 4px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logs-container {
+            padding: 16px;
+        }
+
+        .page-header {
+            padding: 20px;
         }
 
         .log-timestamp {
-            color: var(--border-gray);
-            font-size: 12px;
+            font-size: 11px;
+            padding: 3px 8px;
         }
+    }
+</style>
+{% endblock %}
 
-        .empty-state {
-            text-align: center;
-            padding: 48px 20px;
-            color: var(--text-muted);
-        }
-
-        .empty-state p {
-            font-size: 15px;
-            margin: 0;
-        }
-
-        .btn-back {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--secondary-blue);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.2s;
-            margin-top: 20px;
-        }
-
-        .btn-back:hover {
-            background-color: var(--primary-blue);
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                padding: 16px 0;
-            }
-
-            .header h1 {
-                font-size: 20px;
-            }
-
-            .log-item {
-                padding: 12px 16px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
+{% block content %}
+<div class="logs-container">
+    <div class="page-header">
+        <div>
             <h1>Recent User Activity</h1>
             <p>DRRMO Silay City - User Logs</p>
         </div>
-
-        <div class="content">
-            {% if logs %}
-                <ul class="logs-list">
-                {% for log in logs %}
-                    <li class="log-item">
-                        <div class="log-username">{{ log.user.username }}</div>
-                        <div class="log-action">{{ log.action }}</div>
-                        <div class="log-timestamp">{{ log.timestamp }}</div>
-                    </li>
-                {% endfor %}
-                </ul>
-            {% else %}
-                <div class="empty-state">
-                    <p>No logs yet.</p>
-                </div>
-            {% endif %}
-
-            <a href="{% url 'home' %}" class="btn-back">Back to Home</a>
-        </div>
+        <a href="{% url 'home' %}" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
     </div>
-</body>
-</html>
+
+    <div class="logs-card">
+        {% if logs %}
+        <ul class="logs-list">
+            {% for log in logs %}
+            <li class="log-item">
+                <div class="log-header">
+                    <div class="log-username">
+                        <i class="fas fa-user"></i>
+                        {{ log.user.username }}
+                    </div>
+                    <div class="log-timestamp">
+                        <i class="far fa-clock"></i>
+                        {{ log.timestamp|date:"M d, Y - h:i A" }}
+                    </div>
+                </div>
+                <div class="log-action">
+                    <i class="fas fa-history"></i>
+                    {{ log.action }}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <div class="empty-state">
+            <i class="fas fa-history"></i>
+            <h3>No Activity Yet</h3>
+            <p>User activities will appear here once users start logging in and performing actions.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

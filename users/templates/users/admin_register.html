@@ -1,106 +1,297 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin Registration</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 20px;
+{% extends 'users/base.html' %}
+
+{% block title %}Admin Registration - DRRMO{% endblock %}
+
+{% block header_title %}SCDRRMO - FMSWGIS{% endblock %}
+
+{% block styles %}
+<style>
+    /* Enhanced Admin Registration Styles */
+    .admin-register-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .register-card {
+        background: white;
+        border-radius: 16px;
+        border: 1px solid var(--border-gray);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+        color: white;
+        padding: 32px 40px;
+        text-align: center;
+    }
+
+    .card-header h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+
+    .card-header p {
+        font-size: 16px;
+        opacity: 0.9;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    .card-body {
+        padding: 40px;
+    }
+
+    .form-group {
+        margin-bottom: 24px;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 8px;
+        letter-spacing: 0.3px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid var(--border-gray);
+        border-radius: 8px;
+        font-size: 15px;
+        transition: all 0.2s ease;
+        background-color: white;
+    }
+
+    .form-control:focus {
+        border-color: var(--secondary-blue);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        outline: none;
+    }
+
+    .help-text {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-top: 6px;
+        line-height: 1.4;
+    }
+
+    .error-text {
+        color: #ef4444;
+        font-size: 13px;
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .error-text i {
+        font-size: 12px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 14px 24px;
+        background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+    }
+
+    .submit-btn:active {
+        transform: translateY(0);
+    }
+
+    .security-notice {
+        margin-top: 32px;
+        padding: 20px;
+        background: linear-gradient(135deg, #fef3c7, #fde68a);
+        border: 1px solid #f59e0b;
+        border-radius: 12px;
+        border-left: 4px solid #f59e0b;
+    }
+
+    .security-notice h4 {
+        color: #92400e;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .security-notice h4 i {
+        font-size: 18px;
+    }
+
+    .security-notice p {
+        color: #92400e;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    .security-notice ul {
+        color: #92400e;
+        font-size: 14px;
+        margin: 12px 0 0 0;
+        padding-left: 20px;
+    }
+
+    .security-notice li {
+        margin-bottom: 4px;
+        line-height: 1.4;
+    }
+
+    /* Override base template constraints for centered content */
+    .main-content {
+        padding: 40px 20px !important;
+        max-width: none !important;
+        margin: 0 !important;
+        display: flex;
+        align-items: center;
+        min-height: calc(100vh - 120px);
+    }
+
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .admin-register-container {
+            max-width: 100%;
         }
-        .container {
-            max-width: 500px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+        .card-header {
+            padding: 24px 20px;
         }
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            text-align: center;
+
+        .card-header h2 {
+            font-size: 24px;
         }
-        .form-group {
-            margin-bottom: 15px;
+
+        .card-body {
+            padding: 24px 20px;
         }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #34495e;
-            font-weight: bold;
+
+        .main-content {
+            padding: 20px 16px !important;
         }
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
+    }
+
+    @media (max-width: 480px) {
+        .card-header h2 {
+            font-size: 20px;
+        }
+
+        .card-header p {
             font-size: 14px;
         }
-        .help-text {
-            font-size: 12px;
-            color: #7f8c8d;
-            margin-top: 5px;
+
+        .form-control {
+            padding: 10px 14px;
+            font-size: 14px;
         }
-        .error-text {
-            color: #e74c3c;
-            font-size: 13px;
-            margin-top: 5px;
+
+        .submit-btn {
+            padding: 12px 20px;
+            font-size: 15px;
         }
-        button {
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #34495e;
-        }
-        .security-note {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #2c3e50;
-            font-size: 13px;
-            color: #2c3e50;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Admin Registration</h2>
-        <form method="post">
-            {% csrf_token %}
-            {% for field in form %}
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="admin-register-container">
+    <div class="register-card">
+        <div class="card-header">
+            <h2><i class="fas fa-shield-alt"></i> Admin Setup</h2>
+            <p>Create the first administrator account</p>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
                 <div class="form-group">
-                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    <label for="{{ field.id_for_label }}" class="form-label">
+                        {% if field.name == 'registration_key' %}
+                            <i class="fas fa-key"></i>
+                        {% elif field.name == 'username' %}
+                            <i class="fas fa-user"></i>
+                        {% elif field.name == 'email' %}
+                            <i class="fas fa-envelope"></i>
+                        {% elif field.name == 'first_name' %}
+                            <i class="fas fa-user-tag"></i>
+                        {% elif field.name == 'last_name' %}
+                            <i class="fas fa-user-tag"></i>
+                        {% elif field.name == 'staff_id' %}
+                            <i class="fas fa-id-badge"></i>
+                        {% elif field.name == 'department' %}
+                            <i class="fas fa-building"></i>
+                        {% elif field.name == 'position' %}
+                            <i class="fas fa-briefcase"></i>
+                        {% elif field.name == 'contact_number' %}
+                            <i class="fas fa-phone"></i>
+                        {% else %}
+                            <i class="fas fa-lock"></i>
+                        {% endif %}
+                        {{ field.label }}
+                    </label>
                     {{ field }}
                     {% if field.help_text %}
-                        <div class="help-text">{{ field.help_text|safe }}</div>
+                    <div class="help-text">{{ field.help_text|safe }}</div>
                     {% endif %}
                     {% if field.errors %}
-                        {% for error in field.errors %}
-                            <div class="error-text">{{ error }}</div>
-                        {% endfor %}
+                    {% for error in field.errors %}
+                    <div class="error-text">
+                        <i class="fas fa-exclamation-circle"></i>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
                     {% endif %}
                 </div>
-            {% endfor %}
-            <button type="submit">Register Admin Account</button>
-        </form>
-        <div class="security-note">
-            <strong>Security Note:</strong> This form is for administrative access only. 
-            You must have a valid registration key to create an admin account. 
-            All registration attempts are logged for security purposes.
+                {% endfor %}
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-user-plus"></i>
+                    Create Admin Account
+                </button>
+            </form>
+
+            <div class="security-notice">
+                <h4><i class="fas fa-exclamation-triangle"></i> Security Notice</h4>
+                <p>This form is for administrative access only. You must have a valid registration key to create an admin account.</p>
+                <ul>
+                    <li>All registration attempts are logged for security purposes</li>
+                    <li>The admin account will have full system access</li>
+                    <li>Keep the registration key secure and confidential</li>
+                </ul>
+            </div>
         </div>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}

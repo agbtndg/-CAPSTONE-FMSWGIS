@@ -1,386 +1,435 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Approve Users - DRRMO Silay City</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        :root {
-            --primary-blue: #1e3a5f;
-            --secondary-blue: #2563eb;
-            --light-gray: #f8fafc;
-            --border-gray: #e2e8f0;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
-        }
+{% extends 'users/base.html' %}
 
-        body {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
-            background-color: white;
-            min-height: 100vh;
-            padding: 0;
-        }
+{% block title %}User Management - DRRMO{% endblock %}
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 24px 20px;
-        }
+{% block header_title %}SCDRRMO - FMSWGIS{% endblock %}
 
-        /* Clean header styling with professional appearance */
-        .header {
-            background: white;
-            padding: 20px 0;
-            margin-bottom: 24px;
-            border-bottom: 1px solid var(--border-gray);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+{% block styles %}
+<style>
+    /* Enhanced User Management Styles */
+    .user-management-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 
-        .header-content h1 {
-            color: var(--text-dark);
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
+    .page-header {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        border: 1px solid var(--border-gray);
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .header-content p {
-            color: var(--text-muted);
-            font-size: 14px;
-            margin: 0;
+    .page-header h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 4px;
+    }
+
+    .page-header p {
+        font-size: 14px;
+        color: var(--text-muted);
+    }
+
+    .back-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s;
+        border: 1px solid var(--secondary-blue);
+    }
+
+    .back-btn:hover {
+        background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+        text-decoration: none;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(30, 58, 95, 0.4);
+    }
+
+    .card {
+        background: white;
+        border-radius: 12px;
+        border: 1px solid var(--border-gray);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+    }
+
+    .card-header {
+        background: white;
+        padding: 20px 24px;
+        border-bottom: 1px solid var(--border-gray);
+    }
+
+    .card-header h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .card-header h2 i {
+        color: var(--secondary-blue);
+    }
+
+    .user-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .user-item {
+        padding: 20px 24px;
+        border-bottom: 1px solid var(--border-gray);
+        transition: all 0.3s ease;
+    }
+
+    .user-item:last-child {
+        border-bottom: none;
+    }
+
+    .user-item:hover {
+        background-color: var(--light-gray);
+        transform: translateX(2px);
+    }
+
+    .user-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .user-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-dark);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .badge {
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .badge-pending {
+        background-color: #fef3c7;
+        color: #92400e;
+    }
+
+    .badge-approved {
+        background-color: #dcfce7;
+        color: #166534;
+    }
+
+    .user-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+
+    .user-details span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .user-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .btn-approve, .btn-delete {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        text-decoration: none;
+    }
+
+    .btn-approve {
+        background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+        color: white;
+    }
+
+    .btn-approve:hover {
+        background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-delete {
+        background-color: #ef4444;
+        color: white;
+    }
+
+    .btn-delete:hover {
+        background-color: #dc2626;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 64px 24px;
+        color: var(--text-muted);
+    }
+
+    .empty-state i {
+        font-size: 56px;
+        color: var(--border-gray);
+        margin-bottom: 20px;
+        opacity: 0.6;
+    }
+
+    .empty-state h3 {
+        color: var(--text-dark);
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .empty-state p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* Override base template constraints for full-width content like other pages */
+    .main-content {
+        padding: 0 !important;
+        max-width: none !important;
+        margin: 0 !important;
+    }
+
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* Add reasonable content constraints for readability */
+    .user-management-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .user-details {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+    }
+
+    @media (max-width: 768px) {
+        .page-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
         }
 
         .back-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            background-color: var(--light-gray);
-            color: var(--text-dark);
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s;
-            border: 1px solid var(--border-gray);
+            width: 100%;
+            justify-content: center;
         }
 
-        .back-btn:hover {
-            background-color: var(--border-gray);
-            color: var(--text-dark);
-            text-decoration: none;
+        .user-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
         }
 
-        .card {
-            background: white;
-            border-radius: 8px;
-            border: 1px solid var(--border-gray);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        .user-details {
+            grid-template-columns: 1fr;
         }
 
-        .card-header {
-            background: white;
-            padding: 16px 20px;
-            border-bottom: 1px solid var(--border-gray);
+        .user-actions {
+            flex-direction: column;
+        }
+
+        .btn-approve, .btn-delete {
+            width: 100%;
+            justify-content: center;
         }
 
         .card-header h2 {
             font-size: 16px;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .user-management-container {
+            padding: 16px;
         }
 
-        .user-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .page-header {
+            padding: 20px;
         }
 
         .user-item {
             padding: 16px 20px;
-            border-bottom: 1px solid var(--border-gray);
-            transition: all 0.2s;
         }
 
-        .user-item:last-child {
-            border-bottom: none;
+        .card-header {
+            padding: 16px 20px;
         }
+    }
+</style>
+{% endblock %}
 
-        .user-item:hover {
-            background-color: var(--light-gray);
-        }
-
-        .user-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .user-name {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .badge {
-            font-size: 12px;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-weight: 600;
-        }
-
-        .badge-pending {
-            background-color: #fef3c7;
-            color: #92400e;
-        }
-
-        .badge-approved {
-            background-color: #dcfce7;
-            color: #166534;
-        }
-
-        .user-details {
-            display: flex;
-            gap: 16px;
-            font-size: 13px;
-            color: var(--text-muted);
-            flex-wrap: wrap;
-        }
-
-        .user-details span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .user-actions {
-            margin-top: 12px;
-            display: flex;
-            gap: 8px;
-        }
-
-        .btn-approve, .btn-delete {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .btn-approve {
-            background-color: var(--secondary-blue);
-            color: white;
-        }
-
-        .btn-approve:hover {
-            background-color: var(--primary-blue);
-        }
-
-        .btn-delete {
-            background-color: #ef4444;
-            color: white;
-        }
-
-        .btn-delete:hover {
-            background-color: #dc2626;
-        }
-
-        .alert {
-            margin-bottom: 24px;
-            border-radius: 8px;
-            border: none;
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 48px 24px;
-            color: var(--text-muted);
-        }
-
-        .empty-state i {
-            font-size: 48px;
-            margin-bottom: 16px;
-            color: var(--border-gray);
-        }
-
-        .empty-state p {
-            font-size: 15px;
-            margin: 0;
-        }
-
-        @media (max-width: 640px) {
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 16px;
-            }
-
-            .back-btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .user-details {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .user-actions {
-                flex-direction: column;
-            }
-
-            .btn-approve, .btn-delete {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="header-content">
-                <h1>User Management</h1>
-                <p>Approve or remove user accounts</p>
-            </div>
-            <a href="{% url 'home' %}" class="back-btn">
-                <i class="fas fa-arrow-left"></i>
-                Back
-            </a>
+{% block content %}
+<div class="user-management-container">
+    <div class="page-header">
+        <div>
+            <h1>User Management</h1>
+            <p>Approve or remove user accounts</p>
         </div>
+        <a href="{% url 'home' %}" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
+    </div>
 
-        {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="card">
+        <div class="card-header">
+            <h2><i class="fas fa-users"></i> User Accounts</h2>
         </div>
-        {% endfor %}
-        {% endif %}
-
-        <div class="card">
-            <div class="card-header">
-                <h2>User Accounts</h2>
-            </div>
-            <div class="card-body p-0">
-                {% if users %}
-                <ul class="user-list">
-                    {% for user in users %}
-                    <li class="user-item">
-                        <div class="user-header">
-                            <div class="user-name">
-                                {{ user.username }}
-                                {% if user.is_active and user.is_approved %}
-                                <span class="badge badge-approved">Approved</span>
-                                {% else %}
-                                <span class="badge badge-pending">Pending</span>
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="user-details">
-                            <span><i class="far fa-envelope"></i>{{ user.email }}</span>
-                            <span><i class="fas fa-id-badge"></i>ID: {{ user.staff_id }}</span>
-                            <span><i class="far fa-calendar"></i>Joined {{ user.date_joined|date:"M d, Y" }}</span>
-                        </div>
-                        <div class="user-actions">
-                            {% if not user.is_active or not user.is_approved %}
-                            <button type="button" class="btn-approve" onclick="confirmApprove('{{ user.id }}', '{{ user.username }}')">
-                                <i class="fas fa-check"></i>Approve
-                            </button>
+        <div class="card-body p-0">
+            {% if users %}
+            <ul class="user-list">
+                {% for user in users %}
+                <li class="user-item">
+                    <div class="user-header">
+                        <div class="user-name">
+                            {{ user.username }}
+                            {% if user.is_active and user.is_approved %}
+                            <span class="badge badge-approved">Approved</span>
+                            {% else %}
+                            <span class="badge badge-pending">Pending</span>
                             {% endif %}
-                            <button type="button" class="btn-delete" onclick="confirmDelete('{{ user.id }}', '{{ user.username }}')">
-                                <i class="fas fa-trash"></i>Delete
-                            </button>
                         </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% else %}
-                <div class="empty-state">
-                    <i class="far fa-user-circle"></i>
-                    <p>No users found</p>
-                </div>
-                {% endif %}
+                    </div>
+                    <div class="user-details">
+                        <span><i class="far fa-envelope"></i>{{ user.email }}</span>
+                        <span><i class="fas fa-id-badge"></i>ID: {{ user.staff_id }}</span>
+                        <span><i class="far fa-calendar"></i>Joined {{ user.date_joined|date:"M d, Y" }}</span>
+                    </div>
+                    <div class="user-actions">
+                        {% if not user.is_active or not user.is_approved %}
+                        <button type="button" class="btn-approve" onclick="confirmApprove('{{ user.id }}', '{{ user.username }}')">
+                            <i class="fas fa-check"></i>Approve
+                        </button>
+                        {% endif %}
+                        <button type="button" class="btn-delete" onclick="confirmDelete('{{ user.id }}', '{{ user.username }}')">
+                            <i class="fas fa-trash"></i>Delete
+                        </button>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <div class="empty-state">
+                <i class="far fa-user-circle"></i>
+                <h3>No Users Found</h3>
+                <p>All user accounts have been processed.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Approve Confirmation Modal -->
+<div class="modal fade" id="approveModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Approval</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to approve this user?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="user_id" id="approveUserId">
+                    <input type="hidden" name="action" value="approve">
+                    <button type="submit" class="btn btn-primary">Approve</button>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Approve Confirmation Modal -->
-    <div class="modal fade" id="approveModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Confirm Approval</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to approve this user?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <form method="post" style="display:inline;">
-                        {% csrf_token %}
-                        <input type="hidden" name="user_id" id="approveUserId">
-                        <input type="hidden" name="action" value="approve">
-                        <button type="submit" class="btn btn-primary">Approve</button>
-                    </form>
-                </div>
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this user? This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="user_id" id="deleteUserId">
+                    <input type="hidden" name="action" value="delete">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Delete Confirmation Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Confirm Deletion</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to delete this user? This action cannot be undone.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <form method="post" style="display:inline;">
-                        {% csrf_token %}
-                        <input type="hidden" name="user_id" id="deleteUserId">
-                        <input type="hidden" name="action" value="delete">
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<script>
+    function confirmApprove(userId, username) {
+        document.getElementById('approveUserId').value = userId;
+        document.querySelector('#approveModal .modal-body').innerHTML =
+            `Are you sure you want to approve user <strong>${username}</strong>?`;
+        new bootstrap.Modal(document.getElementById('approveModal')).show();
+    }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function confirmApprove(userId, username) {
-            document.getElementById('approveUserId').value = userId;
-            document.querySelector('#approveModal .modal-body').innerHTML = 
-                `Are you sure you want to approve user <strong>${username}</strong>?`;
-            new bootstrap.Modal(document.getElementById('approveModal')).show();
-        }
-
-        function confirmDelete(userId, username) {
-            document.getElementById('deleteUserId').value = userId;
-            document.querySelector('#deleteModal .modal-body').innerHTML = 
-                `Are you sure you want to delete user <strong>${username}</strong>? This action cannot be undone.`;
-            new bootstrap.Modal(document.getElementById('deleteModal')).show();
-        }
-    </script>
-</body>
-</html>
+    function confirmDelete(userId, username) {
+        document.getElementById('deleteUserId').value = userId;
+        document.querySelector('#deleteModal .modal-body').innerHTML =
+            `Are you sure you want to delete user <strong>${username}</strong>? This action cannot be undone.`;
+        new bootstrap.Modal(document.getElementById('deleteModal')).show();
+    }
+</script>
+{% endblock %}
