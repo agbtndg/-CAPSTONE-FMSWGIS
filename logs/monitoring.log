@@ -110,3 +110,113 @@ INFO 2025-11-12 15:18:28 autoreload 17108 20460 C:\Users\aldri\-CAPSTONE-FMSWGIS
 INFO 2025-11-12 15:18:29 autoreload 1364 29012 Watching for file changes with StatReloader
 INFO 2025-11-12 15:18:30 basehttp 1364 19704 "GET / HTTP/1.1" 302 0
 INFO 2025-11-12 15:18:30 basehttp 1364 19704 "GET /home/ HTTP/1.1" 200 30238
+INFO 2025-11-12 15:25:10 autoreload 14248 5776 Watching for file changes with StatReloader
+INFO 2025-11-12 15:25:11 basehttp 14248 1216 "GET / HTTP/1.1" 302 0
+INFO 2025-11-12 15:25:11 basehttp 14248 1216 "GET /home/ HTTP/1.1" 200 30238
+INFO 2025-11-12 15:25:15 basehttp 14248 1216 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-12 15:25:15 basehttp 14248 1216 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-12 15:25:18 basehttp 14248 1216 "POST / HTTP/1.1" 302 0
+INFO 2025-11-12 15:25:18 basehttp 14248 1216 "GET /home/ HTTP/1.1" 200 30543
+INFO 2025-11-12 15:25:48 basehttp 14248 1216 "GET /maps/all-activities/ HTTP/1.1" 200 444809
+INFO 2025-11-12 15:26:20 basehttp 14248 1216 "GET /maps/all-activities/?tab=user-logs&user=&date=&sort=oldest HTTP/1.1" 200 444801
+INFO 2025-11-12 15:26:25 basehttp 14248 1216 "GET /home/ HTTP/1.1" 200 30212
+INFO 2025-11-12 15:31:37 basehttp 14248 2412 "GET /home/ HTTP/1.1" 200 30214
+INFO 2025-11-12 15:31:40 views 14248 2412 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-12 15:31:41 views 14248 2412 API returned - Rain: 0.0mm, Temp: 30.5°C, Humidity: 63%, Wind: 5.6km/h
+INFO 2025-11-12 15:31:41 views 14248 2412 Processed 7 days of weather forecast
+INFO 2025-11-12 15:31:41 basehttp 14248 2412 "GET /monitoring/ HTTP/1.1" 200 74582
+INFO 2025-11-12 15:36:41 basehttp 14248 24628 "GET /monitoring/api/data/ HTTP/1.1" 200 54
+INFO 2025-11-12 15:36:55 basehttp 14248 24628 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 554
+INFO 2025-11-12 15:41:41 basehttp 14248 24628 "GET /monitoring/api/data/ HTTP/1.1" 200 54
+INFO 2025-11-12 15:46:42 basehttp 14248 24628 "GET /monitoring/api/data/ HTTP/1.1" 200 54
+INFO 2025-11-12 15:48:08 basehttp 14248 24628 "GET /profile/ HTTP/1.1" 200 25350
+INFO 2025-11-12 16:31:59 autoreload 25804 5732 Watching for file changes with StatReloader
+INFO 2025-11-12 16:32:00 basehttp 25804 6424 "GET /home/ HTTP/1.1" 200 30235
+INFO 2025-11-12 16:32:01 basehttp 25804 6424 "GET / HTTP/1.1" 302 0
+INFO 2025-11-12 16:32:01 basehttp 25804 6424 "GET /home/ HTTP/1.1" 200 30235
+INFO 2025-11-12 16:32:05 basehttp 25804 6424 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-12 16:32:05 basehttp 25804 6424 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-12 16:32:14 basehttp 25804 6424 "POST / HTTP/1.1" 302 0
+INFO 2025-11-12 16:32:14 basehttp 25804 6424 "GET /home/ HTTP/1.1" 200 26908
+INFO 2025-11-12 16:32:21 basehttp 25804 6424 "GET /maps/ HTTP/1.1" 200 1023583
+INFO 2025-11-12 16:32:22 basehttp 25804 6424 "GET /home/ HTTP/1.1" 200 26575
+INFO 2025-11-12 16:39:28 basehttp 25804 2720 "GET /maps/ HTTP/1.1" 200 1023583
+INFO 2025-11-12 17:34:29 autoreload 440 24708 Watching for file changes with StatReloader
+INFO 2025-11-12 17:34:33 basehttp 440 30464 "GET / HTTP/1.1" 302 0
+INFO 2025-11-12 17:34:33 basehttp 440 30464 "GET /home/ HTTP/1.1" 200 26575
+WARNING 2025-11-12 17:34:33 log 440 30464 Not Found: /favicon.ico
+WARNING 2025-11-12 17:34:33 basehttp 440 30464 "GET /favicon.ico HTTP/1.1" 404 5118
+INFO 2025-11-12 17:34:34 basehttp 440 30464 "GET /home/ HTTP/1.1" 200 26575
+INFO 2025-11-12 17:34:36 basehttp 440 30464 "GET /home/ HTTP/1.1" 200 26575
+INFO 2025-11-12 17:34:37 basehttp 440 30464 "GET /home/ HTTP/1.1" 200 26575
+INFO 2025-11-12 17:34:41 basehttp 440 30464 "GET /maps/ HTTP/1.1" 200 1023583
+WARNING 2025-11-12 17:34:49 log 440 30464 Forbidden (CSRF token from POST has incorrect length.): /maps/save-assessment/
+WARNING 2025-11-12 17:34:49 basehttp 440 30464 "POST /maps/save-assessment/ HTTP/1.1" 403 2514
+INFO 2025-11-12 17:34:54 basehttp 440 30464 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10126
+INFO 2025-11-12 17:45:10 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10203
+INFO 2025-11-12 17:45:10 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 200 161208
+INFO 2025-11-12 17:47:00 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10251
+INFO 2025-11-12 17:47:00 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 17:48:56 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10274
+INFO 2025-11-12 17:48:56 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 17:49:44 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10290
+INFO 2025-11-12 17:49:44 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 17:50:25 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10285
+INFO 2025-11-12 17:50:25 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 17:50:58 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10285
+INFO 2025-11-12 17:51:15 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10285
+INFO 2025-11-12 17:51:15 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 17:53:51 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10394
+INFO 2025-11-12 17:53:51 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 17:54:26 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10611
+INFO 2025-11-12 17:55:48 basehttp 440 15524 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.797854&lon=123.008016&risk=LF HTTP/1.1" 200 10609
+INFO 2025-11-12 17:55:48 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+WARNING 2025-11-12 17:56:36 log 440 15524 Forbidden (CSRF token from POST has incorrect length.): /maps/save-assessment/
+WARNING 2025-11-12 17:56:36 basehttp 440 15524 "POST /maps/save-assessment/ HTTP/1.1" 403 2514
+INFO 2025-11-12 17:56:39 basehttp 440 15524 "GET /maps/report/?barangay=Barangay%20I%20(Pob.)&lat=10.802309&lon=122.977075&risk=VHF HTTP/1.1" 200 10973
+INFO 2025-11-12 17:57:07 basehttp 440 15524 "GET /maps/certificate/form/?barangay=Barangay%20I%20(Pob.)&lat=10.802309&lon=122.977075&risk=VHF HTTP/1.1" 200 17061
+INFO 2025-11-12 17:57:15 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9382
+INFO 2025-11-12 17:57:27 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9090
+INFO 2025-11-12 17:57:27 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 17:57:58 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 8850
+INFO 2025-11-12 17:59:08 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9184
+INFO 2025-11-12 17:59:08 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 18:00:32 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9186
+INFO 2025-11-12 18:01:24 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9185
+INFO 2025-11-12 18:01:24 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 18:02:25 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9186
+INFO 2025-11-12 18:02:59 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9189
+INFO 2025-11-12 18:03:59 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9252
+INFO 2025-11-12 18:03:59 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 18:04:24 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9252
+INFO 2025-11-12 18:04:52 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9252
+INFO 2025-11-12 18:07:29 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9572
+INFO 2025-11-12 18:07:29 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 18:08:12 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 9572
+INFO 2025-11-12 18:10:24 basehttp 440 15524 "POST /maps/certificate/ HTTP/1.1" 200 10490
+INFO 2025-11-12 18:10:24 basehttp 440 15524 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-12 18:10:33 basehttp 440 15524 "GET /home/ HTTP/1.1" 200 26575
+INFO 2025-11-12 21:27:48 autoreload 17308 20380 Watching for file changes with StatReloader
+INFO 2025-11-12 21:27:51 basehttp 17308 13740 "GET / HTTP/1.1" 302 0
+INFO 2025-11-12 21:27:51 basehttp 17308 13740 "GET /home/ HTTP/1.1" 200 26575
+INFO 2025-11-12 21:27:51 basehttp 17308 13740 "GET /static/images/drrmo_logo.png HTTP/1.1" 304 0
+WARNING 2025-11-12 21:27:51 log 17308 13740 Not Found: /favicon.ico
+WARNING 2025-11-12 21:27:51 basehttp 17308 13740 "GET /favicon.ico HTTP/1.1" 404 5118
+INFO 2025-11-12 21:34:32 basehttp 17308 14516 "GET /home/ HTTP/1.1" 200 26575
+INFO 2025-11-12 21:35:28 basehttp 17308 14516 "GET /home/ HTTP/1.1" 200 26295
+INFO 2025-11-12 21:36:23 basehttp 17308 12580 "GET /home/ HTTP/1.1" 200 26262
+INFO 2025-11-12 21:36:36 basehttp 17308 12580 "GET /profile/ HTTP/1.1" 200 25355
+INFO 2025-11-12 21:36:36 basehttp 17308 12580 "GET /profile_images/istockphoto-2194474157-612x612.webp HTTP/1.1" 200 10530
+INFO 2025-11-12 21:36:41 basehttp 17308 12580 "GET /home/ HTTP/1.1" 200 26262
+INFO 2025-11-12 21:36:43 views 17308 12580 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-12 21:36:44 views 17308 12580 API returned - Rain: 0.0mm, Temp: 25.9°C, Humidity: 93%, Wind: 4.0km/h
+INFO 2025-11-12 21:36:44 views 17308 12580 Processed 7 days of weather forecast
+INFO 2025-11-12 21:36:44 views 17308 12580 Created new rainfall record: 0.0mm
+INFO 2025-11-12 21:36:44 views 17308 12580 Created new weather record
+INFO 2025-11-12 21:36:44 views 17308 12580 Requesting WorldTides API for Cebu City: https://www.worldtides.info/api/v3
+INFO 2025-11-12 21:36:46 views 17308 12580 Created new tide record: 0.037m from WorldTides API
+INFO 2025-11-12 21:36:46 basehttp 17308 12580 "GET /monitoring/ HTTP/1.1" 200 73022
+INFO 2025-11-12 21:37:10 basehttp 17308 12580 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-12 21:37:10 basehttp 17308 12580 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-12 21:37:28 basehttp 17308 12580 "POST / HTTP/1.1" 302 0
+INFO 2025-11-12 21:37:28 basehttp 17308 12580 "GET /home/ HTTP/1.1" 200 26595

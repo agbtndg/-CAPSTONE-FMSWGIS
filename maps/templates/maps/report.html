@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+{% load static %}
 <head>
     <title>Flood Hazard Assessment Report</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,7 +9,17 @@
     <style>
         @media print {
             @page {
-                margin: 1cm;
+                margin: 6mm;
+            }
+            body {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .report-container {
+                margin: 0 !important;
+                padding: 4mm !important;
+                width: auto !important;
+                min-height: auto !important;
             }
             .no-print {
                 display: none !important;
@@ -24,22 +35,25 @@
         body {
             font-family: 'Inter', Arial, sans-serif;
             background: #f5f5f5;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
         }
         
         .report-container {
-            max-width: 210mm;
-            margin: 0 auto;
+            width: auto;
+            min-height: auto;
+            margin: 6px;
             background: white;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 10px;
+            box-shadow: none;
         }
         
         .header {
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #000;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000;
         }
         
         .qr-section {
@@ -66,13 +80,13 @@
         }
         
         .header-info h3 {
-            font-size: 14px;
+            font-size: 13.5px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
         
         .header-info p {
-            font-size: 12px;
+            font-size: 12.5px;
             margin-bottom: 4px;
             line-height: 1.4;
         }
@@ -80,8 +94,8 @@
         .title {
             clear: both;
             text-align: center;
-            margin: 30px 0 20px 0;
-            padding-top: 20px;
+            margin: 18px 0 12px 0;
+            padding-top: 10px;
         }
         
         .title h1 {
@@ -99,7 +113,7 @@
         .assessment-table th,
         .assessment-table td {
             border: 1px solid #000;
-            padding: 12px;
+            padding: 9.5px;
             text-align: left;
             vertical-align: top;
         }
@@ -112,8 +126,8 @@
         }
         
         .assessment-table td {
-            font-size: 11px;
-            line-height: 1.6;
+            font-size: 12px;
+            line-height: 1.55;
         }
         
         .hazard-col {
@@ -147,23 +161,23 @@
         .explanation-section h3 {
             font-size: 13px;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 9px;
         }
         
         .explanation-section h4 {
             font-size: 12px;
             font-weight: 600;
-            margin: 10px 0 5px 0;
+            margin: 9px 0 6px 0;
         }
         
         .explanation-section ul {
             margin-left: 20px;
             font-size: 11px;
-            line-height: 1.8;
+            line-height: 1.65;
         }
         
         .explanation-section ul li {
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
         
         .action-buttons {
@@ -239,22 +253,19 @@
     
     <div class="report-container">
         <div class="header">
+            <img src="{% static 'images/drrmo_header.png' %}" alt="Silay DRRMO Header" style="width:100%;max-width:1100px;margin-bottom:20px;margin-top:-30px;display:block;">
             <div class="qr-section">
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data={{ request.build_absolute_uri }}" alt="QR Code" class="qr-code">
                 <div class="view-document">View document<br>online</div>
             </div>
-            
             <div class="header-info">
                 <h3>DATE</h3>
                 <p>{{ current_date }}</p>
-                
                 <h3>LOCATION</h3>
                 <p>Silay City, Negros Occidental</p>
-                
                 <h3>COORDINATES</h3>
                 <p>{{ longitude }}, {{ latitude }}</p>
             </div>
-            
             <p class="note-text">
                 Note: When scanning the QR code, the assessment results in the website might vary from the results stated in this report due to updates in the data in the GeoRISKPH database. You may refer to the report available upon scanning the QR code for the updated assessment results
             </p>
