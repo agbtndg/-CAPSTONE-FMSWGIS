@@ -113,7 +113,7 @@ def generate_flood_insights(weather_forecast, rainfall_data, tide_data, flood_re
 
     insights['forecast_analysis'].append({
         'title': 'Temperature Trend',
-        'analysis': f'Average maximum temperature: {avg_temp:.1f}°C. {"High temperatures may intensify rainfall events." if avg_temp > 32 else "Temperatures within normal range."}',
+        'analysis': f'Average maximum temperature: {avg_temp:.1f}Â°C. {"High temperatures may intensify rainfall events." if avg_temp > 32 else "Temperatures within normal range."}',
         'impact': 'moderate' if avg_temp > 32 else 'low'
     })
 
@@ -248,7 +248,7 @@ def monitoring_view(request):
         humidity = current.get('relative_humidity_2m', 75)
         wind_speed = current.get('wind_speed_10m', 10)
         
-        logger.info(f"API returned - Rain: {rainfall_value}mm, Temp: {temperature}°C, Humidity: {humidity}%, Wind: {wind_speed}km/h")
+        logger.info(f"API returned - Rain: {rainfall_value}mm, Temp: {temperature}Â°C, Humidity: {humidity}%, Wind: {wind_speed}km/h")
 
         # Process 7-day forecast data
         daily_data = data.get('daily', {})
@@ -601,7 +601,7 @@ def flood_record_form(request):
                     damage_total_php=flood_record.damage_total_php
                 )
                 
-                success_message = f'✅ Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully added!'
+                success_message = f'âœ… Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully added!'
                 logger.info(f"Flood record created: {flood_record.id} - {flood_record.event}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -614,7 +614,7 @@ def flood_record_form(request):
                 messages.success(request, success_message)
                 return redirect('monitoring_view')
             else:
-                error_message = '❌ Please correct the errors below and try again.'
+                error_message = 'âŒ Please correct the errors below and try again.'
                 logger.warning(f"Form validation errors: {form.errors}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -626,7 +626,7 @@ def flood_record_form(request):
                     
                 messages.error(request, error_message)
         except Exception as e:
-            error_message = f'❌ An unexpected error occurred while saving the record: {str(e)}'
+            error_message = f'âŒ An unexpected error occurred while saving the record: {str(e)}'
             logger.error(f"Error saving flood record: {e}", exc_info=True)
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -655,7 +655,7 @@ def flood_record_edit(request, record_id):
         try:
             if form.is_valid():
                 flood_record = form.save()
-                success_message = f'✅ Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully updated!'
+                success_message = f'âœ… Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully updated!'
                 logger.info(f"Flood record updated: {flood_record.id} - {flood_record.event}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -668,7 +668,7 @@ def flood_record_edit(request, record_id):
                 messages.success(request, success_message)
                 return redirect('monitoring_view')
             else:
-                error_message = '❌ Please correct the errors below and try again.'
+                error_message = 'âŒ Please correct the errors below and try again.'
                 logger.warning(f"Form validation errors: {form.errors}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -680,7 +680,7 @@ def flood_record_edit(request, record_id):
                     
                 messages.error(request, error_message)
         except Exception as e:
-            error_message = f'❌ An unexpected error occurred while updating the record: {str(e)}'
+            error_message = f'âŒ An unexpected error occurred while updating the record: {str(e)}'
             logger.error(f"Error updating flood record: {e}", exc_info=True)
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -710,7 +710,7 @@ def flood_record_delete(request, record_id):
             event_date = flood_record.date.strftime("%Y-%m-%d")
             flood_record.delete()
             
-            success_message = f'✅ Flood record for {event_name} on {event_date} has been successfully deleted!'
+            success_message = f'âœ… Flood record for {event_name} on {event_date} has been successfully deleted!'
             logger.info(f"Flood record deleted: {record_id} - {event_name}")
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -723,7 +723,7 @@ def flood_record_delete(request, record_id):
             messages.success(request, success_message)
             return redirect('monitoring_view')
         except Exception as e:
-            error_message = f'❌ An error occurred while deleting the record: {str(e)}'
+            error_message = f'âŒ An error occurred while deleting the record: {str(e)}'
             logger.error(f"Error deleting flood record: {e}", exc_info=True)
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':

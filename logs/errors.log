@@ -1,0 +1,79 @@
+ERROR 2025-11-12 14:54:21 log 18628 24196 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 145, in home
+    from monitoring.views import get_flood_risk_level, get_tide_risk_level, get_combined_risk_level
+ImportError: cannot import name 'get_flood_risk_level' from 'monitoring.views' (C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py)
+ERROR 2025-11-12 14:54:21 basehttp 18628 24196 "GET /home/ HTTP/1.1" 500 83674
+ERROR 2025-11-12 14:56:26 log 15216 7820 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 153, in home
+    rain_risk_level, rain_risk_color = get_flood_risk_level(rainfall_data.value_mm)
+                                       ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'get_flood_risk_level' is not defined. Did you mean: 'get_combined_risk_level'?
+ERROR 2025-11-12 14:56:26 basehttp 15216 7820 "GET /home/ HTTP/1.1" 500 84901
+ERROR 2025-11-12 14:56:30 log 15216 7820 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 153, in home
+    rain_risk_level, rain_risk_color = get_flood_risk_level(rainfall_data.value_mm)
+                                       ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'get_flood_risk_level' is not defined. Did you mean: 'get_combined_risk_level'?
+ERROR 2025-11-12 14:56:30 basehttp 15216 7820 "GET /home/ HTTP/1.1" 500 85038
+ERROR 2025-11-12 14:57:36 log 13700 22892 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 153, in home
+    rain_risk_level, rain_risk_color = get_flood_risk_level(rainfall_data.value_mm)
+                                       ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'get_flood_risk_level' is not defined
+ERROR 2025-11-12 14:57:36 basehttp 13700 22892 "GET /home/ HTTP/1.1" 500 84075
+ERROR 2025-11-12 14:58:16 log 5372 25016 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 153, in home
+    rain_risk_level, rain_risk_color = get_flood_risk_level(rainfall_data.value_mm)
+                                       ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'get_flood_risk_level' is not defined
+ERROR 2025-11-12 14:58:16 basehttp 5372 25016 "GET /home/ HTTP/1.1" 500 84075

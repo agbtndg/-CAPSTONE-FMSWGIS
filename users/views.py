@@ -10,6 +10,7 @@ from django.core.exceptions import PermissionDenied
 from .forms import CustomUserCreationForm, AdminRegistrationForm, ProfileEditForm
 from .models import CustomUser, UserLog, LoginAttempt
 from .validators import PasswordStrengthValidator
+from monitoring.views import get_flood_risk_level, get_tide_risk_level, get_combined_risk_level
 
 def register(request):
     if request.method == 'POST':
@@ -142,7 +143,7 @@ def home(request):
     
     # Get latest monitoring data
     from monitoring.models import RainfallData, WeatherData, TideLevelData, FloodRecord
-    from monitoring.views import get_flood_risk_level, get_tide_risk_level, get_combined_risk_level
+    
     
     rainfall_data = RainfallData.objects.last()
     weather_data = WeatherData.objects.last()

@@ -2,6 +2,7 @@ from django.core.serializers import serialize
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Barangay, FloodSusceptibility, AssessmentRecord, ReportRecord, CertificateRecord, FloodRecordActivity
+from users.models import UserLog
 from datetime import datetime
 
 @login_required
@@ -233,20 +234,43 @@ def save_assessment(request):
 # View for staff to see their own activity history
 @login_required
 def my_activity(request):
+    # Get sort parameter (default: recent first)
+    sort_order = request.GET.get('sort', 'recent')
+    
     assessments = AssessmentRecord.objects.filter(user=request.user)
     reports = ReportRecord.objects.filter(user=request.user)
     certificates = CertificateRecord.objects.filter(user=request.user)
     flood_activities = FloodRecordActivity.objects.filter(user=request.user)
+    user_logs = UserLog.objects.filter(user=request.user)
+    
+    # Apply ordering based on sort parameter
+    if sort_order == 'oldest':
+        order_by = 'timestamp'  # Oldest first
+    else:
+        order_by = '-timestamp'  # Recent first (default)
+    
+    assessments = assessments.order_by(order_by)
+    reports = reports.order_by(order_by)
+    certificates = certificates.order_by(order_by)
+    flood_activities = flood_activities.order_by(order_by)
+    user_logs = user_logs.order_by(order_by)
+    
+    # Get active tab parameter
+    active_tab = request.GET.get('tab', 'assessments')  # Default to assessments
     
     context = {
         'assessments': assessments,
         'reports': reports,
         'certificates': certificates,
         'flood_activities': flood_activities,
+        'user_logs': user_logs,
+        'sort_order': sort_order,
+        'active_tab': active_tab,
         'total_assessments': assessments.count(),
         'total_reports': reports.count(),
         'total_certificates': certificates.count(),
         'total_flood_activities': flood_activities.count(),
+        'total_user_logs': user_logs.count(),
     }
     
     return render(request, 'maps/my_activity.html', context)
@@ -260,23 +284,45 @@ def all_activities(request):
     if not request.user.is_staff:
         raise PermissionDenied
     
+    # Get sort parameter (default: recent first)
+    sort_order = request.GET.get('sort', 'recent')
+    
     assessments = AssessmentRecord.objects.all().select_related('user')
     reports = ReportRecord.objects.all().select_related('user')
     certificates = CertificateRecord.objects.all().select_related('user')
+    flood_activities = FloodRecordActivity.objects.all().select_related('user')
+    user_logs = UserLog.objects.all().select_related('user')
+    
+    # Apply ordering based on sort parameter
+    if sort_order == 'oldest':
+        order_by = 'timestamp'  # Oldest first
+    else:
+        order_by = '-timestamp'  # Recent first (default)
+    
+    assessments = assessments.order_by(order_by)
+    reports = reports.order_by(order_by)
+    certificates = certificates.order_by(order_by)
+    flood_activities = flood_activities.order_by(order_by)
+    user_logs = user_logs.order_by(order_by)
     
     # Get filter parameters
     filter_user = request.GET.get('user', None)
     filter_date = request.GET.get('date', None)
+    active_tab = request.GET.get('tab', 'assessments')  # Default to assessments
     
     if filter_user:
         assessments = assessments.filter(user__id=filter_user)
         reports = reports.filter(user__id=filter_user)
         certificates = certificates.filter(user__id=filter_user)
+        flood_activities = flood_activities.filter(user__id=filter_user)
+        user_logs = user_logs.filter(user__id=filter_user)
     
     if filter_date:
         assessments = assessments.filter(timestamp__date=filter_date)
         reports = reports.filter(timestamp__date=filter_date)
         certificates = certificates.filter(timestamp__date=filter_date)
+        flood_activities = flood_activities.filter(timestamp__date=filter_date)
+        user_logs = user_logs.filter(timestamp__date=filter_date)
     
     # Get all users for filter dropdown
     from django.contrib.auth import get_user_model
@@ -287,12 +333,18 @@ def all_activities(request):
         'assessments': assessments,
         'reports': reports,
         'certificates': certificates,
+        'flood_activities': flood_activities,
+        'user_logs': user_logs,
         'users': users,
         'filter_user': filter_user,
         'filter_date': filter_date,
+        'sort_order': sort_order,
+        'active_tab': active_tab,
         'total_assessments': assessments.count(),
         'total_reports': reports.count(),
         'total_certificates': certificates.count(),
+        'total_flood_activities': flood_activities.count(),
+        'total_user_logs': user_logs.count(),
     }
     
     return render(request, 'maps/all_activities.html', context)

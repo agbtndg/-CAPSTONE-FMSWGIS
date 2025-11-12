@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+import logging.config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,6 +87,7 @@ DATABASES = {
         'PASSWORD': 'Tndg652611',
         'HOST': 'localhost',
         'PORT': '5432',
+        'CONN_MAX_AGE': 600,  # Connection pooling
     }
 }
 
@@ -127,6 +129,232 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'silay_drrmo/static')]
 
+# Create logs directory if it doesn't exist
+LOGS_DIR = os.path.join(BASE_DIR, 'logs')
+if not os.path.exists(LOGS_DIR):
+    os.makedirs(LOGS_DIR)
+
+# ============================================
+# LOGGING CONFIGURATION - Enhanced
+# ============================================
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
+        'simple': {
+            'format': '{levelname} {asctime} {name} {message}',
+            'style': '{',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+            'filters': ['require_debug_true'],
+        },
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOGS_DIR, 'monitoring.log'),
+            'maxBytes': 1024 * 1024 * 10,  # 10MB
+            'backupCount': 5,
+            'formatter': 'verbose',
+        },
+        'error_file': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOGS_DIR, 'errors.log'),
+            'maxBytes': 1024 * 1024 * 10,  # 10MB
+            'backupCount': 5,
+            'formatter': 'verbose',
+        },
+        'api_file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOGS_DIR, 'api.log'),
+            'maxBytes': 1024 * 1024 * 5,  # 5MB
+            'backupCount': 3,
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file', 'error_file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'monitoring': {
+            'handlers': ['console', 'file', 'error_file', 'api_file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'maps': {
+            'handlers': ['console', 'file', 'error_file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'users': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+    'root': {
+        'handlers': ['console', 'file'],
+        'level': 'INFO',
+    },
+}
+
+# Configure logging
+logging.config.dictConfig(LOGGING)
+
+
+# ============================================
+# CACHING CONFIGURATION - Optional but Recommended
+# ============================================
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'monitoring-cache',
+        'TIMEOUT': 300,  # 5 minutes default cache timeout
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000
+        }
+    }
+}
+
+
+# ============================================
+# WEATHER & FLOOD MONITORING CONFIGURATION
+# ============================================
+
+# Silay City Coordinates (for weather API)
+SILAY_LATITUDE = 10.753794
+SILAY_LONGITUDE = 123.084160
+
+# Cebu City Coordinates (for tide data)
+CEBU_LATITUDE = 10.3167200
+CEBU_LONGITUDE = 123.8907100
+
+# API Keys
+WORLDTIDES_API_KEY = '28d6df6b-6b1c-4aa9-b96d-026ba71348eb'
+
+# Note: Open-Meteo API is free and doesn't require an API key
+OPENMETEO_API_URL = 'https://api.open-meteo.com/v1/forecast'
+
+# API Timeouts (in seconds)
+WEATHER_API_TIMEOUT = 10
+TIDE_API_TIMEOUT = 10
+
+# Data update intervals
+DATA_UPDATE_INTERVAL = 3 * 60 * 60  # 3 hours in seconds
+DATA_RETENTION_DAYS = 365  # Keep 1 year of historical data
+
+
+# ============================================
+# FLOOD PREDICTION CONFIGURATION
+# ============================================
+
+# Risk calculation thresholds (can be overridden in database RiskThreshold model)
+RISK_THRESHOLDS = {
+    'rainfall': {
+        'low': 30,        # mm
+        'moderate': 50,   # mm
+        'high': 100,      # mm
+    },
+    'tide': {
+        'low': 1.0,       # meters
+        'moderate': 1.5,  # meters
+        'high': 2.0,      # meters
+    },
+    'rainfall_intensity': {
+        'heavy': 15,      # mm per day
+        'very_heavy': 25, # mm per day
+        'extreme': 50,    # mm per day
+    }
+}
+
+# Flood-prone barangays (customize based on your city)
+FLOOD_PRONE_BARANGAYS = [
+    'Barangay 1',
+    'Barangay 5', 
+    'Barangay 7',
+    # Add more as needed
+]
+
+# Seasonal rainfall expectations (millimeters)
+SEASONAL_RAINFALL = {
+    1: 30,    # January - Dry
+    2: 25,    # February - Dry
+    3: 35,    # March - Dry
+    4: 50,    # April - Pre-Monsoon
+    5: 150,   # May - Monsoon Start
+    6: 200,   # June - Monsoon
+    7: 200,   # July - Monsoon
+    8: 200,   # August - Monsoon
+    9: 250,   # September - Peak Monsoon
+    10: 180,  # October - Monsoon End
+    11: 100,  # November - Post-Monsoon
+    12: 50,   # December - Dry Season Start
+}
+
+# Recommendation priorities
+RECOMMENDATION_PRIORITIES = {
+    'high': {'color': 'red', 'action_required': True},
+    'medium': {'color': 'yellow', 'action_required': False},
+    'low': {'color': 'green', 'action_required': False},
+}
+
+
+# ============================================
+# ALERTS & NOTIFICATIONS CONFIGURATION
+# ============================================
+
+# Alert settings
+ALERT_SETTINGS = {
+    'critical_alert_threshold': 3.5,  # Risk level >= 3.5 triggers critical alert
+    'high_alert_threshold': 2.5,      # Risk level >= 2.5 triggers high alert
+    'enable_email_alerts': False,      # Set to True to enable email notifications
+    'enable_sms_alerts': False,        # Set to True to enable SMS notifications
+    'alert_recipients': [
+        'drrmo@silay.gov.ph',
+    ],
+    'sms_recipients': [
+        # Add emergency contact numbers here
+    ]
+}
+
+
+# ============================================
+# EMAIL CONFIGURATION (for alerts)
+# ============================================
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Console for development
+# For production, use:
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'your-email@gmail.com'
+# EMAIL_HOST_PASSWORD = 'your-app-password'
+# DEFAULT_FROM_EMAIL = 'your-email@gmail.com'
+
+
 # Admin Registration Key
 ADMIN_REGISTRATION_KEY = 'silay-drrmo-admin-2025'  # Change this in production!
 
@@ -145,6 +373,41 @@ if os.name != "nt":  # not Windows
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
-WORLDTIDES_API_KEY = '28d6df6b-6b1c-4aa9-b96d-026ba71348eb'
-
 LOGIN_URL = '/'
+
+
+# ============================================
+# SECURITY SETTINGS FOR PRODUCTION
+# ============================================
+
+if not DEBUG:
+    # HTTPS/SSL settings
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    
+    # HSTS settings
+    SECURE_HSTS_SECONDS = 31536000  # 1 year
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    
+    # Other security
+    SECURE_BROWSER_XSS_FILTER = True
+    X_FRAME_OPTIONS = 'DENY'
+    SECURE_CONTENT_SECURITY_POLICY = {
+        'default-src': ("'self'",),
+        'script-src': ("'self'", "'unsafe-inline'", "cdn.jsdelivr.net", "cdnjs.cloudflare.com"),
+        'style-src': ("'self'", "'unsafe-inline'", "cdn.jsdelivr.net", "fonts.googleapis.com"),
+        'font-src': ("'self'", "fonts.gstatic.com"),
+        'img-src': ("'self'", "data:", "https:"),
+    }
+
+
+# ============================================
+# SESSION & COOKIE CONFIGURATION
+# ============================================
+
+SESSION_COOKIE_AGE = 86400  # 24 hours
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True

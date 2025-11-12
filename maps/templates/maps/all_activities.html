@@ -501,7 +501,7 @@
         <div class="header-top">
             <div>
                 <h1><i class="fas fa-chart-line"></i> System Activities</h1>
-                <p>Monitor and review all assessments, reports, certificates, and flood records</p>
+                <p>Monitor and review all assessments, reports, certificates, flood records, and user activity logs</p>
             </div>
             <a href="{% url 'home' %}" class="back-btn">
                 <i class="fas fa-arrow-left"></i> Back to Dashboard
@@ -509,6 +509,7 @@
         </div>
 
         <form method="get" class="filters">
+            <input type="hidden" name="tab" id="active_tab" value="{{ active_tab|default:'assessments' }}">
             <div class="filter-group">
                 <label>Filter by Staff</label>
                 <select name="user">
@@ -524,12 +525,19 @@
                 <label>Filter by Date</label>
                 <input type="date" name="date" value="{{ filter_date }}">
             </div>
+            <div class="filter-group">
+                <label>Sort Order</label>
+                <select name="sort">
+                    <option value="recent" {% if sort_order == 'recent' or not sort_order %}selected{% endif %}>Recent First</option>
+                    <option value="oldest" {% if sort_order == 'oldest' %}selected{% endif %}>Oldest First</option>
+                </select>
+            </div>
             <button type="submit" class="filter-btn">
                 <i class="fas fa-filter"></i> Apply Filters
             </button>
-            <a href="{% url 'all_activities' %}" class="clear-btn">
+            <button type="button" class="clear-btn" onclick="clearFilters()">
                 <i class="fas fa-times"></i> Clear
-            </a>
+            </button>
         </form>
     </div>
 
@@ -548,26 +556,33 @@
         </div>
         <div class="stat-card">
             <h3><i class="fas fa-water"></i> Flood Records</h3>
-            <div class="value">{{ total_flood_activities }}</div>
+            <div class="value">{{ total_flood_activities|default:0 }}</div>
+        </div>
+        <div class="stat-card">
+            <h3><i class="fas fa-history"></i> User Activities</h3>
+            <div class="value">{{ total_user_logs }}</div>
         </div>
     </div>
 
     <div class="tabs">
-        <button class="tab active" onclick="switchTab('assessments')">
+        <button class="tab {% if active_tab == 'assessments' or not active_tab %}active{% endif %}" onclick="switchTab('assessments')">
             <i class="fas fa-map-marked-alt"></i> Assessments ({{ total_assessments }})
         </button>
-        <button class="tab" onclick="switchTab('reports')">
+        <button class="tab {% if active_tab == 'reports' %}active{% endif %}" onclick="switchTab('reports')">
             <i class="fas fa-file-alt"></i> Reports ({{ total_reports }})
         </button>
-        <button class="tab" onclick="switchTab('certificates')">
+        <button class="tab {% if active_tab == 'certificates' %}active{% endif %}" onclick="switchTab('certificates')">
             <i class="fas fa-certificate"></i> Certificates ({{ total_certificates }})
         </button>
-        <button class="tab" onclick="switchTab('flood-records')">
-            <i class="fas fa-water"></i> Flood Records ({{ total_flood_activities }})
+        <button class="tab {% if active_tab == 'flood-records' %}active{% endif %}" onclick="switchTab('flood-records')">
+            <i class="fas fa-water"></i> Flood Records ({{ total_flood_activities|default:0 }})
+        </button>
+        <button class="tab {% if active_tab == 'user-logs' %}active{% endif %}" onclick="switchTab('user-logs')">
+            <i class="fas fa-history"></i> User Logs ({{ total_user_logs }})
         </button>
     </div>
 
-    <div id="assessments" class="content-section active">
+    <div id="assessments" class="content-section {% if active_tab == 'assessments' or not active_tab %}active{% endif %}">
         {% if assessments %}
             {% for assessment in assessments %}
             <div class="activity-card">
@@ -623,7 +638,7 @@
         {% endif %}
     </div>
 
-    <div id="reports" class="content-section">
+    <div id="reports" class="content-section {% if active_tab == 'reports' %}active{% endif %}">
         {% if reports %}
             {% for report in reports %}
             <div class="activity-card">
@@ -679,7 +694,7 @@
         {% endif %}
     </div>
 
-    <div id="certificates" class="content-section">
+    <div id="certificates" class="content-section {% if active_tab == 'certificates' %}active{% endif %}">
         {% if certificates %}
             {% for cert in certificates %}
             <div class="activity-card">
@@ -731,7 +746,7 @@
         {% endif %}
     </div>
 
-    <div id="flood-records" class="content-section">
+    <div id="flood-records" class="content-section {% if active_tab == 'flood-records' %}active{% endif %}">
         {% if flood_activities %}
             {% for activity in flood_activities %}
             <div class="activity-card">
@@ -792,6 +807,61 @@
             </div>
         {% endif %}
     </div>
+
+    <div id="user-logs" class="content-section {% if active_tab == 'user-logs' %}active{% endif %}">
+        {% if user_logs %}
+            {% for log in user_logs %}
+            <div class="activity-card">
+                <div class="activity-header">
+                    <div class="activity-title">
+                        <i class="fas fa-user-clock"></i> {{ log.action }}
+                        <span class="staff-badge">
+                            <i class="fas fa-user"></i> {{ log.user.get_full_name }}
+                        </span>
+                        {% if 'login' in log.action|lower %}
+                            <span class="badge badge-create">Login</span>
+                        {% elif 'logout' in log.action|lower %}
+                            <span class="badge badge-update">Logout</span>
+                        {% else %}
+                            <span class="badge">Activity</span>
+                        {% endif %}
+                    </div>
+                    <div class="activity-timestamp">
+                        <i class="far fa-clock"></i> {{ log.timestamp|date:"M d, Y - h:i A" }}
+                    </div>
+                </div>
+                <div class="activity-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Staff Member</div>
+                        <div class="detail-value">{{ log.user.username }} ({{ log.user.staff_id }})</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Department</div>
+                        <div class="detail-value">{{ log.user.department|default:"Not specified" }}</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Position</div>
+                        <div class="detail-value">{{ log.user.position|default:"Not specified" }}</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Activity Type</div>
+                        <div class="detail-value">{{ log.action }}</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Time</div>
+                        <div class="detail-value">{{ log.timestamp|timesince }} ago ({{ log.timestamp|date:"M d, Y - h:i:s A" }})</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="empty-state">
+                <i class="fas fa-history"></i>
+                <h3>No User Logs Found</h3>
+                <p>No user activity logs have been recorded yet.</p>
+            </div>
+        {% endif %}
+    </div>
 </div>
 
 <script>
@@ -811,6 +881,22 @@
 
         // Add active class to clicked tab
         event.target.closest('.tab').classList.add('active');
+
+        // Update hidden field to track active tab
+        document.getElementById('active_tab').value = tabName;
+    }
+
+    function clearFilters() {
+        // Clear all filter inputs
+        document.querySelector('select[name="user"]').value = '';
+        document.querySelector('input[name="date"]').value = '';
+        document.querySelector('select[name="sort"]').value = 'recent';
+        
+        // Keep the current tab active
+        // The hidden tab field already has the current value
+        
+        // Submit the form
+        document.querySelector('.filters').submit();
     }
 </script>
 {% endblock %}
