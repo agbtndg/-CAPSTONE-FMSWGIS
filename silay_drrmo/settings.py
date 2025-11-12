@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 import logging.config
+# Load environment variables (we'll create .env later)
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +29,7 @@ SECRET_KEY = 'django-insecure-ray+$42+3p@)$4w00ul5-eftyn6%5eu$57*(y)peu=1p3!3tim
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ['silay-drrmo-app.onrender.com', 'localhost', '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['https://silay-drrmo-app.onrender.com']
@@ -82,12 +86,12 @@ WSGI_APPLICATION = 'silay_drrmo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'silaydrrmo_db',
-        'USER': 'postgres',
-        'PASSWORD': 'Tndg652611',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        'CONN_MAX_AGE': 600,  # Connection pooling
+        'NAME': os.getenv('PGDATABASE', 'silaydrrmo_db'),
+        'USER': os.getenv('PGUSER', 'postgres'),
+        'PASSWORD': os.getenv('PGPASSWORD', 'Tndg652611'),
+        'HOST': os.getenv('PGHOST', 'localhost'),
+        'PORT': os.getenv('PGPORT', '5432'),
+        'CONN_MAX_AGE': 600,
     }
 }
 
@@ -128,6 +132,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'silay_drrmo/static')]
+
+# === PRODUCTION STATIC SETTINGS (ALWAYS ACTIVE) ===
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Create logs directory if it doesn't exist
 LOGS_DIR = os.path.join(BASE_DIR, 'logs')
