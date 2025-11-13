@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-{% load static %}
 <head>
     <title>Flood Hazard Certification</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,33 +8,11 @@
     <style>
         @media print {
             @page {
-                margin: 8mm;
+                margin: 1.5cm;
                 size: letter;
-            }
-            body {
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-            .certificate-container {
-                margin: 0 !important;
-                padding: 6mm !important;
-                max-width: 100% !important;
-                box-shadow: none !important;
             }
             .no-print {
                 display: none !important;
-            }
-        }
-
-        @media print and (size: A4) {
-            @page {
-                size: A4;
-                margin: 10mm;
-            }
-            .certificate-container {
-                min-height: 340mm;
-                padding-top: 22mm !important;
-                padding-bottom: 22mm !important;
             }
         }
         
@@ -48,22 +25,21 @@
         body {
             font-family: 'Times New Roman', Times, serif;
             background: #f5f5f5;
-            padding: 0;
-            margin: 0;
-            line-height: 1.6;
+            padding: 20px;
+            line-height: 1.8;
         }
         
         .certificate-container {
-            max-width: 100%;
-            margin: 10px;
+            max-width: 8.5in;
+            margin: 0 auto;
             background: white;
-            padding: 18px 18px 12px 18px;
-            box-shadow: none;
+            padding: 40px 60px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .header {
             text-align: center;
-            margin-bottom: 18px;
+            margin-bottom: 40px;
         }
         
         .header-logos {
@@ -109,28 +85,26 @@
         
         .title {
             text-align: center;
-            margin: 18px 0 14px 0;
+            margin: 40px 0 30px 0;
         }
         
         .title h1 {
-            font-size: 23px;
+            font-size: 24px;
             font-weight: bold;
-            letter-spacing: 7.5px;
+            letter-spacing: 8px;
             color: #999;
-            margin-top: 38px;
-            margin-bottom: 32px;
         }
         
         .content {
             text-align: justify;
-            font-size: 14.2px;
-            line-height: 1.75;
-            margin-bottom: 24px;
+            font-size: 13px;
+            line-height: 2;
+            margin-bottom: 30px;
         }
         
         .content p {
-            margin-bottom: 18px;
-            text-indent: 40px;
+            margin-bottom: 20px;
+            text-indent: 50px;
         }
         
         .establishment-name {
@@ -168,12 +142,12 @@
         }
         
         .issued-date {
-            margin-top: 24px;
-            text-indent: 40px;
+            margin-top: 30px;
+            text-indent: 50px;
         }
         
         .signature-section {
-            margin-top: 44px;
+            margin-top: 60px;
         }
         
         .signature-block {
@@ -182,10 +156,10 @@
         
         .signature-line {
             display: inline-block;
-            width: 280px;
+            width: 300px;
             border-bottom: 2px solid #000;
-            margin-bottom: 9px;
-            height: 52px;
+            margin-bottom: 5px;
+            height: 60px;
         }
         
         .signatory-name {
@@ -201,8 +175,8 @@
         
         .footer {
             text-align: center;
-            margin-top: 25px;
-            padding-top: 14px;
+            margin-top: 40px;
+            padding-top: 20px;
             border-top: 2px solid #000;
         }
         
@@ -211,63 +185,47 @@
             font-weight: bold;
         }
         
-        .action-buttons {
+        .print-btn {
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1000;
-            display: flex;
-            gap: 12px;
-        }
-        .print-btn {
-            background: linear-gradient(135deg, #2563eb, #1e3a5f);
+            padding: 12px 24px;
+            background: #3b82f6;
             color: white;
             border: none;
             border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            padding: 14px 24px;
+            font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
-            font-family: inherit;
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+            font-family: 'Inter', Arial, sans-serif;
             transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
-        .close-btn {
-            background: linear-gradient(135deg, #dc2626, #b91c1c);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            padding: 14px 20px;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(220, 38, 38, 0.15);
-            font-family: inherit;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .close-btn:hover {
-            background: linear-gradient(135deg, #b91c1c, #dc2626);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+        
+        .print-btn:hover {
+            background: #2563eb;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
         }
     </style>
 </head>
 <body>
-    <div class="action-buttons no-print">
-        <button class="close-btn" onclick="window.close()">✕ Cancel</button>
-        <button class="print-btn" onclick="window.print()">🖨️ Print Certificate</button>
-    </div>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print Certificate</button>
     
     <div class="certificate-container">
         <div class="header">
-            <img src="{% static 'images/drrmo_header.png' %}" alt="Silay DRRMO Header" style="width:100%;max-width:1100px;margin-bottom:20px;margin-top:-30px;display:block;">
-            <!-- Removed duplicate text header under DRRMO header image -->
+            <div class="header-logos">
+                <!-- Placeholder for logos - you can replace with actual logo URLs -->
+                <div style="width: 80px; height: 80px; background: #ddd; border-radius: 50%;"></div>
+                <div style="width: 80px; height: 80px; background: #ddd; border-radius: 50%;"></div>
+                <div style="width: 80px; height: 80px; background: #ddd; border-radius: 50%;"></div>
+            </div>
+            
+            <div class="header-text">
+                <h1>Republic of the Philippines</h1>
+                <h2>Province of Negros Occidental</h2>
+                <h3>SILAY CITY DISASTER RISK REDUCTION AND MANAGEMENT OFFICE</h3>
+                <p>Aguinaldo Street, Barangay V, Silay City 6116</p>
+            </div>
         </div>
         
         <div class="title">
@@ -337,15 +295,7 @@
         </div>
         
         <div class="footer">
-            <p style="font-size:13px; font-weight:bold; margin-bottom:6px;">SILAY CITY DISASTER RISK REDUCTION &amp; MANAGEMENT COUNCIL</p>
-            <div style="font-size:11.5px; line-height:1.7;">
-                <strong>Emergency Hotlines:</strong><br>
-                SMART: 0918-489-6175<br>
-                GLOBE: 0967-305-4668<br>
-                PLDT: 441-3685 &amp; 213-8979<br>
-                <strong>Email:</strong> <a href="mailto:drrmsilaycity@gmail.com" style="color:#2563eb;text-decoration:none;">drrmsilaycity@gmail.com</a><br>
-                <strong>Facebook:</strong> <a href="https://www.facebook.com/silaycitydrrmoffice" target="_blank" style="color:#2563eb;text-decoration:none;">facebook.com/silaycitydrrmoffice</a>
-            </div>
+            <p>SILAY CITY DISASTER RISK REDUCTION & MANAGEMENT COUNCIL</p>
         </div>
     </div>
 </body>
