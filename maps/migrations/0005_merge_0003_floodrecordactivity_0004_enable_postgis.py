@@ -7,7 +7,6 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('maps', '0003_floodrecordactivity'),
-        ('maps', '0004_enable_postgis'),
     ]
 
     operations = [
