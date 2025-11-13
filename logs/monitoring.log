@@ -223,3 +223,53 @@ INFO 2025-11-12 21:37:28 basehttp 17308 12580 "GET /home/ HTTP/1.1" 200 26595
 INFO 2025-11-12 21:51:33 autoreload 29144 14468 Watching for file changes with StatReloader
 INFO 2025-11-12 21:51:46 basehttp 29144 28532 "GET / HTTP/1.1" 302 0
 INFO 2025-11-12 21:51:46 basehttp 29144 28532 "GET /home/ HTTP/1.1" 200 26262
+INFO 2025-11-13 17:45:19 autoreload 25960 13916 Watching for file changes with StatReloader
+INFO 2025-11-13 17:45:22 basehttp 25960 12600 "GET / HTTP/1.1" 302 0
+INFO 2025-11-13 17:45:22 basehttp 25960 12600 "GET /home/ HTTP/1.1" 200 26262
+INFO 2025-11-13 17:45:22 basehttp 25960 30692 "GET /static/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2025-11-13 17:45:22 basehttp 25960 12600 "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-11-13 17:45:22 basehttp 25960 16268 "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2025-11-13 17:45:22 basehttp 25960 23788 "GET /static/images/drrmo_logo.png HTTP/1.1" 304 0
+INFO 2025-11-13 17:45:22 basehttp 25960 23788 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-11-13 17:45:22 basehttp 25960 16268 "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 304 0
+INFO 2025-11-13 17:45:25 basehttp 25960 16268 "GET /profile/ HTTP/1.1" 200 25355
+INFO 2025-11-13 17:45:25 basehttp 25960 16268 "GET /profile_images/istockphoto-2194474157-612x612.webp HTTP/1.1" 200 10530
+INFO 2025-11-13 17:45:26 basehttp 25960 16268 "GET /home/ HTTP/1.1" 200 26262
+INFO 2025-11-13 17:45:43 basehttp 25960 16268 "GET /maps/ HTTP/1.1" 200 1023270
+INFO 2025-11-13 17:45:43 basehttp 25960 16268 "GET /static/js/ol.js HTTP/1.1" 304 0
+WARNING 2025-11-13 17:45:47 log 25960 16268 Forbidden (CSRF token from POST has incorrect length.): /maps/save-assessment/
+WARNING 2025-11-13 17:45:47 basehttp 25960 16268 "POST /maps/save-assessment/ HTTP/1.1" 403 2514
+INFO 2025-11-13 17:45:51 basehttp 25960 16268 "GET /maps/report/?barangay=Rizal&lat=10.809988&lon=122.977265&risk=MF HTTP/1.1" 200 10725
+INFO 2025-11-13 17:45:51 basehttp 25960 16268 "GET /static/images/drrmo_header.png HTTP/1.1" 304 0
+INFO 2025-11-13 17:46:03 basehttp 25960 16268 "GET /maps/certificate/form/?barangay=Rizal&lat=10.809988&lon=122.977265&risk=MF HTTP/1.1" 200 17025
+INFO 2025-11-13 17:46:06 basehttp 25960 16268 "GET /home/ HTTP/1.1" 200 26262
+INFO 2025-11-13 17:46:08 basehttp 25960 16268 "GET /home/ HTTP/1.1" 200 26262
+INFO 2025-11-13 17:46:08 basehttp 25960 16268 "GET /home/ HTTP/1.1" 200 26262
+INFO 2025-11-13 17:46:09 views 25960 16268 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 17:46:10 views 25960 16268 API returned - Rain: 0.0mm, Temp: 27.5°C, Humidity: 89%, Wind: 8.0km/h
+INFO 2025-11-13 17:46:10 views 25960 16268 Processed 7 days of weather forecast
+INFO 2025-11-13 17:46:10 views 25960 16268 Created new rainfall record: 0.0mm
+INFO 2025-11-13 17:46:10 views 25960 16268 Created new weather record
+INFO 2025-11-13 17:46:10 views 25960 16268 Requesting WorldTides API for Cebu City: https://www.worldtides.info/api/v3
+INFO 2025-11-13 17:46:12 views 25960 16268 Created new tide record: -0.026m from WorldTides API
+INFO 2025-11-13 17:46:12 basehttp 25960 16268 "GET /monitoring/ HTTP/1.1" 200 74031
+INFO 2025-11-13 17:46:12 basehttp 25960 16268 "GET /static/js/chart.js HTTP/1.1" 304 0
+INFO 2025-11-13 17:46:46 basehttp 25960 16268 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 659
+INFO 2025-11-13 17:46:49 basehttp 25960 16268 "GET /monitoring/api/trends/?time_range=24h HTTP/1.1" 200 242
+INFO 2025-11-13 17:46:54 basehttp 25960 16268 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-13 17:47:10 views 25960 16268 Flood record created: 15 - Flash Flood
+INFO 2025-11-13 17:47:10 basehttp 25960 16268 "POST /monitoring/flood-record/ HTTP/1.1" 200 154
+INFO 2025-11-13 17:47:12 views 25960 16268 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 17:47:13 views 25960 16268 API returned - Rain: 0.0mm, Temp: 27.5°C, Humidity: 89%, Wind: 8.0km/h
+INFO 2025-11-13 17:47:13 views 25960 16268 Processed 7 days of weather forecast
+INFO 2025-11-13 17:47:13 basehttp 25960 16268 "GET /monitoring/ HTTP/1.1" 200 75227
+INFO 2025-11-13 17:47:27 basehttp 25960 16268 "GET /monitoring/flood-record/delete/15/ HTTP/1.1" 200 8532
+INFO 2025-11-13 17:47:29 views 25960 16268 Flood record deleted: 15 - Flash Flood
+INFO 2025-11-13 17:47:29 basehttp 25960 16268 "POST /monitoring/flood-record/delete/15/ HTTP/1.1" 302 0
+INFO 2025-11-13 17:47:29 views 25960 16268 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 17:47:30 views 25960 16268 API returned - Rain: 0.0mm, Temp: 27.5°C, Humidity: 89%, Wind: 8.0km/h
+INFO 2025-11-13 17:47:30 views 25960 16268 Processed 7 days of weather forecast
+INFO 2025-11-13 17:47:30 basehttp 25960 16268 "GET /monitoring/ HTTP/1.1" 200 74421
+INFO 2025-11-13 17:47:43 basehttp 25960 16268 "GET /home/ HTTP/1.1" 200 26262
+INFO 2025-11-13 17:47:44 basehttp 25960 16268 "GET /maps/my-activity/ HTTP/1.1" 200 262918
+INFO 2025-11-13 17:47:44 basehttp 25960 16268 "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 23900
