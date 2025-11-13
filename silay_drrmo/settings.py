@@ -419,3 +419,12 @@ SESSION_COOKIE_AGE = 86400  # 24 hours
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_COOKIE_HTTPONLY = True
 CSRF_COOKIE_HTTPONLY = True
+
+# Set paths to system GDAL libraries (Render-specific)
+if os.getenv('DATABASE_URL'):  # Production (Render)
+    os.environ['GDAL_LIBRARY_PATH'] = '/usr/lib/x86_64-linux-gnu/libgdal.so'
+    os.environ['GEOS_LIBRARY_PATH'] = '/usr/lib/x86_64-linux-gnu/libgeos_c.so'
+    GDAL_LIBRARY_PATH = '/usr/lib/x86_64-linux-gnu/libgdal.so'
+    GEOS_LIBRARY_PATH = '/usr/lib/x86_64-linux-gnu/libgeos_c.so'
+else:  # Local development (skip or use your local paths)
+    pass  # Your local setup already works
