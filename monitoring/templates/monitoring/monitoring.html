@@ -868,9 +868,6 @@
             <h1>Monitoring Dashboard</h1>
             <p>Real-time flood risk monitoring and data analysis</p>
         </div>
-        <a href="{% url 'home' %}" class="back-btn">
-            <i class="fas fa-arrow-left"></i> Back to Dashboard
-        </a>
     </div>
 
     <!-- Flood Risk Alert Banner -->
@@ -1294,6 +1291,8 @@
                 tideTrendChart.data.labels = data.tide_timestamps;
                 tideTrendChart.data.datasets[0].data = data.tide_values;
                 tideTrendChart.update();
+                // Update the table view as well
+                updateTrendsTable(data.rainfall_timestamps, data.rainfall_values, data.tide_values);
             });
     }
 
@@ -1354,6 +1353,8 @@
                 tideTrendChart.data.labels = data.tide_timestamps;
                 tideTrendChart.data.datasets[0].data = data.tide_values;
                 tideTrendChart.update();
+                // Update the table view as well
+                updateTrendsTable(data.rainfall_timestamps, data.rainfall_values, data.tide_values);
             })
             .catch(error => {
                 alert('Error loading data. Please try again.');

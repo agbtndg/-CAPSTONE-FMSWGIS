@@ -140,6 +140,62 @@ def home(request):
         'recent_logs': UserLog.objects.all().order_by('-timestamp')[:5],
         'total_users': CustomUser.objects.filter(is_active=True).count()
     }
+
+    # Admin summary cards context
+    if request.user.is_staff:
+        # Total activities: count of all UserLog, FloodRecordActivity, AssessmentRecord, ReportRecord, CertificateRecord
+        from maps.models import FloodRecordActivity, AssessmentRecord, ReportRecord, CertificateRecord
+        total_activities = (
+            UserLog.objects.count() +
+            FloodRecordActivity.objects.count() +
+            AssessmentRecord.objects.count() +
+            ReportRecord.objects.count() +
+            CertificateRecord.objects.count()
+        )
+        # Most active user: user with most UserLog entries
+        from django.db.models import Count
+        most_active = UserLog.objects.values('user__username').annotate(activity_count=Count('id')).order_by('-activity_count').first()
+        most_active_user = None
+        if most_active:
+            most_active_user = type('MostActiveUser', (), {})()
+            most_active_user.username = most_active['user__username']
+            most_active_user.activity_count = most_active['activity_count']
+
+        # Recent activity highlights: last 5 from all activity models, sorted by timestamp/date
+        recent_activity_highlights = []
+        # UserLog
+        for log in UserLog.objects.all().order_by('-timestamp')[:5]:
+            log.type = 'UserLog'
+            recent_activity_highlights.append(log)
+        # FloodRecordActivity
+        for flood in FloodRecordActivity.objects.all().order_by('-timestamp')[:5]:
+            flood.type = 'FloodRecordActivity'
+            flood.description = f"{flood.get_action_display()} flood record for {flood.event_type}"
+            flood.date = flood.timestamp
+            recent_activity_highlights.append(flood)
+        # AssessmentRecord
+        for assess in AssessmentRecord.objects.all().order_by('-timestamp')[:5]:
+            assess.type = 'AssessmentRecord'
+            assess.summary = f"Assessment for {assess.barangay} by {assess.user.username}"
+            assess.date = assess.timestamp
+            recent_activity_highlights.append(assess)
+        # ReportRecord
+        for report in ReportRecord.objects.all().order_by('-timestamp')[:5]:
+            report.type = 'ReportRecord'
+            report.summary = f"Report for {report.barangay} by {report.user.username}"
+            report.date = report.timestamp
+            recent_activity_highlights.append(report)
+        # CertificateRecord
+        for cert in CertificateRecord.objects.all().order_by('-timestamp')[:5]:
+            cert.type = 'CertificateRecord'
+            cert.summary = f"Certificate for {cert.establishment_name} by {cert.user.username}"
+            cert.date = cert.timestamp
+            recent_activity_highlights.append(cert)
+        # Sort all by date/timestamp descending
+        recent_activity_highlights.sort(key=lambda x: getattr(x, 'timestamp', getattr(x, 'date', None)), reverse=True)
+        context['total_activities'] = total_activities
+        context['most_active_user'] = most_active_user
+        context['recent_activity_highlights'] = recent_activity_highlights[:5]
     
     # Get latest monitoring data
     from monitoring.models import RainfallData, WeatherData, TideLevelData, FloodRecord

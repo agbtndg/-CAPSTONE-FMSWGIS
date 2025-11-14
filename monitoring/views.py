@@ -534,15 +534,15 @@ def fetch_trends_api(request):
         
         # Fetch filtered data
         if start_date_str and end_date_str:
-            # Custom date range filtering
+            # Custom date range filtering (timezone-aware, inclusive)
             rainfall_history = list(RainfallData.objects.filter(
-                timestamp__date__gte=start_date,
-                timestamp__date__lte=end_date
+                timestamp__gte=start_datetime,
+                timestamp__lte=end_datetime
             ).order_by('timestamp').values('timestamp', 'value_mm'))
-            
+
             tide_history = list(TideLevelData.objects.filter(
-                timestamp__date__gte=start_date,
-                timestamp__date__lte=end_date
+                timestamp__gte=start_datetime,
+                timestamp__lte=end_datetime
             ).order_by('timestamp').values('timestamp', 'height_m'))
         else:
             # Time-based filtering
@@ -655,7 +655,7 @@ def flood_record_edit(request, record_id):
         try:
             if form.is_valid():
                 flood_record = form.save()
-                success_message = f'âœ… Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully updated!'
+                success_message = f'✅ Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully updated!'
                 logger.info(f"Flood record updated: {flood_record.id} - {flood_record.event}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -668,7 +668,7 @@ def flood_record_edit(request, record_id):
                 messages.success(request, success_message)
                 return redirect('monitoring_view')
             else:
-                error_message = 'âŒ Please correct the errors below and try again.'
+                error_message = '❌ Please correct the errors below and try again.'
                 logger.warning(f"Form validation errors: {form.errors}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -680,7 +680,7 @@ def flood_record_edit(request, record_id):
                     
                 messages.error(request, error_message)
         except Exception as e:
-            error_message = f'âŒ An unexpected error occurred while updating the record: {str(e)}'
+            error_message = f'❌ An unexpected error occurred while updating the record: {str(e)}'
             logger.error(f"Error updating flood record: {e}", exc_info=True)
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':

@@ -381,7 +381,7 @@
                 System Overview
             </h2>
             <div class="last-updated">
-                Last updated: <span id="current-time">{{ weather_data.timestamp|date:"M d, Y H:i" }} PST</span>
+                Last updated: <span id="current-time">{{ weather_data.timestamp|date:"M d, Y" }} PST</span>
             </div>
         </div>
 
@@ -523,92 +523,140 @@
         </div>
     </div>
 
-    <!-- Enhanced Dashboard Cards -->
-    <div class="dashboard-grid">
-        <!-- Maps Card -->
-        <div class="dashboard-card">
-            <h3><i class="fas fa-map-marked-alt"></i> Geographic Maps</h3>
-            <p>Access comprehensive geographical data, interactive flood maps, and detailed barangay information for Silay City disaster management and planning.</p>
-            <a href="{% url 'map_view' %}" class="card-link">
-                <span>Explore Maps</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
+
+    <!-- Dashboard Cards Section: Responsive Flex Layout -->
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: flex-start;">
+        <!-- Current Flood/Weather Risk Level & Alerts -->
+        <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
+            <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-exclamation-triangle"></i> Current Risk & Alerts</h3>
+            {% if combined_risk %}
+                <div style="font-size:16px; margin-bottom:8px;">Overall Risk: <span class="risk-indicator risk-{{ combined_risk.level|lower }}">{{ combined_risk.level }}</span></div>
+            {% endif %}
+            {% if flood_alerts %}
+                <ul style="padding-left:18px;">
+                {% for alert in flood_alerts %}
+                    <li style="color:#dc2626; font-size:15px;">{{ alert }}</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <div style="color:var(--text-muted); font-size:14px;">No active flood or weather alerts.</div>
+            {% endif %}
         </div>
 
-        <!-- Monitoring Card -->
-        <div class="dashboard-card">
-            <h3><i class="fas fa-chart-line"></i> Real-time Monitoring</h3>
-            <p>Monitor live weather conditions, rainfall patterns, tide levels, and flood monitoring data with advanced risk assessment algorithms.</p>
+        <!-- Recent Flood Events or Reports -->
+        <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
+            <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-water"></i> Recent Flood Events</h3>
             {% if recent_floods %}
-            <div class="recent-activity">
-                <h4>Recent Flood Events</h4>
-                {% for flood in recent_floods %}
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <span>{{ flood.event }} - {{ flood.date|date:"M d, Y" }}</span>
-                </div>
+                <ul style="padding-left:18px;">
+                {% for flood in recent_floods|slice:':5' %}
+                    <li style="font-size:15px; margin-bottom:4px;">{{ flood.event }} <span style="color:var(--text-muted); font-size:13px;">({{ flood.date|date:"M d, Y" }})</span></li>
                 {% endfor %}
-            </div>
+                </ul>
+            {% else %}
+                <div style="color:var(--text-muted); font-size:14px;">No recent flood events reported.</div>
             {% endif %}
-            <a href="{% url 'monitoring_view' %}" class="card-link">
-                <span>View Monitoring</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
         </div>
 
-        <!-- Activity History Card -->
-        <div class="dashboard-card">
-            <h3><i class="fas fa-history"></i> My Activity History</h3>
-            <p>Access your complete record of assessments, reports, certificates, and contributions to the DRRMO system.</p>
-            <a href="{% url 'my_activity' %}" class="card-link">
-                <span>View My Activities</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-
-        {% if user.is_staff %}
-        <!-- User Management Card -->
-        <div class="dashboard-card">
-            <h3><i class="fas fa-user-shield"></i> User Management</h3>
-            <p>Manage user accounts, review pending approvals, and monitor system access. Ensure secure and efficient user administration.</p>
-            <div class="recent-activity">
-                <h4>Quick Stats</h4>
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <span>{{ pending_approvals }} pending approval{{ pending_approvals|pluralize }}</span>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <span>{{ total_users }} active user{{ total_users|pluralize }}</span>
-                </div>
-            </div>
-            <a href="{% url 'approve_users' %}" class="card-link">
-                <span>Manage Users</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-
-        <!-- All Activities Card -->
-        <div class="dashboard-card">
-            <h3><i class="fas fa-clipboard-list"></i> System Activities</h3>
-            <p>Comprehensive oversight of all staff activities, assessments, reports, and system usage across the DRRMO platform.</p>
-            {% if recent_logs %}
-            <div class="recent-activity">
-                <h4>Recent System Activity</h4>
-                {% for log in recent_logs %}
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <span>{{ log.user.username }} - {{ log.action|truncatechars:30 }} ({{ log.timestamp|timesince }} ago)</span>
-                </div>
-                {% endfor %}
-            </div>
-            {% endif %}
-            <a href="{% url 'all_activities' %}" class="card-link">
-                <span>View All Activities</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
+        <!-- Pending Approvals (Staff Only) -->
+        {% if user.is_staff and pending_approvals %}
+        <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
+            <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-user-check"></i> Pending Approvals</h3>
+            <div style="font-size:15px;">You have <b>{{ pending_approvals }}</b> user approval{{ pending_approvals|pluralize }} pending.</div>
         </div>
         {% endif %}
+
+        <!-- ADMIN SUMMARY CARDS: Only for staff -->
+        {% if user.is_staff %}
+            <!-- Total Activities Card -->
+            <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
+                <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-list"></i> Total Activities</h3>
+                <div style="font-size:22px; font-weight:700;">{{ total_activities }}</div>
+            </div>
+            <!-- Most Active User Card -->
+            <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
+                <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-user-clock"></i> Most Active User</h3>
+                {% if most_active_user %}
+                    <div style="font-size:16px;">{{ most_active_user.username }}<br><span style="color:var(--text-muted); font-size:13px;">({{ most_active_user.activity_count }} activities)</span></div>
+                {% else %}
+                    <div style="color:var(--text-muted); font-size:14px;">No activity data available.</div>
+                {% endif %}
+            </div>
+            <!-- Recent Activity Highlights Card -->
+            <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
+                <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-bolt"></i> Recent Activity Highlights</h3>
+                {% if recent_activity_highlights %}
+                    <ul style="padding-left:18px;">
+                    {% for act in recent_activity_highlights|slice:':5' %}
+                        <li style="font-size:15px; margin-bottom:4px;">
+                            {% if act.type == 'UserLog' %}
+                                [User Log] {{ act.action }} <span style="color:var(--text-muted); font-size:13px;">({{ act.timestamp|date:"M d, Y H:i" }})</span>
+                            {% elif act.type == 'FloodRecordActivity' %}
+                                [Flood] {{ act.description }} <span style="color:var(--text-muted); font-size:13px;">({{ act.date|date:"M d, Y H:i" }})</span>
+                            {% elif act.type == 'AssessmentRecord' %}
+                                [Assessment] {{ act.summary }} <span style="color:var(--text-muted); font-size:13px;">({{ act.date|date:"M d, Y H:i" }})</span>
+                            {% elif act.type == 'ReportRecord' %}
+                                [Report] {{ act.summary }} <span style="color:var(--text-muted); font-size:13px;">({{ act.date|date:"M d, Y H:i" }})</span>
+                            {% elif act.type == 'CertificateRecord' %}
+                                [Certificate] {{ act.summary }} <span style="color:var(--text-muted); font-size:13px;">({{ act.date|date:"M d, Y H:i" }})</span>
+                            {% else %}
+                                [Other] {{ act }}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <div style="color:var(--text-muted); font-size:14px;">No recent highlights available.</div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+
+
+
+        <!-- User Activity Summary -->
+        <div style="margin-top:32px; display:flex; flex-wrap:wrap; gap:24px;">
+            <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
+                <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-user"></i> Your Recent Activity</h3>
+                {% if user_logs %}
+                    <ul style="padding-left:18px;">
+                    {% for log in user_logs|slice:':5' %}
+                        <li style="font-size:15px; margin-bottom:4px;">{{ log.action }} <span style="color:var(--text-muted); font-size:13px;">({{ log.timestamp|date:"M d, Y" }})</span></li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <div style="color:var(--text-muted); font-size:14px;">No recent activity found.</div>
+                {% endif %}
+            </div>
+
+            <!-- Community/Barangay at Highest Risk -->
+            <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
+                <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-map-marker-alt"></i> Highest Risk Barangay</h3>
+                {% if highest_risk_barangay %}
+                    <div style="font-size:16px;">{{ highest_risk_barangay.name }}<br><span class="risk-indicator risk-{{ highest_risk_barangay.risk_level|lower }}">{{ highest_risk_barangay.risk_level }}</span></div>
+                {% else %}
+                    <div style="color:var(--text-muted); font-size:14px;">No barangay currently at high risk.</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Weather Summary & Safety Tip -->
+        <div style="margin-top:32px; display:flex; flex-wrap:wrap; gap:24px;">
+            <!-- Weather Summary -->
+            <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
+                <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-cloud-sun"></i> Weather Summary</h3>
+                {% if weather_data %}
+                    <div style="font-size:16px;">Temp: <b>{{ weather_data.temperature_c }}°C</b><br>Humidity: <b>{{ weather_data.humidity_percent }}%</b><br>Wind: <b>{{ weather_data.wind_speed_kph }} km/h</b><br>Rainfall: <b>{{ weather_data.rainfall_mm }} mm</b></div>
+                {% else %}
+                    <div style="color:var(--text-muted); font-size:14px;">Weather data unavailable.</div>
+                {% endif %}
+            </div>
+
+            <!-- Safety Tip or Recommendation -->
+            <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(16,185,129,0.06); border:1px solid var(--border-gray); padding:24px; display:flex; align-items:center; gap:14px;">
+                <i class="fas fa-lightbulb" style="font-size:22px; color:#10b981;"></i>
+                <span style="font-size:15px; color:var(--text-dark);">{% if safety_tip %}{{ safety_tip }}{% else %}Stay alert and prepared—know your evacuation routes and keep emergency kits ready!{% endif %}</span>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

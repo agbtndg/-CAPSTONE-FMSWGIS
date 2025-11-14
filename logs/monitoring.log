@@ -568,3 +568,913 @@ INFO 2025-11-14 22:07:50 basehttp 19228 28920 "POST / HTTP/1.1" 302 0
 INFO 2025-11-14 22:07:50 basehttp 19228 28920 "GET /home/ HTTP/1.1" 200 26591
 INFO 2025-11-14 22:07:50 basehttp 19228 28920 "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
 INFO 2025-11-14 22:07:50 basehttp 19228 28920 "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 304 0
+INFO 2025-11-14 23:39:49 autoreload 17124 29372 Watching for file changes with StatReloader
+INFO 2025-11-14 23:39:51 basehttp 17124 17804 "GET / HTTP/1.1" 302 0
+INFO 2025-11-14 23:39:51 basehttp 17124 17804 "GET /home/ HTTP/1.1" 200 31835
+INFO 2025-11-14 23:39:57 basehttp 17124 17804 "GET /home/ HTTP/1.1" 200 31835
+INFO 2025-11-14 23:39:59 basehttp 17124 17804 "GET /maps/ HTTP/1.1" 200 1029015
+INFO 2025-11-14 23:39:59 basehttp 17124 26900 "GET /static/js/ol.js HTTP/1.1" 304 0
+INFO 2025-11-14 23:39:59 basehttp 17124 17804 "GET /static/css/ol.css HTTP/1.1" 200 6284
+INFO 2025-11-14 23:40:12 views 17124 17804 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-14 23:40:15 views 17124 17804 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 10.4km/h
+INFO 2025-11-14 23:40:15 views 17124 17804 Processed 7 days of weather forecast
+INFO 2025-11-14 23:40:15 views 17124 17804 Created new rainfall record: 0.0mm
+INFO 2025-11-14 23:40:15 views 17124 17804 Created new weather record
+INFO 2025-11-14 23:40:15 views 17124 17804 Requesting WorldTides API for Cebu City: https://www.worldtides.info/api/v3
+INFO 2025-11-14 23:40:16 views 17124 17804 Created new tide record: 0.075m from WorldTides API
+INFO 2025-11-14 23:40:16 basehttp 17124 17804 "GET /monitoring/ HTTP/1.1" 200 79839
+INFO 2025-11-14 23:40:16 basehttp 17124 17804 "GET /static/js/chart.js HTTP/1.1" 304 0
+INFO 2025-11-14 23:42:03 views 17124 17804 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-14 23:42:05 views 17124 17804 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 10.4km/h
+INFO 2025-11-14 23:42:05 views 17124 17804 Processed 7 days of weather forecast
+INFO 2025-11-14 23:42:05 basehttp 17124 17804 "GET /monitoring/ HTTP/1.1" 200 80261
+INFO 2025-11-14 23:42:14 basehttp 17124 17804 "GET /home/ HTTP/1.1" 200 32258
+INFO 2025-11-14 23:51:17 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 34091
+INFO 2025-11-14 23:56:05 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 36586
+INFO 2025-11-14 23:58:43 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 36899
+INFO 2025-11-14 23:58:44 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 36899
+INFO 2025-11-14 23:58:54 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 36899
+WARNING 2025-11-14 23:59:12 log 17124 16664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-14 23:59:12 basehttp 17124 16664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5266
+INFO 2025-11-14 23:59:12 basehttp 17124 16664 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 589892
+INFO 2025-11-14 23:59:18 basehttp 17124 16664 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+WARNING 2025-11-14 23:59:18 log 17124 16664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-14 23:59:18 basehttp 17124 16664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5266
+INFO 2025-11-14 23:59:22 views 17124 16664 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-14 23:59:23 views 17124 16664 API returned - Rain: 0.0mm, Temp: 25.7°C, Humidity: 95%, Wind: 10.5km/h
+INFO 2025-11-14 23:59:23 views 17124 16664 Processed 7 days of weather forecast
+INFO 2025-11-14 23:59:23 basehttp 17124 16664 "GET /monitoring/ HTTP/1.1" 200 84902
+WARNING 2025-11-14 23:59:23 log 17124 16664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-14 23:59:23 basehttp 17124 16664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5266
+WARNING 2025-11-14 23:59:23 basehttp 17124 16664 "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
+INFO 2025-11-14 23:59:26 basehttp 17124 6928 "GET /home/ HTTP/1.1" 200 36899
+WARNING 2025-11-14 23:59:27 log 17124 6928 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-14 23:59:27 basehttp 17124 6928 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5266
+INFO 2025-11-15 00:02:56 basehttp 17124 6928 "GET /home/ HTTP/1.1" 200 32025
+INFO 2025-11-15 00:04:56 basehttp 17124 6928 "GET /home/ HTTP/1.1" 200 32025
+INFO 2025-11-15 00:10:38 basehttp 17124 23592 "GET /home/ HTTP/1.1" 200 31198
+INFO 2025-11-15 00:10:49 basehttp 17124 23592 "GET /maps/ HTTP/1.1" 200 1028377
+INFO 2025-11-15 00:10:51 views 17124 23592 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:10:52 views 17124 23592 API returned - Rain: 0.0mm, Temp: 25.7°C, Humidity: 95%, Wind: 10.5km/h
+INFO 2025-11-15 00:10:52 views 17124 23592 Processed 7 days of weather forecast
+INFO 2025-11-15 00:10:52 basehttp 17124 23592 "GET /monitoring/ HTTP/1.1" 200 78879
+INFO 2025-11-15 00:10:54 basehttp 17124 23592 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 00:10:58 views 17124 23592 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:10:59 views 17124 23592 API returned - Rain: 0.0mm, Temp: 25.7°C, Humidity: 95%, Wind: 10.5km/h
+INFO 2025-11-15 00:10:59 views 17124 23592 Processed 7 days of weather forecast
+INFO 2025-11-15 00:10:59 basehttp 17124 23592 "GET /monitoring/ HTTP/1.1" 200 78879
+INFO 2025-11-15 00:11:00 basehttp 17124 23592 "GET /maps/my-activity/ HTTP/1.1" 200 293786
+INFO 2025-11-15 00:11:00 basehttp 17124 23592 "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 23900
+INFO 2025-11-15 00:18:11 basehttp 17124 8212 "GET /maps/my-activity/ HTTP/1.1" 200 293784
+INFO 2025-11-15 00:18:33 basehttp 17124 8212 "GET /maps/my-activity/ HTTP/1.1" 200 293784
+INFO 2025-11-15 00:19:58 basehttp 17124 8212 "GET /maps/my-activity/ HTTP/1.1" 200 293847
+INFO 2025-11-15 00:30:59 basehttp 17124 18552 "GET /maps/my-activity/ HTTP/1.1" 200 289090
+INFO 2025-11-15 00:31:05 basehttp 17124 18552 "GET /profile/ HTTP/1.1" 200 25593
+INFO 2025-11-15 00:31:05 basehttp 17124 18552 "GET /profile_images/istockphoto-2194474157-612x612.webp HTTP/1.1" 200 10530
+INFO 2025-11-15 00:31:08 basehttp 17124 18552 "GET /maps/ HTTP/1.1" 200 1023680
+INFO 2025-11-15 00:31:29 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:31:32 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:31:32 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:31:32 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73175
+INFO 2025-11-15 00:31:34 basehttp 17124 18552 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 00:31:37 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:31:38 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:31:38 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:31:38 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73175
+INFO 2025-11-15 00:31:41 basehttp 17124 18552 "GET /maps/my-activity/ HTTP/1.1" 200 289090
+INFO 2025-11-15 00:33:02 basehttp 17124 18552 "GET /maps/my-activity/ HTTP/1.1" 200 288970
+INFO 2025-11-15 00:33:03 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:33:04 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:33:04 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:33:04 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73055
+INFO 2025-11-15 00:33:09 basehttp 17124 18552 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 00:33:12 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:33:13 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:33:13 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:33:13 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73055
+INFO 2025-11-15 00:33:16 basehttp 17124 18552 "GET /maps/ HTTP/1.1" 200 1023510
+INFO 2025-11-15 00:33:31 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:33:32 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:33:32 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:33:32 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73055
+INFO 2025-11-15 00:34:07 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:34:09 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:34:09 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:34:09 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 76746
+INFO 2025-11-15 00:35:43 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:35:43 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:35:43 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:35:44 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 76779
+INFO 2025-11-15 00:37:29 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:37:30 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:37:30 views 17124 18552 Processed 7 days of weather forecast
+ERROR 2025-11-15 00:37:30 log 17124 18552 Internal Server Error: /monitoring/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py", line 454, in monitoring_view
+    return render(request, 'monitoring/monitoring.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' not found. 'dashboard' is not a valid view function or pattern name.
+ERROR 2025-11-15 00:37:30 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 500 255785
+INFO 2025-11-15 00:38:09 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:38:10 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:38:10 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:38:10 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 77026
+INFO 2025-11-15 00:38:13 basehttp 17124 18552 "GET /home/ HTTP/1.1" 200 30472
+INFO 2025-11-15 00:38:18 basehttp 17124 18552 "GET /home/ HTTP/1.1" 200 30472
+INFO 2025-11-15 00:39:46 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:39:47 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:39:47 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:39:47 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 77026
+INFO 2025-11-15 00:40:23 basehttp 17124 18552 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 00:40:52 basehttp 17124 18552 "GET /home/ HTTP/1.1" 200 28368
+INFO 2025-11-15 00:44:31 basehttp 17124 18552 "GET /home/ HTTP/1.1" 200 33543
+ERROR 2025-11-15 00:44:44 log 17124 18552 Internal Server Error: /maps/report/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(3)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\maps\views.py", line 64, in report_view
+    ReportRecord.objects.create(
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: value too long for type character varying(3)
+
+ERROR 2025-11-15 00:44:44 basehttp 17124 18552 "GET /maps/report/ HTTP/1.1" 500 173644
+ERROR 2025-11-15 00:56:08 log 17124 5356 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 170, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 749, in resolve
+    new_obj = func(obj, *arg_vals)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaultfilters.py", line 784, in date
+    return formats.date_format(value, arg)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\formats.py", line 155, in date_format
+    return dateformat.format(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\dateformat.py", line 325, in format
+    return df.format(format_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\dateformat.py", line 45, in format
+    raise TypeError(
+TypeError: The format for date objects may not contain time-related format specifiers (found 'H').
+ERROR 2025-11-15 00:56:08 basehttp 17124 5356 "GET /home/ HTTP/1.1" 500 228548
+INFO 2025-11-15 00:57:26 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 33352
+INFO 2025-11-15 00:59:27 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 32432
+INFO 2025-11-15 00:59:54 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 32432
+INFO 2025-11-15 01:00:02 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 32432
+INFO 2025-11-15 01:00:04 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 33352
+INFO 2025-11-15 01:01:09 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 31834
+INFO 2025-11-15 01:01:23 basehttp 17124 5356 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 01:01:32 views 17124 5356 Flood record created: 20 - Flash Flood
+INFO 2025-11-15 01:01:32 basehttp 17124 5356 "POST /monitoring/flood-record/ HTTP/1.1" 200 142
+INFO 2025-11-15 01:01:34 views 17124 5356 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 01:01:35 views 17124 5356 API returned - Rain: 0.0mm, Temp: 25.7°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 01:01:35 views 17124 5356 Processed 7 days of weather forecast
+INFO 2025-11-15 01:01:35 basehttp 17124 5356 "GET /monitoring/ HTTP/1.1" 200 78201
+INFO 2025-11-15 01:01:36 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 31834
+INFO 2025-11-15 01:01:41 basehttp 17124 5356 "GET /maps/my-activity/ HTTP/1.1" 200 294770
+INFO 2025-11-15 01:01:50 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 31834
+INFO 2025-11-15 01:09:46 autoreload 17124 29372 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:09:47 autoreload 24976 20888 Watching for file changes with StatReloader
+INFO 2025-11-15 01:09:57 basehttp 24976 12392 "GET /home/ HTTP/1.1" 200 33204
+INFO 2025-11-15 01:10:29 basehttp 24976 12392 "GET /maps/ HTTP/1.1" 200 1027481
+INFO 2025-11-15 01:10:38 views 24976 12392 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 01:10:41 views 24976 12392 API returned - Rain: 0.0mm, Temp: 25.7°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 01:10:41 views 24976 12392 Processed 7 days of weather forecast
+INFO 2025-11-15 01:10:41 basehttp 24976 12392 "GET /monitoring/ HTTP/1.1" 200 78201
+INFO 2025-11-15 01:11:08 basehttp 24976 12392 "GET /home/ HTTP/1.1" 200 33204
+INFO 2025-11-15 01:12:01 basehttp 24976 12392 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 01:12:01 basehttp 24976 12392 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 01:12:06 basehttp 24976 12392 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 01:12:06 basehttp 24976 12392 "GET /home/ HTTP/1.1" 200 34727
+INFO 2025-11-15 01:12:23 basehttp 24976 12392 "GET /maps/my-activity/ HTTP/1.1" 200 90683
+INFO 2025-11-15 01:12:26 basehttp 24976 12392 "GET /home/ HTTP/1.1" 200 34398
+INFO 2025-11-15 01:19:46 basehttp 24976 19964 "GET /home/ HTTP/1.1" 200 35026
+ERROR 2025-11-15 01:20:36 log 24976 19964 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 205, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_activity' not found. 'admin_activity' is not a valid view function or pattern name.
+ERROR 2025-11-15 01:20:36 basehttp 24976 19964 "GET /home/ HTTP/1.1" 500 216636
+INFO 2025-11-15 01:21:07 autoreload 24976 20888 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\urls.py changed, reloading.
+INFO 2025-11-15 01:21:07 autoreload 20672 15156 Watching for file changes with StatReloader
+INFO 2025-11-15 01:23:31 autoreload 20672 15156 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:23:31 autoreload 9872 11692 Watching for file changes with StatReloader
+ERROR 2025-11-15 01:23:36 log 9872 3268 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 170, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_activity' not found. 'admin_activity' is not a valid view function or pattern name.
+ERROR 2025-11-15 01:23:36 basehttp 9872 3268 "GET /home/ HTTP/1.1" 500 187008
+INFO 2025-11-15 01:23:46 basehttp 9872 3268 "GET /home/ HTTP/1.1" 200 34859
+INFO 2025-11-15 01:25:43 basehttp 9872 3268 "GET /home/ HTTP/1.1" 200 35088
+INFO 2025-11-15 01:25:45 basehttp 9872 3268 "GET /logs/ HTTP/1.1" 200 26088
+INFO 2025-11-15 01:25:51 basehttp 9872 3268 "GET /approve/ HTTP/1.1" 200 32770
+INFO 2025-11-15 01:25:57 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 90915
+INFO 2025-11-15 01:25:58 basehttp 9872 3268 "GET /logs/ HTTP/1.1" 200 26088
+INFO 2025-11-15 01:27:07 basehttp 9872 3268 "GET /logs/ HTTP/1.1" 200 26103
+INFO 2025-11-15 01:27:09 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551643
+INFO 2025-11-15 01:27:11 basehttp 9872 3268 "GET /approve/ HTTP/1.1" 200 32785
+INFO 2025-11-15 01:27:12 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551643
+INFO 2025-11-15 01:27:13 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 90930
+INFO 2025-11-15 01:27:16 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551643
+INFO 2025-11-15 01:27:18 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 90930
+INFO 2025-11-15 01:27:21 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551643
+INFO 2025-11-15 01:31:19 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551950
+INFO 2025-11-15 01:31:44 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 91237
+INFO 2025-11-15 01:31:47 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551950
+INFO 2025-11-15 01:31:50 basehttp 9872 3268 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 01:31:50 basehttp 9872 3268 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 01:31:58 basehttp 9872 3268 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 01:31:58 basehttp 9872 3268 "GET /home/ HTTP/1.1" 200 33715
+INFO 2025-11-15 01:32:02 views 9872 3268 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 01:32:03 views 9872 3268 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 01:32:03 views 9872 3268 Processed 7 days of weather forecast
+INFO 2025-11-15 01:32:03 basehttp 9872 3268 "GET /monitoring/ HTTP/1.1" 200 78231
+INFO 2025-11-15 01:32:04 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 296950
+INFO 2025-11-15 01:32:11 basehttp 9872 3268 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 01:32:11 basehttp 9872 3268 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 01:32:19 basehttp 9872 3268 "POST / HTTP/1.1" 200 7379
+INFO 2025-11-15 01:32:25 basehttp 9872 3268 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 01:32:25 basehttp 9872 3268 "GET /home/ HTTP/1.1" 200 36032
+INFO 2025-11-15 01:38:01 autoreload 9872 11692 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:38:02 autoreload 28800 8732 Watching for file changes with StatReloader
+ERROR 2025-11-15 01:38:27 log 28800 10728 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserLog' object has no attribute 'get_action_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'get_action_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 189, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 743, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [get_action_display] in <UserLog: admin - Logged in at 2025-11-14 17:32:25.165526+00:00>
+ERROR 2025-11-15 01:38:27 basehttp 28800 10728 "GET /home/ HTTP/1.1" 500 261169
+ERROR 2025-11-15 01:39:22 log 28800 10728 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: 'act.__class__.__name__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 823, in __init__
+    self.literal = float(var)
+                   ^^^^^^^^^^
+ValueError: could not convert string to float: 'act.__class__.__name__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 839, in __init__
+    self.literal = mark_safe(unescape_string_literal(var))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 231, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\text.py", line 447, in unescape_string_literal
+    raise ValueError("Not a string literal: %r" % s)
+ValueError: Not a string literal: 'act.__class__.__name__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 189, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 894, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 897, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 697, in __init__
+    var_obj = Variable(var)
+              ^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 844, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Variables and attributes may not begin with underscores: 'act.__class__.__name__'
+ERROR 2025-11-15 01:39:22 basehttp 28800 10728 "GET /home/ HTTP/1.1" 500 409629
+INFO 2025-11-15 01:39:42 autoreload 28800 8732 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:39:43 autoreload 7464 600 Watching for file changes with StatReloader
+INFO 2025-11-15 01:40:16 basehttp 7464 13264 "GET /home/ HTTP/1.1" 200 40262
+INFO 2025-11-15 01:41:08 autoreload 7464 600 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:41:09 autoreload 2648 17232 Watching for file changes with StatReloader
+INFO 2025-11-15 01:41:14 basehttp 2648 7824 "GET /home/ HTTP/1.1" 200 37670
+INFO 2025-11-15 01:41:23 basehttp 2648 7824 "GET /home/ HTTP/1.1" 200 35410
+INFO 2025-11-15 01:44:37 basehttp 2648 7824 "GET /home/ HTTP/1.1" 200 37183
+INFO 2025-11-15 01:46:01 autoreload 2648 17232 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:46:02 autoreload 22728 14132 Watching for file changes with StatReloader
+INFO 2025-11-15 01:47:39 basehttp 22728 18404 "GET /home/ HTTP/1.1" 200 38926
+INFO 2025-11-15 01:51:37 autoreload 22728 14132 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:51:38 autoreload 23168 13932 Watching for file changes with StatReloader
+INFO 2025-11-15 01:52:17 basehttp 23168 13664 "GET /home/ HTTP/1.1" 200 38539
+INFO 2025-11-15 01:54:41 basehttp 23168 13664 "GET /home/ HTTP/1.1" 200 38101
+INFO 2025-11-15 02:05:30 basehttp 23168 6000 "GET /home/ HTTP/1.1" 200 38101
+INFO 2025-11-15 02:09:29 basehttp 23168 6000 "GET /approve/ HTTP/1.1" 200 33092
+INFO 2025-11-15 02:09:32 basehttp 23168 6000 "GET /home/ HTTP/1.1" 200 38101
+INFO 2025-11-15 02:09:58 views 23168 6000 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:09:59 views 23168 6000 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:09:59 views 23168 6000 Processed 7 days of weather forecast
+INFO 2025-11-15 02:09:59 basehttp 23168 6000 "GET /monitoring/ HTTP/1.1" 200 78752
+INFO 2025-11-15 02:10:07 basehttp 23168 6000 "GET /monitoring/flood-record/delete/20/ HTTP/1.1" 200 8452
+INFO 2025-11-15 02:10:08 views 23168 6000 Flood record deleted: 20 - Flash Flood
+INFO 2025-11-15 02:10:08 basehttp 23168 6000 "POST /monitoring/flood-record/delete/20/ HTTP/1.1" 302 0
+INFO 2025-11-15 02:10:08 views 23168 6000 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:10:10 views 23168 6000 API returned - Rain: 0.0mm, Temp: 25.8°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:10:10 views 23168 6000 Processed 7 days of weather forecast
+INFO 2025-11-15 02:10:10 basehttp 23168 6000 "GET /monitoring/ HTTP/1.1" 200 77963
+INFO 2025-11-15 02:10:12 basehttp 23168 6000 "GET /home/ HTTP/1.1" 200 38125
+INFO 2025-11-15 02:11:42 basehttp 23168 27472 "GET /maps/all-activities/ HTTP/1.1" 200 561505
+INFO 2025-11-15 02:11:50 basehttp 23168 27472 "GET /home/ HTTP/1.1" 200 38125
+INFO 2025-11-15 02:13:03 basehttp 23168 27472 "GET /maps/ HTTP/1.1" 200 1028032
+INFO 2025-11-15 02:16:33 basehttp 23168 27472 "POST /maps/save-assessment/ HTTP/1.1" 200 82
+INFO 2025-11-15 02:16:34 basehttp 23168 27472 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.808940&lon=123.023975&risk=LF HTTP/1.1" 200 10609
+INFO 2025-11-15 02:16:34 basehttp 23168 27472 "GET /static/images/drrmo_header.png HTTP/1.1" 200 161208
+INFO 2025-11-15 02:16:44 basehttp 23168 27472 "GET /maps/certificate/form/?barangay=Eustaquio%20Lopez&lat=10.808940&lon=123.023975&risk=LF HTTP/1.1" 200 17029
+INFO 2025-11-15 02:16:55 basehttp 23168 27472 "POST /maps/certificate/ HTTP/1.1" 200 10530
+INFO 2025-11-15 02:17:11 views 23168 27472 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:17:12 views 23168 27472 API returned - Rain: 0.0mm, Temp: 25.9°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:17:12 views 23168 27472 Processed 7 days of weather forecast
+INFO 2025-11-15 02:17:12 basehttp 23168 27472 "GET /monitoring/ HTTP/1.1" 200 77577
+INFO 2025-11-15 02:18:03 basehttp 23168 27472 "GET /monitoring/flood-record/edit/12/ HTTP/1.1" 200 30721
+INFO 2025-11-15 02:18:11 views 23168 27472 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:18:12 views 23168 27472 API returned - Rain: 0.0mm, Temp: 25.9°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:18:12 views 23168 27472 Processed 7 days of weather forecast
+INFO 2025-11-15 02:18:12 basehttp 23168 27472 "GET /monitoring/ HTTP/1.1" 200 77577
+INFO 2025-11-15 02:18:22 basehttp 23168 27472 "GET /monitoring/flood-record/edit/12/ HTTP/1.1" 200 30721
+INFO 2025-11-15 02:18:27 views 23168 27472 Flood record updated: 12 - Flood
+INFO 2025-11-15 02:18:27 basehttp 23168 27472 "POST /monitoring/flood-record/edit/12/ HTTP/1.1" 200 150
+INFO 2025-11-15 02:18:29 views 23168 27472 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:18:31 views 23168 27472 API returned - Rain: 0.0mm, Temp: 25.9°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:18:31 views 23168 27472 Processed 7 days of weather forecast
+INFO 2025-11-15 02:18:31 basehttp 23168 27472 "GET /monitoring/ HTTP/1.1" 200 77587
+INFO 2025-11-15 02:19:53 autoreload 23168 13932 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 02:19:54 autoreload 8476 8964 Watching for file changes with StatReloader
+INFO 2025-11-15 02:20:16 basehttp 8476 29200 "GET /monitoring/flood-record/edit/12/ HTTP/1.1" 200 30731
+INFO 2025-11-15 02:20:29 views 8476 29200 Flood record updated: 12 - Flood
+INFO 2025-11-15 02:20:29 basehttp 8476 29200 "POST /monitoring/flood-record/edit/12/ HTTP/1.1" 200 138
+INFO 2025-11-15 02:20:31 views 8476 29200 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:20:33 views 8476 29200 API returned - Rain: 0.0mm, Temp: 25.9°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:20:33 views 8476 29200 Processed 7 days of weather forecast
+INFO 2025-11-15 02:20:33 basehttp 8476 29200 "GET /monitoring/ HTTP/1.1" 200 77642
+INFO 2025-11-15 02:20:53 autoreload 8476 8964 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 02:20:54 autoreload 3268 24624 Watching for file changes with StatReloader
+INFO 2025-11-15 02:20:58 basehttp 3268 23500 "GET /monitoring/flood-record/delete/12/ HTTP/1.1" 200 8485
+INFO 2025-11-15 02:20:59 views 3268 23500 Flood record deleted: 12 - Flood
+INFO 2025-11-15 02:20:59 basehttp 3268 23500 "POST /monitoring/flood-record/delete/12/ HTTP/1.1" 302 0
+INFO 2025-11-15 02:20:59 views 3268 23500 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:21:00 views 3268 23500 API returned - Rain: 0.0mm, Temp: 25.9°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:21:00 views 3268 23500 Processed 7 days of weather forecast
+INFO 2025-11-15 02:21:00 basehttp 3268 23500 "GET /monitoring/ HTTP/1.1" 200 76765
+INFO 2025-11-15 02:21:10 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:11 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:12 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:15 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:21 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:21 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:22 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:22 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=24h HTTP/1.1" 200 189
+INFO 2025-11-15 02:21:23 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:24 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:24 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:26 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:28 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:28 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:29 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=all HTTP/1.1" 200 1284
+INFO 2025-11-15 02:21:30 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:22:18 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:25:33 views 3268 23500 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:25:34 views 3268 23500 API returned - Rain: 0.0mm, Temp: 25.9°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:25:34 views 3268 23500 Processed 7 days of weather forecast
+INFO 2025-11-15 02:25:34 basehttp 3268 23500 "GET /monitoring/ HTTP/1.1" 200 76685
+INFO 2025-11-15 02:25:37 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:25:39 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:25:48 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:25:50 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=24h HTTP/1.1" 200 189
+INFO 2025-11-15 02:26:01 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:26:02 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:26:02 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:26:14 basehttp 3268 23500 "GET /monitoring/api/trends/?start_date=2025-11-10&end_date=2025-11-11 HTTP/1.1" 200 220
+INFO 2025-11-15 02:28:37 autoreload 3268 24624 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 02:28:37 autoreload 13760 12368 Watching for file changes with StatReloader
+INFO 2025-11-15 02:28:47 views 13760 24904 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:28:48 views 13760 24904 API returned - Rain: 0.0mm, Temp: 25.9°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:28:48 views 13760 24904 Processed 7 days of weather forecast
+INFO 2025-11-15 02:28:48 basehttp 13760 24904 "GET /monitoring/ HTTP/1.1" 200 76685
+INFO 2025-11-15 02:28:51 basehttp 13760 24904 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:29:08 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-09 HTTP/1.1" 200 430
+INFO 2025-11-15 02:29:11 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-10 HTTP/1.1" 200 482
+INFO 2025-11-15 02:29:18 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-11 HTTP/1.1" 200 482
+INFO 2025-11-15 02:29:23 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-12 HTTP/1.1" 200 587
+INFO 2025-11-15 02:29:28 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-13 HTTP/1.1" 200 640
+INFO 2025-11-15 02:29:43 basehttp 13760 24904 "GET /monitoring/api/trends/?time_range=all HTTP/1.1" 200 1284
+INFO 2025-11-15 02:29:48 basehttp 13760 24904 "GET /monitoring/api/trends/?time_range=24h HTTP/1.1" 200 189
+INFO 2025-11-15 02:29:59 basehttp 13760 24904 "GET /approve/ HTTP/1.1" 200 33092
+INFO 2025-11-15 02:30:21 basehttp 13760 24904 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 02:30:21 basehttp 13760 24904 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 02:30:23 basehttp 13760 24904 "GET /register/ HTTP/1.1" 200 13287
+INFO 2025-11-15 02:30:33 autoreload 13760 12368 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 02:30:33 autoreload 30540 22472 Watching for file changes with StatReloader
+INFO 2025-11-15 02:32:30 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 14763
+INFO 2025-11-15 02:32:35 basehttp 30540 22348 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 02:32:41 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 14763
+INFO 2025-11-15 02:35:30 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 14763
+INFO 2025-11-15 02:35:32 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 14763
+INFO 2025-11-15 02:36:00 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 13287
+INFO 2025-11-15 02:37:56 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 15113
+INFO 2025-11-15 02:40:45 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 15750
+INFO 2025-11-15 02:47:18 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 17230
+INFO 2025-11-15 02:48:56 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15497
+INFO 2025-11-15 02:50:25 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15497
+INFO 2025-11-15 02:51:26 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:51:33 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:51:35 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:51:39 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:51:41 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:53:08 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15802
+INFO 2025-11-15 02:54:26 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15802
+INFO 2025-11-15 02:55:32 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15803
+INFO 2025-11-15 02:56:32 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15803
+INFO 2025-11-15 02:59:50 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15369
