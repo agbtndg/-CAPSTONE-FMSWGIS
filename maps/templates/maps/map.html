@@ -557,6 +557,7 @@
 {% endblock %}
 
 {% block content %}
+<form id="csrf-form" style="display:none;">{% csrf_token %}</form>
 <div class="map-container">
     <!-- Sidebar -->
     <div class="sidebar">

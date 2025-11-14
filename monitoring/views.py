@@ -601,7 +601,7 @@ def flood_record_form(request):
                     damage_total_php=flood_record.damage_total_php
                 )
                 
-                success_message = f'âœ… Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully added!'
+                success_message = f'✅ Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully added!'
                 logger.info(f"Flood record created: {flood_record.id} - {flood_record.event}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -614,7 +614,7 @@ def flood_record_form(request):
                 messages.success(request, success_message)
                 return redirect('monitoring_view')
             else:
-                error_message = 'âŒ Please correct the errors below and try again.'
+                error_message = '❌ Please correct the errors below and try again.'
                 logger.warning(f"Form validation errors: {form.errors}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -626,7 +626,7 @@ def flood_record_form(request):
                     
                 messages.error(request, error_message)
         except Exception as e:
-            error_message = f'âŒ An unexpected error occurred while saving the record: {str(e)}'
+            error_message = f'❌ An unexpected error occurred while saving the record: {str(e)}'
             logger.error(f"Error saving flood record: {e}", exc_info=True)
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -708,9 +708,25 @@ def flood_record_delete(request, record_id):
         try:
             event_name = flood_record.event
             event_date = flood_record.date.strftime("%Y-%m-%d")
+            # Log the activity before deleting
+            from maps.models import FloodRecordActivity
+            FloodRecordActivity.objects.create(
+                user=request.user,
+                action='DELETE',
+                flood_record_id=flood_record.id,
+                event_type=flood_record.event,
+                event_date=flood_record.date,
+                affected_barangays=flood_record.affected_barangays,
+                casualties_dead=flood_record.casualties_dead,
+                casualties_injured=flood_record.casualties_injured,
+                casualties_missing=flood_record.casualties_missing,
+                affected_persons=flood_record.affected_persons,
+                affected_families=flood_record.affected_families,
+                damage_total_php=flood_record.damage_total_php
+            )
             flood_record.delete()
             
-            success_message = f'âœ… Flood record for {event_name} on {event_date} has been successfully deleted!'
+            success_message = f'✅ Flood record for {event_name} on {event_date} has been successfully deleted!'
             logger.info(f"Flood record deleted: {record_id} - {event_name}")
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -723,7 +739,7 @@ def flood_record_delete(request, record_id):
             messages.success(request, success_message)
             return redirect('monitoring_view')
         except Exception as e:
-            error_message = f'âŒ An error occurred while deleting the record: {str(e)}'
+            error_message = f'❌ An error occurred while deleting the record: {str(e)}'
             logger.error(f"Error deleting flood record: {e}", exc_info=True)
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':

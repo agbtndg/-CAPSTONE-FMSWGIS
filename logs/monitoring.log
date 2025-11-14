@@ -275,3 +275,296 @@ INFO 2025-11-13 17:47:44 basehttp 25960 16268 "GET /maps/my-activity/ HTTP/1.1" 
 INFO 2025-11-13 17:47:44 basehttp 25960 16268 "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 23900
 INFO 2025-11-13 17:55:52 autoreload 25960 13916 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
 INFO 2025-11-13 17:55:54 autoreload 6568 27440 Watching for file changes with StatReloader
+INFO 2025-11-13 17:57:40 autoreload 28440 18748 Watching for file changes with StatReloader
+INFO 2025-11-13 17:57:43 basehttp 28440 11624 "GET / HTTP/1.1" 302 0
+INFO 2025-11-13 17:57:43 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:57:51 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 262914
+INFO 2025-11-13 17:57:54 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:57:56 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023266
+INFO 2025-11-13 17:57:56 basehttp 28440 11624 "GET /static/css/ol.css HTTP/1.1" 200 6284
+WARNING 2025-11-13 17:58:01 log 28440 11624 Forbidden (CSRF token from POST has incorrect length.): /maps/save-assessment/
+WARNING 2025-11-13 17:58:01 basehttp 28440 11624 "POST /maps/save-assessment/ HTTP/1.1" 403 2514
+INFO 2025-11-13 17:58:05 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:58:07 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 262914
+INFO 2025-11-13 17:58:15 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:58:17 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023266
+WARNING 2025-11-13 17:58:21 log 28440 11624 Forbidden (CSRF token from POST has incorrect length.): /maps/save-assessment/
+WARNING 2025-11-13 17:58:21 basehttp 28440 11624 "POST /maps/save-assessment/ HTTP/1.1" 403 2514
+INFO 2025-11-13 17:58:26 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:58:28 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 262914
+INFO 2025-11-13 18:00:25 basehttp 28440 11624 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:00:25 basehttp 28440 11624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-13 18:00:31 basehttp 28440 11624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-13 18:00:31 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26591
+INFO 2025-11-13 18:00:33 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 265054
+INFO 2025-11-13 18:00:36 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:00:38 basehttp 28440 11624 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:00:38 basehttp 28440 11624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-13 18:00:42 basehttp 28440 11624 "POST / HTTP/1.1" 200 7379
+INFO 2025-11-13 18:00:48 basehttp 28440 11624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-13 18:00:48 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 30509
+INFO 2025-11-13 18:00:54 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 84587
+INFO 2025-11-13 18:00:58 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 29887
+INFO 2025-11-13 18:01:00 basehttp 28440 11624 "GET /maps/all-activities/ HTTP/1.1" 200 512032
+INFO 2025-11-13 18:03:14 basehttp 28440 11624 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:03:14 basehttp 28440 11624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-13 18:03:21 basehttp 28440 11624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-13 18:03:21 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26591
+INFO 2025-11-13 18:03:26 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023438
+INFO 2025-11-13 18:03:28 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023438
+INFO 2025-11-13 18:03:41 basehttp 28440 11624 "POST /maps/save-assessment/ HTTP/1.1" 200 82
+INFO 2025-11-13 18:03:46 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:03:48 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 268545
+INFO 2025-11-13 18:04:03 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:04:05 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023438
+INFO 2025-11-13 18:04:13 basehttp 28440 11624 "POST /maps/save-assessment/ HTTP/1.1" 200 82
+INFO 2025-11-13 18:04:14 basehttp 28440 11624 "GET /maps/report/?barangay=Barangay%20I%20(Pob.)&lat=10.802390&lon=122.976144&risk=VHF HTTP/1.1" 200 10973
+INFO 2025-11-13 18:04:24 basehttp 28440 11624 "GET /maps/certificate/form/?barangay=Barangay%20I%20(Pob.)&lat=10.802390&lon=122.976144&risk=VHF HTTP/1.1" 200 17061
+INFO 2025-11-13 18:04:30 basehttp 28440 11624 "POST /maps/certificate/ HTTP/1.1" 200 11170
+INFO 2025-11-13 18:05:54 basehttp 28440 11624 "POST /maps/certificate/ HTTP/1.1" 200 10549
+INFO 2025-11-13 18:07:40 basehttp 28440 11624 "POST /maps/certificate/ HTTP/1.1" 200 10549
+INFO 2025-11-13 18:08:10 basehttp 28440 11624 "POST /maps/certificate/ HTTP/1.1" 200 10549
+INFO 2025-11-13 18:08:25 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:08:26 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 278599
+INFO 2025-11-13 18:08:50 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:08:52 views 28440 11624 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:08:53 views 28440 11624 API returned - Rain: 0.0mm, Temp: 27.4°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:08:53 views 28440 11624 Processed 7 days of weather forecast
+INFO 2025-11-13 18:08:53 basehttp 28440 11624 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:08:57 basehttp 28440 11624 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-13 18:09:12 views 28440 11624 Flood record created: 16 - Flash Flood
+INFO 2025-11-13 18:09:12 basehttp 28440 11624 "POST /monitoring/flood-record/ HTTP/1.1" 200 154
+INFO 2025-11-13 18:09:14 views 28440 11624 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:09:15 views 28440 11624 API returned - Rain: 0.0mm, Temp: 27.4°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:09:15 views 28440 11624 Processed 7 days of weather forecast
+INFO 2025-11-13 18:09:15 basehttp 28440 11624 "GET /monitoring/ HTTP/1.1" 200 74228
+INFO 2025-11-13 18:10:25 basehttp 28440 11624 "GET /monitoring/flood-record/delete/16/ HTTP/1.1" 200 8543
+INFO 2025-11-13 18:10:26 views 28440 11624 Flood record deleted: 16 - Flash Flood
+INFO 2025-11-13 18:10:26 basehttp 28440 11624 "POST /monitoring/flood-record/delete/16/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:10:26 views 28440 11624 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:10:27 views 28440 11624 API returned - Rain: 0.0mm, Temp: 27.4°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:10:27 views 28440 11624 Processed 7 days of weather forecast
+INFO 2025-11-13 18:10:27 basehttp 28440 11624 "GET /monitoring/ HTTP/1.1" 200 73410
+INFO 2025-11-13 18:11:26 autoreload 28440 18748 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:11:27 autoreload 6948 16096 Watching for file changes with StatReloader
+INFO 2025-11-13 18:12:35 views 6948 30576 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:12:36 views 6948 30576 API returned - Rain: 0.0mm, Temp: 27.4°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:12:36 views 6948 30576 Processed 7 days of weather forecast
+INFO 2025-11-13 18:12:36 basehttp 6948 30576 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:12:40 basehttp 6948 30576 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-13 18:12:52 views 6948 30576 Flood record created: 17 - Flood
+INFO 2025-11-13 18:12:52 basehttp 6948 30576 "POST /monitoring/flood-record/ HTTP/1.1" 200 136
+INFO 2025-11-13 18:12:54 views 6948 30576 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:12:55 views 6948 30576 API returned - Rain: 0.0mm, Temp: 27.4°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:12:55 views 6948 30576 Processed 7 days of weather forecast
+INFO 2025-11-13 18:12:55 basehttp 6948 30576 "GET /monitoring/ HTTP/1.1" 200 74202
+INFO 2025-11-13 18:13:01 basehttp 6948 30576 "GET /monitoring/flood-record/delete/17/ HTTP/1.1" 200 8518
+INFO 2025-11-13 18:13:02 views 6948 30576 Flood record deleted: 17 - Flood
+INFO 2025-11-13 18:13:02 basehttp 6948 30576 "POST /monitoring/flood-record/delete/17/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:13:02 views 6948 30576 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:13:03 views 6948 30576 API returned - Rain: 0.0mm, Temp: 27.4°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:13:03 views 6948 30576 Processed 7 days of weather forecast
+INFO 2025-11-13 18:13:03 basehttp 6948 30576 "GET /monitoring/ HTTP/1.1" 200 73404
+INFO 2025-11-13 18:13:37 autoreload 6948 16096 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:13:38 autoreload 29920 10704 Watching for file changes with StatReloader
+INFO 2025-11-13 18:13:48 views 29920 17300 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:13:49 views 29920 17300 API returned - Rain: 0.0mm, Temp: 27.4°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:13:49 views 29920 17300 Processed 7 days of weather forecast
+INFO 2025-11-13 18:13:49 basehttp 29920 17300 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:13:52 basehttp 29920 17300 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-13 18:13:59 views 29920 17300 Flood record created: 18 - Flood
+INFO 2025-11-13 18:13:59 basehttp 29920 17300 "POST /monitoring/flood-record/ HTTP/1.1" 200 136
+INFO 2025-11-13 18:14:01 views 29920 17300 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:14:02 views 29920 17300 API returned - Rain: 0.0mm, Temp: 27.4°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:14:02 views 29920 17300 Processed 7 days of weather forecast
+INFO 2025-11-13 18:14:02 basehttp 29920 17300 "GET /monitoring/ HTTP/1.1" 200 74192
+INFO 2025-11-13 18:14:12 basehttp 29920 17300 "GET /monitoring/flood-record/delete/18/ HTTP/1.1" 200 8508
+INFO 2025-11-13 18:14:13 views 29920 17300 Flood record deleted: 18 - Flood
+INFO 2025-11-13 18:14:13 basehttp 29920 17300 "POST /monitoring/flood-record/delete/18/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:14:13 views 29920 17300 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:14:14 views 29920 17300 API returned - Rain: 0.0mm, Temp: 27.4°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:14:14 views 29920 17300 Processed 7 days of weather forecast
+INFO 2025-11-13 18:14:14 basehttp 29920 17300 "GET /monitoring/ HTTP/1.1" 200 73400
+INFO 2025-11-13 18:14:21 basehttp 29920 17300 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:14:23 basehttp 29920 17300 "GET /maps/my-activity/ HTTP/1.1" 200 284103
+INFO 2025-11-13 18:14:56 autoreload 29920 10704 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:14:56 autoreload 28536 26436 Watching for file changes with StatReloader
+INFO 2025-11-13 18:15:54 autoreload 28536 26436 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:15:55 autoreload 28568 17564 Watching for file changes with StatReloader
+INFO 2025-11-13 18:16:50 basehttp 28568 29148 "GET /maps/my-activity/ HTTP/1.1" 200 284103
+INFO 2025-11-13 18:16:57 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:16:59 views 28568 29148 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:17:00 views 28568 29148 API returned - Rain: 0.0mm, Temp: 27.3°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:17:00 views 28568 29148 Processed 7 days of weather forecast
+INFO 2025-11-13 18:17:00 basehttp 28568 29148 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:17:10 basehttp 28568 29148 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-13 18:17:16 views 28568 29148 Flood record created: 19 - Flood
+INFO 2025-11-13 18:17:16 basehttp 28568 29148 "POST /monitoring/flood-record/ HTTP/1.1" 200 136
+INFO 2025-11-13 18:17:18 views 28568 29148 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:17:19 views 28568 29148 API returned - Rain: 0.0mm, Temp: 27.3°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:17:19 views 28568 29148 Processed 7 days of weather forecast
+INFO 2025-11-13 18:17:19 basehttp 28568 29148 "GET /monitoring/ HTTP/1.1" 200 74192
+INFO 2025-11-13 18:17:20 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26252
+INFO 2025-11-13 18:17:21 basehttp 28568 29148 "GET /maps/my-activity/ HTTP/1.1" 200 285928
+INFO 2025-11-13 18:17:25 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26252
+INFO 2025-11-13 18:17:26 views 28568 29148 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:17:27 views 28568 29148 API returned - Rain: 0.0mm, Temp: 27.3°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:17:27 views 28568 29148 Processed 7 days of weather forecast
+INFO 2025-11-13 18:17:27 basehttp 28568 29148 "GET /monitoring/ HTTP/1.1" 200 74192
+INFO 2025-11-13 18:17:41 basehttp 28568 29148 "GET /monitoring/flood-record/delete/19/ HTTP/1.1" 200 8508
+INFO 2025-11-13 18:17:44 views 28568 29148 Flood record deleted: 19 - Flood
+INFO 2025-11-13 18:17:44 basehttp 28568 29148 "POST /monitoring/flood-record/delete/19/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:17:44 views 28568 29148 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:17:45 views 28568 29148 API returned - Rain: 0.0mm, Temp: 27.3°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:17:45 views 28568 29148 Processed 7 days of weather forecast
+INFO 2025-11-13 18:17:45 basehttp 28568 29148 "GET /monitoring/ HTTP/1.1" 200 73400
+INFO 2025-11-13 18:17:47 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:17:48 basehttp 28568 29148 "GET /maps/my-activity/ HTTP/1.1" 200 287753
+INFO 2025-11-13 18:17:55 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:17:59 autoreload 28568 17564 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:17:59 autoreload 27012 11080 Watching for file changes with StatReloader
+INFO 2025-11-13 18:18:04 views 27012 18348 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:18:05 views 27012 18348 API returned - Rain: 0.0mm, Temp: 27.3°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:18:05 views 27012 18348 Processed 7 days of weather forecast
+INFO 2025-11-13 18:18:05 basehttp 27012 18348 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:18:55 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:18:56 basehttp 27012 18348 "GET /maps/my-activity/ HTTP/1.1" 200 287753
+INFO 2025-11-13 18:19:00 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 26258
+ERROR 2025-11-13 18:22:00 log 27012 18348 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 170, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'report' not found. 'report' is not a valid view function or pattern name.
+ERROR 2025-11-13 18:22:00 basehttp 27012 18348 "GET /home/ HTTP/1.1" 500 173265
+ERROR 2025-11-13 18:23:01 log 27012 18348 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 170, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'certificate_form' not found. 'certificate_form' is not a valid view function or pattern name.
+ERROR 2025-11-13 18:23:01 basehttp 27012 18348 "GET /home/ HTTP/1.1" 500 173460
+INFO 2025-11-13 18:23:28 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 32586
+INFO 2025-11-13 18:23:32 views 27012 18348 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:23:33 views 27012 18348 API returned - Rain: 0.0mm, Temp: 27.3°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:23:33 views 27012 18348 Processed 7 days of weather forecast
+INFO 2025-11-13 18:23:33 basehttp 27012 18348 "GET /monitoring/ HTTP/1.1" 200 79348
+INFO 2025-11-13 18:23:35 basehttp 27012 18348 "GET /maps/my-activity/ HTTP/1.1" 200 294081
+INFO 2025-11-13 18:23:40 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 32586
+INFO 2025-11-13 18:24:08 basehttp 27012 18348 "GET /maps/ HTTP/1.1" 200 1029760
+INFO 2025-11-13 18:24:28 basehttp 27012 18348 "GET /maps/ HTTP/1.1" 200 1029760
+INFO 2025-11-13 18:24:31 basehttp 27012 18348 "GET /maps/ HTTP/1.1" 200 1029760
+INFO 2025-11-13 18:24:37 basehttp 27012 18348 "GET /maps/ HTTP/1.1" 200 1023438
+INFO 2025-11-13 18:24:39 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-14 22:07:20 autoreload 19228 9864 Watching for file changes with StatReloader
+INFO 2025-11-14 22:07:26 basehttp 19228 7384 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-14 22:07:26 basehttp 19228 6832 "GET /static/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2025-11-14 22:07:26 basehttp 19228 7384 "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-11-14 22:07:26 basehttp 19228 28920 "GET /static/images/drrmo_logo.png HTTP/1.1" 304 0
+INFO 2025-11-14 22:07:26 basehttp 19228 28920 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+WARNING 2025-11-14 22:07:26 log 19228 28920 Not Found: /favicon.ico
+WARNING 2025-11-14 22:07:26 basehttp 19228 28920 "GET /favicon.ico HTTP/1.1" 404 5118
+INFO 2025-11-14 22:07:50 basehttp 19228 28920 "POST / HTTP/1.1" 302 0
+INFO 2025-11-14 22:07:50 basehttp 19228 28920 "GET /home/ HTTP/1.1" 200 26591
+INFO 2025-11-14 22:07:50 basehttp 19228 28920 "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2025-11-14 22:07:50 basehttp 19228 28920 "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 304 0
