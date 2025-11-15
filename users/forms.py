@@ -22,8 +22,65 @@ class CustomUserCreationForm(UserCreationForm):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field in self.fields.values():
+        placeholders = {
+            'first_name': 'Enter your first name',
+            'last_name': 'Enter your last name',
+            'username': 'Choose a username',
+            'email': 'Enter your email address',
+            'position': 'Select your position',
+            'contact_number': '11-digit mobile number',
+            'date_of_birth': 'YYYY-MM-DD',
+            'password1': 'Create a password',
+            'password2': 'Confirm your password',
+        }
+        for name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
+            if name in placeholders:
+                # Remove leading/trailing spaces just in case
+                field.widget.attrs['placeholder'] = placeholders[name].strip()
+        
+        # Make email required
+        self.fields['email'].required = True
+        self.fields['first_name'].required = True
+        self.fields['last_name'].required = True
+        self.fields['contact_number'].required = True
+        self.fields['date_of_birth'].required = True
+    
+    def clean_email(self):
+        """Validate email uniqueness."""
+        email = self.cleaned_data.get('email')
+        if email:
+            # Check if email already exists
+            if CustomUser.objects.filter(email__iexact=email).exists():
+                raise forms.ValidationError("This email address is already registered. Please use a different email.")
+        return email.lower() if email else email
+    
+    def clean_username(self):
+        """Validate username uniqueness and format."""
+        username = self.cleaned_data.get('username')
+        if username:
+            # Check if username already exists (case-insensitive)
+            if CustomUser.objects.filter(username__iexact=username).exists():
+                raise forms.ValidationError("This username is already taken. Please choose a different username.")
+            # Validate username format (alphanumeric and underscores only)
+            import re
+            if not re.match(r'^[a-zA-Z0-9_]+$', username):
+                raise forms.ValidationError("Username can only contain letters, numbers, and underscores.")
+        return username
+    
+    def clean_contact_number(self):
+        """Validate contact number is exactly 11 digits."""
+        num = self.cleaned_data.get('contact_number')
+        if num:
+            # Remove any whitespace
+            num = num.strip()
+            # Check if it's exactly 11 digits
+            if not num.isdigit() or len(num) != 11:
+                raise forms.ValidationError("Contact number must be exactly 11 digits.")
+            # Check if it starts with 09 (Philippine mobile format)
+            if not num.startswith('09'):
+                raise forms.ValidationError("Contact number must start with '09'.")
+        return num
     
     def clean_date_of_birth(self):
         """Validate date of birth: must be 18-80 years old, no future dates."""
@@ -75,12 +132,55 @@ class AdminRegistrationForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
             field.widget.attrs['class'] = 'form-control'
+        
+        # Make email and other fields required
+        self.fields['email'].required = True
+        self.fields['first_name'].required = True
+        self.fields['last_name'].required = True
+        self.fields['contact_number'].required = True
+        self.fields['date_of_birth'].required = True
     
     def clean_registration_key(self):
         key = self.cleaned_data.get('registration_key')
         if key != getattr(settings, 'ADMIN_REGISTRATION_KEY', None):
             raise forms.ValidationError("Invalid registration key. Please contact the system administrator.")
         return key
+    
+    def clean_email(self):
+        """Validate email uniqueness."""
+        email = self.cleaned_data.get('email')
+        if email:
+            # Check if email already exists
+            if CustomUser.objects.filter(email__iexact=email).exists():
+                raise forms.ValidationError("This email address is already registered. Please use a different email.")
+        return email.lower() if email else email
+    
+    def clean_username(self):
+        """Validate username uniqueness and format."""
+        username = self.cleaned_data.get('username')
+        if username:
+            # Check if username already exists (case-insensitive)
+            if CustomUser.objects.filter(username__iexact=username).exists():
+                raise forms.ValidationError("This username is already taken. Please choose a different username.")
+            # Validate username format (alphanumeric and underscores only)
+            import re
+            if not re.match(r'^[a-zA-Z0-9_]+$', username):
+                raise forms.ValidationError("Username can only contain letters, numbers, and underscores.")
+        return username
+    
+    def clean_contact_number(self):
+        """Validate contact number is exactly 11 digits."""
+        num = self.cleaned_data.get('contact_number')
+        if num:
+            # Remove any whitespace
+            num = num.strip()
+            # Check if it's exactly 11 digits
+            if not num.isdigit() or len(num) != 11:
+                raise forms.ValidationError("Contact number must be exactly 11 digits.")
+            # Check if it starts with 09 (Philippine mobile format)
+            if not num.startswith('09'):
+                raise forms.ValidationError("Contact number must start with '09'.")
+        return num
     
     def clean_date_of_birth(self):
         """Validate date of birth: must be 18-80 years old, no future dates."""

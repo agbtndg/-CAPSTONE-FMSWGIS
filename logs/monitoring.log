@@ -2351,3 +2351,66 @@ INFO 2025-11-15 19:04:45 basehttp 23476 6196 "GET /media/profile_images/istockph
 WARNING 2025-11-15 19:04:45 log 23476 6196 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 WARNING 2025-11-15 19:04:45 basehttp 23476 6196 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5029
 INFO 2025-11-15 19:05:00 basehttp 23476 6196 "GET /home/ HTTP/1.1" 200 46327
+INFO 2025-11-15 19:06:27 autoreload 1360 18052 Watching for file changes with StatReloader
+INFO 2025-11-15 19:18:23 autoreload 11988 7808 Watching for file changes with StatReloader
+INFO 2025-11-15 19:18:24 basehttp 11988 14660 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 19:18:24 basehttp 11988 14660 "GET /home/ HTTP/1.1" 200 46327
+INFO 2025-11-15 19:18:27 basehttp 11988 14660 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 19:18:27 basehttp 11988 14660 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 19:18:29 basehttp 11988 14660 "GET /register/ HTTP/1.1" 200 23376
+INFO 2025-11-15 19:21:46 autoreload 8148 24184 Watching for file changes with StatReloader
+INFO 2025-11-15 19:21:47 basehttp 8148 28816 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 19:33:17 basehttp 8148 25972 "GET /register/ HTTP/1.1" 200 23376
+INFO 2025-11-15 19:33:50 basehttp 8148 25972 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 19:33:53 basehttp 8148 25972 "GET /register/ HTTP/1.1" 200 23376
+INFO 2025-11-15 19:36:24 autoreload 23720 28660 Watching for file changes with StatReloader
+INFO 2025-11-15 19:36:26 basehttp 23720 20816 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 19:36:27 basehttp 23720 20816 "GET /register/ HTTP/1.1" 200 23683
+INFO 2025-11-15 19:37:06 autoreload 23720 28660 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 19:37:07 autoreload 22128 15412 Watching for file changes with StatReloader
+INFO 2025-11-15 19:37:13 basehttp 22128 5024 "GET /register/ HTTP/1.1" 200 23683
+INFO 2025-11-15 19:37:15 basehttp 22128 5024 "GET /register/ HTTP/1.1" 200 23683
+INFO 2025-11-15 19:40:12 basehttp 22128 5024 "GET /register/ HTTP/1.1" 200 23738
+INFO 2025-11-15 19:41:14 basehttp 22128 5024 "GET /register/ HTTP/1.1" 200 23752
+INFO 2025-11-15 19:42:32 basehttp 22128 5024 "GET /register/ HTTP/1.1" 200 23757
+INFO 2025-11-15 19:43:21 basehttp 22128 5024 "POST /register/ HTTP/1.1" 200 25266
+INFO 2025-11-15 19:43:37 basehttp 22128 5024 "POST /register/ HTTP/1.1" 200 24737
+INFO 2025-11-15 19:43:48 basehttp 22128 5024 "POST /register/ HTTP/1.1" 302 0
+INFO 2025-11-15 19:43:48 basehttp 22128 5024 "GET / HTTP/1.1" 200 13494
+INFO 2025-11-15 19:43:54 basehttp 22128 5024 "GET /register/ HTTP/1.1" 200 23757
+INFO 2025-11-15 19:43:57 basehttp 22128 5024 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 19:44:10 basehttp 22128 5024 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 19:44:10 basehttp 22128 5024 "GET /home/ HTTP/1.1" 200 46994
+INFO 2025-11-15 19:44:16 basehttp 22128 5024 "GET /approve/ HTTP/1.1" 200 35272
+INFO 2025-11-15 19:44:21 basehttp 22128 5024 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 19:44:21 basehttp 22128 5024 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 19:44:22 basehttp 22128 5024 "GET /register/ HTTP/1.1" 200 23757
+INFO 2025-11-15 19:44:44 basehttp 22128 5024 "POST /register/ HTTP/1.1" 200 25246
+INFO 2025-11-15 19:44:55 basehttp 22128 5024 "POST /register/ HTTP/1.1" 200 24992
+INFO 2025-11-15 19:45:06 basehttp 22128 5024 "POST /register/ HTTP/1.1" 302 0
+INFO 2025-11-15 19:45:06 basehttp 22128 5024 "GET / HTTP/1.1" 200 13494
+INFO 2025-11-15 19:45:16 basehttp 22128 5024 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 19:45:16 basehttp 22128 5024 "GET /home/ HTTP/1.1" 200 46961
+INFO 2025-11-15 19:45:18 basehttp 22128 5024 "GET /approve/ HTTP/1.1" 200 36541
+INFO 2025-11-15 19:45:28 basehttp 22128 5024 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 19:45:28 basehttp 22128 5024 "GET /approve/ HTTP/1.1" 200 36536
+INFO 2025-11-15 19:45:40 autoreload 22128 15412 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 19:45:40 autoreload 17900 21388 Watching for file changes with StatReloader
+INFO 2025-11-15 19:52:14 autoreload 17900 21388 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 19:52:14 autoreload 23204 16124 Watching for file changes with StatReloader
+INFO 2025-11-15 19:52:28 autoreload 23204 16124 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 19:52:28 autoreload 5564 28704 Watching for file changes with StatReloader
+INFO 2025-11-15 19:53:23 autoreload 5564 28704 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 19:53:24 autoreload 1460 13800 Watching for file changes with StatReloader
+INFO 2025-11-15 19:53:30 autoreload 1460 13800 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 19:53:31 autoreload 23632 8848 Watching for file changes with StatReloader
+INFO 2025-11-15 19:54:46 basehttp 23632 11820 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 19:54:46 basehttp 23632 11820 "GET /approve/ HTTP/1.1" 200 35496
+INFO 2025-11-15 19:54:51 basehttp 23632 11820 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 19:54:51 basehttp 23632 11820 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 19:54:52 basehttp 23632 11820 "GET /register/ HTTP/1.1" 200 23802
+INFO 2025-11-15 19:54:54 basehttp 23632 11820 "GET /register/ HTTP/1.1" 200 23802
+INFO 2025-11-15 19:55:09 basehttp 23632 11820 "POST /register/ HTTP/1.1" 200 24885
+INFO 2025-11-15 19:55:22 basehttp 23632 11820 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 19:55:33 basehttp 23632 11820 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 19:55:33 basehttp 23632 11820 "GET /home/ HTTP/1.1" 200 41418
