@@ -2416,3 +2416,6 @@ INFO 2025-11-15 19:55:33 basehttp 23632 11820 "POST / HTTP/1.1" 302 0
 INFO 2025-11-15 19:55:33 basehttp 23632 11820 "GET /home/ HTTP/1.1" 200 41418
 INFO 2025-11-15 19:56:41 autoreload 23632 8848 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
 INFO 2025-11-15 19:56:42 autoreload 18820 13500 Watching for file changes with StatReloader
+INFO 2025-11-15 20:17:02 autoreload 22316 30412 Watching for file changes with StatReloader
+INFO 2025-11-15 20:17:04 basehttp 22316 6816 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 20:17:04 basehttp 22316 6816 "GET /home/ HTTP/1.1" 200 41198

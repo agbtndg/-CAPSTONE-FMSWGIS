@@ -18,7 +18,7 @@ Traceback (most recent call last):
   File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get _response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
