@@ -868,9 +868,6 @@
             <h1>Monitoring Dashboard</h1>
             <p>Real-time flood risk monitoring and data analysis</p>
         </div>
-        <a href="{% url 'home' %}" class="back-btn">
-            <i class="fas fa-arrow-left"></i> Back to Dashboard
-        </a>
     </div>
 
     <!-- Flood Risk Alert Banner -->
@@ -1065,9 +1062,9 @@
             
             <div class="custom-date-picker">
                 <label style="font-size: 12px; color: var(--text-muted);">Custom Range:</label>
-                <input type="date" id="start-date">
+                <input type="date" id="start-date" {% if min_date %}min="{{ min_date }}"{% endif %} {% if max_date %}max="{{ max_date }}"{% endif %}>
                 <span style="font-size: 12px; color: var(--text-muted);">to</span>
-                <input type="date" id="end-date">
+                <input type="date" id="end-date" {% if min_date %}min="{{ min_date }}"{% endif %} {% if max_date %}max="{{ max_date }}"{% endif %}>
                 <button id="apply-custom-range" class="btn-apply">Apply</button>
                 <button id="reset-custom-range" class="btn-reset">Reset</button>
             </div>
@@ -1294,12 +1291,16 @@
                 tideTrendChart.data.labels = data.tide_timestamps;
                 tideTrendChart.data.datasets[0].data = data.tide_values;
                 tideTrendChart.update();
+                // Update the table view as well
+                updateTrendsTable(data.rainfall_timestamps, data.rainfall_values, data.tide_values);
             });
     }
 
     function applyCustomDateRange() {
-        const startDate = document.getElementById('start-date').value;
-        const endDate = document.getElementById('end-date').value;
+        const startDateInput = document.getElementById('start-date');
+        const endDateInput = document.getElementById('end-date');
+        const startDate = startDateInput.value;
+        const endDate = endDateInput.value;
         
         if (!startDate || !endDate) { 
             alert('Please select both start and end dates'); 
@@ -1308,33 +1309,30 @@
         
         const startDateObj = new Date(startDate);
         const endDateObj = new Date(endDate);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Reset time to start of day for comparison
         
-        const hundredYearsAgo = new Date();
-        hundredYearsAgo.setFullYear(today.getFullYear() - 100);
+        // Get min and max dates from input attributes
+        const minDate = startDateInput.min ? new Date(startDateInput.min) : null;
+        const maxDate = startDateInput.max ? new Date(startDateInput.max) : null;
         
-        // Check if start date is in the future
-        if (startDateObj > today) {
-            alert('Start date cannot be in the future. Please select a date on or before today.');
+        // Validate against min date (earliest data)
+        if (minDate && startDateObj < minDate) {
+            alert(`Start date cannot be before ${minDate.toLocaleDateString()}. Please select a date within the available data range.`);
             return;
         }
         
-        // Check if end date is in the future
-        if (endDateObj > today) {
-            alert('End date cannot be in the future. Please select a date on or before today.');
+        if (minDate && endDateObj < minDate) {
+            alert(`End date cannot be before ${minDate.toLocaleDateString()}. Please select a date within the available data range.`);
             return;
         }
         
-        // Check if start date is more than 100 years ago
-        if (startDateObj < hundredYearsAgo) {
-            alert('Start date cannot be more than 100 years ago. Please select a more recent date.');
+        // Validate against max date (today)
+        if (maxDate && startDateObj > maxDate) {
+            alert(`Start date cannot be after ${maxDate.toLocaleDateString()}. Please select a date on or before today.`);
             return;
         }
         
-        // Check if end date is more than 100 years ago
-        if (endDateObj < hundredYearsAgo) {
-            alert('End date cannot be more than 100 years ago. Please select a more recent date.');
+        if (maxDate && endDateObj > maxDate) {
+            alert(`End date cannot be after ${maxDate.toLocaleDateString()}. Please select a date on or before today.`);
             return;
         }
         
@@ -1354,6 +1352,8 @@
                 tideTrendChart.data.labels = data.tide_timestamps;
                 tideTrendChart.data.datasets[0].data = data.tide_values;
                 tideTrendChart.update();
+                // Update the table view as well
+                updateTrendsTable(data.rainfall_timestamps, data.rainfall_values, data.tide_values);
             })
             .catch(error => {
                 alert('Error loading data. Please try again.');
@@ -1374,9 +1374,13 @@
         const tableBody = document.getElementById('trendsTableBody');
         tableBody.innerHTML = '';
         if (timestamps.length === 0) { tableBody.innerHTML = '<tr><td colspan="3">No data available</td></tr>'; return; }
-        for (let i = 0; i < timestamps.length; i++) {
+        // Reverse loop to show most recent records at the top
+        for (let i = timestamps.length - 1; i >= 0; i--) {
             const row = document.createElement('tr');
-            row.innerHTML = `<td>${timestamps[i]}</td><td>${rainfallValues[i] || 'N/A'}</td><td>${tideValues[i] || 'N/A'}</td>`;
+            // Show 0 instead of N/A for zero values, but N/A for undefined/null
+            const rainfallDisplay = rainfallValues[i] !== undefined && rainfallValues[i] !== null ? rainfallValues[i] : 'N/A';
+            const tideDisplay = tideValues[i] !== undefined && tideValues[i] !== null ? tideValues[i] : 'N/A';
+            row.innerHTML = `<td>${timestamps[i]}</td><td>${rainfallDisplay}</td><td>${tideDisplay}</td>`;
             tableBody.appendChild(row);
         }
     }

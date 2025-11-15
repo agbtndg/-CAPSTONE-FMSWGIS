@@ -273,3 +273,2081 @@ INFO 2025-11-13 17:47:30 basehttp 25960 16268 "GET /monitoring/ HTTP/1.1" 200 74
 INFO 2025-11-13 17:47:43 basehttp 25960 16268 "GET /home/ HTTP/1.1" 200 26262
 INFO 2025-11-13 17:47:44 basehttp 25960 16268 "GET /maps/my-activity/ HTTP/1.1" 200 262918
 INFO 2025-11-13 17:47:44 basehttp 25960 16268 "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 23900
+<<<<<<< HEAD
+=======
+INFO 2025-11-13 17:55:52 autoreload 25960 13916 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-13 17:55:54 autoreload 6568 27440 Watching for file changes with StatReloader
+INFO 2025-11-13 17:57:40 autoreload 28440 18748 Watching for file changes with StatReloader
+INFO 2025-11-13 17:57:43 basehttp 28440 11624 "GET / HTTP/1.1" 302 0
+INFO 2025-11-13 17:57:43 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:57:51 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 262914
+INFO 2025-11-13 17:57:54 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:57:56 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023266
+INFO 2025-11-13 17:57:56 basehttp 28440 11624 "GET /static/css/ol.css HTTP/1.1" 200 6284
+WARNING 2025-11-13 17:58:01 log 28440 11624 Forbidden (CSRF token from POST has incorrect length.): /maps/save-assessment/
+WARNING 2025-11-13 17:58:01 basehttp 28440 11624 "POST /maps/save-assessment/ HTTP/1.1" 403 2514
+INFO 2025-11-13 17:58:05 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:58:07 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 262914
+INFO 2025-11-13 17:58:15 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:58:17 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023266
+WARNING 2025-11-13 17:58:21 log 28440 11624 Forbidden (CSRF token from POST has incorrect length.): /maps/save-assessment/
+WARNING 2025-11-13 17:58:21 basehttp 28440 11624 "POST /maps/save-assessment/ HTTP/1.1" 403 2514
+INFO 2025-11-13 17:58:26 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 17:58:28 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 262914
+INFO 2025-11-13 18:00:25 basehttp 28440 11624 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:00:25 basehttp 28440 11624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-13 18:00:31 basehttp 28440 11624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-13 18:00:31 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26591
+INFO 2025-11-13 18:00:33 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 265054
+INFO 2025-11-13 18:00:36 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:00:38 basehttp 28440 11624 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:00:38 basehttp 28440 11624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-13 18:00:42 basehttp 28440 11624 "POST / HTTP/1.1" 200 7379
+INFO 2025-11-13 18:00:48 basehttp 28440 11624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-13 18:00:48 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 30509
+INFO 2025-11-13 18:00:54 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 84587
+INFO 2025-11-13 18:00:58 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 29887
+INFO 2025-11-13 18:01:00 basehttp 28440 11624 "GET /maps/all-activities/ HTTP/1.1" 200 512032
+INFO 2025-11-13 18:03:14 basehttp 28440 11624 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:03:14 basehttp 28440 11624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-13 18:03:21 basehttp 28440 11624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-13 18:03:21 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26591
+INFO 2025-11-13 18:03:26 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023438
+INFO 2025-11-13 18:03:28 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023438
+INFO 2025-11-13 18:03:41 basehttp 28440 11624 "POST /maps/save-assessment/ HTTP/1.1" 200 82
+INFO 2025-11-13 18:03:46 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:03:48 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 268545
+INFO 2025-11-13 18:04:03 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:04:05 basehttp 28440 11624 "GET /maps/ HTTP/1.1" 200 1023438
+INFO 2025-11-13 18:04:13 basehttp 28440 11624 "POST /maps/save-assessment/ HTTP/1.1" 200 82
+INFO 2025-11-13 18:04:14 basehttp 28440 11624 "GET /maps/report/?barangay=Barangay%20I%20(Pob.)&lat=10.802390&lon=122.976144&risk=VHF HTTP/1.1" 200 10973
+INFO 2025-11-13 18:04:24 basehttp 28440 11624 "GET /maps/certificate/form/?barangay=Barangay%20I%20(Pob.)&lat=10.802390&lon=122.976144&risk=VHF HTTP/1.1" 200 17061
+INFO 2025-11-13 18:04:30 basehttp 28440 11624 "POST /maps/certificate/ HTTP/1.1" 200 11170
+INFO 2025-11-13 18:05:54 basehttp 28440 11624 "POST /maps/certificate/ HTTP/1.1" 200 10549
+INFO 2025-11-13 18:07:40 basehttp 28440 11624 "POST /maps/certificate/ HTTP/1.1" 200 10549
+INFO 2025-11-13 18:08:10 basehttp 28440 11624 "POST /maps/certificate/ HTTP/1.1" 200 10549
+INFO 2025-11-13 18:08:25 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:08:26 basehttp 28440 11624 "GET /maps/my-activity/ HTTP/1.1" 200 278599
+INFO 2025-11-13 18:08:50 basehttp 28440 11624 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:08:52 views 28440 11624 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:08:53 views 28440 11624 API returned - Rain: 0.0mm, Temp: 27.4Â°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:08:53 views 28440 11624 Processed 7 days of weather forecast
+INFO 2025-11-13 18:08:53 basehttp 28440 11624 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:08:57 basehttp 28440 11624 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-13 18:09:12 views 28440 11624 Flood record created: 16 - Flash Flood
+INFO 2025-11-13 18:09:12 basehttp 28440 11624 "POST /monitoring/flood-record/ HTTP/1.1" 200 154
+INFO 2025-11-13 18:09:14 views 28440 11624 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:09:15 views 28440 11624 API returned - Rain: 0.0mm, Temp: 27.4Â°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:09:15 views 28440 11624 Processed 7 days of weather forecast
+INFO 2025-11-13 18:09:15 basehttp 28440 11624 "GET /monitoring/ HTTP/1.1" 200 74228
+INFO 2025-11-13 18:10:25 basehttp 28440 11624 "GET /monitoring/flood-record/delete/16/ HTTP/1.1" 200 8543
+INFO 2025-11-13 18:10:26 views 28440 11624 Flood record deleted: 16 - Flash Flood
+INFO 2025-11-13 18:10:26 basehttp 28440 11624 "POST /monitoring/flood-record/delete/16/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:10:26 views 28440 11624 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:10:27 views 28440 11624 API returned - Rain: 0.0mm, Temp: 27.4Â°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:10:27 views 28440 11624 Processed 7 days of weather forecast
+INFO 2025-11-13 18:10:27 basehttp 28440 11624 "GET /monitoring/ HTTP/1.1" 200 73410
+INFO 2025-11-13 18:11:26 autoreload 28440 18748 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:11:27 autoreload 6948 16096 Watching for file changes with StatReloader
+INFO 2025-11-13 18:12:35 views 6948 30576 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:12:36 views 6948 30576 API returned - Rain: 0.0mm, Temp: 27.4Â°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:12:36 views 6948 30576 Processed 7 days of weather forecast
+INFO 2025-11-13 18:12:36 basehttp 6948 30576 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:12:40 basehttp 6948 30576 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-13 18:12:52 views 6948 30576 Flood record created: 17 - Flood
+INFO 2025-11-13 18:12:52 basehttp 6948 30576 "POST /monitoring/flood-record/ HTTP/1.1" 200 136
+INFO 2025-11-13 18:12:54 views 6948 30576 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:12:55 views 6948 30576 API returned - Rain: 0.0mm, Temp: 27.4Â°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:12:55 views 6948 30576 Processed 7 days of weather forecast
+INFO 2025-11-13 18:12:55 basehttp 6948 30576 "GET /monitoring/ HTTP/1.1" 200 74202
+INFO 2025-11-13 18:13:01 basehttp 6948 30576 "GET /monitoring/flood-record/delete/17/ HTTP/1.1" 200 8518
+INFO 2025-11-13 18:13:02 views 6948 30576 Flood record deleted: 17 - Flood
+INFO 2025-11-13 18:13:02 basehttp 6948 30576 "POST /monitoring/flood-record/delete/17/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:13:02 views 6948 30576 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:13:03 views 6948 30576 API returned - Rain: 0.0mm, Temp: 27.4Â°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:13:03 views 6948 30576 Processed 7 days of weather forecast
+INFO 2025-11-13 18:13:03 basehttp 6948 30576 "GET /monitoring/ HTTP/1.1" 200 73404
+INFO 2025-11-13 18:13:37 autoreload 6948 16096 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:13:38 autoreload 29920 10704 Watching for file changes with StatReloader
+INFO 2025-11-13 18:13:48 views 29920 17300 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:13:49 views 29920 17300 API returned - Rain: 0.0mm, Temp: 27.4Â°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:13:49 views 29920 17300 Processed 7 days of weather forecast
+INFO 2025-11-13 18:13:49 basehttp 29920 17300 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:13:52 basehttp 29920 17300 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-13 18:13:59 views 29920 17300 Flood record created: 18 - Flood
+INFO 2025-11-13 18:13:59 basehttp 29920 17300 "POST /monitoring/flood-record/ HTTP/1.1" 200 136
+INFO 2025-11-13 18:14:01 views 29920 17300 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:14:02 views 29920 17300 API returned - Rain: 0.0mm, Temp: 27.4Â°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:14:02 views 29920 17300 Processed 7 days of weather forecast
+INFO 2025-11-13 18:14:02 basehttp 29920 17300 "GET /monitoring/ HTTP/1.1" 200 74192
+INFO 2025-11-13 18:14:12 basehttp 29920 17300 "GET /monitoring/flood-record/delete/18/ HTTP/1.1" 200 8508
+INFO 2025-11-13 18:14:13 views 29920 17300 Flood record deleted: 18 - Flood
+INFO 2025-11-13 18:14:13 basehttp 29920 17300 "POST /monitoring/flood-record/delete/18/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:14:13 views 29920 17300 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:14:14 views 29920 17300 API returned - Rain: 0.0mm, Temp: 27.4Â°C, Humidity: 90%, Wind: 7.6km/h
+INFO 2025-11-13 18:14:14 views 29920 17300 Processed 7 days of weather forecast
+INFO 2025-11-13 18:14:14 basehttp 29920 17300 "GET /monitoring/ HTTP/1.1" 200 73400
+INFO 2025-11-13 18:14:21 basehttp 29920 17300 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:14:23 basehttp 29920 17300 "GET /maps/my-activity/ HTTP/1.1" 200 284103
+INFO 2025-11-13 18:14:56 autoreload 29920 10704 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:14:56 autoreload 28536 26436 Watching for file changes with StatReloader
+INFO 2025-11-13 18:15:54 autoreload 28536 26436 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:15:55 autoreload 28568 17564 Watching for file changes with StatReloader
+INFO 2025-11-13 18:16:50 basehttp 28568 29148 "GET /maps/my-activity/ HTTP/1.1" 200 284103
+INFO 2025-11-13 18:16:57 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:16:59 views 28568 29148 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:17:00 views 28568 29148 API returned - Rain: 0.0mm, Temp: 27.3Â°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:17:00 views 28568 29148 Processed 7 days of weather forecast
+INFO 2025-11-13 18:17:00 basehttp 28568 29148 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:17:10 basehttp 28568 29148 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-13 18:17:16 views 28568 29148 Flood record created: 19 - Flood
+INFO 2025-11-13 18:17:16 basehttp 28568 29148 "POST /monitoring/flood-record/ HTTP/1.1" 200 136
+INFO 2025-11-13 18:17:18 views 28568 29148 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:17:19 views 28568 29148 API returned - Rain: 0.0mm, Temp: 27.3Â°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:17:19 views 28568 29148 Processed 7 days of weather forecast
+INFO 2025-11-13 18:17:19 basehttp 28568 29148 "GET /monitoring/ HTTP/1.1" 200 74192
+INFO 2025-11-13 18:17:20 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26252
+INFO 2025-11-13 18:17:21 basehttp 28568 29148 "GET /maps/my-activity/ HTTP/1.1" 200 285928
+INFO 2025-11-13 18:17:25 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26252
+INFO 2025-11-13 18:17:26 views 28568 29148 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:17:27 views 28568 29148 API returned - Rain: 0.0mm, Temp: 27.3Â°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:17:27 views 28568 29148 Processed 7 days of weather forecast
+INFO 2025-11-13 18:17:27 basehttp 28568 29148 "GET /monitoring/ HTTP/1.1" 200 74192
+INFO 2025-11-13 18:17:41 basehttp 28568 29148 "GET /monitoring/flood-record/delete/19/ HTTP/1.1" 200 8508
+INFO 2025-11-13 18:17:44 views 28568 29148 Flood record deleted: 19 - Flood
+INFO 2025-11-13 18:17:44 basehttp 28568 29148 "POST /monitoring/flood-record/delete/19/ HTTP/1.1" 302 0
+INFO 2025-11-13 18:17:44 views 28568 29148 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:17:45 views 28568 29148 API returned - Rain: 0.0mm, Temp: 27.3Â°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:17:45 views 28568 29148 Processed 7 days of weather forecast
+INFO 2025-11-13 18:17:45 basehttp 28568 29148 "GET /monitoring/ HTTP/1.1" 200 73400
+INFO 2025-11-13 18:17:47 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:17:48 basehttp 28568 29148 "GET /maps/my-activity/ HTTP/1.1" 200 287753
+INFO 2025-11-13 18:17:55 basehttp 28568 29148 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:17:59 autoreload 28568 17564 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-13 18:17:59 autoreload 27012 11080 Watching for file changes with StatReloader
+INFO 2025-11-13 18:18:04 views 27012 18348 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:18:05 views 27012 18348 API returned - Rain: 0.0mm, Temp: 27.3Â°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:18:05 views 27012 18348 Processed 7 days of weather forecast
+INFO 2025-11-13 18:18:05 basehttp 27012 18348 "GET /monitoring/ HTTP/1.1" 200 73020
+INFO 2025-11-13 18:18:55 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-13 18:18:56 basehttp 27012 18348 "GET /maps/my-activity/ HTTP/1.1" 200 287753
+INFO 2025-11-13 18:19:00 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 26258
+ERROR 2025-11-13 18:22:00 log 27012 18348 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 170, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'report' not found. 'report' is not a valid view function or pattern name.
+ERROR 2025-11-13 18:22:00 basehttp 27012 18348 "GET /home/ HTTP/1.1" 500 173265
+ERROR 2025-11-13 18:23:01 log 27012 18348 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 170, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'certificate_form' not found. 'certificate_form' is not a valid view function or pattern name.
+ERROR 2025-11-13 18:23:01 basehttp 27012 18348 "GET /home/ HTTP/1.1" 500 173460
+INFO 2025-11-13 18:23:28 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 32586
+INFO 2025-11-13 18:23:32 views 27012 18348 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-13 18:23:33 views 27012 18348 API returned - Rain: 0.0mm, Temp: 27.3Â°C, Humidity: 91%, Wind: 7.1km/h
+INFO 2025-11-13 18:23:33 views 27012 18348 Processed 7 days of weather forecast
+INFO 2025-11-13 18:23:33 basehttp 27012 18348 "GET /monitoring/ HTTP/1.1" 200 79348
+INFO 2025-11-13 18:23:35 basehttp 27012 18348 "GET /maps/my-activity/ HTTP/1.1" 200 294081
+INFO 2025-11-13 18:23:40 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 32586
+INFO 2025-11-13 18:24:08 basehttp 27012 18348 "GET /maps/ HTTP/1.1" 200 1029760
+INFO 2025-11-13 18:24:28 basehttp 27012 18348 "GET /maps/ HTTP/1.1" 200 1029760
+INFO 2025-11-13 18:24:31 basehttp 27012 18348 "GET /maps/ HTTP/1.1" 200 1029760
+INFO 2025-11-13 18:24:37 basehttp 27012 18348 "GET /maps/ HTTP/1.1" 200 1023438
+INFO 2025-11-13 18:24:39 basehttp 27012 18348 "GET /home/ HTTP/1.1" 200 26258
+INFO 2025-11-14 22:07:20 autoreload 19228 9864 Watching for file changes with StatReloader
+INFO 2025-11-14 22:07:26 basehttp 19228 7384 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-14 22:07:26 basehttp 19228 6832 "GET /static/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2025-11-14 22:07:26 basehttp 19228 7384 "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-11-14 22:07:26 basehttp 19228 28920 "GET /static/images/drrmo_logo.png HTTP/1.1" 304 0
+INFO 2025-11-14 22:07:26 basehttp 19228 28920 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+WARNING 2025-11-14 22:07:26 log 19228 28920 Not Found: /favicon.ico
+WARNING 2025-11-14 22:07:26 basehttp 19228 28920 "GET /favicon.ico HTTP/1.1" 404 5118
+INFO 2025-11-14 22:07:50 basehttp 19228 28920 "POST / HTTP/1.1" 302 0
+INFO 2025-11-14 22:07:50 basehttp 19228 28920 "GET /home/ HTTP/1.1" 200 26591
+INFO 2025-11-14 22:07:50 basehttp 19228 28920 "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2025-11-14 22:07:50 basehttp 19228 28920 "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 304 0
+INFO 2025-11-14 23:39:49 autoreload 17124 29372 Watching for file changes with StatReloader
+INFO 2025-11-14 23:39:51 basehttp 17124 17804 "GET / HTTP/1.1" 302 0
+INFO 2025-11-14 23:39:51 basehttp 17124 17804 "GET /home/ HTTP/1.1" 200 31835
+INFO 2025-11-14 23:39:57 basehttp 17124 17804 "GET /home/ HTTP/1.1" 200 31835
+INFO 2025-11-14 23:39:59 basehttp 17124 17804 "GET /maps/ HTTP/1.1" 200 1029015
+INFO 2025-11-14 23:39:59 basehttp 17124 26900 "GET /static/js/ol.js HTTP/1.1" 304 0
+INFO 2025-11-14 23:39:59 basehttp 17124 17804 "GET /static/css/ol.css HTTP/1.1" 200 6284
+INFO 2025-11-14 23:40:12 views 17124 17804 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-14 23:40:15 views 17124 17804 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 10.4km/h
+INFO 2025-11-14 23:40:15 views 17124 17804 Processed 7 days of weather forecast
+INFO 2025-11-14 23:40:15 views 17124 17804 Created new rainfall record: 0.0mm
+INFO 2025-11-14 23:40:15 views 17124 17804 Created new weather record
+INFO 2025-11-14 23:40:15 views 17124 17804 Requesting WorldTides API for Cebu City: https://www.worldtides.info/api/v3
+INFO 2025-11-14 23:40:16 views 17124 17804 Created new tide record: 0.075m from WorldTides API
+INFO 2025-11-14 23:40:16 basehttp 17124 17804 "GET /monitoring/ HTTP/1.1" 200 79839
+INFO 2025-11-14 23:40:16 basehttp 17124 17804 "GET /static/js/chart.js HTTP/1.1" 304 0
+INFO 2025-11-14 23:42:03 views 17124 17804 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-14 23:42:05 views 17124 17804 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 10.4km/h
+INFO 2025-11-14 23:42:05 views 17124 17804 Processed 7 days of weather forecast
+INFO 2025-11-14 23:42:05 basehttp 17124 17804 "GET /monitoring/ HTTP/1.1" 200 80261
+INFO 2025-11-14 23:42:14 basehttp 17124 17804 "GET /home/ HTTP/1.1" 200 32258
+INFO 2025-11-14 23:51:17 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 34091
+INFO 2025-11-14 23:56:05 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 36586
+INFO 2025-11-14 23:58:43 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 36899
+INFO 2025-11-14 23:58:44 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 36899
+INFO 2025-11-14 23:58:54 basehttp 17124 16664 "GET /home/ HTTP/1.1" 200 36899
+WARNING 2025-11-14 23:59:12 log 17124 16664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-14 23:59:12 basehttp 17124 16664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5266
+INFO 2025-11-14 23:59:12 basehttp 17124 16664 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 589892
+INFO 2025-11-14 23:59:18 basehttp 17124 16664 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+WARNING 2025-11-14 23:59:18 log 17124 16664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-14 23:59:18 basehttp 17124 16664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5266
+INFO 2025-11-14 23:59:22 views 17124 16664 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-14 23:59:23 views 17124 16664 API returned - Rain: 0.0mm, Temp: 25.7Â°C, Humidity: 95%, Wind: 10.5km/h
+INFO 2025-11-14 23:59:23 views 17124 16664 Processed 7 days of weather forecast
+INFO 2025-11-14 23:59:23 basehttp 17124 16664 "GET /monitoring/ HTTP/1.1" 200 84902
+WARNING 2025-11-14 23:59:23 log 17124 16664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-14 23:59:23 basehttp 17124 16664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5266
+WARNING 2025-11-14 23:59:23 basehttp 17124 16664 "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
+INFO 2025-11-14 23:59:26 basehttp 17124 6928 "GET /home/ HTTP/1.1" 200 36899
+WARNING 2025-11-14 23:59:27 log 17124 6928 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-14 23:59:27 basehttp 17124 6928 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5266
+INFO 2025-11-15 00:02:56 basehttp 17124 6928 "GET /home/ HTTP/1.1" 200 32025
+INFO 2025-11-15 00:04:56 basehttp 17124 6928 "GET /home/ HTTP/1.1" 200 32025
+INFO 2025-11-15 00:10:38 basehttp 17124 23592 "GET /home/ HTTP/1.1" 200 31198
+INFO 2025-11-15 00:10:49 basehttp 17124 23592 "GET /maps/ HTTP/1.1" 200 1028377
+INFO 2025-11-15 00:10:51 views 17124 23592 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:10:52 views 17124 23592 API returned - Rain: 0.0mm, Temp: 25.7Â°C, Humidity: 95%, Wind: 10.5km/h
+INFO 2025-11-15 00:10:52 views 17124 23592 Processed 7 days of weather forecast
+INFO 2025-11-15 00:10:52 basehttp 17124 23592 "GET /monitoring/ HTTP/1.1" 200 78879
+INFO 2025-11-15 00:10:54 basehttp 17124 23592 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 00:10:58 views 17124 23592 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:10:59 views 17124 23592 API returned - Rain: 0.0mm, Temp: 25.7Â°C, Humidity: 95%, Wind: 10.5km/h
+INFO 2025-11-15 00:10:59 views 17124 23592 Processed 7 days of weather forecast
+INFO 2025-11-15 00:10:59 basehttp 17124 23592 "GET /monitoring/ HTTP/1.1" 200 78879
+INFO 2025-11-15 00:11:00 basehttp 17124 23592 "GET /maps/my-activity/ HTTP/1.1" 200 293786
+INFO 2025-11-15 00:11:00 basehttp 17124 23592 "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 23900
+INFO 2025-11-15 00:18:11 basehttp 17124 8212 "GET /maps/my-activity/ HTTP/1.1" 200 293784
+INFO 2025-11-15 00:18:33 basehttp 17124 8212 "GET /maps/my-activity/ HTTP/1.1" 200 293784
+INFO 2025-11-15 00:19:58 basehttp 17124 8212 "GET /maps/my-activity/ HTTP/1.1" 200 293847
+INFO 2025-11-15 00:30:59 basehttp 17124 18552 "GET /maps/my-activity/ HTTP/1.1" 200 289090
+INFO 2025-11-15 00:31:05 basehttp 17124 18552 "GET /profile/ HTTP/1.1" 200 25593
+INFO 2025-11-15 00:31:05 basehttp 17124 18552 "GET /profile_images/istockphoto-2194474157-612x612.webp HTTP/1.1" 200 10530
+INFO 2025-11-15 00:31:08 basehttp 17124 18552 "GET /maps/ HTTP/1.1" 200 1023680
+INFO 2025-11-15 00:31:29 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:31:32 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:31:32 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:31:32 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73175
+INFO 2025-11-15 00:31:34 basehttp 17124 18552 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 00:31:37 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:31:38 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:31:38 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:31:38 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73175
+INFO 2025-11-15 00:31:41 basehttp 17124 18552 "GET /maps/my-activity/ HTTP/1.1" 200 289090
+INFO 2025-11-15 00:33:02 basehttp 17124 18552 "GET /maps/my-activity/ HTTP/1.1" 200 288970
+INFO 2025-11-15 00:33:03 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:33:04 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:33:04 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:33:04 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73055
+INFO 2025-11-15 00:33:09 basehttp 17124 18552 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 00:33:12 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:33:13 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:33:13 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:33:13 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73055
+INFO 2025-11-15 00:33:16 basehttp 17124 18552 "GET /maps/ HTTP/1.1" 200 1023510
+INFO 2025-11-15 00:33:31 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:33:32 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:33:32 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:33:32 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 73055
+INFO 2025-11-15 00:34:07 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:34:09 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:34:09 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:34:09 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 76746
+INFO 2025-11-15 00:35:43 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:35:43 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:35:43 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:35:44 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 76779
+INFO 2025-11-15 00:37:29 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:37:30 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:37:30 views 17124 18552 Processed 7 days of weather forecast
+ERROR 2025-11-15 00:37:30 log 17124 18552 Internal Server Error: /monitoring/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py", line 454, in monitoring_view
+    return render(request, 'monitoring/monitoring.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' not found. 'dashboard' is not a valid view function or pattern name.
+ERROR 2025-11-15 00:37:30 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 500 255785
+INFO 2025-11-15 00:38:09 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:38:10 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:38:10 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:38:10 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 77026
+INFO 2025-11-15 00:38:13 basehttp 17124 18552 "GET /home/ HTTP/1.1" 200 30472
+INFO 2025-11-15 00:38:18 basehttp 17124 18552 "GET /home/ HTTP/1.1" 200 30472
+INFO 2025-11-15 00:39:46 views 17124 18552 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 00:39:47 views 17124 18552 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 00:39:47 views 17124 18552 Processed 7 days of weather forecast
+INFO 2025-11-15 00:39:47 basehttp 17124 18552 "GET /monitoring/ HTTP/1.1" 200 77026
+INFO 2025-11-15 00:40:23 basehttp 17124 18552 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 00:40:52 basehttp 17124 18552 "GET /home/ HTTP/1.1" 200 28368
+INFO 2025-11-15 00:44:31 basehttp 17124 18552 "GET /home/ HTTP/1.1" 200 33543
+ERROR 2025-11-15 00:44:44 log 17124 18552 Internal Server Error: /maps/report/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(3)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\maps\views.py", line 64, in report_view
+    ReportRecord.objects.create(
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: value too long for type character varying(3)
+
+ERROR 2025-11-15 00:44:44 basehttp 17124 18552 "GET /maps/report/ HTTP/1.1" 500 173644
+ERROR 2025-11-15 00:56:08 log 17124 5356 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 170, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 749, in resolve
+    new_obj = func(obj, *arg_vals)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaultfilters.py", line 784, in date
+    return formats.date_format(value, arg)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\formats.py", line 155, in date_format
+    return dateformat.format(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\dateformat.py", line 325, in format
+    return df.format(format_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\dateformat.py", line 45, in format
+    raise TypeError(
+TypeError: The format for date objects may not contain time-related format specifiers (found 'H').
+ERROR 2025-11-15 00:56:08 basehttp 17124 5356 "GET /home/ HTTP/1.1" 500 228548
+INFO 2025-11-15 00:57:26 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 33352
+INFO 2025-11-15 00:59:27 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 32432
+INFO 2025-11-15 00:59:54 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 32432
+INFO 2025-11-15 01:00:02 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 32432
+INFO 2025-11-15 01:00:04 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 33352
+INFO 2025-11-15 01:01:09 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 31834
+INFO 2025-11-15 01:01:23 basehttp 17124 5356 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 01:01:32 views 17124 5356 Flood record created: 20 - Flash Flood
+INFO 2025-11-15 01:01:32 basehttp 17124 5356 "POST /monitoring/flood-record/ HTTP/1.1" 200 142
+INFO 2025-11-15 01:01:34 views 17124 5356 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 01:01:35 views 17124 5356 API returned - Rain: 0.0mm, Temp: 25.7Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 01:01:35 views 17124 5356 Processed 7 days of weather forecast
+INFO 2025-11-15 01:01:35 basehttp 17124 5356 "GET /monitoring/ HTTP/1.1" 200 78201
+INFO 2025-11-15 01:01:36 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 31834
+INFO 2025-11-15 01:01:41 basehttp 17124 5356 "GET /maps/my-activity/ HTTP/1.1" 200 294770
+INFO 2025-11-15 01:01:50 basehttp 17124 5356 "GET /home/ HTTP/1.1" 200 31834
+INFO 2025-11-15 01:09:46 autoreload 17124 29372 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:09:47 autoreload 24976 20888 Watching for file changes with StatReloader
+INFO 2025-11-15 01:09:57 basehttp 24976 12392 "GET /home/ HTTP/1.1" 200 33204
+INFO 2025-11-15 01:10:29 basehttp 24976 12392 "GET /maps/ HTTP/1.1" 200 1027481
+INFO 2025-11-15 01:10:38 views 24976 12392 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 01:10:41 views 24976 12392 API returned - Rain: 0.0mm, Temp: 25.7Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 01:10:41 views 24976 12392 Processed 7 days of weather forecast
+INFO 2025-11-15 01:10:41 basehttp 24976 12392 "GET /monitoring/ HTTP/1.1" 200 78201
+INFO 2025-11-15 01:11:08 basehttp 24976 12392 "GET /home/ HTTP/1.1" 200 33204
+INFO 2025-11-15 01:12:01 basehttp 24976 12392 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 01:12:01 basehttp 24976 12392 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 01:12:06 basehttp 24976 12392 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 01:12:06 basehttp 24976 12392 "GET /home/ HTTP/1.1" 200 34727
+INFO 2025-11-15 01:12:23 basehttp 24976 12392 "GET /maps/my-activity/ HTTP/1.1" 200 90683
+INFO 2025-11-15 01:12:26 basehttp 24976 12392 "GET /home/ HTTP/1.1" 200 34398
+INFO 2025-11-15 01:19:46 basehttp 24976 19964 "GET /home/ HTTP/1.1" 200 35026
+ERROR 2025-11-15 01:20:36 log 24976 19964 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 205, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_activity' not found. 'admin_activity' is not a valid view function or pattern name.
+ERROR 2025-11-15 01:20:36 basehttp 24976 19964 "GET /home/ HTTP/1.1" 500 216636
+INFO 2025-11-15 01:21:07 autoreload 24976 20888 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\urls.py changed, reloading.
+INFO 2025-11-15 01:21:07 autoreload 20672 15156 Watching for file changes with StatReloader
+INFO 2025-11-15 01:23:31 autoreload 20672 15156 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:23:31 autoreload 9872 11692 Watching for file changes with StatReloader
+ERROR 2025-11-15 01:23:36 log 9872 3268 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 170, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_activity' not found. 'admin_activity' is not a valid view function or pattern name.
+ERROR 2025-11-15 01:23:36 basehttp 9872 3268 "GET /home/ HTTP/1.1" 500 187008
+INFO 2025-11-15 01:23:46 basehttp 9872 3268 "GET /home/ HTTP/1.1" 200 34859
+INFO 2025-11-15 01:25:43 basehttp 9872 3268 "GET /home/ HTTP/1.1" 200 35088
+INFO 2025-11-15 01:25:45 basehttp 9872 3268 "GET /logs/ HTTP/1.1" 200 26088
+INFO 2025-11-15 01:25:51 basehttp 9872 3268 "GET /approve/ HTTP/1.1" 200 32770
+INFO 2025-11-15 01:25:57 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 90915
+INFO 2025-11-15 01:25:58 basehttp 9872 3268 "GET /logs/ HTTP/1.1" 200 26088
+INFO 2025-11-15 01:27:07 basehttp 9872 3268 "GET /logs/ HTTP/1.1" 200 26103
+INFO 2025-11-15 01:27:09 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551643
+INFO 2025-11-15 01:27:11 basehttp 9872 3268 "GET /approve/ HTTP/1.1" 200 32785
+INFO 2025-11-15 01:27:12 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551643
+INFO 2025-11-15 01:27:13 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 90930
+INFO 2025-11-15 01:27:16 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551643
+INFO 2025-11-15 01:27:18 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 90930
+INFO 2025-11-15 01:27:21 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551643
+INFO 2025-11-15 01:31:19 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551950
+INFO 2025-11-15 01:31:44 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 91237
+INFO 2025-11-15 01:31:47 basehttp 9872 3268 "GET /maps/all-activities/ HTTP/1.1" 200 551950
+INFO 2025-11-15 01:31:50 basehttp 9872 3268 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 01:31:50 basehttp 9872 3268 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 01:31:58 basehttp 9872 3268 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 01:31:58 basehttp 9872 3268 "GET /home/ HTTP/1.1" 200 33715
+INFO 2025-11-15 01:32:02 views 9872 3268 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 01:32:03 views 9872 3268 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 95%, Wind: 12.0km/h
+INFO 2025-11-15 01:32:03 views 9872 3268 Processed 7 days of weather forecast
+INFO 2025-11-15 01:32:03 basehttp 9872 3268 "GET /monitoring/ HTTP/1.1" 200 78231
+INFO 2025-11-15 01:32:04 basehttp 9872 3268 "GET /maps/my-activity/ HTTP/1.1" 200 296950
+INFO 2025-11-15 01:32:11 basehttp 9872 3268 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 01:32:11 basehttp 9872 3268 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 01:32:19 basehttp 9872 3268 "POST / HTTP/1.1" 200 7379
+INFO 2025-11-15 01:32:25 basehttp 9872 3268 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 01:32:25 basehttp 9872 3268 "GET /home/ HTTP/1.1" 200 36032
+INFO 2025-11-15 01:38:01 autoreload 9872 11692 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:38:02 autoreload 28800 8732 Watching for file changes with StatReloader
+ERROR 2025-11-15 01:38:27 log 28800 10728 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserLog' object has no attribute 'get_action_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'get_action_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 189, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 743, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [get_action_display] in <UserLog: admin - Logged in at 2025-11-14 17:32:25.165526+00:00>
+ERROR 2025-11-15 01:38:27 basehttp 28800 10728 "GET /home/ HTTP/1.1" 500 261169
+ERROR 2025-11-15 01:39:22 log 28800 10728 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: 'act.__class__.__name__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 823, in __init__
+    self.literal = float(var)
+                   ^^^^^^^^^^
+ValueError: could not convert string to float: 'act.__class__.__name__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 839, in __init__
+    self.literal = mark_safe(unescape_string_literal(var))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 231, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\text.py", line 447, in unescape_string_literal
+    raise ValueError("Not a string literal: %r" % s)
+ValueError: Not a string literal: 'act.__class__.__name__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 189, in home
+    return render(request, 'users/home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 894, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 897, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 697, in __init__
+    var_obj = Variable(var)
+              ^^^^^^^^^^^^^
+  File "C:\Users\aldri\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 844, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Variables and attributes may not begin with underscores: 'act.__class__.__name__'
+ERROR 2025-11-15 01:39:22 basehttp 28800 10728 "GET /home/ HTTP/1.1" 500 409629
+INFO 2025-11-15 01:39:42 autoreload 28800 8732 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:39:43 autoreload 7464 600 Watching for file changes with StatReloader
+INFO 2025-11-15 01:40:16 basehttp 7464 13264 "GET /home/ HTTP/1.1" 200 40262
+INFO 2025-11-15 01:41:08 autoreload 7464 600 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:41:09 autoreload 2648 17232 Watching for file changes with StatReloader
+INFO 2025-11-15 01:41:14 basehttp 2648 7824 "GET /home/ HTTP/1.1" 200 37670
+INFO 2025-11-15 01:41:23 basehttp 2648 7824 "GET /home/ HTTP/1.1" 200 35410
+INFO 2025-11-15 01:44:37 basehttp 2648 7824 "GET /home/ HTTP/1.1" 200 37183
+INFO 2025-11-15 01:46:01 autoreload 2648 17232 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:46:02 autoreload 22728 14132 Watching for file changes with StatReloader
+INFO 2025-11-15 01:47:39 basehttp 22728 18404 "GET /home/ HTTP/1.1" 200 38926
+INFO 2025-11-15 01:51:37 autoreload 22728 14132 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 01:51:38 autoreload 23168 13932 Watching for file changes with StatReloader
+INFO 2025-11-15 01:52:17 basehttp 23168 13664 "GET /home/ HTTP/1.1" 200 38539
+INFO 2025-11-15 01:54:41 basehttp 23168 13664 "GET /home/ HTTP/1.1" 200 38101
+INFO 2025-11-15 02:05:30 basehttp 23168 6000 "GET /home/ HTTP/1.1" 200 38101
+INFO 2025-11-15 02:09:29 basehttp 23168 6000 "GET /approve/ HTTP/1.1" 200 33092
+INFO 2025-11-15 02:09:32 basehttp 23168 6000 "GET /home/ HTTP/1.1" 200 38101
+INFO 2025-11-15 02:09:58 views 23168 6000 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:09:59 views 23168 6000 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:09:59 views 23168 6000 Processed 7 days of weather forecast
+INFO 2025-11-15 02:09:59 basehttp 23168 6000 "GET /monitoring/ HTTP/1.1" 200 78752
+INFO 2025-11-15 02:10:07 basehttp 23168 6000 "GET /monitoring/flood-record/delete/20/ HTTP/1.1" 200 8452
+INFO 2025-11-15 02:10:08 views 23168 6000 Flood record deleted: 20 - Flash Flood
+INFO 2025-11-15 02:10:08 basehttp 23168 6000 "POST /monitoring/flood-record/delete/20/ HTTP/1.1" 302 0
+INFO 2025-11-15 02:10:08 views 23168 6000 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:10:10 views 23168 6000 API returned - Rain: 0.0mm, Temp: 25.8Â°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:10:10 views 23168 6000 Processed 7 days of weather forecast
+INFO 2025-11-15 02:10:10 basehttp 23168 6000 "GET /monitoring/ HTTP/1.1" 200 77963
+INFO 2025-11-15 02:10:12 basehttp 23168 6000 "GET /home/ HTTP/1.1" 200 38125
+INFO 2025-11-15 02:11:42 basehttp 23168 27472 "GET /maps/all-activities/ HTTP/1.1" 200 561505
+INFO 2025-11-15 02:11:50 basehttp 23168 27472 "GET /home/ HTTP/1.1" 200 38125
+INFO 2025-11-15 02:13:03 basehttp 23168 27472 "GET /maps/ HTTP/1.1" 200 1028032
+INFO 2025-11-15 02:16:33 basehttp 23168 27472 "POST /maps/save-assessment/ HTTP/1.1" 200 82
+INFO 2025-11-15 02:16:34 basehttp 23168 27472 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.808940&lon=123.023975&risk=LF HTTP/1.1" 200 10609
+INFO 2025-11-15 02:16:34 basehttp 23168 27472 "GET /static/images/drrmo_header.png HTTP/1.1" 200 161208
+INFO 2025-11-15 02:16:44 basehttp 23168 27472 "GET /maps/certificate/form/?barangay=Eustaquio%20Lopez&lat=10.808940&lon=123.023975&risk=LF HTTP/1.1" 200 17029
+INFO 2025-11-15 02:16:55 basehttp 23168 27472 "POST /maps/certificate/ HTTP/1.1" 200 10530
+INFO 2025-11-15 02:17:11 views 23168 27472 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:17:12 views 23168 27472 API returned - Rain: 0.0mm, Temp: 25.9Â°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:17:12 views 23168 27472 Processed 7 days of weather forecast
+INFO 2025-11-15 02:17:12 basehttp 23168 27472 "GET /monitoring/ HTTP/1.1" 200 77577
+INFO 2025-11-15 02:18:03 basehttp 23168 27472 "GET /monitoring/flood-record/edit/12/ HTTP/1.1" 200 30721
+INFO 2025-11-15 02:18:11 views 23168 27472 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:18:12 views 23168 27472 API returned - Rain: 0.0mm, Temp: 25.9Â°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:18:12 views 23168 27472 Processed 7 days of weather forecast
+INFO 2025-11-15 02:18:12 basehttp 23168 27472 "GET /monitoring/ HTTP/1.1" 200 77577
+INFO 2025-11-15 02:18:22 basehttp 23168 27472 "GET /monitoring/flood-record/edit/12/ HTTP/1.1" 200 30721
+INFO 2025-11-15 02:18:27 views 23168 27472 Flood record updated: 12 - Flood
+INFO 2025-11-15 02:18:27 basehttp 23168 27472 "POST /monitoring/flood-record/edit/12/ HTTP/1.1" 200 150
+INFO 2025-11-15 02:18:29 views 23168 27472 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:18:31 views 23168 27472 API returned - Rain: 0.0mm, Temp: 25.9Â°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:18:31 views 23168 27472 Processed 7 days of weather forecast
+INFO 2025-11-15 02:18:31 basehttp 23168 27472 "GET /monitoring/ HTTP/1.1" 200 77587
+INFO 2025-11-15 02:19:53 autoreload 23168 13932 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 02:19:54 autoreload 8476 8964 Watching for file changes with StatReloader
+INFO 2025-11-15 02:20:16 basehttp 8476 29200 "GET /monitoring/flood-record/edit/12/ HTTP/1.1" 200 30731
+INFO 2025-11-15 02:20:29 views 8476 29200 Flood record updated: 12 - Flood
+INFO 2025-11-15 02:20:29 basehttp 8476 29200 "POST /monitoring/flood-record/edit/12/ HTTP/1.1" 200 138
+INFO 2025-11-15 02:20:31 views 8476 29200 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:20:33 views 8476 29200 API returned - Rain: 0.0mm, Temp: 25.9Â°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:20:33 views 8476 29200 Processed 7 days of weather forecast
+INFO 2025-11-15 02:20:33 basehttp 8476 29200 "GET /monitoring/ HTTP/1.1" 200 77642
+INFO 2025-11-15 02:20:53 autoreload 8476 8964 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 02:20:54 autoreload 3268 24624 Watching for file changes with StatReloader
+INFO 2025-11-15 02:20:58 basehttp 3268 23500 "GET /monitoring/flood-record/delete/12/ HTTP/1.1" 200 8485
+INFO 2025-11-15 02:20:59 views 3268 23500 Flood record deleted: 12 - Flood
+INFO 2025-11-15 02:20:59 basehttp 3268 23500 "POST /monitoring/flood-record/delete/12/ HTTP/1.1" 302 0
+INFO 2025-11-15 02:20:59 views 3268 23500 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:21:00 views 3268 23500 API returned - Rain: 0.0mm, Temp: 25.9Â°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:21:00 views 3268 23500 Processed 7 days of weather forecast
+INFO 2025-11-15 02:21:00 basehttp 3268 23500 "GET /monitoring/ HTTP/1.1" 200 76765
+INFO 2025-11-15 02:21:10 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:11 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:12 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:15 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:21 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:21 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:22 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:22 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=24h HTTP/1.1" 200 189
+INFO 2025-11-15 02:21:23 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:24 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:24 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:26 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:21:28 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:28 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:21:29 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=all HTTP/1.1" 200 1284
+INFO 2025-11-15 02:21:30 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:22:18 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:25:33 views 3268 23500 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:25:34 views 3268 23500 API returned - Rain: 0.0mm, Temp: 25.9Â°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:25:34 views 3268 23500 Processed 7 days of weather forecast
+INFO 2025-11-15 02:25:34 basehttp 3268 23500 "GET /monitoring/ HTTP/1.1" 200 76685
+INFO 2025-11-15 02:25:37 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:25:39 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:25:48 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:25:50 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=24h HTTP/1.1" 200 189
+INFO 2025-11-15 02:26:01 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:26:02 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:26:02 basehttp 3268 23500 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1287
+INFO 2025-11-15 02:26:14 basehttp 3268 23500 "GET /monitoring/api/trends/?start_date=2025-11-10&end_date=2025-11-11 HTTP/1.1" 200 220
+INFO 2025-11-15 02:28:37 autoreload 3268 24624 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 02:28:37 autoreload 13760 12368 Watching for file changes with StatReloader
+INFO 2025-11-15 02:28:47 views 13760 24904 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 02:28:48 views 13760 24904 API returned - Rain: 0.0mm, Temp: 25.9Â°C, Humidity: 94%, Wind: 12.3km/h
+INFO 2025-11-15 02:28:48 views 13760 24904 Processed 7 days of weather forecast
+INFO 2025-11-15 02:28:48 basehttp 13760 24904 "GET /monitoring/ HTTP/1.1" 200 76685
+INFO 2025-11-15 02:28:51 basehttp 13760 24904 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 658
+INFO 2025-11-15 02:29:08 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-09 HTTP/1.1" 200 430
+INFO 2025-11-15 02:29:11 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-10 HTTP/1.1" 200 482
+INFO 2025-11-15 02:29:18 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-11 HTTP/1.1" 200 482
+INFO 2025-11-15 02:29:23 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-12 HTTP/1.1" 200 587
+INFO 2025-11-15 02:29:28 basehttp 13760 24904 "GET /monitoring/api/trends/?start_date=2025-11-08&end_date=2025-11-13 HTTP/1.1" 200 640
+INFO 2025-11-15 02:29:43 basehttp 13760 24904 "GET /monitoring/api/trends/?time_range=all HTTP/1.1" 200 1284
+INFO 2025-11-15 02:29:48 basehttp 13760 24904 "GET /monitoring/api/trends/?time_range=24h HTTP/1.1" 200 189
+INFO 2025-11-15 02:29:59 basehttp 13760 24904 "GET /approve/ HTTP/1.1" 200 33092
+INFO 2025-11-15 02:30:21 basehttp 13760 24904 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 02:30:21 basehttp 13760 24904 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 02:30:23 basehttp 13760 24904 "GET /register/ HTTP/1.1" 200 13287
+INFO 2025-11-15 02:30:33 autoreload 13760 12368 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 02:30:33 autoreload 30540 22472 Watching for file changes with StatReloader
+INFO 2025-11-15 02:32:30 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 14763
+INFO 2025-11-15 02:32:35 basehttp 30540 22348 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 02:32:41 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 14763
+INFO 2025-11-15 02:35:30 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 14763
+INFO 2025-11-15 02:35:32 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 14763
+INFO 2025-11-15 02:36:00 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 13287
+INFO 2025-11-15 02:37:56 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 15113
+INFO 2025-11-15 02:40:45 basehttp 30540 22348 "GET /register/ HTTP/1.1" 200 15750
+INFO 2025-11-15 02:47:18 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 17230
+INFO 2025-11-15 02:48:56 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15497
+INFO 2025-11-15 02:50:25 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15497
+INFO 2025-11-15 02:51:26 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:51:33 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:51:35 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:51:39 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:51:41 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15508
+INFO 2025-11-15 02:53:08 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15802
+INFO 2025-11-15 02:54:26 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15802
+INFO 2025-11-15 02:55:32 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15803
+INFO 2025-11-15 02:56:32 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15803
+INFO 2025-11-15 02:59:50 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:15:42 basehttp 19196 7192 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:15:44 basehttp 19196 7192 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:21:18 basehttp 19196 8232 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:21:30 basehttp 19196 8232 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:21:33 basehttp 19196 8232 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:21:42 autoreload 17452 22708 Watching for file changes with StatReloader
+INFO 2025-11-15 03:21:44 basehttp 17452 4064 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:21:47 basehttp 17452 4064 "GET /register/ HTTP/1.1" 200 15188
+INFO 2025-11-15 03:23:33 basehttp 17452 4064 "GET /register/ HTTP/1.1" 200 16262
+INFO 2025-11-15 03:23:55 autoreload 17452 22708 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 03:23:56 autoreload 8804 5476 Watching for file changes with StatReloader
+INFO 2025-11-15 03:25:34 basehttp 8804 24220 "GET /register/ HTTP/1.1" 200 15140
+INFO 2025-11-15 03:25:36 basehttp 8804 24220 "GET /register/ HTTP/1.1" 200 15140
+INFO 2025-11-15 03:25:40 basehttp 8804 24220 "GET /register/ HTTP/1.1" 200 15140
+INFO 2025-11-15 03:25:44 autoreload 8804 5476 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 03:25:44 autoreload 11924 15844 Watching for file changes with StatReloader
+INFO 2025-11-15 03:25:46 basehttp 11924 18480 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:27:49 autoreload 11924 15844 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\models.py changed, reloading.
+INFO 2025-11-15 03:27:50 autoreload 13756 27528 Watching for file changes with StatReloader
+INFO 2025-11-15 03:28:43 autoreload 7792 26124 Watching for file changes with StatReloader
+INFO 2025-11-15 03:28:44 basehttp 7792 27312 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:28:45 basehttp 7792 27312 "GET /register/ HTTP/1.1" 200 15101
+INFO 2025-11-15 03:28:50 basehttp 7792 27312 "GET /register/ HTTP/1.1" 200 15101
+INFO 2025-11-15 03:30:34 basehttp 7792 27312 "GET /register/ HTTP/1.1" 200 14998
+INFO 2025-11-15 03:31:07 autoreload 7792 26124 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 03:31:08 autoreload 15092 9568 Watching for file changes with StatReloader
+INFO 2025-11-15 03:31:47 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14987
+INFO 2025-11-15 03:32:04 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:32:19 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:33:27 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:33:28 basehttp 15092 6448 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:33:30 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:33:32 basehttp 15092 6448 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:33:33 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:33:34 basehttp 15092 6448 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:20:20 basehttp 15092 8392 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:20:20 basehttp 15092 28780 "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-11-15 13:20:20 basehttp 15092 8392 "GET /static/images/drrmo_logo.png HTTP/1.1" 304 0
+INFO 2025-11-15 13:20:20 basehttp 15092 11788 "GET /static/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2025-11-15 13:20:20 basehttp 15092 11788 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-11-15 13:20:21 basehttp 15092 11788 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 13:21:46 basehttp 15092 11788 "GET /register/ HTTP/1.1" 200 15036
+INFO 2025-11-15 13:24:33 basehttp 15092 6636 "GET /register/ HTTP/1.1" 200 15154
+INFO 2025-11-15 13:25:17 basehttp 15092 19556 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:25:21 basehttp 15092 19556 "GET /register/ HTTP/1.1" 200 15154
+WARNING 2025-11-15 13:29:10 log 15092 19556 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 13:29:10 basehttp 15092 19556 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 13:29:52 log 15092 19556 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 13:29:52 basehttp 15092 19556 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 13:30:05 log 15092 29020 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 13:30:05 basehttp 15092 29020 "POST /register/ HTTP/1.1" 403 2491
+INFO 2025-11-15 13:30:27 autoreload 15092 9568 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:30:28 autoreload 9780 19160 Watching for file changes with StatReloader
+INFO 2025-11-15 13:30:36 autoreload 9780 19160 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:32:20 autoreload 29148 24116 Watching for file changes with StatReloader
+INFO 2025-11-15 13:32:21 basehttp 29148 10088 "GET / HTTP/1.1" 301 0
+INFO 2025-11-15 13:32:21 basehttp 29148 25288 code 400, message Bad request version ('\x00\x02\x01\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-11-15 13:32:21 basehttp 29148 25288 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:21 basehttp 29148 14764 code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÚÚ\x00\x00\x00')
+ERROR 2025-11-15 13:32:21 basehttp 29148 14764 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:22 basehttp 29148 29772 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-11-15 13:32:22 basehttp 29148 29772 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:22 basehttp 29148 2760 code 400, message Bad request version ('a§RºÄ/Ã:Ìª\x9b\x86\x0f(¦[I')
+ERROR 2025-11-15 13:32:22 basehttp 29148 2760 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:45 autoreload 29148 24116 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:32:45 autoreload 25512 3924 Watching for file changes with StatReloader
+INFO 2025-11-15 13:32:49 basehttp 25512 26512 code 400, message Bad request version ('%PÔt')
+ERROR 2025-11-15 13:32:49 basehttp 25512 26512 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 28592 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00\x00')
+ERROR 2025-11-15 13:32:49 basehttp 25512 28592 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 25776 code 400, message Bad request version ('/ùÈ\x8c')
+ERROR 2025-11-15 13:32:49 basehttp 25512 25776 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 21000 code 400, message Bad request version ('éWñe\x8dïÞ\x8e3')
+ERROR 2025-11-15 13:32:49 basehttp 25512 21000 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 30128 code 400, message Bad request version ('Ël7Ã\x16\x81gëØ!\x94\x9d')
+ERROR 2025-11-15 13:32:49 basehttp 25512 30128 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 14216 code 400, message Bad request version ("'E¼XÖ'")
+ERROR 2025-11-15 13:32:49 basehttp 25512 14216 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:55 autoreload 25512 3924 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:33:15 autoreload 20460 19140 Watching for file changes with StatReloader
+INFO 2025-11-15 13:33:16 basehttp 20460 11788 code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x8c\x15\x8f%K-í<e')
+ERROR 2025-11-15 13:33:16 basehttp 20460 11788 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:16 basehttp 20460 18240 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s**\x00\x00\x00')
+ERROR 2025-11-15 13:33:16 basehttp 20460 18240 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 2572 code 400, message Bad request version ('\x1b?\x8e¹±\x90l\x07*ºl¼5\x17¼\x8cÏ¼Z%\x94\x14\x8fÈ\x1a=«[»\x11L"ð\x87¸±\x06}iJ~<É\x9aßõz\x98\x1b\x12õÚ*7¶\x82+êtÁ\x94j0\x13Ë\x12«ÍX£,\x16(YgÁ\x9a#£\x90´\x8an²´h\x9fZ´2º\x0f¼QkÉ\x08h÷Â«,RTÒ´-þ\x12Bh\x06`q©')
+ERROR 2025-11-15 13:33:17 basehttp 20460 2572 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 30816 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-11-15 13:33:17 basehttp 20460 30816 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 6560 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06szz\x00\x00\x00')
+ERROR 2025-11-15 13:33:17 basehttp 20460 6560 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 11724 code 400, message Bad request version ('÷Â´Ê«»¦ê|=')
+INFO 2025-11-15 13:33:17 basehttp 20460 24796 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S')
+ERROR 2025-11-15 13:33:17 basehttp 20460 11724 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-11-15 13:33:17 basehttp 20460 24796 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 9492 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x93àfP\x8b±Õ¢ì%ðó\x8a\x97r^Dj~Ø')
+ERROR 2025-11-15 13:33:17 basehttp 20460 9492 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:32 basehttp 20460 25508 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:33:33 basehttp 20460 8732 "GET /static/css/font-awesome.min.css HTTP/1.1" 200 89220
+INFO 2025-11-15 13:33:33 basehttp 20460 25508 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 232948
+INFO 2025-11-15 13:33:33 basehttp 20460 25508 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 126828
+INFO 2025-11-15 13:33:33 basehttp 20460 25944 "GET /static/images/drrmo_logo.png HTTP/1.1" 200 96716
+WARNING 2025-11-15 13:33:33 log 20460 25944 Not Found: /favicon.ico
+WARNING 2025-11-15 13:33:33 basehttp 20460 25944 "GET /favicon.ico HTTP/1.1" 404 5118
+INFO 2025-11-15 13:33:41 autoreload 20460 19140 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:33:43 autoreload 14124 24840 Watching for file changes with StatReloader
+INFO 2025-11-15 13:33:44 basehttp 14124 12560 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:34:01 autoreload 14124 24840 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:34:02 autoreload 25576 18528 Watching for file changes with StatReloader
+INFO 2025-11-15 13:34:12 autoreload 25576 18528 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:34:14 autoreload 5124 11968 Watching for file changes with StatReloader
+INFO 2025-11-15 13:34:14 basehttp 5124 5072 code 400, message Bad request version ('2¼]ÄÐt!{Z')
+ERROR 2025-11-15 13:34:14 basehttp 5124 5072 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:14 basehttp 5124 22844 code 400, message Bad request version ('\x82L\x99k(¡\x14þ¡³VÐ\x84ÞÖ')
+ERROR 2025-11-15 13:34:14 basehttp 5124 22844 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 19636 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s\x1a\x1a\x00\x00\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00')
+ERROR 2025-11-15 13:34:15 basehttp 5124 19636 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 17308 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x1b\x00\x03\x02\x00\x02\x00')
+ERROR 2025-11-15 13:34:15 basehttp 5124 17308 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 14028 code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sªª\x00\x00\x00\x12\x00\x00\x003\x04ï\x04í**\x00\x01\x00\x11ì\x04Àé\x99»â')
+ERROR 2025-11-15 13:34:15 basehttp 5124 14028 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 29980 code 400, message Bad request version ('\x05')
+INFO 2025-11-15 13:34:15 basehttp 5124 25228 code 400, message Bad request version ('¡%¹OÊ©ûük\x03¬')
+ERROR 2025-11-15 13:34:15 basehttp 5124 29980 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-11-15 13:34:15 basehttp 5124 25228 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 15752 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03g\x97>È\x06·\x86u\x8e')
+ERROR 2025-11-15 13:34:15 basehttp 5124 15752 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:23 autoreload 5124 11968 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:34:24 autoreload 20736 31380 Watching for file changes with StatReloader
+INFO 2025-11-15 13:34:26 basehttp 20736 18572 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06')
+ERROR 2025-11-15 13:34:26 basehttp 20736 18572 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 23116 code 400, message Bad request version ('ûÊ»U*¤\x8a0\x17Gu¡\x11lÃÔmC/rLdí>yÊ}\x00\x18Îrk')
+ERROR 2025-11-15 13:34:26 basehttp 20736 23116 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 17972 code 400, message Bad request version ('MÍ')
+ERROR 2025-11-15 13:34:26 basehttp 20736 17972 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 13828 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-11-15 13:34:26 basehttp 20736 13828 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 22020 code 400, message Bad request version ('íÌ\x84\x8eð¶<t')
+ERROR 2025-11-15 13:34:26 basehttp 20736 22020 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 26352 code 400, message Bad request version ('èF5±òW\x05\x8a\x14©ú\x08$\x1b\x92G>Ð')
+ERROR 2025-11-15 13:34:26 basehttp 20736 26352 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 21000 code 400, message Bad request version ("ÓtÖ'ÕBÄsûî\x97d\x897\x9c_ÊXÍ\x9f¹K\x96cTÂ\x92\x07Ýóà1\x00ÐE\x88å«;BSôf%yØh\x07")
+ERROR 2025-11-15 13:34:27 basehttp 20736 21000 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 25520 code 400, message Bad request version ('½û3o#GÛ\x07\x16\x90£ß\x15¶Kk\x84\x9c')
+ERROR 2025-11-15 13:34:27 basehttp 20736 25520 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 30252 code 400, message Bad request version ('CëÛ\x0f\x00Ð')
+ERROR 2025-11-15 13:34:27 basehttp 20736 30252 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 6188 code 400, message Bad request version ('j\x91\x8bðÍ\x1a#')
+ERROR 2025-11-15 13:34:27 basehttp 20736 6188 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 7980 code 400, message Bad request version ('4ã\x17')
+INFO 2025-11-15 13:34:27 basehttp 20736 6100 code 400, message Bad request version ('È\x05Dâ\x89´3{D\x95¤]è©^\x04ârº©vº,jògiÇ\x06\x15Õ\x91\xadz\x01D&÷\x8b¬ä¼')
+ERROR 2025-11-15 13:34:27 basehttp 20736 6100 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-11-15 13:34:27 basehttp 20736 7980 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:35 autoreload 20736 31380 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:34:36 autoreload 7188 24600 Watching for file changes with StatReloader
+INFO 2025-11-15 13:34:37 basehttp 7188 30900 code 400, message Bad request version ("'")
+ERROR 2025-11-15 13:34:37 basehttp 7188 30900 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 15420 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S')
+ERROR 2025-11-15 13:34:37 basehttp 7188 15420 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 17056 code 400, message Bad request version ('\x16WS\x89¾ÐÌFJ5\x00')
+ERROR 2025-11-15 13:34:37 basehttp 7188 17056 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 29404 code 400, message Bad request version ('Àæ\x8cw8\x00')
+ERROR 2025-11-15 13:34:37 basehttp 7188 29404 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 4420 code 400, message Bad request version ('úàãí«VÒ\x12aw\x9fT')
+ERROR 2025-11-15 13:34:37 basehttp 7188 4420 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 17156 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-11-15 13:34:37 basehttp 7188 17156 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:39 basehttp 7188 20368 code 400, message Bad request version ('\x11Ã\x17ó\x96\x0f\x02t\x86º\x88zÇ\x04Æ\x8er5\x8cl\x14')
+ERROR 2025-11-15 13:34:39 basehttp 7188 20368 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:39 basehttp 7188 5616 code 400, message Bad request version ('X«¯ìÉb`dwcÖ')
+ERROR 2025-11-15 13:34:39 basehttp 7188 5616 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:35:22 autoreload 7188 24600 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:35:23 autoreload 1916 20364 Watching for file changes with StatReloader
+INFO 2025-11-15 13:35:25 basehttp 1916 21384 code 400, message Bad request version ('\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-11-15 13:35:25 basehttp 1916 21384 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:35:25 basehttp 1916 30696 code 400, message Bad request version ('Tc\x98â\x9afôæµÊ§Gí@Xj¼¾\x9b\x1a{\x05Z/.\\¹')
+ERROR 2025-11-15 13:35:25 basehttp 1916 30696 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:35:33 basehttp 1916 20612 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 13:35:33 basehttp 1916 20612 "GET /static/images/drrmo_logo.png HTTP/1.1" 304 0
+INFO 2025-11-15 13:37:20 autoreload 25280 8920 Watching for file changes with StatReloader
+INFO 2025-11-15 13:37:21 basehttp 25280 10272 code 400, message Bad request version ('Ï\x05\x00\x17\x00\x00\x00#\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:37:21 basehttp 25280 10272 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:21 basehttp 25280 24684 code 400, message Bad request version ('b\x87äê¨ûX#*\x847\x08(\\Ëep¼\x1b\x9b\x82Ï¦\x9eXµÈhs·+b\x00')
+ERROR 2025-11-15 13:37:21 basehttp 25280 24684 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 31252 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93úú\x00\x00\x00')
+ERROR 2025-11-15 13:37:24 basehttp 25280 31252 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 14152 code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sjj\x00\x00\x00')
+ERROR 2025-11-15 13:37:24 basehttp 25280 14152 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 15956 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x17\x00\x00\x00')
+ERROR 2025-11-15 13:37:24 basehttp 25280 15956 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 28080 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-11-15 13:37:24 basehttp 25280 28080 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 14252 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03:¾ûÖ.Ë\x86t¯a\\\x82\x933\x9f;\x84{¸^ìo\x97]Â')
+ERROR 2025-11-15 13:37:24 basehttp 25280 14252 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 10776 code 400, message Bad request version ('&')
+ERROR 2025-11-15 13:37:24 basehttp 25280 10776 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 6228 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x1b\x00\x03\x02\x00\x02\x00-\x00\x02\x01\x01DÍ\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04í\x8a\x8a\x00\x01\x00\x11ì\x04À4£`þB¤\x893T\x84ûs6C\x81Rê"ÄÂÏ!9Z\x8bhoHuQ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 6228 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 13800 code 400, message Bad request version ('\x93\x90m\x15\x94¨¤¬')
+ERROR 2025-11-15 13:37:25 basehttp 25280 13800 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 7240 code 400, message Bad request version ('¶Ë\x99aü°\x13Ä8:\x11øc')
+ERROR 2025-11-15 13:37:25 basehttp 25280 7240 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 29528 code 400, message Bad request version ('c')
+ERROR 2025-11-15 13:37:25 basehttp 25280 29528 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 2124 code 400, message Bad request version ("'T.)\x12Áðjea\x17}FÂ²ÂØpA#*¼\x87áF*ý'ªïhÃ\x1b<½Ê{\x11\x00")
+ERROR 2025-11-15 13:37:25 basehttp 25280 2124 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 15444 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-11-15 13:37:25 basehttp 25280 15444 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 15472 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S**\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 15472 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 3384 code 400, message Bad request version ('½\x984\x89')
+ERROR 2025-11-15 13:37:25 basehttp 25280 3384 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 22060 code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S::\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 22060 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 5900 code 400, message Bad request version ('\x00\x02\x01\x00\x00+\x00\x07\x06jj\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 5900 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 10824 code 400, message Bad request version ('\x06(æÆB¦ä/²\x02\x87\x19zNds^\x14\x92d\x94\x1a\x0e]\x962bÜ¨¸\x07Tþc·=Á±xQp\x8f\x02G&6Ã\x9a\x03¹ou')
+ERROR 2025-11-15 13:37:25 basehttp 25280 10824 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 20892 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063')
+ERROR 2025-11-15 13:37:25 basehttp 25280 20892 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 26900 code 400, message Bad request version ('¼küðsI¸\x88óÊm¼V')
+ERROR 2025-11-15 13:37:25 basehttp 25280 26900 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 4108 code 400, message Bad request version ("A\x94à,x\x01R\x05c\x15IÖF\x8fÕ©\x89\x81vÞ\x82\x89w³zÀ-Õ¤rõÏ\x0f\x91];0Ñ<i_éÏþA\x9eî}\x93îVCeç'7Õ\x15pô¤pd;Ö\x17Ó¾VsLå\x93\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x12\x00\x00ÿ\x01\x00\x01\x00\x00\x17\x00\x00\x00")
+ERROR 2025-11-15 13:37:25 basehttp 25280 4108 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 19828 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ÚÚ\x00\x00\x00+\x00\x07\x06ÊÊ\x03\x04\x03\x03\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 19828 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 4636 code 400, message Bad request version ('\x02h2\x08http/1.1\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 4636 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 4232 code 400, message Bad request version ('[5ó¶\x9d\x8c¨GÕ62ñ\x89CÈ\x9b#ó\x13\x17*\x97¤°\x16Àês')
+ERROR 2025-11-15 13:37:25 basehttp 25280 4232 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 27964 code 400, message Bad request version ('êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93**\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 27964 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 31064 code 400, message Bad request version ('\\Ê\x86í5&ì\x8e«¤Âßç¸5×\x00')
+INFO 2025-11-15 13:37:25 basehttp 25280 26176 code 400, message Bad request version ('\\yô\x87A\x88±bàzF¸tZ"\x17\x1aMê\x94¼)Ï÷\x17<ÀlR\x0e\x06¥\x8e\x98ÎÒ\x93}%\x93¨Ø\x888>æ¨\x9c²\x80\x9e@v}ÂÂ(\x13©×c\x90¸¨\x83\x7fÔt(á\xadD\x04zcË\x87Õ§\x82\x12ÌHDJ-')
+ERROR 2025-11-15 13:37:25 basehttp 25280 31064 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-11-15 13:37:25 basehttp 25280 26176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 17240 code 400, message Bad request version ('UxKÜ~\x8ce`\x97ãTÞÉ\x95\x98DMae')
+ERROR 2025-11-15 13:37:25 basehttp 25280 17240 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 8660 code 400, message Bad request version ('.\x92\x8d\x9aVû%"\\\x184\x16\x81Ùo\x89¨\x08Ë\x93öÖÆÎ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 8660 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 3816 code 400, message Bad request version ('Ô²%5÷\x9e¶\x8f+Îø:\x03l\x94ôÛ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 3816 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 19452 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03Ùì\x05¢)\\¸¦¦\x99íi^M\x90´Uò\x96ê§¼Sï[\x16\x93JY6bÂ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 19452 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 28884 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x17\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 28884 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 16408 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x0ekÁ²\x1bT\x05(ú\x80oµ\x92\x11`Z\x8eX%r\x92ÿ\x04Rõì8\x12â\x86¬P')
+ERROR 2025-11-15 13:37:25 basehttp 25280 16408 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 22188 code 400, message Bad request version ('\x98Q\x14c\x02')
+ERROR 2025-11-15 13:37:25 basehttp 25280 22188 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 20868 code 400, message Bad request version ('\x91')
+ERROR 2025-11-15 13:37:25 basehttp 25280 20868 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 21408 code 400, message Bad request version ('È\x8dlåM,ê\x95Å\x93Z{\x12G\x84')
+ERROR 2025-11-15 13:37:25 basehttp 25280 21408 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 27680 code 400, message Bad request version ('_}siÑ*d\x02ñ\x05\x04ÂDcnGÿ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 27680 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 10308 code 400, message Bad request version ('îUÿ\x01\x00\x01\x00\x00+\x00\x07\x06êê\x03\x04\x03\x03\x00\x17\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 10308 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 17372 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x17\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 17372 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 4168 code 400, message Bad request version ('\x00\x02\x01\x00\x00#\x00\x00\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04í')
+ERROR 2025-11-15 13:37:25 basehttp 25280 4168 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 8580 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03è±,i¼')
+ERROR 2025-11-15 13:37:25 basehttp 25280 8580 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 16548 code 400, message Bad request version ('\x02h2\x08http/1.1\x00+\x00\x07\x06')
+ERROR 2025-11-15 13:37:25 basehttp 25280 16548 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 12752 code 400, message Bad request version ('¼ÕË¿f",Ø*\x12\x87\x05·à\x97\x16°^÷')
+ERROR 2025-11-15 13:37:25 basehttp 25280 12752 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 23780 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03á)A@xÉýoGT_Ä"\x01e\x8aò?\x95ÕS$¾ç\x86\x05ÑÛ\x17\x86õ»')
+ERROR 2025-11-15 13:37:25 basehttp 25280 23780 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 11672 code 400, message Bad request version ('\x00\x02\x01\x00\x00#\x00\x00\x00\x17\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 11672 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 24284 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-11-15 13:37:25 basehttp 25280 24284 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 26140 code 400, message Bad request version ('³"¢¶²z½P\x9a\x06')
+ERROR 2025-11-15 13:37:25 basehttp 25280 26140 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 16316 code 400, message Bad request version ('\x02h2\x08http/1.1DÍ\x00\x05\x00\x03\x02h2\x00-\x00\x02\x01\x01\x00\x17\x00\x00\x00+\x00\x07\x06ºº\x03\x04\x03\x03ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 16316 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 24176 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s\x9a\x9a\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 24176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 2944 code 400, message Bad request version ('$»>ðd\x96êQ\\¶\x86Å¢=\x0fTm\x8eÁC\x10çÇ\x17ë§ýs\x87\x97')
+ERROR 2025-11-15 13:37:26 basehttp 25280 2944 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 13756 code 400, message Bad request version ('\x8a°Â\x15ôÄ9ô5)6\x8a]$7þ[\x18ëì[Ú¨[\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 13756 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 23188 code 400, message Bad request version ('\x8bÛOY\x14\x83ù]hº')
+ERROR 2025-11-15 13:37:26 basehttp 25280 23188 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 29036 code 400, message Bad request version ('\x05ó1\x86àh\x062XX_\x81µ')
+ERROR 2025-11-15 13:37:26 basehttp 25280 29036 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 9468 code 400, message Bad request version ('\x02h2\x08http/1.1\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 9468 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 10436 code 400, message Bad request version ('5\x15dHÚ¤eÇ')
+ERROR 2025-11-15 13:37:26 basehttp 25280 10436 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 9040 code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06súú\x00\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 9040 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 21868 code 400, message Bad request version ('À\x05ß\x83')
+ERROR 2025-11-15 13:37:26 basehttp 25280 21868 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 20448 code 400, message Bad request version ('\x138')
+ERROR 2025-11-15 13:37:26 basehttp 25280 20448 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 16600 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 16600 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 4676 code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03ÁÈÎÕk¸\x11õT\x8f\x99@Æª\x81')
+ERROR 2025-11-15 13:37:26 basehttp 25280 4676 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 7284 code 400, message Bad request version ('\x02h2\x08http/1.1\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 7284 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 24148 code 400, message Bad request version ('\x8eØ\x03á3[È\x9dtU¾BÊ\x92')
+ERROR 2025-11-15 13:37:26 basehttp 25280 24148 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 13728 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Szz\x00\x00\x00\x12\x00\x00\x00-\x00\x02\x01\x01\x00\x1b\x00\x03\x02\x00\x02\x00+\x00\x07\x06jj\x03\x04\x03\x03\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 13728 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 30724 code 400, message Bad request version ('*')
+ERROR 2025-11-15 13:37:26 basehttp 25280 30724 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 21308 code 400, message Bad request version ('A#¡ñÿ\x82\x05\x94\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 21308 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 8676 code 400, message Bad request version ("NuUn\x84\x9d<A\x82í)Àô%¾\x19'\x84{")
+ERROR 2025-11-15 13:37:26 basehttp 25280 8676 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 31364 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93jj\x00\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 31364 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 20108 code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x8a\x8a\x00\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 20108 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 2152 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x12\x00\x00\x00+\x00\x07\x06ZZ\x03\x04\x03\x03\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 2152 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 18196 code 400, message Bad request version ('\x11Ia\x8aÞW\x8eï\x9a{#:Qß\x90\\0\x99CCP\x8fcÆ}£\x90<øQU\x0e\x13®ïã')
+ERROR 2025-11-15 13:37:26 basehttp 25280 18196 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 23852 code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÚÚ\x00\x00DÍ\x00\x05\x00\x03\x02h2ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 23852 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 20836 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03rþK¦³Áîá:\x86á\x830æ\x06þÐÛQ\x07µ3S\x98¸')
+ERROR 2025-11-15 13:37:26 basehttp 25280 20836 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 8400 code 400, message Bad request version ('\x13Qw\x16¿B')
+ERROR 2025-11-15 13:37:26 basehttp 25280 8400 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 26564 code 400, message Bad request version ('§°k\x8aë=kÊ\x93\x8a\x968Ì&1o+²y')
+ERROR 2025-11-15 13:37:26 basehttp 25280 26564 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 4264 code 400, message Bad request version ('WÓÙY\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 4264 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:40:40 basehttp 25280 29868 code 400, message Bad request version ('¥§hz\x87|ç\x95Xë')
+ERROR 2025-11-15 13:40:40 basehttp 25280 29868 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:40:40 basehttp 25280 27324 code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03')
+ERROR 2025-11-15 13:40:40 basehttp 25280 27324 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:41:34 basehttp 25280 16708 code 400, message Bad request version ('\x90r\x91O\x16¬P\xad\x04´½â\x8f\x17\x86%:Al')
+ERROR 2025-11-15 13:41:34 basehttp 25280 16708 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:41:34 basehttp 25280 17232 code 400, message Bad request version ('\x83èäzo$\x95¸fâå\x9a/:«³åÕüïVm¶(\x08ñêöAuCö\x00')
+ERROR 2025-11-15 13:41:34 basehttp 25280 17232 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:41:37 basehttp 25280 14172 code 400, message Bad request version ('Z\x98Â\x00äkÀñr.w\x99T¹±Ù\x9b\x82Wi\x10\x05HcãkZåx\x1bé7puO')
+ERROR 2025-11-15 13:41:37 basehttp 25280 14172 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:41:37 basehttp 25280 31128 code 400, message Bad request version ('\x87§-)\x9d\x04[W\x7f\x16\x00')
+ERROR 2025-11-15 13:41:37 basehttp 25280 31128 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:53:06 autoreload 7908 26536 Watching for file changes with StatReloader
+INFO 2025-11-15 13:53:08 basehttp 7908 18348 code 400, message Bad request version ('\xad?')
+ERROR 2025-11-15 13:53:08 basehttp 7908 18348 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:53:08 basehttp 7908 31180 code 400, message Bad request version ('.s')
+ERROR 2025-11-15 13:53:08 basehttp 7908 31180 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:55:04 autoreload 7908 26536 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:55:05 autoreload 20240 28332 Watching for file changes with StatReloader
+INFO 2025-11-15 13:55:54 autoreload 27336 31376 Watching for file changes with StatReloader
+INFO 2025-11-15 13:57:38 autoreload 20240 28332 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:57:39 autoreload 8716 16588 Watching for file changes with StatReloader
+INFO 2025-11-15 13:57:41 basehttp 8716 13708 code 400, message Bad request version ('Txý$6_')
+ERROR 2025-11-15 13:57:41 basehttp 8716 13708 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:57:41 basehttp 8716 15836 code 400, message Bad request version ('de\x08\x00#\x03\x920lz¥ÀæeZÄWyG\x12\x16´ª')
+ERROR 2025-11-15 13:57:41 basehttp 8716 15836 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:58:44 basehttp 8716 16532 code 400, message Bad request version ('&&)')
+ERROR 2025-11-15 13:58:44 basehttp 8716 16532 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:58:44 basehttp 8716 23292 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06szz\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:58:44 basehttp 8716 23292 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:58:53 basehttp 8716 12028 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4177
+INFO 2025-11-15 13:58:54 basehttp 8716 12028 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-11-15 13:58:54 basehttp 8716 30780 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-11-15 13:58:54 basehttp 8716 3160 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-11-15 13:58:54 basehttp 8716 23352 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-11-15 13:58:54 basehttp 8716 27048 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-11-15 13:58:54 basehttp 8716 20888 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-11-15 13:58:54 basehttp 8716 20888 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-11-15 13:58:58 basehttp 8716 1272 code 400, message Bad request version ('\x02h2\x08http/1.1\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-11-15 13:58:58 basehttp 8716 1272 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:58:58 basehttp 8716 3164 code 400, message Bad request version ('\x94Ò»IÑ*¿')
+ERROR 2025-11-15 13:58:58 basehttp 8716 3164 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 30256 code 400, message Bad request version ('G\x1b\xad\x90!HúY¾âÐ¬H\x02ÆÍÉ0\x12¤\x93KÐ*R')
+ERROR 2025-11-15 14:01:30 basehttp 8716 30256 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 11464 code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ÊÊ\x00\x00\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-11-15 14:01:30 basehttp 8716 11464 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 4260 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+ERROR 2025-11-15 14:01:30 basehttp 8716 4260 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 18228 code 400, message Bad request version ('%h\x9b\x00')
+ERROR 2025-11-15 14:01:30 basehttp 8716 18228 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 15144 code 400, message Bad request version ('ì@ù\x14')
+ERROR 2025-11-15 14:01:30 basehttp 8716 15144 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 12428 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ªª\x00\x00\x00')
+ERROR 2025-11-15 14:01:30 basehttp 8716 12428 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:37 basehttp 8716 20888 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:01:37 basehttp 8716 27048 "GET /static/css/font-awesome.min.css HTTP/1.1" 200 89220
+INFO 2025-11-15 14:01:37 basehttp 8716 23352 "GET /static/images/drrmo_logo.png HTTP/1.1" 200 96716
+INFO 2025-11-15 14:01:37 basehttp 8716 20888 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 232948
+INFO 2025-11-15 14:01:37 basehttp 8716 20888 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 126828
+INFO 2025-11-15 14:01:49 autoreload 27572 4404 Watching for file changes with StatReloader
+INFO 2025-11-15 14:01:51 basehttp 27572 7632 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:01:53 basehttp 27572 7632 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:08:56 autoreload 27572 4404 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 14:18:46 autoreload 11872 732 Watching for file changes with StatReloader
+INFO 2025-11-15 14:18:49 basehttp 11872 7220 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:18:50 basehttp 11872 7220 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:18:52 basehttp 11872 7220 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 14:19:19 basehttp 11872 7220 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 14:19:31 basehttp 11872 7220 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:19:34 basehttp 11872 7220 "GET /register/ HTTP/1.1" 200 14988
+WARNING 2025-11-15 14:19:48 log 11872 7220 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 14:19:48 basehttp 11872 7220 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 14:22:56 log 11872 7220 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 14:22:56 basehttp 11872 7220 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 14:23:04 log 11872 7220 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 14:23:04 basehttp 11872 7220 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 14:23:30 log 11872 7220 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 14:23:30 basehttp 11872 7220 "POST /register/ HTTP/1.1" 403 2491
+INFO 2025-11-15 14:23:32 basehttp 11872 7220 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:23:37 autoreload 17184 18844 Watching for file changes with StatReloader
+INFO 2025-11-15 14:23:38 basehttp 17184 22168 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:23:41 basehttp 17184 22168 "GET /register/ HTTP/1.1" 200 16313
+INFO 2025-11-15 14:24:12 basehttp 17184 22168 "POST /register/ HTTP/1.1" 200 17611
+INFO 2025-11-15 14:24:48 basehttp 17184 22168 "POST /register/ HTTP/1.1" 200 17783
+INFO 2025-11-15 14:25:06 basehttp 17184 22168 "POST /register/ HTTP/1.1" 200 17318
+INFO 2025-11-15 14:25:22 basehttp 17184 22168 "POST /register/ HTTP/1.1" 200 17286
+INFO 2025-11-15 14:27:06 autoreload 17184 18844 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 14:27:07 autoreload 28676 30464 Watching for file changes with StatReloader
+INFO 2025-11-15 14:27:30 autoreload 28676 30464 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 14:27:31 autoreload 30192 8060 Watching for file changes with StatReloader
+INFO 2025-11-15 14:27:42 autoreload 30192 8060 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 14:27:43 autoreload 22900 25456 Watching for file changes with StatReloader
+INFO 2025-11-15 14:30:05 basehttp 22900 11692 "POST /register/ HTTP/1.1" 200 17179
+INFO 2025-11-15 14:30:09 basehttp 22900 11692 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:30:10 basehttp 22900 11692 "GET /register/ HTTP/1.1" 200 16218
+ERROR 2025-11-15 14:30:27 log 22900 11692 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "department" of relation "users_customuser" violates not-null constraint
+DETAIL:  Failing row contains (11, pbkdf2_sha256$1000000$OPcNohJOGXLn321c5o8GVZ$Z5M8X8nC6DafkQ93DyH..., null, f, japetd, japet, dejan, japetd@gmail.com, f, f, 2025-11-15 06:30:26.593655+00, 20250001, f, , 09123123123, null, null, , , eoc, ).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 57, in register
+    user.save()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "department" of relation "users_customuser" violates not-null constraint
+DETAIL:  Failing row contains (11, pbkdf2_sha256$1000000$OPcNohJOGXLn321c5o8GVZ$Z5M8X8nC6DafkQ93DyH..., null, f, japetd, japet, dejan, japetd@gmail.com, f, f, 2025-11-15 06:30:26.593655+00, 20250001, f, , 09123123123, null, null, , , eoc, ).
+
+ERROR 2025-11-15 14:30:27 basehttp 22900 11692 "POST /register/ HTTP/1.1" 500 169258
+INFO 2025-11-15 14:32:15 autoreload 876 2312 Watching for file changes with StatReloader
+INFO 2025-11-15 14:32:18 basehttp 876 17624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:32:19 basehttp 876 17624 "GET /register/ HTTP/1.1" 200 16218
+INFO 2025-11-15 14:32:51 basehttp 876 17624 "POST /register/ HTTP/1.1" 302 0
+INFO 2025-11-15 14:32:51 basehttp 876 17624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:33:10 basehttp 876 17624 "POST / HTTP/1.1" 200 7379
+INFO 2025-11-15 14:33:15 basehttp 876 17624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 14:33:15 basehttp 876 17624 "GET /home/ HTTP/1.1" 200 39128
+INFO 2025-11-15 14:33:15 basehttp 876 17624 "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2025-11-15 14:33:15 basehttp 876 17624 "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 304 0
+INFO 2025-11-15 14:33:30 basehttp 876 17624 "GET /approve/ HTTP/1.1" 200 34365
+INFO 2025-11-15 14:33:33 basehttp 876 17624 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 14:33:33 basehttp 876 17624 "GET /approve/ HTTP/1.1" 200 34475
+INFO 2025-11-15 14:33:36 basehttp 876 17624 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 14:33:36 basehttp 876 17624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:33:44 basehttp 876 17624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 14:33:44 basehttp 876 17624 "GET /home/ HTTP/1.1" 200 33196
+INFO 2025-11-15 15:45:56 autoreload 876 2312 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 15:45:56 autoreload 29668 29060 Watching for file changes with StatReloader
+INFO 2025-11-15 15:47:58 basehttp 29668 12112 "GET /admin HTTP/1.1" 301 0
+INFO 2025-11-15 15:47:58 basehttp 29668 10720 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-15 15:47:58 basehttp 29668 10720 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3696
+INFO 2025-11-15 15:47:58 basehttp 29668 10720 "GET /static/admin/css/base.css HTTP/1.1" 200 23300
+INFO 2025-11-15 15:47:58 basehttp 29668 18468 "GET /static/admin/js/theme.js HTTP/1.1" 200 1704
+INFO 2025-11-15 15:47:58 basehttp 29668 30060 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2938
+INFO 2025-11-15 15:47:58 basehttp 29668 20928 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2960
+INFO 2025-11-15 15:47:58 basehttp 29668 12412 "GET /static/admin/css/login.css HTTP/1.1" 200 1012
+INFO 2025-11-15 15:47:58 basehttp 29668 20928 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3142
+INFO 2025-11-15 15:47:58 basehttp 29668 9176 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17469
+INFO 2025-11-15 15:48:09 basehttp 29668 9176 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-11-15 15:48:09 basehttp 29668 9176 "GET /admin/ HTTP/1.1" 200 16378
+INFO 2025-11-15 15:48:09 basehttp 29668 9176 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 470
+INFO 2025-11-15 15:48:09 basehttp 29668 20928 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 383
+INFO 2025-11-15 15:48:09 basehttp 29668 9176 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 334
+INFO 2025-11-15 15:48:09 basehttp 29668 12412 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 395
+INFO 2025-11-15 15:48:16 basehttp 29668 12412 "GET /admin/users/customuser/ HTTP/1.1" 200 16435
+INFO 2025-11-15 15:48:16 basehttp 29668 12412 "GET /static/admin/css/changelists.css HTTP/1.1" 200 7221
+INFO 2025-11-15 15:48:16 basehttp 29668 30060 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 355
+INFO 2025-11-15 15:48:16 basehttp 29668 18468 "GET /static/admin/js/core.js HTTP/1.1" 200 6392
+INFO 2025-11-15 15:48:16 basehttp 29668 10720 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 10029
+INFO 2025-11-15 15:48:16 basehttp 29668 9176 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-15 15:48:16 basehttp 29668 12412 "GET /static/admin/js/actions.js HTTP/1.1" 200 8280
+INFO 2025-11-15 15:48:16 basehttp 29668 18468 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1574
+INFO 2025-11-15 15:48:16 basehttp 29668 30060 "GET /static/admin/js/urlify.js HTTP/1.1" 200 8056
+INFO 2025-11-15 15:48:16 basehttp 29668 20928 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-11-15 15:48:16 basehttp 29668 10720 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 331297
+INFO 2025-11-15 15:48:16 basehttp 29668 20928 "GET /static/admin/js/filters.js HTTP/1.1" 200 1008
+INFO 2025-11-15 15:48:16 basehttp 29668 20928 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 334
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /admin/users/customuser/12/change/ HTTP/1.1" 200 36261
+INFO 2025-11-15 15:48:18 basehttp 29668 12412 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 601
+INFO 2025-11-15 15:48:18 basehttp 29668 10720 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9380
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /static/admin/css/forms.css HTTP/1.1" 200 9023
+INFO 2025-11-15 15:48:18 basehttp 29668 18468 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19727
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /static/admin/css/widgets.css HTTP/1.1" 200 12586
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /static/admin/js/change_form.js HTTP/1.1" 200 622
+INFO 2025-11-15 15:48:18 basehttp 29668 30060 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 686
+INFO 2025-11-15 15:48:18 basehttp 29668 30060 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1095
+INFO 2025-11-15 15:49:23 basehttp 29668 30060 "GET /admin/ HTTP/1.1" 200 16378
+INFO 2025-11-15 16:15:32 basehttp 29668 1132 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 16:15:33 basehttp 29668 1132 "GET /home/ HTTP/1.1" 200 45406
+INFO 2025-11-15 16:15:34 basehttp 29668 1132 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:15:34 basehttp 29668 1132 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 16:20:59 basehttp 29668 4224 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 16:20:59 basehttp 29668 4224 "GET /home/ HTTP/1.1" 200 45620
+INFO 2025-11-15 16:21:07 basehttp 29668 4224 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 16:21:07 basehttp 29668 4224 "GET /static/css/ol.css HTTP/1.1" 304 0
+INFO 2025-11-15 16:21:10 basehttp 29668 4224 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 16:21:21 views 29668 4224 Flood record created: 21 - Flash Flood
+INFO 2025-11-15 16:21:21 basehttp 29668 4224 "POST /monitoring/flood-record/ HTTP/1.1" 200 142
+INFO 2025-11-15 16:21:23 views 29668 4224 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 16:21:24 views 29668 4224 API returned - Rain: 0.0mm, Temp: 27.5Â°C, Humidity: 87%, Wind: 14.3km/h
+INFO 2025-11-15 16:21:24 views 29668 4224 Processed 7 days of weather forecast
+INFO 2025-11-15 16:21:24 views 29668 4224 Created new rainfall record: 0.0mm
+INFO 2025-11-15 16:21:24 views 29668 4224 Created new weather record
+INFO 2025-11-15 16:21:24 views 29668 4224 Requesting WorldTides API for Cebu City: https://www.worldtides.info/api/v3
+INFO 2025-11-15 16:21:26 views 29668 4224 Created new tide record: -0.219m from WorldTides API
+INFO 2025-11-15 16:21:26 basehttp 29668 4224 "GET /monitoring/ HTTP/1.1" 200 85243
+INFO 2025-11-15 16:21:26 basehttp 29668 4224 "GET /static/js/chart.js HTTP/1.1" 304 0
+INFO 2025-11-15 16:21:39 basehttp 29668 4224 "GET /monitoring/flood-record/delete/21/ HTTP/1.1" 200 8466
+INFO 2025-11-15 16:21:40 views 29668 4224 Flood record deleted: 21 - Flash Flood
+INFO 2025-11-15 16:21:40 basehttp 29668 4224 "POST /monitoring/flood-record/delete/21/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:21:40 views 29668 4224 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 16:21:41 views 29668 4224 API returned - Rain: 0.0mm, Temp: 27.5Â°C, Humidity: 87%, Wind: 14.3km/h
+INFO 2025-11-15 16:21:41 views 29668 4224 Processed 7 days of weather forecast
+INFO 2025-11-15 16:21:41 basehttp 29668 4224 "GET /monitoring/ HTTP/1.1" 200 84336
+INFO 2025-11-15 16:21:51 basehttp 29668 4224 "GET /approve/ HTTP/1.1" 200 41416
+INFO 2025-11-15 16:21:51 basehttp 29668 4224 "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-11-15 16:21:55 basehttp 29668 4224 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:21:55 basehttp 29668 4224 "GET /approve/ HTTP/1.1" 200 41412
+INFO 2025-11-15 16:22:02 basehttp 29668 4224 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:22:02 basehttp 29668 4224 "GET /approve/ HTTP/1.1" 200 40371
+INFO 2025-11-15 16:22:07 basehttp 29668 4224 "GET /maps/my-activity/ HTTP/1.1" 200 120457
+INFO 2025-11-15 16:22:10 basehttp 29668 4224 "GET /maps/all-activities/ HTTP/1.1" 200 597199
+INFO 2025-11-15 16:22:14 basehttp 29668 4224 "GET /home/ HTTP/1.1" 200 45465
+INFO 2025-11-15 16:22:26 basehttp 29668 4224 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 16:22:36 basehttp 29668 4224 "POST /maps/save-assessment/ HTTP/1.1" 200 82
+INFO 2025-11-15 16:22:38 basehttp 29668 4224 "GET /home/ HTTP/1.1" 200 45497
+INFO 2025-11-15 16:27:05 autoreload 29668 29060 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 16:27:06 autoreload 15416 27416 Watching for file changes with StatReloader
+INFO 2025-11-15 16:28:25 basehttp 15416 16180 "GET /home/ HTTP/1.1" 200 46511
+INFO 2025-11-15 16:28:41 basehttp 15416 16180 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:28:41 basehttp 15416 16180 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 16:28:50 basehttp 15416 16180 "POST / HTTP/1.1" 200 13547
+INFO 2025-11-15 16:29:01 basehttp 15416 16180 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 16:29:01 basehttp 15416 16180 "GET /home/ HTTP/1.1" 200 41279
+INFO 2025-11-15 16:29:10 views 15416 16180 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 16:29:12 views 15416 16180 API returned - Rain: 0.0mm, Temp: 27.5Â°C, Humidity: 87%, Wind: 14.3km/h
+INFO 2025-11-15 16:29:12 views 15416 16180 Processed 7 days of weather forecast
+INFO 2025-11-15 16:29:12 basehttp 15416 16180 "GET /monitoring/ HTTP/1.1" 200 83534
+INFO 2025-11-15 16:29:54 basehttp 15416 16180 "GET /profile/ HTTP/1.1" 200 36240
+WARNING 2025-11-15 16:29:54 log 15416 16180 Not Found: /media/profile_images/istockphoto-2194474157-612x612.webp
+WARNING 2025-11-15 16:29:54 basehttp 15416 16180 "GET /media/profile_images/istockphoto-2194474157-612x612.webp HTTP/1.1" 404 5304
+INFO 2025-11-15 16:30:05 basehttp 15416 16180 "POST /profile/ HTTP/1.1" 200 36616
+WARNING 2025-11-15 16:30:05 log 15416 16180 Not Found: /media/istockphoto-1020233306-612x612.webp
+WARNING 2025-11-15 16:30:05 basehttp 15416 16180 "GET /media/istockphoto-1020233306-612x612.webp HTTP/1.1" 404 5244
+INFO 2025-11-15 16:39:41 autoreload 15416 27416 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 16:39:42 autoreload 31328 26132 Watching for file changes with StatReloader
+INFO 2025-11-15 16:39:55 basehttp 31328 9196 "POST /profile/ HTTP/1.1" 200 36614
+WARNING 2025-11-15 16:39:55 log 31328 9196 Not Found: /media/istockphoto-486239437-612x612.webp
+WARNING 2025-11-15 16:39:55 basehttp 31328 9196 "GET /media/istockphoto-486239437-612x612.webp HTTP/1.1" 404 5240
+INFO 2025-11-15 16:41:35 basehttp 31328 9196 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:41:36 basehttp 31328 9196 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 16:41:37 basehttp 31328 9196 "GET /register/ HTTP/1.1" 200 22230
+INFO 2025-11-15 16:41:39 basehttp 31328 9196 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 16:41:44 basehttp 31328 9196 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 16:41:44 basehttp 31328 9196 "GET /home/ HTTP/1.1" 200 46691
+INFO 2025-11-15 16:41:53 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 40144
+INFO 2025-11-15 16:41:56 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:41:56 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 39326
+INFO 2025-11-15 16:41:58 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:41:58 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 38275
+INFO 2025-11-15 16:42:00 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:00 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 37236
+INFO 2025-11-15 16:42:01 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:01 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 36201
+INFO 2025-11-15 16:42:03 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:03 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 35163
+INFO 2025-11-15 16:42:05 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:05 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 34129
+INFO 2025-11-15 16:42:07 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:07 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 33014
+INFO 2025-11-15 16:42:09 basehttp 31328 9196 "GET /home/ HTTP/1.1" 200 46091
+INFO 2025-11-15 16:42:15 basehttp 31328 9196 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 16:42:18 basehttp 31328 9196 "GET /profile/ HTTP/1.1" 200 36440
+INFO 2025-11-15 16:42:28 basehttp 31328 9196 "POST /profile/ HTTP/1.1" 200 36972
+WARNING 2025-11-15 16:42:28 log 31328 9196 Not Found: /media/istockphoto-816152804-612x612.webp
+WARNING 2025-11-15 16:42:28 basehttp 31328 9196 "GET /media/istockphoto-816152804-612x612.webp HTTP/1.1" 404 5240
+INFO 2025-11-15 16:49:15 autoreload 31328 26132 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 16:49:16 autoreload 20204 25712 Watching for file changes with StatReloader
+INFO 2025-11-15 16:49:20 basehttp 20204 10500 "POST /profile/ HTTP/1.1" 200 38524
+WARNING 2025-11-15 16:49:20 log 20204 10500 Not Found: /media/istockphoto-816152804-612x612.webp
+WARNING 2025-11-15 16:49:20 basehttp 20204 10500 "GET /media/istockphoto-816152804-612x612.webp HTTP/1.1" 404 5240
+INFO 2025-11-15 16:49:26 basehttp 20204 10500 "POST /profile/ HTTP/1.1" 200 38524
+WARNING 2025-11-15 16:49:26 log 20204 10500 Not Found: /media/istockphoto-816152804-612x612.webp
+WARNING 2025-11-15 16:49:26 basehttp 20204 10500 "GET /media/istockphoto-816152804-612x612.webp HTTP/1.1" 404 5240
+INFO 2025-11-15 16:49:30 basehttp 20204 10500 "GET /home/ HTTP/1.1" 200 46091
+INFO 2025-11-15 16:49:32 basehttp 20204 10500 "GET /profile/ HTTP/1.1" 200 37843
+INFO 2025-11-15 16:49:47 basehttp 20204 10500 "POST /profile/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:49:47 basehttp 20204 10500 "GET /profile/ HTTP/1.1" 200 38102
+INFO 2025-11-15 16:49:50 autoreload 20204 25712 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 16:49:50 autoreload 9012 6780 Watching for file changes with StatReloader
+INFO 2025-11-15 17:00:55 basehttp 9012 11112 "GET /profile/ HTTP/1.1" 200 37879
+INFO 2025-11-15 17:01:18 basehttp 9012 11112 "POST /profile/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:01:18 basehttp 9012 11112 "GET /profile/ HTTP/1.1" 200 38301
+INFO 2025-11-15 17:01:18 basehttp 9012 11112 "GET /media/profile_images/istockphoto-816152804-612x612.webp HTTP/1.1" 200 14964
+INFO 2025-11-15 17:06:56 autoreload 9012 6780 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:06:57 autoreload 17784 27392 Watching for file changes with StatReloader
+INFO 2025-11-15 17:09:55 basehttp 17784 24072 "GET /home/ HTTP/1.1" 200 46063
+INFO 2025-11-15 17:09:57 basehttp 17784 24072 "GET /profile/ HTTP/1.1" 200 38656
+INFO 2025-11-15 17:09:57 basehttp 17784 24072 "GET /media/profile_images/istockphoto-816152804-612x612.webp HTTP/1.1" 304 0
+ERROR 2025-11-15 17:10:03 log 17784 24072 Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 321, in view_profile
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 337, in full_clean
+    self._clean_fields()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 347, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py", line 156, in clean_date_of_birth
+    from dateutil.relativedelta import relativedelta
+ModuleNotFoundError: No module named 'dateutil'
+ERROR 2025-11-15 17:10:03 basehttp 17784 24072 "POST /profile/ HTTP/1.1" 500 104820
+INFO 2025-11-15 17:10:13 autoreload 31128 8136 Watching for file changes with StatReloader
+INFO 2025-11-15 17:10:15 basehttp 17784 24072 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 17:10:15 basehttp 17784 24072 "GET /home/ HTTP/1.1" 200 46063
+INFO 2025-11-15 17:10:17 basehttp 17784 24072 "GET /maps/my-activity/ HTTP/1.1" 200 133756
+INFO 2025-11-15 17:10:19 basehttp 17784 24072 "GET /profile/ HTTP/1.1" 200 38656
+ERROR 2025-11-15 17:10:29 log 17784 24072 Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 321, in view_profile
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 337, in full_clean
+    self._clean_fields()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 347, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py", line 156, in clean_date_of_birth
+    from dateutil.relativedelta import relativedelta
+ModuleNotFoundError: No module named 'dateutil'
+ERROR 2025-11-15 17:10:29 basehttp 17784 24072 "POST /profile/ HTTP/1.1" 500 104820
+WARNING 2025-11-15 17:10:39 log 17784 24072 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-15 17:10:39 basehttp 17784 24072 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5029
+INFO 2025-11-15 17:11:13 autoreload 17784 27392 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:11:13 autoreload 1952 16508 Watching for file changes with StatReloader
+INFO 2025-11-15 17:11:34 autoreload 1952 16508 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:11:35 autoreload 9780 20244 Watching for file changes with StatReloader
+INFO 2025-11-15 17:12:56 autoreload 30216 12988 Watching for file changes with StatReloader
+INFO 2025-11-15 17:12:57 basehttp 9780 6084 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 17:12:57 basehttp 9780 6084 "GET /home/ HTTP/1.1" 200 46063
+INFO 2025-11-15 17:12:59 basehttp 9780 6084 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:12:59 basehttp 9780 6084 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 17:13:00 basehttp 9780 6084 "GET /register/ HTTP/1.1" 200 23376
+INFO 2025-11-15 17:14:47 basehttp 9780 6084 "POST /register/ HTTP/1.1" 200 24399
+INFO 2025-11-15 17:14:58 basehttp 9780 6084 "POST /register/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:14:58 basehttp 9780 6084 "GET / HTTP/1.1" 200 13494
+INFO 2025-11-15 17:15:14 basehttp 9780 6084 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 17:15:14 basehttp 9780 6084 "GET /home/ HTTP/1.1" 200 46686
+INFO 2025-11-15 17:15:16 basehttp 9780 6084 "GET /approve/ HTTP/1.1" 200 33932
+INFO 2025-11-15 17:15:25 basehttp 9780 6084 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:15:25 basehttp 9780 6084 "GET /approve/ HTTP/1.1" 200 33927
+INFO 2025-11-15 17:15:30 basehttp 9780 6084 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:15:30 basehttp 9780 6084 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 17:15:40 basehttp 9780 6084 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 17:15:40 basehttp 9780 6084 "GET /home/ HTTP/1.1" 200 40543
+INFO 2025-11-15 17:15:50 basehttp 9780 6084 "GET /maps/ HTTP/1.1" 200 1034795
+INFO 2025-11-15 17:15:57 views 9780 6084 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:15:58 views 9780 6084 API returned - Rain: 0.0mm, Temp: 26.9Â°C, Humidity: 89%, Wind: 12.2km/h
+INFO 2025-11-15 17:15:58 views 9780 6084 Processed 7 days of weather forecast
+INFO 2025-11-15 17:15:58 basehttp 9780 6084 "GET /monitoring/ HTTP/1.1" 200 83534
+INFO 2025-11-15 17:16:58 basehttp 9780 6084 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 711
+INFO 2025-11-15 17:17:09 basehttp 9780 6084 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1340
+INFO 2025-11-15 17:17:20 basehttp 9780 6084 "GET /profile/ HTTP/1.1" 200 38011
+INFO 2025-11-15 17:17:38 basehttp 9780 6084 "POST /profile/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:17:38 basehttp 9780 6084 "GET /profile/ HTTP/1.1" 200 38439
+INFO 2025-11-15 17:17:38 basehttp 9780 6084 "GET /media/profile_images/istockphoto-2174167592-612x612.webp HTTP/1.1" 200 10684
+INFO 2025-11-15 17:18:20 autoreload 30216 12988 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:18:20 autoreload 9780 20244 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:18:20 autoreload 14464 6036 Watching for file changes with StatReloader
+INFO 2025-11-15 17:18:21 autoreload 31716 31708 Watching for file changes with StatReloader
+INFO 2025-11-15 17:20:18 autoreload 14464 6036 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:20:18 autoreload 31716 31708 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:20:19 autoreload 10644 12464 Watching for file changes with StatReloader
+INFO 2025-11-15 17:20:19 autoreload 29940 19616 Watching for file changes with StatReloader
+INFO 2025-11-15 17:22:30 views 10644 8408 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:22:31 views 10644 8408 API returned - Rain: 0.0mm, Temp: 26.9Â°C, Humidity: 89%, Wind: 12.2km/h
+INFO 2025-11-15 17:22:31 views 10644 8408 Processed 7 days of weather forecast
+INFO 2025-11-15 17:22:31 basehttp 10644 8408 "GET /monitoring/ HTTP/1.1" 200 83899
+INFO 2025-11-15 17:22:44 basehttp 10644 8408 "GET /home/ HTTP/1.1" 200 40513
+INFO 2025-11-15 17:22:57 views 10644 8408 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:22:58 views 10644 8408 API returned - Rain: 0.0mm, Temp: 26.9Â°C, Humidity: 89%, Wind: 12.2km/h
+INFO 2025-11-15 17:22:58 views 10644 8408 Processed 7 days of weather forecast
+INFO 2025-11-15 17:22:58 basehttp 10644 8408 "GET /monitoring/ HTTP/1.1" 200 83899
+INFO 2025-11-15 17:23:26 basehttp 10644 8408 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 711
+INFO 2025-11-15 17:23:28 basehttp 10644 8408 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1340
+INFO 2025-11-15 17:23:28 basehttp 10644 8408 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1340
+INFO 2025-11-15 17:23:48 basehttp 10644 8408 "GET /monitoring/api/trends/?start_date=2025-11-07&end_date=2025-11-10 HTTP/1.1" 200 482
+INFO 2025-11-15 17:27:59 basehttp 10644 11672 "GET /monitoring/api/data/ HTTP/1.1" 200 54
+INFO 2025-11-15 17:28:12 autoreload 10644 12464 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:28:12 autoreload 12212 23220 Watching for file changes with StatReloader
+INFO 2025-11-15 17:28:12 autoreload 29940 19616 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:28:13 autoreload 23904 16316 Watching for file changes with StatReloader
+INFO 2025-11-15 17:30:32 autoreload 12212 23220 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:30:32 autoreload 23904 16316 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:30:33 autoreload 26220 28780 Watching for file changes with StatReloader
+INFO 2025-11-15 17:30:33 autoreload 20956 4228 Watching for file changes with StatReloader
+INFO 2025-11-15 17:31:34 views 26220 16756 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:31:35 views 26220 16756 API returned - Rain: 0.0mm, Temp: 26.8Â°C, Humidity: 90%, Wind: 12.0km/h
+INFO 2025-11-15 17:31:35 views 26220 16756 Processed 7 days of weather forecast
+INFO 2025-11-15 17:31:35 basehttp 26220 16756 "GET /monitoring/ HTTP/1.1" 200 84093
+INFO 2025-11-15 17:31:59 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-04-16&end_date=2025-11-14 HTTP/1.1" 200 1319
+INFO 2025-11-15 17:32:05 basehttp 26220 16756 "GET /monitoring/api/trends/?time_range=all HTTP/1.1" 200 1337
+INFO 2025-11-15 17:32:17 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-01-04&end_date=2025-11-14 HTTP/1.1" 200 1319
+INFO 2025-11-15 17:33:00 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-11-07&end_date=2025-11-07 HTTP/1.1" 200 176
+INFO 2025-11-15 17:33:05 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-11-07&end_date=2025-11-08 HTTP/1.1" 200 220
+INFO 2025-11-15 17:33:14 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-11-07&end_date=2025-11-09 HTTP/1.1" 200 430
+INFO 2025-11-15 17:33:19 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-11-06&end_date=2025-11-09 HTTP/1.1" 200 483
+INFO 2025-11-15 17:33:39 basehttp 26220 16756 "GET /home/ HTTP/1.1" 200 40513
+INFO 2025-11-15 17:35:02 autoreload 20956 4228 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 17:35:02 autoreload 26220 28780 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 17:35:02 autoreload 22788 10776 Watching for file changes with StatReloader
+INFO 2025-11-15 17:35:03 autoreload 23960 29152 Watching for file changes with StatReloader
+INFO 2025-11-15 17:35:20 basehttp 22788 6728 "GET /home/ HTTP/1.1" 200 40516
+INFO 2025-11-15 17:35:24 views 22788 6728 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:35:25 views 22788 6728 API returned - Rain: 0.0mm, Temp: 26.8Â°C, Humidity: 90%, Wind: 12.0km/h
+INFO 2025-11-15 17:35:25 views 22788 6728 Processed 7 days of weather forecast
+INFO 2025-11-15 17:35:25 basehttp 22788 6728 "GET /monitoring/ HTTP/1.1" 200 84093
+INFO 2025-11-15 17:35:27 basehttp 22788 6728 "GET /home/ HTTP/1.1" 200 40516
+INFO 2025-11-15 17:35:46 basehttp 22788 6728 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:35:46 basehttp 22788 6728 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 17:35:50 basehttp 22788 6728 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 17:35:51 basehttp 22788 6728 "GET /home/ HTTP/1.1" 200 46228
+INFO 2025-11-15 17:36:07 basehttp 22788 6728 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 17:36:10 views 22788 6728 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:36:11 views 22788 6728 API returned - Rain: 0.0mm, Temp: 26.8Â°C, Humidity: 90%, Wind: 12.0km/h
+INFO 2025-11-15 17:36:11 views 22788 6728 Processed 7 days of weather forecast
+INFO 2025-11-15 17:36:11 basehttp 22788 6728 "GET /monitoring/ HTTP/1.1" 200 84614
+INFO 2025-11-15 17:36:14 basehttp 22788 6728 "GET /approve/ HTTP/1.1" 200 33698
+INFO 2025-11-15 17:36:17 basehttp 22788 6728 "GET /maps/my-activity/ HTTP/1.1" 200 139191
+INFO 2025-11-15 17:36:24 autoreload 23960 29152 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 17:36:24 autoreload 24816 5424 Watching for file changes with StatReloader
+INFO 2025-11-15 17:36:24 autoreload 22788 10776 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:36:25 autoreload 23184 30388 Watching for file changes with StatReloader
+INFO 2025-11-15 18:12:43 basehttp 24816 13140 "GET /maps/my-activity/ HTTP/1.1" 200 139256
+INFO 2025-11-15 18:12:45 basehttp 24816 13140 "GET /home/ HTTP/1.1" 200 46014
+INFO 2025-11-15 18:12:52 basehttp 24816 13140 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 18:12:55 basehttp 24816 13140 "GET /approve/ HTTP/1.1" 200 33698
+INFO 2025-11-15 18:22:01 basehttp 24816 19776 "GET /approve/ HTTP/1.1" 200 59255
+INFO 2025-11-15 18:22:23 basehttp 24816 19776 "GET /home/ HTTP/1.1" 200 71571
+INFO 2025-11-15 18:22:27 basehttp 24816 19776 "GET /maps/ HTTP/1.1" 200 1060873
+INFO 2025-11-15 18:29:17 basehttp 24816 26704 "GET /maps/ HTTP/1.1" 200 1061262
+INFO 2025-11-15 18:29:18 basehttp 24816 26704 "GET /home/ HTTP/1.1" 200 71960
+INFO 2025-11-15 18:43:29 basehttp 24816 11556 "GET /home/ HTTP/1.1" 200 55148
+INFO 2025-11-15 18:46:12 basehttp 24816 11556 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 18:46:12 basehttp 24816 11556 "GET /home/ HTTP/1.1" 200 54996
+INFO 2025-11-15 18:46:18 autoreload 13132 22704 Watching for file changes with StatReloader
+INFO 2025-11-15 18:46:19 basehttp 23184 12868 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 18:46:19 basehttp 23184 12868 "GET /home/ HTTP/1.1" 200 54996
+INFO 2025-11-15 18:47:32 basehttp 23184 12868 "GET /home/ HTTP/1.1" 200 46014
+>>>>>>> temp-branch
+INFO 2025-11-15 19:04:09 autoreload 23476 21148 Watching for file changes with StatReloader
+INFO 2025-11-15 19:04:14 basehttp 23476 28344 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 19:04:14 basehttp 23476 28344 "GET /home/ HTTP/1.1" 200 46327
+WARNING 2025-11-15 19:04:19 log 23476 28344 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-15 19:04:19 basehttp 23476 28344 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5029
+INFO 2025-11-15 19:04:19 basehttp 23476 28344 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 589892
+INFO 2025-11-15 19:04:35 basehttp 23476 28344 "GET /maps/ HTTP/1.1" 200 1035629
+WARNING 2025-11-15 19:04:35 log 23476 28344 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-15 19:04:35 basehttp 23476 28344 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5029
+INFO 2025-11-15 19:04:35 basehttp 23476 28344 "GET /static/js/ol.js.map HTTP/1.1" 200 4835285
+INFO 2025-11-15 19:04:37 views 23476 28344 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 19:04:37 views 23476 7644 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 19:04:38 views 23476 28344 API returned - Rain: 0.0mm, Temp: 26.5Â°C, Humidity: 89%, Wind: 11.8km/h
+INFO 2025-11-15 19:04:38 views 23476 28344 Processed 7 days of weather forecast
+INFO 2025-11-15 19:04:38 basehttp 23476 28344 - Broken pipe from ('127.0.0.1', 54900)
+INFO 2025-11-15 19:04:38 views 23476 7644 API returned - Rain: 0.0mm, Temp: 26.5Â°C, Humidity: 89%, Wind: 11.8km/h
+INFO 2025-11-15 19:04:38 views 23476 7644 Processed 7 days of weather forecast
+INFO 2025-11-15 19:04:38 basehttp 23476 7644 "GET /monitoring/ HTTP/1.1" 200 84936
+WARNING 2025-11-15 19:04:38 log 23476 7644 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-15 19:04:38 basehttp 23476 7644 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5029
+WARNING 2025-11-15 19:04:38 basehttp 23476 7644 "GET /static/js/chart.umd.min.js.map HTTP/1.1" 404 1996
+INFO 2025-11-15 19:04:40 basehttp 23476 6196 "GET /approve/ HTTP/1.1" 200 34011
+WARNING 2025-11-15 19:04:40 log 23476 6196 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-15 19:04:40 basehttp 23476 6196 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5029
+INFO 2025-11-15 19:04:42 basehttp 23476 6196 "GET /maps/my-activity/ HTTP/1.1" 200 139660
+WARNING 2025-11-15 19:04:42 log 23476 6196 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-15 19:04:42 basehttp 23476 6196 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5029
+INFO 2025-11-15 19:04:45 basehttp 23476 6196 "GET /profile/ HTTP/1.1" 200 38969
+INFO 2025-11-15 19:04:45 basehttp 23476 6196 "GET /media/profile_images/istockphoto-816152804-612x612.webp HTTP/1.1" 200 14964
+WARNING 2025-11-15 19:04:45 log 23476 6196 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-15 19:04:45 basehttp 23476 6196 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5029
+INFO 2025-11-15 19:05:00 basehttp 23476 6196 "GET /home/ HTTP/1.1" 200 46327

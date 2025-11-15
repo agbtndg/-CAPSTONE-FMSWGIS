@@ -91,15 +91,153 @@
             margin-bottom: 8px;
         }
 
-        .alert {
-            background-color: #fee2e2;
-            border-left: 4px solid #dc2626;
-            color: #991b1b;
-            padding: 14px 18px;
-            border-radius: 8px;
-            margin-bottom: 24px;
+        /* Toast notification styles */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+        }
+
+        .toast-notification {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            overflow: hidden;
+            animation: slideInRight 0.4s ease-out;
+            border-left: 4px solid;
+        }
+
+        .toast-notification.hiding {
+            animation: slideOutRight 0.4s ease-out forwards;
+        }
+
+        .toast-notification.toast-success {
+            border-left-color: #10b981;
+        }
+
+        .toast-notification.toast-error,
+        .toast-notification.toast-danger {
+            border-left-color: #ef4444;
+        }
+
+        .toast-notification.toast-warning {
+            border-left-color: #f59e0b;
+        }
+
+        .toast-notification.toast-info {
+            border-left-color: #3b82f6;
+        }
+
+        .toast-icon {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .toast-success .toast-icon {
+            color: #10b981;
+            background: #d1fae5;
+        }
+
+        .toast-error .toast-icon,
+        .toast-danger .toast-icon {
+            color: #ef4444;
+            background: #fee2e2;
+        }
+
+        .toast-warning .toast-icon {
+            color: #f59e0b;
+            background: #fef3c7;
+        }
+
+        .toast-info .toast-icon {
+            color: #3b82f6;
+            background: #dbeafe;
+        }
+
+        .toast-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .toast-message {
+            margin: 0;
+            color: var(--text-dark);
             font-size: 14px;
             font-weight: 500;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .toast-close:hover {
+            background: var(--border-gray);
+            color: var(--text-dark);
+        }
+
+        .toast-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: currentColor;
+            opacity: 0.3;
+            animation: shrink 5s linear forwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutRight {
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes shrink {
+            from {
+                width: 100%;
+            }
+            to {
+                width: 0;
+            }
         }
 
         .form-group {
@@ -215,6 +353,9 @@
     </style>
 </head>
 <body>
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
     <div class="container">
         <div class="header">
             <div class="logo-section">
@@ -225,9 +366,7 @@
             <p>Disaster Risk Reduction and Management Office<br>Flood Monitoring & Early Warning System</p>
         </div>
 
-        {% if error %}
-            <div class="alert">{{ error }}</div>
-        {% endif %}
+        <!-- Toast notifications will appear here -->
 
         <form method="post">
             {% csrf_token %}
@@ -259,5 +398,86 @@
             {% endif %}
         </div>
     </div>
+
+    <script>
+        // ============================================
+        // TOAST NOTIFICATION SYSTEM
+        // ============================================
+        function showToast(message, type = 'info', duration = 5000) {
+            const container = document.getElementById('toastContainer');
+            
+            // Icon mapping
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-times-circle',
+                danger: 'fa-exclamation-circle',
+                warning: 'fa-exclamation-triangle',
+                info: 'fa-info-circle'
+            };
+            
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = `toast-notification toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-icon">
+                    <i class="fas ${icons[type] || icons.info}"></i>
+                </div>
+                <div class="toast-content">
+                    <p class="toast-message">${message}</p>
+                </div>
+                <button class="toast-close" onclick="dismissToast(this)">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="toast-progress"></div>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Auto-dismiss after duration
+            const timer = setTimeout(() => {
+                dismissToast(toast.querySelector('.toast-close'));
+            }, duration);
+            
+            // Store timer for manual dismissal
+            toast.dataset.timer = timer;
+            
+            return toast;
+        }
+        
+        function dismissToast(button) {
+            const toast = button.closest('.toast-notification');
+            if (!toast) return;
+            
+            // Clear auto-dismiss timer
+            if (toast.dataset.timer) {
+                clearTimeout(parseInt(toast.dataset.timer));
+            }
+            
+            // Add hiding animation
+            toast.classList.add('hiding');
+            
+            // Remove from DOM after animation
+            setTimeout(() => {
+                toast.remove();
+            }, 400);
+        }
+        
+        // Display Django messages and errors as toasts on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            {% if error %}
+                showToast("{{ error|escapejs }}", "error", 5000);
+            {% endif %}
+            
+            {% if messages %}
+                {% for message in messages %}
+                    showToast(
+                        "{{ message|escapejs }}", 
+                        "{{ message.tags|default:'info' }}",
+                        5000
+                    );
+                {% endfor %}
+            {% endif %}
+        });
+    </script>
 </body>
 </html>

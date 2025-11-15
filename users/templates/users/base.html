@@ -7,6 +7,285 @@
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <style>
+        /* ============================================
+           TOAST NOTIFICATION SYSTEM - Consistent Auto-Dismissing Alerts
+           ============================================ */
+        .toast-container {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 420px;
+            pointer-events: none;
+        }
+
+        .toast-notification {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 16px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            min-width: 320px;
+            max-width: 420px;
+            border-left: 4px solid;
+            animation: slideInRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            pointer-events: all;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toast-notification.hiding {
+            animation: slideOutRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(120%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(120%);
+                opacity: 0;
+            }
+        }
+
+        /* Success Toast */
+        .toast-success {
+            border-left-color: #10b981;
+            background: linear-gradient(to right, #ecfdf5, #ffffff);
+        }
+        .toast-success .toast-icon {
+            color: #10b981;
+            background: #d1fae5;
+        }
+
+        /* Error/Danger Toast */
+        .toast-error, .toast-danger {
+            border-left-color: #ef4444;
+            background: linear-gradient(to right, #fef2f2, #ffffff);
+        }
+        .toast-error .toast-icon, .toast-danger .toast-icon {
+            color: #ef4444;
+            background: #fee2e2;
+        }
+
+        /* Warning Toast */
+        .toast-warning {
+            border-left-color: #f59e0b;
+            background: linear-gradient(to right, #fffbeb, #ffffff);
+        }
+        .toast-warning .toast-icon {
+            color: #f59e0b;
+            background: #fef3c7;
+        }
+
+        /* Info Toast */
+        .toast-info {
+            border-left-color: #3b82f6;
+            background: linear-gradient(to right, #eff6ff, #ffffff);
+        }
+        .toast-info .toast-icon {
+            color: #3b82f6;
+            background: #dbeafe;
+        }
+
+        .toast-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .toast-content {
+            flex: 1;
+            padding-top: 2px;
+        }
+
+        .toast-message {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .toast-close:hover {
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--text-dark);
+        }
+
+        /* Progress bar for auto-dismiss */
+        .toast-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: currentColor;
+            opacity: 0.3;
+            animation: shrink 5s linear forwards;
+        }
+
+        @keyframes shrink {
+            from {
+                width: 100%;
+            }
+            to {
+                width: 0%;
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            .toast-container {
+                top: 70px;
+                right: 12px;
+                left: 12px;
+                max-width: none;
+            }
+            .toast-notification {
+                min-width: auto;
+                max-width: none;
+            }
+        }
+
+                /* Footer Styles */
+                footer {
+                    background-color: var(--primary-blue);
+                    color: white;
+                    margin-top: auto;
+                    border-top: 1px solid rgba(255,255,255,0.1);
+                    width: 100%;
+                }
+                .footer-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 40px 20px 20px 20px;
+                }
+                .footer-content {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                    gap: 30px;
+                    margin-bottom: 30px;
+                }
+                .footer-section h3 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 16px;
+                    letter-spacing: -0.3px;
+                }
+                .footer-section p {
+                    font-size: 14px;
+                    line-height: 1.6;
+                    opacity: 0.9;
+                    margin-bottom: 8px;
+                }
+                .footer-section a {
+                    color: rgba(255,255,255,0.8);
+                    text-decoration: none;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-bottom: 8px;
+                    transition: color 0.2s;
+                }
+                .footer-section a:hover {
+                    color: white;
+                }
+                .social-links {
+                    display: flex;
+                    gap: 12px;
+                    margin-top: 12px;
+                }
+                .social-links a {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 36px;
+                    background-color: rgba(255,255,255,0.15);
+                    border-radius: 6px;
+                    color: white;
+                    transition: all 0.2s;
+                    margin-bottom: 0;
+                }
+                .social-links a:hover {
+                    background-color: rgba(255,255,255,0.25);
+                }
+                .footer-divider {
+                    height: 1px;
+                    background-color: rgba(255,255,255,0.1);
+                    margin: 20px 0;
+                }
+                .footer-bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 13px;
+                    opacity: 0.8;
+                    flex-wrap: wrap;
+                    gap: 16px;
+                }
+                @media (max-width: 900px) {
+                    .footer-content {
+                        grid-template-columns: 1fr 1fr;
+                        gap: 18px;
+                    }
+                    .footer-container {
+                        padding: 24px 10px 10px 10px;
+                    }
+                }
+                @media (max-width: 600px) {
+                    .footer-content {
+                        grid-template-columns: 1fr;
+                        gap: 12px;
+                    }
+                    .footer-container {
+                        padding: 16px 4px 8px 4px;
+                    }
+                    .footer-bottom {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 8px;
+                    }
+                }
         :root {
             --primary-blue: #1e3a5f;
             --secondary-blue: #2563eb;
@@ -15,13 +294,6 @@
             --text-dark: #1e293b;
             --text-muted: #64748b;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
             background-color: #ffffff;
@@ -30,288 +302,219 @@
             display: flex;
             flex-direction: column;
         }
-
-        /* Professional dark blue header with white text */
-        .header {
-            background-color: var(--primary-blue);
+        .navbar {
+            width: 100%;
+            background: var(--primary-blue);
             color: white;
-            padding: 0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            margin-bottom: 0;
-            min-height: 60px;
             display: flex;
             align-items: center;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
             justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 16px 20px;
+            padding: 0 32px;
+            min-height: 64px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 1000;
         }
-
-        .header-logo {
+        .navbar-left {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-
-        .header-logo-link {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: white;
-            transition: opacity 0.2s;
-        }
-
-        .header-logo-link:hover {
-            opacity: 0.8;
-            text-decoration: none;
-            color: white;
-        }
-
-        .header-logo img {
-            height: 48px;
-            width: auto;
-        }
-
-        .header h2 {
-            margin: 0;
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-        }
-
-        .header-actions {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .profile-btn, .logout-btn {
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            border: none;
-            cursor: pointer;
-        }
-
-        .profile-btn {
-            background-color: rgba(255, 255, 255, 0.15);
-            color: white;
-        }
-
-        .profile-btn:hover {
-            background-color: rgba(255, 255, 255, 0.25);
-            color: white;
-            text-decoration: none;
-        }
-
-        .logout-btn {
-            background-color: rgba(255, 255, 255, 0.15);
-            color: white;
-        }
-
-        .logout-btn:hover {
-            background-color: rgba(255, 255, 255, 0.25);
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Main content area with proper spacing */
-        .main-content {
-            flex: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-            padding: 24px 20px;
-        }
-
-        .alert {
+        .navbar-logo {
+            height: 40px;
+            width: 40px;
             border-radius: 8px;
-            border: none;
-            margin-bottom: 20px;
         }
-
-        .alert-success {
-            background-color: #dcfce7;
-            color: #166534;
+        .navbar-title {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
-
-        .alert-error, .alert-danger {
-            background-color: #fee2e2;
-            color: #991b1b;
+        .navbar-center {
+            display: flex;
+            align-items: center;
+            gap: 24px;
         }
-
-        .alert-warning {
-            background-color: #fef3c7;
-            color: #92400e;
-        }
-
-        .alert-info {
-            background-color: #e0f2fe;
-            color: #0c4a6e;
-        }
-
-        /* New professional footer with DRRMO contact information */
-        footer {
-            background-color: var(--primary-blue);
+        .nav-link {
             color: white;
-            padding: 0;
-            margin-top: auto;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-section h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            letter-spacing: -0.3px;
-        }
-
-        .footer-section p {
-            font-size: 14px;
-            line-height: 1.6;
-            opacity: 0.9;
-            margin-bottom: 8px;
-        }
-
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 16px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 8px;
-            transition: color 0.2s;
+            position: relative;
+            transition: background 0.2s;
         }
-
-        .footer-section a:hover {
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255,255,255,0.12);
             color: white;
+            text-decoration: none;
         }
-
-        .social-links {
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: white;
+            color: var(--text-dark);
+            min-width: 180px;
+            box-shadow: 0 4px 16px rgba(30,58,95,0.10);
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 2000;
+        }
+        .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: var(--text-dark);
+            padding: 12px 18px;
+            display: block;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+        .dropdown-content a:hover {
+            background: var(--light-gray);
+        }
+        .navbar-right {
             display: flex;
-            gap: 12px;
-            margin-top: 12px;
-        }
-
-        .social-links a {
-            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            background-color: rgba(255, 255, 255, 0.15);
-            border-radius: 6px;
-            color: white;
-            transition: all 0.2s;
-            margin-bottom: 0;
-        }
-
-        .social-links a:hover {
-            background-color: rgba(255, 255, 255, 0.25);
-        }
-
-        .footer-divider {
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.1);
-            margin: 20px 0;
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 13px;
-            opacity: 0.8;
-            flex-wrap: wrap;
             gap: 16px;
         }
-
-        @media (max-width: 768px) {
-            .header-container {
+        .settings-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: background 0.2s;
+            position: relative;
+        }
+        .settings-btn:hover, .settings-btn:focus {
+            background: rgba(255,255,255,0.15);
+            outline: none;
+        }
+        .settings-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 110%;
+            background: white;
+            color: var(--text-dark);
+            min-width: 160px;
+            box-shadow: 0 4px 16px rgba(30,58,95,0.10);
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 2000;
+        }
+        .settings-btn:focus + .settings-dropdown, .settings-btn.active + .settings-dropdown {
+            display: block;
+        }
+        .settings-dropdown a {
+            color: var(--text-dark);
+            padding: 12px 18px;
+            display: block;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+        .settings-dropdown a:hover {
+            background: var(--light-gray);
+        }
+        .main-content {
+            flex: 1;
+            width: 100%;
+            margin: 0 auto;
+            padding: 32px 24px 24px 24px;
+            box-sizing: border-box;
+            max-width: 1200px;
+        }
+        @media (max-width: 900px) {
+            .navbar {
                 flex-direction: column;
+                align-items: stretch;
+                padding: 0 10px;
+            }
+            .navbar-center {
+                justify-content: center;
                 gap: 12px;
-                align-items: flex-start;
             }
-
-            .header-actions {
-                width: 100%;
-                justify-content: flex-start;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
             .main-content {
-                padding: 16px 12px;
+                padding: 18px 6px 12px 6px;
             }
         }
-
-        {% block styles %}{% endblock %}
+        @media (max-width: 600px) {
+            .navbar-title {
+                font-size: 16px;
+            }
+            .navbar-logo {
+                height: 32px;
+                width: 32px;
+            }
+            .main-content {
+                padding: 8px 2px 8px 2px;
+            }
+        }
     </style>
+    {% block styles %}{% endblock %}
 </head>
+
 <body>
-    <!-- Professional dark blue header -->
-    <div class="header">
-        <div class="header-container">
-            <div class="header-logo">
-                <a href="{% url 'home' %}" class="header-logo-link">
-                    <img src="{% static 'images/drrmo_logo.png' %}" alt="SCDRRMO Logo">
-                    <h2>{% block header_title %}SCDRRMO - FMSWGIS{% endblock %}</h2>
-                </a>
+    <!-- Modern Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="{% url 'home' %}" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+                <img src="{% static 'images/drrmo_logo.png' %}" alt="SCDRRMO Logo" class="navbar-logo">
+                <span class="navbar-title">SCDRRMO</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <a href="{% url 'home' %}" class="nav-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="{% url 'map_view' %}" class="nav-link"><i class="fas fa-map"></i> Map</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link" style="cursor:default;pointer-events:none;"><i class="fas fa-chart-area"></i> Monitoring <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="{% url 'monitoring_view' %}"><i class="fas fa-chart-area"></i> Monitoring Page</a>
+                    <a href="{% url 'flood_record_form' %}"><i class="fas fa-plus-circle"></i> Add Flood Record</a>
+                </div>
             </div>
-            <div class="header-actions">
-                <a href="{% url 'view_profile' %}" class="profile-btn"><i class="fas fa-user"></i> Profile</a>
-                <a href="{% url 'logout' %}" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            {% if user.is_staff %}
+                <a href="{% url 'approve_users' %}" class="nav-link"><i class="fas fa-user-check"></i> User Approvals</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link" style="cursor:default;pointer-events:none;"><i class="fas fa-history"></i> Activity History <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'my_activity' %}"><i class="fas fa-user"></i> Your Activity History</a>
+                        <a href="{% url 'all_activities' %}"><i class="fas fa-list"></i> All Activities</a>
+                    </div>
+                </div>
+            {% else %}
+                <a href="{% url 'my_activity' %}" class="nav-link"><i class="fas fa-history"></i> Activity History</a>
+            {% endif %}
+        </div>
+        <div class="navbar-right">
+            <div style="position: relative;">
+                <button class="settings-btn" id="settingsBtn" tabindex="0"><i class="fas fa-cog"></i></button>
+                <div class="settings-dropdown" id="settingsDropdown">
+                    <a href="{% url 'view_profile' %}"><i class="fas fa-user"></i> Profile</a>
+                    <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
             </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
     <div class="main-content">
-        {% if messages %}
-        <div class="mb-4">
-            {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
-
         {% block content %}{% endblock %}
     </div>
 
@@ -324,7 +527,6 @@
                     <h3><i class="fas fa-shield-alt"></i> DRRMO Silay City</h3>
                     <p>Disaster Risk Reduction and Management Office dedicated to protecting the community of Silay City through comprehensive disaster preparedness and response.</p>
                 </div>
-
                 <!-- Contact Section -->
                 <div class="footer-section">
                     <h3><i class="fas fa-phone"></i> Contact Us</h3>
@@ -333,7 +535,6 @@
                     <a href="mailto:drrmo@silaycity.gov.ph"><i class="fas fa-envelope"></i> drrmo@silaycity.gov.ph</a>
                     <a href="mailto:info@silaycity.gov.ph"><i class="fas fa-envelope"></i> info@silaycity.gov.ph</a>
                 </div>
-
                 <!-- Office Hours Section -->
                 <div class="footer-section">
                     <h3><i class="fas fa-clock"></i> Office Hours</h3>
@@ -341,7 +542,6 @@
                     <p><strong>Saturday:</strong><br>8:00 AM - 12:00 PM</p>
                     <p><strong>Sunday & Holidays:</strong><br>Closed</p>
                 </div>
-
                 <!-- Social Media Section -->
                 <div class="footer-section">
                     <h3><i class="fas fa-share-alt"></i> Follow Us</h3>
@@ -354,9 +554,7 @@
                     </div>
                 </div>
             </div>
-
             <div class="footer-divider"></div>
-
             <div class="footer-bottom">
                 <p>&copy; 2025 DRRMO Silay City. All rights reserved.</p>
                 <div>
@@ -366,6 +564,103 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // ============================================
+        // TOAST NOTIFICATION SYSTEM
+        // ============================================
+        function showToast(message, type = 'info', duration = 5000) {
+            const container = document.getElementById('toastContainer');
+            
+            // Icon mapping
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-times-circle',
+                danger: 'fa-exclamation-circle',
+                warning: 'fa-exclamation-triangle',
+                info: 'fa-info-circle'
+            };
+            
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = `toast-notification toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-icon">
+                    <i class="fas ${icons[type] || icons.info}"></i>
+                </div>
+                <div class="toast-content">
+                    <p class="toast-message">${message}</p>
+                </div>
+                <button class="toast-close" onclick="dismissToast(this)">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="toast-progress"></div>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Auto-dismiss after duration
+            const timer = setTimeout(() => {
+                dismissToast(toast.querySelector('.toast-close'));
+            }, duration);
+            
+            // Store timer for manual dismissal
+            toast.dataset.timer = timer;
+            
+            return toast;
+        }
+        
+        function dismissToast(button) {
+            const toast = button.closest('.toast-notification');
+            if (!toast) return;
+            
+            // Clear auto-dismiss timer
+            if (toast.dataset.timer) {
+                clearTimeout(parseInt(toast.dataset.timer));
+            }
+            
+            // Add hiding animation
+            toast.classList.add('hiding');
+            
+            // Remove from DOM after animation
+            setTimeout(() => {
+                toast.remove();
+            }, 400);
+        }
+        
+        // Display Django messages as toasts on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            {% if messages %}
+                {% for message in messages %}
+                    showToast(
+                        "{{ message|escapejs }}", 
+                        "{{ message.tags|default:'info' }}",
+                        5000
+                    );
+                {% endfor %}
+            {% endif %}
+        });
+
+        // Settings dropdown toggle for accessibility
+        const settingsBtn = document.getElementById('settingsBtn');
+        const settingsDropdown = document.getElementById('settingsDropdown');
+        document.addEventListener('click', function(event) {
+            if (settingsBtn.contains(event.target)) {
+                settingsDropdown.style.display = settingsDropdown.style.display === 'block' ? 'none' : 'block';
+                settingsBtn.classList.toggle('active');
+            } else if (!settingsDropdown.contains(event.target)) {
+                settingsDropdown.style.display = 'none';
+                settingsBtn.classList.remove('active');
+            }
+        });
+        // Highlight active nav link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 
     {% block scripts %}{% endblock %}
 </body>

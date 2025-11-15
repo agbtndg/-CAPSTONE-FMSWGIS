@@ -365,8 +365,8 @@ def monitoring_view(request):
         timestamp__gte=time_filter
     ).order_by('timestamp').values('timestamp', 'height_m'))
     
-    # Order by date ascending for proper graph display, and include ID for edit/delete
-    flood_records = list(FloodRecord.objects.all().order_by('date')[:20].values(
+    # Order by date descending (most recent first) for proper table display, and include ID for edit/delete
+    flood_records = list(FloodRecord.objects.all().order_by('-date')[:20].values(
         'id', 'event', 'date', 'affected_barangays', 'casualties_dead', 'casualties_injured', 'casualties_missing',
         'affected_persons', 'affected_families', 'houses_damaged_partially', 'houses_damaged_totally',
         'damage_infrastructure_php', 'damage_agriculture_php', 'damage_institutions_php',
@@ -418,6 +418,23 @@ def monitoring_view(request):
     tide_risk_level, tide_risk_color = get_tide_risk_level(tide_data.height_m if tide_data else 0)
     combined_risk_level, combined_risk_color = get_combined_risk_level(rain_risk_level, tide_risk_level)
 
+    # Get earliest and latest data dates for date picker constraints
+    earliest_rainfall = RainfallData.objects.order_by('timestamp').first()
+    earliest_tide = TideLevelData.objects.order_by('timestamp').first()
+    earliest_flood = FloodRecord.objects.order_by('date').first()
+    
+    # Find the earliest date among all data sources
+    earliest_dates = []
+    if earliest_rainfall:
+        earliest_dates.append(earliest_rainfall.timestamp.date())
+    if earliest_tide:
+        earliest_dates.append(earliest_tide.timestamp.date())
+    if earliest_flood:
+        earliest_dates.append(earliest_flood.date)
+    
+    min_date = min(earliest_dates).isoformat() if earliest_dates else None
+    max_date = timezone.now().date().isoformat()  # Today's date
+
     context = {
         'rainfall_data': rainfall_data,
         'weather_data': weather_data,
@@ -450,6 +467,8 @@ def monitoring_view(request):
         'tide_values': tide_values,
         'time_range': time_range,
         'range_label': range_label,
+        'min_date': min_date,
+        'max_date': max_date,
     }
     return render(request, 'monitoring/monitoring.html', context)
 
@@ -534,15 +553,15 @@ def fetch_trends_api(request):
         
         # Fetch filtered data
         if start_date_str and end_date_str:
-            # Custom date range filtering
+            # Custom date range filtering (timezone-aware, inclusive)
             rainfall_history = list(RainfallData.objects.filter(
-                timestamp__date__gte=start_date,
-                timestamp__date__lte=end_date
+                timestamp__gte=start_datetime,
+                timestamp__lte=end_datetime
             ).order_by('timestamp').values('timestamp', 'value_mm'))
-            
+
             tide_history = list(TideLevelData.objects.filter(
-                timestamp__date__gte=start_date,
-                timestamp__date__lte=end_date
+                timestamp__gte=start_datetime,
+                timestamp__lte=end_datetime
             ).order_by('timestamp').values('timestamp', 'height_m'))
         else:
             # Time-based filtering
@@ -601,7 +620,7 @@ def flood_record_form(request):
                     damage_total_php=flood_record.damage_total_php
                 )
                 
-                success_message = f'âœ… Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully added!'
+                success_message = f'✅ Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully added!'
                 logger.info(f"Flood record created: {flood_record.id} - {flood_record.event}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -614,7 +633,7 @@ def flood_record_form(request):
                 messages.success(request, success_message)
                 return redirect('monitoring_view')
             else:
-                error_message = 'âŒ Please correct the errors below and try again.'
+                error_message = '❌ Please correct the errors below and try again.'
                 logger.warning(f"Form validation errors: {form.errors}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -626,7 +645,7 @@ def flood_record_form(request):
                     
                 messages.error(request, error_message)
         except Exception as e:
-            error_message = f'âŒ An unexpected error occurred while saving the record: {str(e)}'
+            error_message = f'❌ An unexpected error occurred while saving the record: {str(e)}'
             logger.error(f"Error saving flood record: {e}", exc_info=True)
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -655,7 +674,7 @@ def flood_record_edit(request, record_id):
         try:
             if form.is_valid():
                 flood_record = form.save()
-                success_message = f'âœ… Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully updated!'
+                success_message = f'✅ Flood record for {flood_record.event} on {flood_record.date.strftime("%Y-%m-%d")} has been successfully updated!'
                 logger.info(f"Flood record updated: {flood_record.id} - {flood_record.event}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -668,7 +687,7 @@ def flood_record_edit(request, record_id):
                 messages.success(request, success_message)
                 return redirect('monitoring_view')
             else:
-                error_message = 'âŒ Please correct the errors below and try again.'
+                error_message = '❌ Please correct the errors below and try again.'
                 logger.warning(f"Form validation errors: {form.errors}")
                 
                 if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -680,7 +699,7 @@ def flood_record_edit(request, record_id):
                     
                 messages.error(request, error_message)
         except Exception as e:
-            error_message = f'âŒ An unexpected error occurred while updating the record: {str(e)}'
+            error_message = f'❌ An unexpected error occurred while updating the record: {str(e)}'
             logger.error(f"Error updating flood record: {e}", exc_info=True)
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -708,9 +727,25 @@ def flood_record_delete(request, record_id):
         try:
             event_name = flood_record.event
             event_date = flood_record.date.strftime("%Y-%m-%d")
+            # Log the activity before deleting
+            from maps.models import FloodRecordActivity
+            FloodRecordActivity.objects.create(
+                user=request.user,
+                action='DELETE',
+                flood_record_id=flood_record.id,
+                event_type=flood_record.event,
+                event_date=flood_record.date,
+                affected_barangays=flood_record.affected_barangays,
+                casualties_dead=flood_record.casualties_dead,
+                casualties_injured=flood_record.casualties_injured,
+                casualties_missing=flood_record.casualties_missing,
+                affected_persons=flood_record.affected_persons,
+                affected_families=flood_record.affected_families,
+                damage_total_php=flood_record.damage_total_php
+            )
             flood_record.delete()
             
-            success_message = f'âœ… Flood record for {event_name} on {event_date} has been successfully deleted!'
+            success_message = f'✅ Flood record for {event_name} on {event_date} has been successfully deleted!'
             logger.info(f"Flood record deleted: {record_id} - {event_name}")
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -723,7 +758,7 @@ def flood_record_delete(request, record_id):
             messages.success(request, success_message)
             return redirect('monitoring_view')
         except Exception as e:
-            error_message = f'âŒ An error occurred while deleting the record: {str(e)}'
+            error_message = f'❌ An error occurred while deleting the record: {str(e)}'
             logger.error(f"Error deleting flood record: {e}", exc_info=True)
             
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':

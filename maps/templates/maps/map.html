@@ -557,14 +557,11 @@
 {% endblock %}
 
 {% block content %}
+<form id="csrf-form" style="display:none;">{% csrf_token %}</form>
 <div class="map-container">
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-header">
-            <a href="{% url 'home' %}" class="back-to-dashboard">
-                <i class="fas fa-arrow-left"></i>
-                <span>Back to Dashboard</span>
-            </a>
             <h2>Silay City Flood Map</h2>
             <div class="sidebar-subtitle">Interactive Risk Assessment</div>
         </div>

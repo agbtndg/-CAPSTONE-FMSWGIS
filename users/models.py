@@ -1,19 +1,20 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 class CustomUser(AbstractUser):
-    DEPARTMENT_CHOICES = [
-        ('operations', 'Operations'),
-        ('planning', 'Planning'),
-        ('logistics', 'Logistics'),
-        ('admin', 'Administration'),
-        ('other', 'Other'),
+    POSITION_CHOICES = [
+        ("officer_planning", "DRRMO OFFICER II PLANNING & RESEARCH"),
+        ("planning_assistant", "PLANNING ASSISTANT"),
+        ("officer_operation", "DRRMO OFFICER II OPERATION & WARNING"),
+        ("eoc", "EMERGENCY OPERATION CENTER"),
+        ("monitoring_alert", "MONITORING ALERT & WARNING SYSTEM"),
+        ("others", "Others"),
     ]
-    
+
     staff_id = models.CharField(max_length=10, unique=True, verbose_name="Staff ID")
     is_approved = models.BooleanField(default=False, verbose_name="Approved")
-    department = models.CharField(max_length=20, choices=DEPARTMENT_CHOICES, default='other', verbose_name="Department")
-    position = models.CharField(max_length=100, blank=True, verbose_name="Position")
+    position = models.CharField(max_length=50, choices=POSITION_CHOICES, default="others", verbose_name="Position")
     contact_number = models.CharField(max_length=11, blank=True, verbose_name="Contact Number")
     emergency_contact = models.CharField(max_length=100, blank=True, verbose_name="Emergency Contact")
     emergency_number = models.CharField(max_length=11, blank=True, verbose_name="Emergency Contact Number")
