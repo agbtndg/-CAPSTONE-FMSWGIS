@@ -1,0 +1,1 @@
+web: gunicorn silay_drrmo.wsgi
