@@ -1478,3 +1478,841 @@ INFO 2025-11-15 02:54:26 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15802
 INFO 2025-11-15 02:55:32 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15803
 INFO 2025-11-15 02:56:32 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15803
 INFO 2025-11-15 02:59:50 basehttp 30540 2516 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:15:42 basehttp 19196 7192 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:15:44 basehttp 19196 7192 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:21:18 basehttp 19196 8232 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:21:30 basehttp 19196 8232 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:21:33 basehttp 19196 8232 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:21:42 autoreload 17452 22708 Watching for file changes with StatReloader
+INFO 2025-11-15 03:21:44 basehttp 17452 4064 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:21:47 basehttp 17452 4064 "GET /register/ HTTP/1.1" 200 15188
+INFO 2025-11-15 03:23:33 basehttp 17452 4064 "GET /register/ HTTP/1.1" 200 16262
+INFO 2025-11-15 03:23:55 autoreload 17452 22708 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 03:23:56 autoreload 8804 5476 Watching for file changes with StatReloader
+INFO 2025-11-15 03:25:34 basehttp 8804 24220 "GET /register/ HTTP/1.1" 200 15140
+INFO 2025-11-15 03:25:36 basehttp 8804 24220 "GET /register/ HTTP/1.1" 200 15140
+INFO 2025-11-15 03:25:40 basehttp 8804 24220 "GET /register/ HTTP/1.1" 200 15140
+INFO 2025-11-15 03:25:44 autoreload 8804 5476 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 03:25:44 autoreload 11924 15844 Watching for file changes with StatReloader
+INFO 2025-11-15 03:25:46 basehttp 11924 18480 "GET /register/ HTTP/1.1" 200 15369
+INFO 2025-11-15 03:27:49 autoreload 11924 15844 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\models.py changed, reloading.
+INFO 2025-11-15 03:27:50 autoreload 13756 27528 Watching for file changes with StatReloader
+INFO 2025-11-15 03:28:43 autoreload 7792 26124 Watching for file changes with StatReloader
+INFO 2025-11-15 03:28:44 basehttp 7792 27312 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:28:45 basehttp 7792 27312 "GET /register/ HTTP/1.1" 200 15101
+INFO 2025-11-15 03:28:50 basehttp 7792 27312 "GET /register/ HTTP/1.1" 200 15101
+INFO 2025-11-15 03:30:34 basehttp 7792 27312 "GET /register/ HTTP/1.1" 200 14998
+INFO 2025-11-15 03:31:07 autoreload 7792 26124 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 03:31:08 autoreload 15092 9568 Watching for file changes with StatReloader
+INFO 2025-11-15 03:31:47 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14987
+INFO 2025-11-15 03:32:04 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:32:19 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:33:27 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:33:28 basehttp 15092 6448 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:33:30 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:33:32 basehttp 15092 6448 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 03:33:33 basehttp 15092 6448 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 03:33:34 basehttp 15092 6448 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:20:20 basehttp 15092 8392 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:20:20 basehttp 15092 28780 "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-11-15 13:20:20 basehttp 15092 8392 "GET /static/images/drrmo_logo.png HTTP/1.1" 304 0
+INFO 2025-11-15 13:20:20 basehttp 15092 11788 "GET /static/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2025-11-15 13:20:20 basehttp 15092 11788 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-11-15 13:20:21 basehttp 15092 11788 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 13:21:46 basehttp 15092 11788 "GET /register/ HTTP/1.1" 200 15036
+INFO 2025-11-15 13:24:33 basehttp 15092 6636 "GET /register/ HTTP/1.1" 200 15154
+INFO 2025-11-15 13:25:17 basehttp 15092 19556 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:25:21 basehttp 15092 19556 "GET /register/ HTTP/1.1" 200 15154
+WARNING 2025-11-15 13:29:10 log 15092 19556 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 13:29:10 basehttp 15092 19556 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 13:29:52 log 15092 19556 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 13:29:52 basehttp 15092 19556 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 13:30:05 log 15092 29020 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 13:30:05 basehttp 15092 29020 "POST /register/ HTTP/1.1" 403 2491
+INFO 2025-11-15 13:30:27 autoreload 15092 9568 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:30:28 autoreload 9780 19160 Watching for file changes with StatReloader
+INFO 2025-11-15 13:30:36 autoreload 9780 19160 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:32:20 autoreload 29148 24116 Watching for file changes with StatReloader
+INFO 2025-11-15 13:32:21 basehttp 29148 10088 "GET / HTTP/1.1" 301 0
+INFO 2025-11-15 13:32:21 basehttp 29148 25288 code 400, message Bad request version ('\x00\x02\x01\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-11-15 13:32:21 basehttp 29148 25288 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:21 basehttp 29148 14764 code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÚÚ\x00\x00\x00')
+ERROR 2025-11-15 13:32:21 basehttp 29148 14764 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:22 basehttp 29148 29772 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-11-15 13:32:22 basehttp 29148 29772 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:22 basehttp 29148 2760 code 400, message Bad request version ('a§RºÄ/Ã:Ìª\x9b\x86\x0f(¦[I')
+ERROR 2025-11-15 13:32:22 basehttp 29148 2760 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:45 autoreload 29148 24116 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:32:45 autoreload 25512 3924 Watching for file changes with StatReloader
+INFO 2025-11-15 13:32:49 basehttp 25512 26512 code 400, message Bad request version ('%PÔt')
+ERROR 2025-11-15 13:32:49 basehttp 25512 26512 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 28592 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00\x00')
+ERROR 2025-11-15 13:32:49 basehttp 25512 28592 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 25776 code 400, message Bad request version ('/ùÈ\x8c')
+ERROR 2025-11-15 13:32:49 basehttp 25512 25776 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 21000 code 400, message Bad request version ('éWñe\x8dïÞ\x8e3')
+ERROR 2025-11-15 13:32:49 basehttp 25512 21000 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 30128 code 400, message Bad request version ('Ël7Ã\x16\x81gëØ!\x94\x9d')
+ERROR 2025-11-15 13:32:49 basehttp 25512 30128 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:49 basehttp 25512 14216 code 400, message Bad request version ("'E¼XÖ'")
+ERROR 2025-11-15 13:32:49 basehttp 25512 14216 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:32:55 autoreload 25512 3924 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:33:15 autoreload 20460 19140 Watching for file changes with StatReloader
+INFO 2025-11-15 13:33:16 basehttp 20460 11788 code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x8c\x15\x8f%K-í<e')
+ERROR 2025-11-15 13:33:16 basehttp 20460 11788 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:16 basehttp 20460 18240 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s**\x00\x00\x00')
+ERROR 2025-11-15 13:33:16 basehttp 20460 18240 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 2572 code 400, message Bad request version ('\x1b?\x8e¹±\x90l\x07*ºl¼5\x17¼\x8cÏ¼Z%\x94\x14\x8fÈ\x1a=«[»\x11L"ð\x87¸±\x06}iJ~<É\x9aßõz\x98\x1b\x12õÚ*7¶\x82+êtÁ\x94j0\x13Ë\x12«ÍX£,\x16(YgÁ\x9a#£\x90´\x8an²´h\x9fZ´2º\x0f¼QkÉ\x08h÷Â«,RTÒ´-þ\x12Bh\x06`q©')
+ERROR 2025-11-15 13:33:17 basehttp 20460 2572 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 30816 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-11-15 13:33:17 basehttp 20460 30816 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 6560 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06szz\x00\x00\x00')
+ERROR 2025-11-15 13:33:17 basehttp 20460 6560 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 11724 code 400, message Bad request version ('÷Â´Ê«»¦ê|=')
+INFO 2025-11-15 13:33:17 basehttp 20460 24796 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S')
+ERROR 2025-11-15 13:33:17 basehttp 20460 11724 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-11-15 13:33:17 basehttp 20460 24796 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:17 basehttp 20460 9492 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x93àfP\x8b±Õ¢ì%ðó\x8a\x97r^Dj~Ø')
+ERROR 2025-11-15 13:33:17 basehttp 20460 9492 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:33:32 basehttp 20460 25508 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:33:33 basehttp 20460 8732 "GET /static/css/font-awesome.min.css HTTP/1.1" 200 89220
+INFO 2025-11-15 13:33:33 basehttp 20460 25508 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 232948
+INFO 2025-11-15 13:33:33 basehttp 20460 25508 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 126828
+INFO 2025-11-15 13:33:33 basehttp 20460 25944 "GET /static/images/drrmo_logo.png HTTP/1.1" 200 96716
+WARNING 2025-11-15 13:33:33 log 20460 25944 Not Found: /favicon.ico
+WARNING 2025-11-15 13:33:33 basehttp 20460 25944 "GET /favicon.ico HTTP/1.1" 404 5118
+INFO 2025-11-15 13:33:41 autoreload 20460 19140 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:33:43 autoreload 14124 24840 Watching for file changes with StatReloader
+INFO 2025-11-15 13:33:44 basehttp 14124 12560 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 13:34:01 autoreload 14124 24840 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:34:02 autoreload 25576 18528 Watching for file changes with StatReloader
+INFO 2025-11-15 13:34:12 autoreload 25576 18528 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:34:14 autoreload 5124 11968 Watching for file changes with StatReloader
+INFO 2025-11-15 13:34:14 basehttp 5124 5072 code 400, message Bad request version ('2¼]ÄÐt!{Z')
+ERROR 2025-11-15 13:34:14 basehttp 5124 5072 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:14 basehttp 5124 22844 code 400, message Bad request version ('\x82L\x99k(¡\x14þ¡³VÐ\x84ÞÖ')
+ERROR 2025-11-15 13:34:14 basehttp 5124 22844 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 19636 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s\x1a\x1a\x00\x00\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00')
+ERROR 2025-11-15 13:34:15 basehttp 5124 19636 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 17308 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x1b\x00\x03\x02\x00\x02\x00')
+ERROR 2025-11-15 13:34:15 basehttp 5124 17308 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 14028 code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sªª\x00\x00\x00\x12\x00\x00\x003\x04ï\x04í**\x00\x01\x00\x11ì\x04Àé\x99»â')
+ERROR 2025-11-15 13:34:15 basehttp 5124 14028 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 29980 code 400, message Bad request version ('\x05')
+INFO 2025-11-15 13:34:15 basehttp 5124 25228 code 400, message Bad request version ('¡%¹OÊ©ûük\x03¬')
+ERROR 2025-11-15 13:34:15 basehttp 5124 29980 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-11-15 13:34:15 basehttp 5124 25228 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:15 basehttp 5124 15752 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03g\x97>È\x06·\x86u\x8e')
+ERROR 2025-11-15 13:34:15 basehttp 5124 15752 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:23 autoreload 5124 11968 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:34:24 autoreload 20736 31380 Watching for file changes with StatReloader
+INFO 2025-11-15 13:34:26 basehttp 20736 18572 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06')
+ERROR 2025-11-15 13:34:26 basehttp 20736 18572 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 23116 code 400, message Bad request version ('ûÊ»U*¤\x8a0\x17Gu¡\x11lÃÔmC/rLdí>yÊ}\x00\x18Îrk')
+ERROR 2025-11-15 13:34:26 basehttp 20736 23116 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 17972 code 400, message Bad request version ('MÍ')
+ERROR 2025-11-15 13:34:26 basehttp 20736 17972 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 13828 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-11-15 13:34:26 basehttp 20736 13828 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 22020 code 400, message Bad request version ('íÌ\x84\x8eð¶<t')
+ERROR 2025-11-15 13:34:26 basehttp 20736 22020 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:26 basehttp 20736 26352 code 400, message Bad request version ('èF5±òW\x05\x8a\x14©ú\x08$\x1b\x92G>Ð')
+ERROR 2025-11-15 13:34:26 basehttp 20736 26352 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 21000 code 400, message Bad request version ("ÓtÖ'ÕBÄsûî\x97d\x897\x9c_ÊXÍ\x9f¹K\x96cTÂ\x92\x07Ýóà1\x00ÐE\x88å«;BSôf%yØh\x07")
+ERROR 2025-11-15 13:34:27 basehttp 20736 21000 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 25520 code 400, message Bad request version ('½û3o#GÛ\x07\x16\x90£ß\x15¶Kk\x84\x9c')
+ERROR 2025-11-15 13:34:27 basehttp 20736 25520 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 30252 code 400, message Bad request version ('CëÛ\x0f\x00Ð')
+ERROR 2025-11-15 13:34:27 basehttp 20736 30252 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 6188 code 400, message Bad request version ('j\x91\x8bðÍ\x1a#')
+ERROR 2025-11-15 13:34:27 basehttp 20736 6188 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:27 basehttp 20736 7980 code 400, message Bad request version ('4ã\x17')
+INFO 2025-11-15 13:34:27 basehttp 20736 6100 code 400, message Bad request version ('È\x05Dâ\x89´3{D\x95¤]è©^\x04ârº©vº,jògiÇ\x06\x15Õ\x91\xadz\x01D&÷\x8b¬ä¼')
+ERROR 2025-11-15 13:34:27 basehttp 20736 6100 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-11-15 13:34:27 basehttp 20736 7980 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:35 autoreload 20736 31380 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:34:36 autoreload 7188 24600 Watching for file changes with StatReloader
+INFO 2025-11-15 13:34:37 basehttp 7188 30900 code 400, message Bad request version ("'")
+ERROR 2025-11-15 13:34:37 basehttp 7188 30900 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 15420 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S')
+ERROR 2025-11-15 13:34:37 basehttp 7188 15420 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 17056 code 400, message Bad request version ('\x16WS\x89¾ÐÌFJ5\x00')
+ERROR 2025-11-15 13:34:37 basehttp 7188 17056 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 29404 code 400, message Bad request version ('Àæ\x8cw8\x00')
+ERROR 2025-11-15 13:34:37 basehttp 7188 29404 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 4420 code 400, message Bad request version ('úàãí«VÒ\x12aw\x9fT')
+ERROR 2025-11-15 13:34:37 basehttp 7188 4420 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:37 basehttp 7188 17156 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-11-15 13:34:37 basehttp 7188 17156 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:39 basehttp 7188 20368 code 400, message Bad request version ('\x11Ã\x17ó\x96\x0f\x02t\x86º\x88zÇ\x04Æ\x8er5\x8cl\x14')
+ERROR 2025-11-15 13:34:39 basehttp 7188 20368 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:34:39 basehttp 7188 5616 code 400, message Bad request version ('X«¯ìÉb`dwcÖ')
+ERROR 2025-11-15 13:34:39 basehttp 7188 5616 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:35:22 autoreload 7188 24600 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:35:23 autoreload 1916 20364 Watching for file changes with StatReloader
+INFO 2025-11-15 13:35:25 basehttp 1916 21384 code 400, message Bad request version ('\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-11-15 13:35:25 basehttp 1916 21384 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:35:25 basehttp 1916 30696 code 400, message Bad request version ('Tc\x98â\x9afôæµÊ§Gí@Xj¼¾\x9b\x1a{\x05Z/.\\¹')
+ERROR 2025-11-15 13:35:25 basehttp 1916 30696 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:35:33 basehttp 1916 20612 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 13:35:33 basehttp 1916 20612 "GET /static/images/drrmo_logo.png HTTP/1.1" 304 0
+INFO 2025-11-15 13:37:20 autoreload 25280 8920 Watching for file changes with StatReloader
+INFO 2025-11-15 13:37:21 basehttp 25280 10272 code 400, message Bad request version ('Ï\x05\x00\x17\x00\x00\x00#\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:37:21 basehttp 25280 10272 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:21 basehttp 25280 24684 code 400, message Bad request version ('b\x87äê¨ûX#*\x847\x08(\\Ëep¼\x1b\x9b\x82Ï¦\x9eXµÈhs·+b\x00')
+ERROR 2025-11-15 13:37:21 basehttp 25280 24684 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 31252 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93úú\x00\x00\x00')
+ERROR 2025-11-15 13:37:24 basehttp 25280 31252 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 14152 code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sjj\x00\x00\x00')
+ERROR 2025-11-15 13:37:24 basehttp 25280 14152 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 15956 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x17\x00\x00\x00')
+ERROR 2025-11-15 13:37:24 basehttp 25280 15956 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 28080 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-11-15 13:37:24 basehttp 25280 28080 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 14252 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03:¾ûÖ.Ë\x86t¯a\\\x82\x933\x9f;\x84{¸^ìo\x97]Â')
+ERROR 2025-11-15 13:37:24 basehttp 25280 14252 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:24 basehttp 25280 10776 code 400, message Bad request version ('&')
+ERROR 2025-11-15 13:37:24 basehttp 25280 10776 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 6228 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x1b\x00\x03\x02\x00\x02\x00-\x00\x02\x01\x01DÍ\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04í\x8a\x8a\x00\x01\x00\x11ì\x04À4£`þB¤\x893T\x84ûs6C\x81Rê"ÄÂÏ!9Z\x8bhoHuQ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 6228 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 13800 code 400, message Bad request version ('\x93\x90m\x15\x94¨¤¬')
+ERROR 2025-11-15 13:37:25 basehttp 25280 13800 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 7240 code 400, message Bad request version ('¶Ë\x99aü°\x13Ä8:\x11øc')
+ERROR 2025-11-15 13:37:25 basehttp 25280 7240 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 29528 code 400, message Bad request version ('c')
+ERROR 2025-11-15 13:37:25 basehttp 25280 29528 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 2124 code 400, message Bad request version ("'T.)\x12Áðjea\x17}FÂ²ÂØpA#*¼\x87áF*ý'ªïhÃ\x1b<½Ê{\x11\x00")
+ERROR 2025-11-15 13:37:25 basehttp 25280 2124 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 15444 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-11-15 13:37:25 basehttp 25280 15444 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 15472 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S**\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 15472 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 3384 code 400, message Bad request version ('½\x984\x89')
+ERROR 2025-11-15 13:37:25 basehttp 25280 3384 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 22060 code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S::\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 22060 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 5900 code 400, message Bad request version ('\x00\x02\x01\x00\x00+\x00\x07\x06jj\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 5900 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 10824 code 400, message Bad request version ('\x06(æÆB¦ä/²\x02\x87\x19zNds^\x14\x92d\x94\x1a\x0e]\x962bÜ¨¸\x07Tþc·=Á±xQp\x8f\x02G&6Ã\x9a\x03¹ou')
+ERROR 2025-11-15 13:37:25 basehttp 25280 10824 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 20892 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063')
+ERROR 2025-11-15 13:37:25 basehttp 25280 20892 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 26900 code 400, message Bad request version ('¼küðsI¸\x88óÊm¼V')
+ERROR 2025-11-15 13:37:25 basehttp 25280 26900 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 4108 code 400, message Bad request version ("A\x94à,x\x01R\x05c\x15IÖF\x8fÕ©\x89\x81vÞ\x82\x89w³zÀ-Õ¤rõÏ\x0f\x91];0Ñ<i_éÏþA\x9eî}\x93îVCeç'7Õ\x15pô¤pd;Ö\x17Ó¾VsLå\x93\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x12\x00\x00ÿ\x01\x00\x01\x00\x00\x17\x00\x00\x00")
+ERROR 2025-11-15 13:37:25 basehttp 25280 4108 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 19828 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ÚÚ\x00\x00\x00+\x00\x07\x06ÊÊ\x03\x04\x03\x03\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 19828 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 4636 code 400, message Bad request version ('\x02h2\x08http/1.1\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 4636 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 4232 code 400, message Bad request version ('[5ó¶\x9d\x8c¨GÕ62ñ\x89CÈ\x9b#ó\x13\x17*\x97¤°\x16Àês')
+ERROR 2025-11-15 13:37:25 basehttp 25280 4232 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 27964 code 400, message Bad request version ('êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93**\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 27964 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 31064 code 400, message Bad request version ('\\Ê\x86í5&ì\x8e«¤Âßç¸5×\x00')
+INFO 2025-11-15 13:37:25 basehttp 25280 26176 code 400, message Bad request version ('\\yô\x87A\x88±bàzF¸tZ"\x17\x1aMê\x94¼)Ï÷\x17<ÀlR\x0e\x06¥\x8e\x98ÎÒ\x93}%\x93¨Ø\x888>æ¨\x9c²\x80\x9e@v}ÂÂ(\x13©×c\x90¸¨\x83\x7fÔt(á\xadD\x04zcË\x87Õ§\x82\x12ÌHDJ-')
+ERROR 2025-11-15 13:37:25 basehttp 25280 31064 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-11-15 13:37:25 basehttp 25280 26176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 17240 code 400, message Bad request version ('UxKÜ~\x8ce`\x97ãTÞÉ\x95\x98DMae')
+ERROR 2025-11-15 13:37:25 basehttp 25280 17240 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 8660 code 400, message Bad request version ('.\x92\x8d\x9aVû%"\\\x184\x16\x81Ùo\x89¨\x08Ë\x93öÖÆÎ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 8660 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 3816 code 400, message Bad request version ('Ô²%5÷\x9e¶\x8f+Îø:\x03l\x94ôÛ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 3816 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 19452 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03Ùì\x05¢)\\¸¦¦\x99íi^M\x90´Uò\x96ê§¼Sï[\x16\x93JY6bÂ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 19452 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 28884 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x17\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 28884 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 16408 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x0ekÁ²\x1bT\x05(ú\x80oµ\x92\x11`Z\x8eX%r\x92ÿ\x04Rõì8\x12â\x86¬P')
+ERROR 2025-11-15 13:37:25 basehttp 25280 16408 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 22188 code 400, message Bad request version ('\x98Q\x14c\x02')
+ERROR 2025-11-15 13:37:25 basehttp 25280 22188 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 20868 code 400, message Bad request version ('\x91')
+ERROR 2025-11-15 13:37:25 basehttp 25280 20868 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 21408 code 400, message Bad request version ('È\x8dlåM,ê\x95Å\x93Z{\x12G\x84')
+ERROR 2025-11-15 13:37:25 basehttp 25280 21408 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 27680 code 400, message Bad request version ('_}siÑ*d\x02ñ\x05\x04ÂDcnGÿ')
+ERROR 2025-11-15 13:37:25 basehttp 25280 27680 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 10308 code 400, message Bad request version ('îUÿ\x01\x00\x01\x00\x00+\x00\x07\x06êê\x03\x04\x03\x03\x00\x17\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 10308 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 17372 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x17\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 17372 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 4168 code 400, message Bad request version ('\x00\x02\x01\x00\x00#\x00\x00\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04í')
+ERROR 2025-11-15 13:37:25 basehttp 25280 4168 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 8580 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03è±,i¼')
+ERROR 2025-11-15 13:37:25 basehttp 25280 8580 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 16548 code 400, message Bad request version ('\x02h2\x08http/1.1\x00+\x00\x07\x06')
+ERROR 2025-11-15 13:37:25 basehttp 25280 16548 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 12752 code 400, message Bad request version ('¼ÕË¿f",Ø*\x12\x87\x05·à\x97\x16°^÷')
+ERROR 2025-11-15 13:37:25 basehttp 25280 12752 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 23780 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03á)A@xÉýoGT_Ä"\x01e\x8aò?\x95ÕS$¾ç\x86\x05ÑÛ\x17\x86õ»')
+ERROR 2025-11-15 13:37:25 basehttp 25280 23780 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 11672 code 400, message Bad request version ('\x00\x02\x01\x00\x00#\x00\x00\x00\x17\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 11672 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 24284 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-11-15 13:37:25 basehttp 25280 24284 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 26140 code 400, message Bad request version ('³"¢¶²z½P\x9a\x06')
+ERROR 2025-11-15 13:37:25 basehttp 25280 26140 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 16316 code 400, message Bad request version ('\x02h2\x08http/1.1DÍ\x00\x05\x00\x03\x02h2\x00-\x00\x02\x01\x01\x00\x17\x00\x00\x00+\x00\x07\x06ºº\x03\x04\x03\x03ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 16316 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:25 basehttp 25280 24176 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s\x9a\x9a\x00\x00\x00')
+ERROR 2025-11-15 13:37:25 basehttp 25280 24176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 2944 code 400, message Bad request version ('$»>ðd\x96êQ\\¶\x86Å¢=\x0fTm\x8eÁC\x10çÇ\x17ë§ýs\x87\x97')
+ERROR 2025-11-15 13:37:26 basehttp 25280 2944 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 13756 code 400, message Bad request version ('\x8a°Â\x15ôÄ9ô5)6\x8a]$7þ[\x18ëì[Ú¨[\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 13756 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 23188 code 400, message Bad request version ('\x8bÛOY\x14\x83ù]hº')
+ERROR 2025-11-15 13:37:26 basehttp 25280 23188 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 29036 code 400, message Bad request version ('\x05ó1\x86àh\x062XX_\x81µ')
+ERROR 2025-11-15 13:37:26 basehttp 25280 29036 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 9468 code 400, message Bad request version ('\x02h2\x08http/1.1\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 9468 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 10436 code 400, message Bad request version ('5\x15dHÚ¤eÇ')
+ERROR 2025-11-15 13:37:26 basehttp 25280 10436 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 9040 code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06súú\x00\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 9040 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 21868 code 400, message Bad request version ('À\x05ß\x83')
+ERROR 2025-11-15 13:37:26 basehttp 25280 21868 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 20448 code 400, message Bad request version ('\x138')
+ERROR 2025-11-15 13:37:26 basehttp 25280 20448 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 16600 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 16600 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 4676 code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03ÁÈÎÕk¸\x11õT\x8f\x99@Æª\x81')
+ERROR 2025-11-15 13:37:26 basehttp 25280 4676 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 7284 code 400, message Bad request version ('\x02h2\x08http/1.1\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 7284 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 24148 code 400, message Bad request version ('\x8eØ\x03á3[È\x9dtU¾BÊ\x92')
+ERROR 2025-11-15 13:37:26 basehttp 25280 24148 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 13728 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Szz\x00\x00\x00\x12\x00\x00\x00-\x00\x02\x01\x01\x00\x1b\x00\x03\x02\x00\x02\x00+\x00\x07\x06jj\x03\x04\x03\x03\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 13728 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 30724 code 400, message Bad request version ('*')
+ERROR 2025-11-15 13:37:26 basehttp 25280 30724 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 21308 code 400, message Bad request version ('A#¡ñÿ\x82\x05\x94\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 21308 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 8676 code 400, message Bad request version ("NuUn\x84\x9d<A\x82í)Àô%¾\x19'\x84{")
+ERROR 2025-11-15 13:37:26 basehttp 25280 8676 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 31364 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93jj\x00\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 31364 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 20108 code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x8a\x8a\x00\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 20108 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 2152 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x12\x00\x00\x00+\x00\x07\x06ZZ\x03\x04\x03\x03\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 2152 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 18196 code 400, message Bad request version ('\x11Ia\x8aÞW\x8eï\x9a{#:Qß\x90\\0\x99CCP\x8fcÆ}£\x90<øQU\x0e\x13®ïã')
+ERROR 2025-11-15 13:37:26 basehttp 25280 18196 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 23852 code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÚÚ\x00\x00DÍ\x00\x05\x00\x03\x02h2ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 23852 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 20836 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03rþK¦³Áîá:\x86á\x830æ\x06þÐÛQ\x07µ3S\x98¸')
+ERROR 2025-11-15 13:37:26 basehttp 25280 20836 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 8400 code 400, message Bad request version ('\x13Qw\x16¿B')
+ERROR 2025-11-15 13:37:26 basehttp 25280 8400 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 26564 code 400, message Bad request version ('§°k\x8aë=kÊ\x93\x8a\x968Ì&1o+²y')
+ERROR 2025-11-15 13:37:26 basehttp 25280 26564 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:37:26 basehttp 25280 4264 code 400, message Bad request version ('WÓÙY\x00')
+ERROR 2025-11-15 13:37:26 basehttp 25280 4264 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:40:40 basehttp 25280 29868 code 400, message Bad request version ('¥§hz\x87|ç\x95Xë')
+ERROR 2025-11-15 13:40:40 basehttp 25280 29868 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:40:40 basehttp 25280 27324 code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03')
+ERROR 2025-11-15 13:40:40 basehttp 25280 27324 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:41:34 basehttp 25280 16708 code 400, message Bad request version ('\x90r\x91O\x16¬P\xad\x04´½â\x8f\x17\x86%:Al')
+ERROR 2025-11-15 13:41:34 basehttp 25280 16708 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:41:34 basehttp 25280 17232 code 400, message Bad request version ('\x83èäzo$\x95¸fâå\x9a/:«³åÕüïVm¶(\x08ñêöAuCö\x00')
+ERROR 2025-11-15 13:41:34 basehttp 25280 17232 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:41:37 basehttp 25280 14172 code 400, message Bad request version ('Z\x98Â\x00äkÀñr.w\x99T¹±Ù\x9b\x82Wi\x10\x05HcãkZåx\x1bé7puO')
+ERROR 2025-11-15 13:41:37 basehttp 25280 14172 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:41:37 basehttp 25280 31128 code 400, message Bad request version ('\x87§-)\x9d\x04[W\x7f\x16\x00')
+ERROR 2025-11-15 13:41:37 basehttp 25280 31128 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:53:06 autoreload 7908 26536 Watching for file changes with StatReloader
+INFO 2025-11-15 13:53:08 basehttp 7908 18348 code 400, message Bad request version ('\xad?')
+ERROR 2025-11-15 13:53:08 basehttp 7908 18348 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:53:08 basehttp 7908 31180 code 400, message Bad request version ('.s')
+ERROR 2025-11-15 13:53:08 basehttp 7908 31180 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:55:04 autoreload 7908 26536 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:55:05 autoreload 20240 28332 Watching for file changes with StatReloader
+INFO 2025-11-15 13:55:54 autoreload 27336 31376 Watching for file changes with StatReloader
+INFO 2025-11-15 13:57:38 autoreload 20240 28332 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 13:57:39 autoreload 8716 16588 Watching for file changes with StatReloader
+INFO 2025-11-15 13:57:41 basehttp 8716 13708 code 400, message Bad request version ('Txý$6_')
+ERROR 2025-11-15 13:57:41 basehttp 8716 13708 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:57:41 basehttp 8716 15836 code 400, message Bad request version ('de\x08\x00#\x03\x920lz¥ÀæeZÄWyG\x12\x16´ª')
+ERROR 2025-11-15 13:57:41 basehttp 8716 15836 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:58:44 basehttp 8716 16532 code 400, message Bad request version ('&&)')
+ERROR 2025-11-15 13:58:44 basehttp 8716 16532 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:58:44 basehttp 8716 23292 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06szz\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-11-15 13:58:44 basehttp 8716 23292 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:58:53 basehttp 8716 12028 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4177
+INFO 2025-11-15 13:58:54 basehttp 8716 12028 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-11-15 13:58:54 basehttp 8716 30780 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-11-15 13:58:54 basehttp 8716 3160 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-11-15 13:58:54 basehttp 8716 23352 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-11-15 13:58:54 basehttp 8716 27048 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-11-15 13:58:54 basehttp 8716 20888 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-11-15 13:58:54 basehttp 8716 20888 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-11-15 13:58:58 basehttp 8716 1272 code 400, message Bad request version ('\x02h2\x08http/1.1\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-11-15 13:58:58 basehttp 8716 1272 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 13:58:58 basehttp 8716 3164 code 400, message Bad request version ('\x94Ò»IÑ*¿')
+ERROR 2025-11-15 13:58:58 basehttp 8716 3164 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 30256 code 400, message Bad request version ('G\x1b\xad\x90!HúY¾âÐ¬H\x02ÆÍÉ0\x12¤\x93KÐ*R')
+ERROR 2025-11-15 14:01:30 basehttp 8716 30256 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 11464 code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ÊÊ\x00\x00\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-11-15 14:01:30 basehttp 8716 11464 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 4260 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+ERROR 2025-11-15 14:01:30 basehttp 8716 4260 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 18228 code 400, message Bad request version ('%h\x9b\x00')
+ERROR 2025-11-15 14:01:30 basehttp 8716 18228 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 15144 code 400, message Bad request version ('ì@ù\x14')
+ERROR 2025-11-15 14:01:30 basehttp 8716 15144 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:30 basehttp 8716 12428 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ªª\x00\x00\x00')
+ERROR 2025-11-15 14:01:30 basehttp 8716 12428 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-11-15 14:01:37 basehttp 8716 20888 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:01:37 basehttp 8716 27048 "GET /static/css/font-awesome.min.css HTTP/1.1" 200 89220
+INFO 2025-11-15 14:01:37 basehttp 8716 23352 "GET /static/images/drrmo_logo.png HTTP/1.1" 200 96716
+INFO 2025-11-15 14:01:37 basehttp 8716 20888 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 232948
+INFO 2025-11-15 14:01:37 basehttp 8716 20888 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 126828
+INFO 2025-11-15 14:01:49 autoreload 27572 4404 Watching for file changes with StatReloader
+INFO 2025-11-15 14:01:51 basehttp 27572 7632 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:01:53 basehttp 27572 7632 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:08:56 autoreload 27572 4404 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-15 14:18:46 autoreload 11872 732 Watching for file changes with StatReloader
+INFO 2025-11-15 14:18:49 basehttp 11872 7220 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:18:50 basehttp 11872 7220 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:18:52 basehttp 11872 7220 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 14:19:19 basehttp 11872 7220 "GET /register/ HTTP/1.1" 200 14988
+INFO 2025-11-15 14:19:31 basehttp 11872 7220 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:19:34 basehttp 11872 7220 "GET /register/ HTTP/1.1" 200 14988
+WARNING 2025-11-15 14:19:48 log 11872 7220 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 14:19:48 basehttp 11872 7220 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 14:22:56 log 11872 7220 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 14:22:56 basehttp 11872 7220 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 14:23:04 log 11872 7220 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 14:23:04 basehttp 11872 7220 "POST /register/ HTTP/1.1" 403 2491
+WARNING 2025-11-15 14:23:30 log 11872 7220 Forbidden (CSRF token missing.): /register/
+WARNING 2025-11-15 14:23:30 basehttp 11872 7220 "POST /register/ HTTP/1.1" 403 2491
+INFO 2025-11-15 14:23:32 basehttp 11872 7220 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:23:37 autoreload 17184 18844 Watching for file changes with StatReloader
+INFO 2025-11-15 14:23:38 basehttp 17184 22168 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:23:41 basehttp 17184 22168 "GET /register/ HTTP/1.1" 200 16313
+INFO 2025-11-15 14:24:12 basehttp 17184 22168 "POST /register/ HTTP/1.1" 200 17611
+INFO 2025-11-15 14:24:48 basehttp 17184 22168 "POST /register/ HTTP/1.1" 200 17783
+INFO 2025-11-15 14:25:06 basehttp 17184 22168 "POST /register/ HTTP/1.1" 200 17318
+INFO 2025-11-15 14:25:22 basehttp 17184 22168 "POST /register/ HTTP/1.1" 200 17286
+INFO 2025-11-15 14:27:06 autoreload 17184 18844 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 14:27:07 autoreload 28676 30464 Watching for file changes with StatReloader
+INFO 2025-11-15 14:27:30 autoreload 28676 30464 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 14:27:31 autoreload 30192 8060 Watching for file changes with StatReloader
+INFO 2025-11-15 14:27:42 autoreload 30192 8060 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 14:27:43 autoreload 22900 25456 Watching for file changes with StatReloader
+INFO 2025-11-15 14:30:05 basehttp 22900 11692 "POST /register/ HTTP/1.1" 200 17179
+INFO 2025-11-15 14:30:09 basehttp 22900 11692 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:30:10 basehttp 22900 11692 "GET /register/ HTTP/1.1" 200 16218
+ERROR 2025-11-15 14:30:27 log 22900 11692 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "department" of relation "users_customuser" violates not-null constraint
+DETAIL:  Failing row contains (11, pbkdf2_sha256$1000000$OPcNohJOGXLn321c5o8GVZ$Z5M8X8nC6DafkQ93DyH..., null, f, japetd, japet, dejan, japetd@gmail.com, f, f, 2025-11-15 06:30:26.593655+00, 20250001, f, , 09123123123, null, null, , , eoc, ).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 57, in register
+    user.save()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "department" of relation "users_customuser" violates not-null constraint
+DETAIL:  Failing row contains (11, pbkdf2_sha256$1000000$OPcNohJOGXLn321c5o8GVZ$Z5M8X8nC6DafkQ93DyH..., null, f, japetd, japet, dejan, japetd@gmail.com, f, f, 2025-11-15 06:30:26.593655+00, 20250001, f, , 09123123123, null, null, , , eoc, ).
+
+ERROR 2025-11-15 14:30:27 basehttp 22900 11692 "POST /register/ HTTP/1.1" 500 169258
+INFO 2025-11-15 14:32:15 autoreload 876 2312 Watching for file changes with StatReloader
+INFO 2025-11-15 14:32:18 basehttp 876 17624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:32:19 basehttp 876 17624 "GET /register/ HTTP/1.1" 200 16218
+INFO 2025-11-15 14:32:51 basehttp 876 17624 "POST /register/ HTTP/1.1" 302 0
+INFO 2025-11-15 14:32:51 basehttp 876 17624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:33:10 basehttp 876 17624 "POST / HTTP/1.1" 200 7379
+INFO 2025-11-15 14:33:15 basehttp 876 17624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 14:33:15 basehttp 876 17624 "GET /home/ HTTP/1.1" 200 39128
+INFO 2025-11-15 14:33:15 basehttp 876 17624 "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2025-11-15 14:33:15 basehttp 876 17624 "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 304 0
+INFO 2025-11-15 14:33:30 basehttp 876 17624 "GET /approve/ HTTP/1.1" 200 34365
+INFO 2025-11-15 14:33:33 basehttp 876 17624 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 14:33:33 basehttp 876 17624 "GET /approve/ HTTP/1.1" 200 34475
+INFO 2025-11-15 14:33:36 basehttp 876 17624 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 14:33:36 basehttp 876 17624 "GET / HTTP/1.1" 200 7298
+INFO 2025-11-15 14:33:44 basehttp 876 17624 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 14:33:44 basehttp 876 17624 "GET /home/ HTTP/1.1" 200 33196
+INFO 2025-11-15 15:45:56 autoreload 876 2312 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 15:45:56 autoreload 29668 29060 Watching for file changes with StatReloader
+INFO 2025-11-15 15:47:58 basehttp 29668 12112 "GET /admin HTTP/1.1" 301 0
+INFO 2025-11-15 15:47:58 basehttp 29668 10720 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-15 15:47:58 basehttp 29668 10720 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3696
+INFO 2025-11-15 15:47:58 basehttp 29668 10720 "GET /static/admin/css/base.css HTTP/1.1" 200 23300
+INFO 2025-11-15 15:47:58 basehttp 29668 18468 "GET /static/admin/js/theme.js HTTP/1.1" 200 1704
+INFO 2025-11-15 15:47:58 basehttp 29668 30060 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2938
+INFO 2025-11-15 15:47:58 basehttp 29668 20928 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2960
+INFO 2025-11-15 15:47:58 basehttp 29668 12412 "GET /static/admin/css/login.css HTTP/1.1" 200 1012
+INFO 2025-11-15 15:47:58 basehttp 29668 20928 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3142
+INFO 2025-11-15 15:47:58 basehttp 29668 9176 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17469
+INFO 2025-11-15 15:48:09 basehttp 29668 9176 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-11-15 15:48:09 basehttp 29668 9176 "GET /admin/ HTTP/1.1" 200 16378
+INFO 2025-11-15 15:48:09 basehttp 29668 9176 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 470
+INFO 2025-11-15 15:48:09 basehttp 29668 20928 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 383
+INFO 2025-11-15 15:48:09 basehttp 29668 9176 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 334
+INFO 2025-11-15 15:48:09 basehttp 29668 12412 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 395
+INFO 2025-11-15 15:48:16 basehttp 29668 12412 "GET /admin/users/customuser/ HTTP/1.1" 200 16435
+INFO 2025-11-15 15:48:16 basehttp 29668 12412 "GET /static/admin/css/changelists.css HTTP/1.1" 200 7221
+INFO 2025-11-15 15:48:16 basehttp 29668 30060 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 355
+INFO 2025-11-15 15:48:16 basehttp 29668 18468 "GET /static/admin/js/core.js HTTP/1.1" 200 6392
+INFO 2025-11-15 15:48:16 basehttp 29668 10720 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 10029
+INFO 2025-11-15 15:48:16 basehttp 29668 9176 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-15 15:48:16 basehttp 29668 12412 "GET /static/admin/js/actions.js HTTP/1.1" 200 8280
+INFO 2025-11-15 15:48:16 basehttp 29668 18468 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1574
+INFO 2025-11-15 15:48:16 basehttp 29668 30060 "GET /static/admin/js/urlify.js HTTP/1.1" 200 8056
+INFO 2025-11-15 15:48:16 basehttp 29668 20928 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-11-15 15:48:16 basehttp 29668 10720 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 331297
+INFO 2025-11-15 15:48:16 basehttp 29668 20928 "GET /static/admin/js/filters.js HTTP/1.1" 200 1008
+INFO 2025-11-15 15:48:16 basehttp 29668 20928 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 334
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /admin/users/customuser/12/change/ HTTP/1.1" 200 36261
+INFO 2025-11-15 15:48:18 basehttp 29668 12412 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 601
+INFO 2025-11-15 15:48:18 basehttp 29668 10720 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9380
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /static/admin/css/forms.css HTTP/1.1" 200 9023
+INFO 2025-11-15 15:48:18 basehttp 29668 18468 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19727
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /static/admin/css/widgets.css HTTP/1.1" 200 12586
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /static/admin/js/change_form.js HTTP/1.1" 200 622
+INFO 2025-11-15 15:48:18 basehttp 29668 30060 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-15 15:48:18 basehttp 29668 20928 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 686
+INFO 2025-11-15 15:48:18 basehttp 29668 30060 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1095
+INFO 2025-11-15 15:49:23 basehttp 29668 30060 "GET /admin/ HTTP/1.1" 200 16378
+INFO 2025-11-15 16:15:32 basehttp 29668 1132 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 16:15:33 basehttp 29668 1132 "GET /home/ HTTP/1.1" 200 45406
+INFO 2025-11-15 16:15:34 basehttp 29668 1132 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:15:34 basehttp 29668 1132 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 16:20:59 basehttp 29668 4224 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 16:20:59 basehttp 29668 4224 "GET /home/ HTTP/1.1" 200 45620
+INFO 2025-11-15 16:21:07 basehttp 29668 4224 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 16:21:07 basehttp 29668 4224 "GET /static/css/ol.css HTTP/1.1" 304 0
+INFO 2025-11-15 16:21:10 basehttp 29668 4224 "GET /monitoring/flood-record/ HTTP/1.1" 200 29979
+INFO 2025-11-15 16:21:21 views 29668 4224 Flood record created: 21 - Flash Flood
+INFO 2025-11-15 16:21:21 basehttp 29668 4224 "POST /monitoring/flood-record/ HTTP/1.1" 200 142
+INFO 2025-11-15 16:21:23 views 29668 4224 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 16:21:24 views 29668 4224 API returned - Rain: 0.0mm, Temp: 27.5Â°C, Humidity: 87%, Wind: 14.3km/h
+INFO 2025-11-15 16:21:24 views 29668 4224 Processed 7 days of weather forecast
+INFO 2025-11-15 16:21:24 views 29668 4224 Created new rainfall record: 0.0mm
+INFO 2025-11-15 16:21:24 views 29668 4224 Created new weather record
+INFO 2025-11-15 16:21:24 views 29668 4224 Requesting WorldTides API for Cebu City: https://www.worldtides.info/api/v3
+INFO 2025-11-15 16:21:26 views 29668 4224 Created new tide record: -0.219m from WorldTides API
+INFO 2025-11-15 16:21:26 basehttp 29668 4224 "GET /monitoring/ HTTP/1.1" 200 85243
+INFO 2025-11-15 16:21:26 basehttp 29668 4224 "GET /static/js/chart.js HTTP/1.1" 304 0
+INFO 2025-11-15 16:21:39 basehttp 29668 4224 "GET /monitoring/flood-record/delete/21/ HTTP/1.1" 200 8466
+INFO 2025-11-15 16:21:40 views 29668 4224 Flood record deleted: 21 - Flash Flood
+INFO 2025-11-15 16:21:40 basehttp 29668 4224 "POST /monitoring/flood-record/delete/21/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:21:40 views 29668 4224 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 16:21:41 views 29668 4224 API returned - Rain: 0.0mm, Temp: 27.5Â°C, Humidity: 87%, Wind: 14.3km/h
+INFO 2025-11-15 16:21:41 views 29668 4224 Processed 7 days of weather forecast
+INFO 2025-11-15 16:21:41 basehttp 29668 4224 "GET /monitoring/ HTTP/1.1" 200 84336
+INFO 2025-11-15 16:21:51 basehttp 29668 4224 "GET /approve/ HTTP/1.1" 200 41416
+INFO 2025-11-15 16:21:51 basehttp 29668 4224 "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-11-15 16:21:55 basehttp 29668 4224 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:21:55 basehttp 29668 4224 "GET /approve/ HTTP/1.1" 200 41412
+INFO 2025-11-15 16:22:02 basehttp 29668 4224 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:22:02 basehttp 29668 4224 "GET /approve/ HTTP/1.1" 200 40371
+INFO 2025-11-15 16:22:07 basehttp 29668 4224 "GET /maps/my-activity/ HTTP/1.1" 200 120457
+INFO 2025-11-15 16:22:10 basehttp 29668 4224 "GET /maps/all-activities/ HTTP/1.1" 200 597199
+INFO 2025-11-15 16:22:14 basehttp 29668 4224 "GET /home/ HTTP/1.1" 200 45465
+INFO 2025-11-15 16:22:26 basehttp 29668 4224 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 16:22:36 basehttp 29668 4224 "POST /maps/save-assessment/ HTTP/1.1" 200 82
+INFO 2025-11-15 16:22:38 basehttp 29668 4224 "GET /home/ HTTP/1.1" 200 45497
+INFO 2025-11-15 16:27:05 autoreload 29668 29060 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 16:27:06 autoreload 15416 27416 Watching for file changes with StatReloader
+INFO 2025-11-15 16:28:25 basehttp 15416 16180 "GET /home/ HTTP/1.1" 200 46511
+INFO 2025-11-15 16:28:41 basehttp 15416 16180 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:28:41 basehttp 15416 16180 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 16:28:50 basehttp 15416 16180 "POST / HTTP/1.1" 200 13547
+INFO 2025-11-15 16:29:01 basehttp 15416 16180 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 16:29:01 basehttp 15416 16180 "GET /home/ HTTP/1.1" 200 41279
+INFO 2025-11-15 16:29:10 views 15416 16180 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 16:29:12 views 15416 16180 API returned - Rain: 0.0mm, Temp: 27.5Â°C, Humidity: 87%, Wind: 14.3km/h
+INFO 2025-11-15 16:29:12 views 15416 16180 Processed 7 days of weather forecast
+INFO 2025-11-15 16:29:12 basehttp 15416 16180 "GET /monitoring/ HTTP/1.1" 200 83534
+INFO 2025-11-15 16:29:54 basehttp 15416 16180 "GET /profile/ HTTP/1.1" 200 36240
+WARNING 2025-11-15 16:29:54 log 15416 16180 Not Found: /media/profile_images/istockphoto-2194474157-612x612.webp
+WARNING 2025-11-15 16:29:54 basehttp 15416 16180 "GET /media/profile_images/istockphoto-2194474157-612x612.webp HTTP/1.1" 404 5304
+INFO 2025-11-15 16:30:05 basehttp 15416 16180 "POST /profile/ HTTP/1.1" 200 36616
+WARNING 2025-11-15 16:30:05 log 15416 16180 Not Found: /media/istockphoto-1020233306-612x612.webp
+WARNING 2025-11-15 16:30:05 basehttp 15416 16180 "GET /media/istockphoto-1020233306-612x612.webp HTTP/1.1" 404 5244
+INFO 2025-11-15 16:39:41 autoreload 15416 27416 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 16:39:42 autoreload 31328 26132 Watching for file changes with StatReloader
+INFO 2025-11-15 16:39:55 basehttp 31328 9196 "POST /profile/ HTTP/1.1" 200 36614
+WARNING 2025-11-15 16:39:55 log 31328 9196 Not Found: /media/istockphoto-486239437-612x612.webp
+WARNING 2025-11-15 16:39:55 basehttp 31328 9196 "GET /media/istockphoto-486239437-612x612.webp HTTP/1.1" 404 5240
+INFO 2025-11-15 16:41:35 basehttp 31328 9196 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:41:36 basehttp 31328 9196 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 16:41:37 basehttp 31328 9196 "GET /register/ HTTP/1.1" 200 22230
+INFO 2025-11-15 16:41:39 basehttp 31328 9196 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 16:41:44 basehttp 31328 9196 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 16:41:44 basehttp 31328 9196 "GET /home/ HTTP/1.1" 200 46691
+INFO 2025-11-15 16:41:53 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 40144
+INFO 2025-11-15 16:41:56 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:41:56 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 39326
+INFO 2025-11-15 16:41:58 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:41:58 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 38275
+INFO 2025-11-15 16:42:00 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:00 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 37236
+INFO 2025-11-15 16:42:01 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:01 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 36201
+INFO 2025-11-15 16:42:03 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:03 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 35163
+INFO 2025-11-15 16:42:05 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:05 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 34129
+INFO 2025-11-15 16:42:07 basehttp 31328 9196 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:42:07 basehttp 31328 9196 "GET /approve/ HTTP/1.1" 200 33014
+INFO 2025-11-15 16:42:09 basehttp 31328 9196 "GET /home/ HTTP/1.1" 200 46091
+INFO 2025-11-15 16:42:15 basehttp 31328 9196 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 16:42:18 basehttp 31328 9196 "GET /profile/ HTTP/1.1" 200 36440
+INFO 2025-11-15 16:42:28 basehttp 31328 9196 "POST /profile/ HTTP/1.1" 200 36972
+WARNING 2025-11-15 16:42:28 log 31328 9196 Not Found: /media/istockphoto-816152804-612x612.webp
+WARNING 2025-11-15 16:42:28 basehttp 31328 9196 "GET /media/istockphoto-816152804-612x612.webp HTTP/1.1" 404 5240
+INFO 2025-11-15 16:49:15 autoreload 31328 26132 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 16:49:16 autoreload 20204 25712 Watching for file changes with StatReloader
+INFO 2025-11-15 16:49:20 basehttp 20204 10500 "POST /profile/ HTTP/1.1" 200 38524
+WARNING 2025-11-15 16:49:20 log 20204 10500 Not Found: /media/istockphoto-816152804-612x612.webp
+WARNING 2025-11-15 16:49:20 basehttp 20204 10500 "GET /media/istockphoto-816152804-612x612.webp HTTP/1.1" 404 5240
+INFO 2025-11-15 16:49:26 basehttp 20204 10500 "POST /profile/ HTTP/1.1" 200 38524
+WARNING 2025-11-15 16:49:26 log 20204 10500 Not Found: /media/istockphoto-816152804-612x612.webp
+WARNING 2025-11-15 16:49:26 basehttp 20204 10500 "GET /media/istockphoto-816152804-612x612.webp HTTP/1.1" 404 5240
+INFO 2025-11-15 16:49:30 basehttp 20204 10500 "GET /home/ HTTP/1.1" 200 46091
+INFO 2025-11-15 16:49:32 basehttp 20204 10500 "GET /profile/ HTTP/1.1" 200 37843
+INFO 2025-11-15 16:49:47 basehttp 20204 10500 "POST /profile/ HTTP/1.1" 302 0
+INFO 2025-11-15 16:49:47 basehttp 20204 10500 "GET /profile/ HTTP/1.1" 200 38102
+INFO 2025-11-15 16:49:50 autoreload 20204 25712 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 16:49:50 autoreload 9012 6780 Watching for file changes with StatReloader
+INFO 2025-11-15 17:00:55 basehttp 9012 11112 "GET /profile/ HTTP/1.1" 200 37879
+INFO 2025-11-15 17:01:18 basehttp 9012 11112 "POST /profile/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:01:18 basehttp 9012 11112 "GET /profile/ HTTP/1.1" 200 38301
+INFO 2025-11-15 17:01:18 basehttp 9012 11112 "GET /media/profile_images/istockphoto-816152804-612x612.webp HTTP/1.1" 200 14964
+INFO 2025-11-15 17:06:56 autoreload 9012 6780 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:06:57 autoreload 17784 27392 Watching for file changes with StatReloader
+INFO 2025-11-15 17:09:55 basehttp 17784 24072 "GET /home/ HTTP/1.1" 200 46063
+INFO 2025-11-15 17:09:57 basehttp 17784 24072 "GET /profile/ HTTP/1.1" 200 38656
+INFO 2025-11-15 17:09:57 basehttp 17784 24072 "GET /media/profile_images/istockphoto-816152804-612x612.webp HTTP/1.1" 304 0
+ERROR 2025-11-15 17:10:03 log 17784 24072 Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 321, in view_profile
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 337, in full_clean
+    self._clean_fields()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 347, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py", line 156, in clean_date_of_birth
+    from dateutil.relativedelta import relativedelta
+ModuleNotFoundError: No module named 'dateutil'
+ERROR 2025-11-15 17:10:03 basehttp 17784 24072 "POST /profile/ HTTP/1.1" 500 104820
+INFO 2025-11-15 17:10:13 autoreload 31128 8136 Watching for file changes with StatReloader
+INFO 2025-11-15 17:10:15 basehttp 17784 24072 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 17:10:15 basehttp 17784 24072 "GET /home/ HTTP/1.1" 200 46063
+INFO 2025-11-15 17:10:17 basehttp 17784 24072 "GET /maps/my-activity/ HTTP/1.1" 200 133756
+INFO 2025-11-15 17:10:19 basehttp 17784 24072 "GET /profile/ HTTP/1.1" 200 38656
+ERROR 2025-11-15 17:10:29 log 17784 24072 Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py", line 321, in view_profile
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 337, in full_clean
+    self._clean_fields()
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\venv\Lib\site-packages\django\forms\forms.py", line 347, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py", line 156, in clean_date_of_birth
+    from dateutil.relativedelta import relativedelta
+ModuleNotFoundError: No module named 'dateutil'
+ERROR 2025-11-15 17:10:29 basehttp 17784 24072 "POST /profile/ HTTP/1.1" 500 104820
+WARNING 2025-11-15 17:10:39 log 17784 24072 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-11-15 17:10:39 basehttp 17784 24072 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5029
+INFO 2025-11-15 17:11:13 autoreload 17784 27392 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:11:13 autoreload 1952 16508 Watching for file changes with StatReloader
+INFO 2025-11-15 17:11:34 autoreload 1952 16508 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:11:35 autoreload 9780 20244 Watching for file changes with StatReloader
+INFO 2025-11-15 17:12:56 autoreload 30216 12988 Watching for file changes with StatReloader
+INFO 2025-11-15 17:12:57 basehttp 9780 6084 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 17:12:57 basehttp 9780 6084 "GET /home/ HTTP/1.1" 200 46063
+INFO 2025-11-15 17:12:59 basehttp 9780 6084 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:12:59 basehttp 9780 6084 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 17:13:00 basehttp 9780 6084 "GET /register/ HTTP/1.1" 200 23376
+INFO 2025-11-15 17:14:47 basehttp 9780 6084 "POST /register/ HTTP/1.1" 200 24399
+INFO 2025-11-15 17:14:58 basehttp 9780 6084 "POST /register/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:14:58 basehttp 9780 6084 "GET / HTTP/1.1" 200 13494
+INFO 2025-11-15 17:15:14 basehttp 9780 6084 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 17:15:14 basehttp 9780 6084 "GET /home/ HTTP/1.1" 200 46686
+INFO 2025-11-15 17:15:16 basehttp 9780 6084 "GET /approve/ HTTP/1.1" 200 33932
+INFO 2025-11-15 17:15:25 basehttp 9780 6084 "POST /approve/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:15:25 basehttp 9780 6084 "GET /approve/ HTTP/1.1" 200 33927
+INFO 2025-11-15 17:15:30 basehttp 9780 6084 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:15:30 basehttp 9780 6084 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 17:15:40 basehttp 9780 6084 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 17:15:40 basehttp 9780 6084 "GET /home/ HTTP/1.1" 200 40543
+INFO 2025-11-15 17:15:50 basehttp 9780 6084 "GET /maps/ HTTP/1.1" 200 1034795
+INFO 2025-11-15 17:15:57 views 9780 6084 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:15:58 views 9780 6084 API returned - Rain: 0.0mm, Temp: 26.9Â°C, Humidity: 89%, Wind: 12.2km/h
+INFO 2025-11-15 17:15:58 views 9780 6084 Processed 7 days of weather forecast
+INFO 2025-11-15 17:15:58 basehttp 9780 6084 "GET /monitoring/ HTTP/1.1" 200 83534
+INFO 2025-11-15 17:16:58 basehttp 9780 6084 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 711
+INFO 2025-11-15 17:17:09 basehttp 9780 6084 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1340
+INFO 2025-11-15 17:17:20 basehttp 9780 6084 "GET /profile/ HTTP/1.1" 200 38011
+INFO 2025-11-15 17:17:38 basehttp 9780 6084 "POST /profile/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:17:38 basehttp 9780 6084 "GET /profile/ HTTP/1.1" 200 38439
+INFO 2025-11-15 17:17:38 basehttp 9780 6084 "GET /media/profile_images/istockphoto-2174167592-612x612.webp HTTP/1.1" 200 10684
+INFO 2025-11-15 17:18:20 autoreload 30216 12988 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:18:20 autoreload 9780 20244 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-15 17:18:20 autoreload 14464 6036 Watching for file changes with StatReloader
+INFO 2025-11-15 17:18:21 autoreload 31716 31708 Watching for file changes with StatReloader
+INFO 2025-11-15 17:20:18 autoreload 14464 6036 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:20:18 autoreload 31716 31708 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:20:19 autoreload 10644 12464 Watching for file changes with StatReloader
+INFO 2025-11-15 17:20:19 autoreload 29940 19616 Watching for file changes with StatReloader
+INFO 2025-11-15 17:22:30 views 10644 8408 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:22:31 views 10644 8408 API returned - Rain: 0.0mm, Temp: 26.9Â°C, Humidity: 89%, Wind: 12.2km/h
+INFO 2025-11-15 17:22:31 views 10644 8408 Processed 7 days of weather forecast
+INFO 2025-11-15 17:22:31 basehttp 10644 8408 "GET /monitoring/ HTTP/1.1" 200 83899
+INFO 2025-11-15 17:22:44 basehttp 10644 8408 "GET /home/ HTTP/1.1" 200 40513
+INFO 2025-11-15 17:22:57 views 10644 8408 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:22:58 views 10644 8408 API returned - Rain: 0.0mm, Temp: 26.9Â°C, Humidity: 89%, Wind: 12.2km/h
+INFO 2025-11-15 17:22:58 views 10644 8408 Processed 7 days of weather forecast
+INFO 2025-11-15 17:22:58 basehttp 10644 8408 "GET /monitoring/ HTTP/1.1" 200 83899
+INFO 2025-11-15 17:23:26 basehttp 10644 8408 "GET /monitoring/api/trends/?time_range=7d HTTP/1.1" 200 711
+INFO 2025-11-15 17:23:28 basehttp 10644 8408 "GET /monitoring/api/trends/?time_range=30d HTTP/1.1" 200 1340
+INFO 2025-11-15 17:23:28 basehttp 10644 8408 "GET /monitoring/api/trends/?time_range=90d HTTP/1.1" 200 1340
+INFO 2025-11-15 17:23:48 basehttp 10644 8408 "GET /monitoring/api/trends/?start_date=2025-11-07&end_date=2025-11-10 HTTP/1.1" 200 482
+INFO 2025-11-15 17:27:59 basehttp 10644 11672 "GET /monitoring/api/data/ HTTP/1.1" 200 54
+INFO 2025-11-15 17:28:12 autoreload 10644 12464 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:28:12 autoreload 12212 23220 Watching for file changes with StatReloader
+INFO 2025-11-15 17:28:12 autoreload 29940 19616 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:28:13 autoreload 23904 16316 Watching for file changes with StatReloader
+INFO 2025-11-15 17:30:32 autoreload 12212 23220 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:30:32 autoreload 23904 16316 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:30:33 autoreload 26220 28780 Watching for file changes with StatReloader
+INFO 2025-11-15 17:30:33 autoreload 20956 4228 Watching for file changes with StatReloader
+INFO 2025-11-15 17:31:34 views 26220 16756 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:31:35 views 26220 16756 API returned - Rain: 0.0mm, Temp: 26.8Â°C, Humidity: 90%, Wind: 12.0km/h
+INFO 2025-11-15 17:31:35 views 26220 16756 Processed 7 days of weather forecast
+INFO 2025-11-15 17:31:35 basehttp 26220 16756 "GET /monitoring/ HTTP/1.1" 200 84093
+INFO 2025-11-15 17:31:59 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-04-16&end_date=2025-11-14 HTTP/1.1" 200 1319
+INFO 2025-11-15 17:32:05 basehttp 26220 16756 "GET /monitoring/api/trends/?time_range=all HTTP/1.1" 200 1337
+INFO 2025-11-15 17:32:17 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-01-04&end_date=2025-11-14 HTTP/1.1" 200 1319
+INFO 2025-11-15 17:33:00 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-11-07&end_date=2025-11-07 HTTP/1.1" 200 176
+INFO 2025-11-15 17:33:05 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-11-07&end_date=2025-11-08 HTTP/1.1" 200 220
+INFO 2025-11-15 17:33:14 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-11-07&end_date=2025-11-09 HTTP/1.1" 200 430
+INFO 2025-11-15 17:33:19 basehttp 26220 16756 "GET /monitoring/api/trends/?start_date=2025-11-06&end_date=2025-11-09 HTTP/1.1" 200 483
+INFO 2025-11-15 17:33:39 basehttp 26220 16756 "GET /home/ HTTP/1.1" 200 40513
+INFO 2025-11-15 17:35:02 autoreload 20956 4228 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 17:35:02 autoreload 26220 28780 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 17:35:02 autoreload 22788 10776 Watching for file changes with StatReloader
+INFO 2025-11-15 17:35:03 autoreload 23960 29152 Watching for file changes with StatReloader
+INFO 2025-11-15 17:35:20 basehttp 22788 6728 "GET /home/ HTTP/1.1" 200 40516
+INFO 2025-11-15 17:35:24 views 22788 6728 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:35:25 views 22788 6728 API returned - Rain: 0.0mm, Temp: 26.8Â°C, Humidity: 90%, Wind: 12.0km/h
+INFO 2025-11-15 17:35:25 views 22788 6728 Processed 7 days of weather forecast
+INFO 2025-11-15 17:35:25 basehttp 22788 6728 "GET /monitoring/ HTTP/1.1" 200 84093
+INFO 2025-11-15 17:35:27 basehttp 22788 6728 "GET /home/ HTTP/1.1" 200 40516
+INFO 2025-11-15 17:35:46 basehttp 22788 6728 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-15 17:35:46 basehttp 22788 6728 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-15 17:35:50 basehttp 22788 6728 "POST / HTTP/1.1" 302 0
+INFO 2025-11-15 17:35:51 basehttp 22788 6728 "GET /home/ HTTP/1.1" 200 46228
+INFO 2025-11-15 17:36:07 basehttp 22788 6728 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 17:36:10 views 22788 6728 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-15 17:36:11 views 22788 6728 API returned - Rain: 0.0mm, Temp: 26.8Â°C, Humidity: 90%, Wind: 12.0km/h
+INFO 2025-11-15 17:36:11 views 22788 6728 Processed 7 days of weather forecast
+INFO 2025-11-15 17:36:11 basehttp 22788 6728 "GET /monitoring/ HTTP/1.1" 200 84614
+INFO 2025-11-15 17:36:14 basehttp 22788 6728 "GET /approve/ HTTP/1.1" 200 33698
+INFO 2025-11-15 17:36:17 basehttp 22788 6728 "GET /maps/my-activity/ HTTP/1.1" 200 139191
+INFO 2025-11-15 17:36:24 autoreload 23960 29152 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\views.py changed, reloading.
+INFO 2025-11-15 17:36:24 autoreload 24816 5424 Watching for file changes with StatReloader
+INFO 2025-11-15 17:36:24 autoreload 22788 10776 C:\Users\aldri\-CAPSTONE-FMSWGIS\monitoring\views.py changed, reloading.
+INFO 2025-11-15 17:36:25 autoreload 23184 30388 Watching for file changes with StatReloader
+INFO 2025-11-15 18:12:43 basehttp 24816 13140 "GET /maps/my-activity/ HTTP/1.1" 200 139256
+INFO 2025-11-15 18:12:45 basehttp 24816 13140 "GET /home/ HTTP/1.1" 200 46014
+INFO 2025-11-15 18:12:52 basehttp 24816 13140 "GET /maps/ HTTP/1.1" 200 1035316
+INFO 2025-11-15 18:12:55 basehttp 24816 13140 "GET /approve/ HTTP/1.1" 200 33698
+INFO 2025-11-15 18:22:01 basehttp 24816 19776 "GET /approve/ HTTP/1.1" 200 59255
+INFO 2025-11-15 18:22:23 basehttp 24816 19776 "GET /home/ HTTP/1.1" 200 71571
+INFO 2025-11-15 18:22:27 basehttp 24816 19776 "GET /maps/ HTTP/1.1" 200 1060873
+INFO 2025-11-15 18:29:17 basehttp 24816 26704 "GET /maps/ HTTP/1.1" 200 1061262
+INFO 2025-11-15 18:29:18 basehttp 24816 26704 "GET /home/ HTTP/1.1" 200 71960
+INFO 2025-11-15 18:43:29 basehttp 24816 11556 "GET /home/ HTTP/1.1" 200 55148
+INFO 2025-11-15 18:46:12 basehttp 24816 11556 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 18:46:12 basehttp 24816 11556 "GET /home/ HTTP/1.1" 200 54996
+INFO 2025-11-15 18:46:18 autoreload 13132 22704 Watching for file changes with StatReloader
+INFO 2025-11-15 18:46:19 basehttp 23184 12868 "GET / HTTP/1.1" 302 0
+INFO 2025-11-15 18:46:19 basehttp 23184 12868 "GET /home/ HTTP/1.1" 200 54996
+INFO 2025-11-15 18:47:32 basehttp 23184 12868 "GET /home/ HTTP/1.1" 200 46014

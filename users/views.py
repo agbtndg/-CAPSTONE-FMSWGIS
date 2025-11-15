@@ -13,13 +13,49 @@ from .validators import PasswordStrengthValidator
 from monitoring.views import get_flood_risk_level, get_tide_risk_level, get_combined_risk_level
 
 def register(request):
+    """
+    Handle user registration with auto-generated staff ID.
+    
+    Staff ID Format: YEAR + sequential 4-digit number (e.g., 20250001)
+    The user account is created as inactive pending admin approval.
+    
+    Args:
+        request: HttpRequest object
+        
+    Returns:
+        HttpResponse: Rendered registration form or redirect to login
+    """
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.is_active = False
             user.is_approved = False
+            
+            # Auto-generate staff ID
+            from datetime import datetime
+            current_year = datetime.now().year
+            
+            # Get the last staff ID for this year
+            last_user = CustomUser.objects.filter(
+                staff_id__startswith=str(current_year)
+            ).order_by('-staff_id').first()
+            
+            if last_user and last_user.staff_id:
+                # Extract the sequential number and increment
+                try:
+                    last_number = int(last_user.staff_id[-4:])
+                    new_number = last_number + 1
+                except (ValueError, TypeError):
+                    new_number = 1
+            else:
+                new_number = 1
+            
+            # Format: YEAR + 4-digit number (e.g., 20250001)
+            user.staff_id = f"{current_year}{new_number:04d}"
+            
             user.save()
+            messages.success(request, f'Account created successfully! Your Staff ID is {user.staff_id}. Please wait for admin approval.')
             return redirect('login')
     else:
         form = CustomUserCreationForm()
@@ -114,6 +150,18 @@ def user_logout(request):
     return redirect('login')
 
 def admin_register(request):
+    """
+    Handle admin registration with auto-generated staff ID.
+    
+    Only allows registration if no admin exists yet.
+    Admin accounts are automatically approved and activated.
+    
+    Args:
+        request: HttpRequest object
+        
+    Returns:
+        HttpResponse: Rendered registration form or redirect
+    """
     if CustomUser.objects.filter(is_superuser=True).exists():
         messages.error(request, "Admin registration is disabled. An admin account already exists.")
         return redirect('login')
@@ -122,12 +170,42 @@ def admin_register(request):
         form = AdminRegistrationForm(request.POST)
         if form.is_valid():
             with transaction.atomic():
-                user = form.save()
+                user = form.save(commit=False)
+                
+                # Auto-generate staff ID for admin
+                from datetime import datetime
+                current_year = datetime.now().year
+                
+                # Get the last staff ID for this year
+                last_user = CustomUser.objects.filter(
+                    staff_id__startswith=str(current_year)
+                ).order_by('-staff_id').first()
+                
+                if last_user and last_user.staff_id:
+                    try:
+                        last_number = int(last_user.staff_id[-4:])
+                        new_number = last_number + 1
+                    except (ValueError, TypeError):
+                        new_number = 1
+                else:
+                    new_number = 1
+                
+                # Format: YEAR + 4-digit number (e.g., 20250001)
+                user.staff_id = f"{current_year}{new_number:04d}"
+                
+                # Set admin privileges
+                user.is_staff = True
+                user.is_superuser = True
+                user.is_active = True
+                user.is_approved = True
+                
+                user.save()
+                
                 UserLog.objects.create(
                     user=user,
-                    action="Created admin account"
+                    action=f"Created admin account with Staff ID: {user.staff_id}"
                 )
-                messages.success(request, "Admin account created successfully. You can now log in.")
+                messages.success(request, f"Admin account created successfully! Your Staff ID is {user.staff_id}. You can now log in.")
                 return redirect('login')
     else:
         form = AdminRegistrationForm()
@@ -138,7 +216,8 @@ def home(request):
     context = {
         'pending_approvals': CustomUser.objects.filter(is_active=False, is_approved=False).count(),
         'recent_logs': UserLog.objects.all().order_by('-timestamp')[:5],
-        'total_users': CustomUser.objects.filter(is_active=True).count()
+        'total_users': CustomUser.objects.filter(is_active=True).count(),
+        'user_logs': UserLog.objects.filter(user=request.user).order_by('-timestamp')[:5]
     }
 
     # Admin summary cards context
@@ -170,7 +249,7 @@ def home(request):
         # FloodRecordActivity
         for flood in FloodRecordActivity.objects.all().order_by('-timestamp')[:5]:
             flood.type = 'FloodRecordActivity'
-            flood.description = f"{flood.get_action_display()} flood record for {flood.event_type}"
+            flood.description = f"{flood.get_action_display()} flood record for {flood.event_type} by {flood.user.username}"
             flood.date = flood.timestamp
             recent_activity_highlights.append(flood)
         # AssessmentRecord
@@ -219,6 +298,7 @@ def home(request):
         context['combined_risk'] = {'level': combined_risk_level, 'color': combined_risk_color}
     
     context.update({
+        'rainfall_data': rainfall_data,
         'weather_data': weather_data,
         'recent_floods': recent_floods
     })
@@ -233,6 +313,10 @@ def user_logs(request):
 
 @login_required
 def view_profile(request):
+    """
+    View and edit user profile.
+    Handles profile information updates including profile image uploads.
+    """
     if request.method == 'POST':
         form = ProfileEditForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
@@ -241,8 +325,8 @@ def view_profile(request):
             messages.success(request, 'Profile updated successfully!')
             return redirect('view_profile')
         else:
-            # Errors will be available in form.errors for template display if needed
-            messages.error(request, 'Error updating profile. Please check the form.')
+            # Keep form errors and data for modal to reopen
+            messages.error(request, 'Error updating profile. Please check the form and try again.')
     else:
         form = ProfileEditForm(instance=request.user)
     

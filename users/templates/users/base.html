@@ -7,6 +7,184 @@
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <style>
+        /* ============================================
+           TOAST NOTIFICATION SYSTEM - Consistent Auto-Dismissing Alerts
+           ============================================ */
+        .toast-container {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 420px;
+            pointer-events: none;
+        }
+
+        .toast-notification {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 16px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            min-width: 320px;
+            max-width: 420px;
+            border-left: 4px solid;
+            animation: slideInRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            pointer-events: all;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toast-notification.hiding {
+            animation: slideOutRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(120%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(120%);
+                opacity: 0;
+            }
+        }
+
+        /* Success Toast */
+        .toast-success {
+            border-left-color: #10b981;
+            background: linear-gradient(to right, #ecfdf5, #ffffff);
+        }
+        .toast-success .toast-icon {
+            color: #10b981;
+            background: #d1fae5;
+        }
+
+        /* Error/Danger Toast */
+        .toast-error, .toast-danger {
+            border-left-color: #ef4444;
+            background: linear-gradient(to right, #fef2f2, #ffffff);
+        }
+        .toast-error .toast-icon, .toast-danger .toast-icon {
+            color: #ef4444;
+            background: #fee2e2;
+        }
+
+        /* Warning Toast */
+        .toast-warning {
+            border-left-color: #f59e0b;
+            background: linear-gradient(to right, #fffbeb, #ffffff);
+        }
+        .toast-warning .toast-icon {
+            color: #f59e0b;
+            background: #fef3c7;
+        }
+
+        /* Info Toast */
+        .toast-info {
+            border-left-color: #3b82f6;
+            background: linear-gradient(to right, #eff6ff, #ffffff);
+        }
+        .toast-info .toast-icon {
+            color: #3b82f6;
+            background: #dbeafe;
+        }
+
+        .toast-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .toast-content {
+            flex: 1;
+            padding-top: 2px;
+        }
+
+        .toast-message {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .toast-close:hover {
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--text-dark);
+        }
+
+        /* Progress bar for auto-dismiss */
+        .toast-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: currentColor;
+            opacity: 0.3;
+            animation: shrink 5s linear forwards;
+        }
+
+        @keyframes shrink {
+            from {
+                width: 100%;
+            }
+            to {
+                width: 0%;
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            .toast-container {
+                top: 70px;
+                right: 12px;
+                left: 12px;
+                max-width: none;
+            }
+            .toast-notification {
+                min-width: auto;
+                max-width: none;
+            }
+        }
+
                 /* Footer Styles */
                 footer {
                     background-color: var(--primary-blue);
@@ -333,18 +511,10 @@
         </div>
     </nav>
 
-    <div class="main-content">
-        {% if messages %}
-        <div class="mb-4">
-            {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
+    <div class="main-content">
         {% block content %}{% endblock %}
     </div>
 
@@ -394,6 +564,81 @@
     </footer>
 
     <script>
+        // ============================================
+        // TOAST NOTIFICATION SYSTEM
+        // ============================================
+        function showToast(message, type = 'info', duration = 5000) {
+            const container = document.getElementById('toastContainer');
+            
+            // Icon mapping
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-times-circle',
+                danger: 'fa-exclamation-circle',
+                warning: 'fa-exclamation-triangle',
+                info: 'fa-info-circle'
+            };
+            
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = `toast-notification toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-icon">
+                    <i class="fas ${icons[type] || icons.info}"></i>
+                </div>
+                <div class="toast-content">
+                    <p class="toast-message">${message}</p>
+                </div>
+                <button class="toast-close" onclick="dismissToast(this)">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="toast-progress"></div>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Auto-dismiss after duration
+            const timer = setTimeout(() => {
+                dismissToast(toast.querySelector('.toast-close'));
+            }, duration);
+            
+            // Store timer for manual dismissal
+            toast.dataset.timer = timer;
+            
+            return toast;
+        }
+        
+        function dismissToast(button) {
+            const toast = button.closest('.toast-notification');
+            if (!toast) return;
+            
+            // Clear auto-dismiss timer
+            if (toast.dataset.timer) {
+                clearTimeout(parseInt(toast.dataset.timer));
+            }
+            
+            // Add hiding animation
+            toast.classList.add('hiding');
+            
+            // Remove from DOM after animation
+            setTimeout(() => {
+                toast.remove();
+            }, 400);
+        }
+        
+        // Display Django messages as toasts on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            {% if messages %}
+                {% for message in messages %}
+                    showToast(
+                        "{{ message|escapejs }}", 
+                        "{{ message.tags|default:'info' }}",
+                        5000
+                    );
+                {% endfor %}
+            {% endif %}
+        });
+
         // Settings dropdown toggle for accessibility
         const settingsBtn = document.getElementById('settingsBtn');
         const settingsDropdown = document.getElementById('settingsDropdown');

@@ -589,7 +589,7 @@
                     {% for act in recent_activity_highlights|slice:':5' %}
                         <li style="font-size:15px; margin-bottom:4px;">
                             {% if act.type == 'UserLog' %}
-                                [User Log] {{ act.action }} <span style="color:var(--text-muted); font-size:13px;">({{ act.timestamp|date:"M d, Y H:i" }})</span>
+                                [User Log] {{ act.action }} by <strong>{{ act.user.username }}</strong> <span style="color:var(--text-muted); font-size:13px;">({{ act.timestamp|date:"M d, Y H:i" }})</span>
                             {% elif act.type == 'FloodRecordActivity' %}
                                 [Flood] {{ act.description }} <span style="color:var(--text-muted); font-size:13px;">({{ act.date|date:"M d, Y H:i" }})</span>
                             {% elif act.type == 'AssessmentRecord' %}
@@ -644,8 +644,10 @@
             <!-- Weather Summary -->
             <div style="flex:1 1 320px; min-width:320px; background:white; border-radius:12px; box-shadow:0 2px 8px rgba(30,58,95,0.06); border:1px solid var(--border-gray); padding:24px;">
                 <h3 style="font-size:18px; font-weight:700; color:var(--primary-blue); margin-bottom:12px;"><i class="fas fa-cloud-sun"></i> Weather Summary</h3>
-                {% if weather_data %}
-                    <div style="font-size:16px;">Temp: <b>{{ weather_data.temperature_c }}°C</b><br>Humidity: <b>{{ weather_data.humidity_percent }}%</b><br>Wind: <b>{{ weather_data.wind_speed_kph }} km/h</b><br>Rainfall: <b>{{ weather_data.rainfall_mm }} mm</b></div>
+                {% if weather_data and rainfall_data %}
+                    <div style="font-size:16px;">Temp: <b>{{ weather_data.temperature_c }}°C</b><br>Humidity: <b>{{ weather_data.humidity_percent }}%</b><br>Wind: <b>{{ weather_data.wind_speed_kph }} km/h</b><br>Rainfall: <b>{{ rainfall_data.value_mm }} mm</b></div>
+                {% elif weather_data %}
+                    <div style="font-size:16px;">Temp: <b>{{ weather_data.temperature_c }}°C</b><br>Humidity: <b>{{ weather_data.humidity_percent }}%</b><br>Wind: <b>{{ weather_data.wind_speed_kph }} km/h</b><br>Rainfall: <b>0 mm</b></div>
                 {% else %}
                     <div style="color:var(--text-muted); font-size:14px;">Weather data unavailable.</div>
                 {% endif %}

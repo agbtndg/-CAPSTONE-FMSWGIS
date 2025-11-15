@@ -365,8 +365,8 @@ def monitoring_view(request):
         timestamp__gte=time_filter
     ).order_by('timestamp').values('timestamp', 'height_m'))
     
-    # Order by date ascending for proper graph display, and include ID for edit/delete
-    flood_records = list(FloodRecord.objects.all().order_by('date')[:20].values(
+    # Order by date descending (most recent first) for proper table display, and include ID for edit/delete
+    flood_records = list(FloodRecord.objects.all().order_by('-date')[:20].values(
         'id', 'event', 'date', 'affected_barangays', 'casualties_dead', 'casualties_injured', 'casualties_missing',
         'affected_persons', 'affected_families', 'houses_damaged_partially', 'houses_damaged_totally',
         'damage_infrastructure_php', 'damage_agriculture_php', 'damage_institutions_php',
@@ -418,6 +418,23 @@ def monitoring_view(request):
     tide_risk_level, tide_risk_color = get_tide_risk_level(tide_data.height_m if tide_data else 0)
     combined_risk_level, combined_risk_color = get_combined_risk_level(rain_risk_level, tide_risk_level)
 
+    # Get earliest and latest data dates for date picker constraints
+    earliest_rainfall = RainfallData.objects.order_by('timestamp').first()
+    earliest_tide = TideLevelData.objects.order_by('timestamp').first()
+    earliest_flood = FloodRecord.objects.order_by('date').first()
+    
+    # Find the earliest date among all data sources
+    earliest_dates = []
+    if earliest_rainfall:
+        earliest_dates.append(earliest_rainfall.timestamp.date())
+    if earliest_tide:
+        earliest_dates.append(earliest_tide.timestamp.date())
+    if earliest_flood:
+        earliest_dates.append(earliest_flood.date)
+    
+    min_date = min(earliest_dates).isoformat() if earliest_dates else None
+    max_date = timezone.now().date().isoformat()  # Today's date
+
     context = {
         'rainfall_data': rainfall_data,
         'weather_data': weather_data,
@@ -450,6 +467,8 @@ def monitoring_view(request):
         'tide_values': tide_values,
         'time_range': time_range,
         'range_label': range_label,
+        'min_date': min_date,
+        'max_date': max_date,
     }
     return render(request, 'monitoring/monitoring.html', context)
 

@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 import logging.config
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,14 +25,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
+# ============================================
+# SECURITY SETTINGS
+# ============================================
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ray+$42+3p@)$4w00ul5-eftyn6%5eu$57*(y)peu=1p3!3tim'
+# In production, use environment variables instead of hardcoding
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-ray+$42+3p@)$4w00ul5-eftyn6%5eu$57*(y)peu=1p3!3tim')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['silay-drrmo-app.onrender.com', 'localhost', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://silay-drrmo-app.onrender.com']
+# Allowed hosts - add your domain in production
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 
 # Application definition
@@ -76,18 +84,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'silay_drrmo.wsgi.application'
 
 
-# Database
+# ============================================
+# DATABASE CONFIGURATION
+# ============================================
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'silaydrrmo_db',
-        'USER': 'postgres',
-        'PASSWORD': 'Tndg652611',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        'CONN_MAX_AGE': 600,  # Connection pooling
+        'NAME': os.getenv('DB_NAME', 'silaydrrmo_db'),
+        'USER': os.getenv('DB_USER', 'postgres'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'Tndg652611'),  # TODO: Move to .env file
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'PORT': os.getenv('DB_PORT', '5432'),
+        'CONN_MAX_AGE': 600,  # Connection pooling (600 seconds = 10 minutes)
     }
 }
 
@@ -123,11 +133,19 @@ USE_I18N = True
 USE_TZ = True
 
 
+# ============================================
+# STATIC FILES CONFIGURATION
+# ============================================
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'silay_drrmo/static')]
+
+# Media files (user uploaded content)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Create logs directory if it doesn't exist
 LOGS_DIR = os.path.join(BASE_DIR, 'logs')
@@ -243,6 +261,11 @@ CACHES = {
 # WEATHER & FLOOD MONITORING CONFIGURATION
 # ============================================
 
+# ============================================
+# API KEYS AND EXTERNAL SERVICES
+# ============================================
+# IMPORTANT: Store sensitive API keys in environment variables
+
 # Silay City Coordinates (for weather API)
 SILAY_LATITUDE = 10.753794
 SILAY_LONGITUDE = 123.084160
@@ -251,8 +274,8 @@ SILAY_LONGITUDE = 123.084160
 CEBU_LATITUDE = 10.3167200
 CEBU_LONGITUDE = 123.8907100
 
-# API Keys
-WORLDTIDES_API_KEY = '28d6df6b-6b1c-4aa9-b96d-026ba71348eb'
+# API Keys - Use environment variables for security
+WORLDTIDES_API_KEY = os.getenv('WORLDTIDES_API_KEY', '28d6df6b-6b1c-4aa9-b96d-026ba71348eb')  # TODO: Move to .env
 
 # Note: Open-Meteo API is free and doesn't require an API key
 OPENMETEO_API_URL = 'https://api.open-meteo.com/v1/forecast'
@@ -355,24 +378,40 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Console for 
 # DEFAULT_FROM_EMAIL = 'your-email@gmail.com'
 
 
-# Admin Registration Key
-ADMIN_REGISTRATION_KEY = 'silay-drrmo-admin-2025'  # Change this in production!
+# ============================================
+# ADMIN REGISTRATION SECURITY
+# ============================================
+# Admin Registration Key - CHANGE THIS IN PRODUCTION!
+# Use environment variable for better security
+ADMIN_REGISTRATION_KEY = os.getenv('ADMIN_REGISTRATION_KEY', 'silay-drrmo-admin-2025')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Detect platform
-if os.name != "nt":  # not Windows
+# ============================================
+# GIS LIBRARY PATHS
+# ============================================
+# Detect platform and set GDAL/GEOS library paths
+# These are required for GeoDjango to work with spatial data
+
+if os.name != "nt":  # Unix/Linux systems (not Windows)
     os.environ["GDAL_LIBRARY_PATH"] = "/usr/lib/libgdal.so"
     os.environ["GEOS_LIBRARY_PATH"] = "/usr/lib/libgeos_c.so"
+else:  # Windows systems
+    # Uncomment and set these paths if you're using OSGeo4W on Windows
+    # GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal310.dll"
+    # GEOS_LIBRARY_PATH = r"C:\OSGeo4W\bin\geos_c.dll"
+    pass
 
-#GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal310.dll"
-#GEOS_LIBRARY_PATH = r"C:\OSGeo4W\bin\geos_c.dll"
-
+# ============================================
+# AUTHENTICATION SETTINGS
+# ============================================
+# Custom user model for extended authentication
 AUTH_USER_MODEL = 'users.CustomUser'
 
+# Login URL - redirect to login page if not authenticated
 LOGIN_URL = '/'
 
 

@@ -94,6 +94,155 @@
             line-height: 1.6;
         }
 
+        /* Toast notification styles */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+        }
+
+        .toast-notification {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            overflow: hidden;
+            animation: slideInRight 0.4s ease-out;
+            border-left: 4px solid;
+        }
+
+        .toast-notification.hiding {
+            animation: slideOutRight 0.4s ease-out forwards;
+        }
+
+        .toast-notification.toast-success {
+            border-left-color: #10b981;
+        }
+
+        .toast-notification.toast-error,
+        .toast-notification.toast-danger {
+            border-left-color: #ef4444;
+        }
+
+        .toast-notification.toast-warning {
+            border-left-color: #f59e0b;
+        }
+
+        .toast-notification.toast-info {
+            border-left-color: #3b82f6;
+        }
+
+        .toast-icon {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .toast-success .toast-icon {
+            color: #10b981;
+            background: #d1fae5;
+        }
+
+        .toast-error .toast-icon,
+        .toast-danger .toast-icon {
+            color: #ef4444;
+            background: #fee2e2;
+        }
+
+        .toast-warning .toast-icon {
+            color: #f59e0b;
+            background: #fef3c7;
+        }
+
+        .toast-info .toast-icon {
+            color: #3b82f6;
+            background: #dbeafe;
+        }
+
+        .toast-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .toast-message {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .toast-close:hover {
+            background: var(--border-gray);
+            color: var(--text-dark);
+        }
+
+        .toast-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: currentColor;
+            opacity: 0.3;
+            animation: shrink 5s linear forwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutRight {
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes shrink {
+            from {
+                width: 100%;
+            }
+            to {
+                width: 0;
+            }
+        }
+
         /* Right Side - Form */
         .form-container {
             flex: 1.2;
@@ -308,105 +457,186 @@
     </style>
 </head>
 <body>
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
     <div class="container">
         <!-- Left Side (Logo & Welcome) -->
-        <div class="logo-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; min-height: 500px; padding-top: 200px;">
+            <div class="logo-section" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 500px; padding-top: 120px;">
             {% load static %}
             <img src="{% static 'images/drrmo_logo.png' %}" alt="SCDRRMO Logo">
             <div class="welcome-text" style="margin-top: 24px;">Create Your Account</div>
             <h2 style="margin-bottom: 8px;">DRRMO Silay City</h2>
             <p style="color: var(--text-muted); font-size: 15px; text-align: center;">Disaster Risk Reduction and Management Office<br>Flood Monitoring & Early Warning System</p>
-        </div>
-
-        <!-- Right Side (Form) -->
+            
+            <!-- Auto-generated Staff ID Notice -->
+            <div style="margin-top: 32px; padding: 16px; background: linear-gradient(135deg, #dbeafe, #bfdbfe); border: 1px solid #3b82f6; border-radius: 12px; max-width: 280px; text-align: center;">
+                <i class="fas fa-info-circle" style="color: #1e40af; font-size: 24px; margin-bottom: 8px;"></i>
+                <p style="color: #1e40af; font-size: 13px; margin: 0; font-weight: 500; line-height: 1.5;">
+                    <strong>Staff ID</strong> will be automatically assigned upon registration approval
+                </p>
+            </div>
+        </div>        <!-- Right Side (Form) -->
         <div class="form-container">
             <form method="post">
+                {% csrf_token %}
+                
+                <!-- Display form errors if any -->
+                {% if form.errors %}
+                <div style="background-color: #fee2e2; border-left: 4px solid #dc2626; color: #991b1b; padding: 14px 18px; border-radius: 8px; margin-bottom: 24px; font-size: 14px;">
+                    <strong>Please correct the following errors:</strong>
+                    <ul style="margin: 8px 0 0 20px; padding: 0;">
+                        {% for field, errors in form.errors.items %}
+                            {% for error in errors %}
+                                <li>{{ field }}: {{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                <!-- Messages will be displayed as toasts -->
+                
                 <!-- Personal Information -->
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group {% if form.first_name.errors %}error{% endif %}">
                         <label><i class="fas fa-user"></i> First Name</label>
                         <div class="input-wrapper">
-                            <input type="text" name="first_name" placeholder="John" required>
+                            {{ form.first_name }}
                         </div>
+                        {% if form.first_name.errors %}
+                            <ul class="errorlist">
+                                {% for error in form.first_name.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </div>
-                    <div class="form-group">
+                    <div class="form-group {% if form.last_name.errors %}error{% endif %}">
                         <label><i class="fas fa-user"></i> Last Name</label>
                         <div class="input-wrapper">
-                            <input type="text" name="last_name" placeholder="Doe" required>
+                            {{ form.last_name }}
                         </div>
+                        {% if form.last_name.errors %}
+                            <ul class="errorlist">
+                                {% for error in form.last_name.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </div>
                 </div>
 
                 <!-- Username & Email -->
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group {% if form.username.errors %}error{% endif %}">
                         <label><i class="fas fa-user-circle"></i> Username</label>
                         <div class="input-wrapper">
-                            <input type="text" name="username" placeholder="johndoe" required>
+                            {{ form.username }}
                         </div>
                         <span class="form-help">Choose a unique username for your account</span>
+                        {% if form.username.errors %}
+                            <ul class="errorlist">
+                                {% for error in form.username.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </div>
-                    <div class="form-group">
+                    <div class="form-group {% if form.email.errors %}error{% endif %}">
                         <label><i class="fas fa-envelope"></i> Email Address</label>
                         <div class="input-wrapper">
-                            <input type="email" name="email" placeholder="john@example.com" required>
+                            {{ form.email }}
                         </div>
                         <span class="form-help">Your email will be used for account verification</span>
+                        {% if form.email.errors %}
+                            <ul class="errorlist">
+                                {% for error in form.email.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </div>
                 </div>
 
-                <!-- Contact Number Only -->
+                <!-- Staff ID & Position -->
                 <div class="form-row">
-                    <div class="form-group">
-                        <label><i class="fas fa-phone"></i> Contact Number</label>
-                        <div class="input-wrapper">
-                            <input type="text" name="contact_number" placeholder="09123456789" required>
-                        </div>
-                        <span class="form-help">11-digit mobile number</span>
-                    </div>
-                </div>
-
-                <!-- Department & Position -->
-                <div class="form-row">
-                    <div class="form-group">
-                        <label><i class="fas fa-building"></i> Department</label>
-                        <div class="input-wrapper">
-                            <select name="department" required>
-                                <option value="">Select Department</option>
-                                <option value="ops">Operations</option>
-                                <option value="planning">Planning</option>
-                                <option value="admin">Administration</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
+                    <div class="form-group {% if form.position.errors %}error{% endif %}">
                         <label><i class="fas fa-briefcase"></i> Position</label>
                         <div class="input-wrapper">
-                            <select name="position" required>
-                                <option value="">Select Position</option>
-                                <option value="officer">Officer</option>
-                                <option value="supervisor">Supervisor</option>
-                                <option value="manager">Manager</option>
-                            </select>
+                            {{ form.position }}
                         </div>
+                        {% if form.position.errors %}
+                            <ul class="errorlist">
+                                {% for error in form.position.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                    <div class="form-group {% if form.contact_number.errors %}error{% endif %}">
+                        <label><i class="fas fa-phone"></i> Contact Number</label>
+                        <div class="input-wrapper">
+                            {{ form.contact_number }}
+                        </div>
+                        <span class="form-help">11-digit mobile number</span>
+                        {% if form.contact_number.errors %}
+                            <ul class="errorlist">
+                                {% for error in form.contact_number.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="form-row">
+                    <div class="form-group {% if form.date_of_birth.errors %}error{% endif %}">
+                        <label><i class="fas fa-calendar-alt"></i> Date of Birth</label>
+                        <div class="input-wrapper">
+                            {{ form.date_of_birth }}
+                        </div>
+                        <span class="form-help">Must be 18-80 years old</span>
+                        {% if form.date_of_birth.errors %}
+                            <ul class="errorlist">
+                                {% for error in form.date_of_birth.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </div>
                 </div>
 
                 <!-- Password Fields -->
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group {% if form.password1.errors %}error{% endif %}">
                         <label><i class="fas fa-lock"></i> Password</label>
                         <div class="input-wrapper">
-                            <input type="password" name="password1" placeholder="••••••••" required>
+                            {{ form.password1 }}
                         </div>
                         <span class="form-help">At least 8 characters with letters, numbers, and symbols</span>
+                        {% if form.password1.errors %}
+                            <ul class="errorlist">
+                                {% for error in form.password1.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </div>
-                    <div class="form-group">
+                    <div class="form-group {% if form.password2.errors %}error{% endif %}">
                         <label><i class="fas fa-lock"></i> Confirm Password</label>
                         <div class="input-wrapper">
-                            <input type="password" name="password2" placeholder="••••••••" required>
+                            {{ form.password2 }}
                         </div>
                         <span class="form-help">Re-enter your password to confirm</span>
+                        {% if form.password2.errors %}
+                            <ul class="errorlist">
+                                {% for error in form.password2.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </div>
                 </div>
 
@@ -415,7 +645,7 @@
                 </button>
 
                 <div class="footer-link">
-                    <p>Already have an account? <a href="#">Login here</a></p>
+                    <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
                 </div>
             </form>
         </div>
@@ -454,6 +684,90 @@
                 return true;
             }
         });
+
+        // ============================================
+        // TOAST NOTIFICATION SYSTEM
+        // ============================================
+        function showToast(message, type = 'info', duration = 5000) {
+            const container = document.getElementById('toastContainer');
+            
+            // Icon mapping
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-times-circle',
+                danger: 'fa-exclamation-circle',
+                warning: 'fa-exclamation-triangle',
+                info: 'fa-info-circle'
+            };
+            
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = `toast-notification toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-icon">
+                    <i class="fas ${icons[type] || icons.info}"></i>
+                </div>
+                <div class="toast-content">
+                    <p class="toast-message">${message}</p>
+                </div>
+                <button class="toast-close" onclick="dismissToast(this)">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="toast-progress"></div>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Auto-dismiss after duration
+            const timer = setTimeout(() => {
+                dismissToast(toast.querySelector('.toast-close'));
+            }, duration);
+            
+            // Store timer for manual dismissal
+            toast.dataset.timer = timer;
+            
+            return toast;
+        }
+        
+        function dismissToast(button) {
+            const toast = button.closest('.toast-notification');
+            if (!toast) return;
+            
+            // Clear auto-dismiss timer
+            if (toast.dataset.timer) {
+                clearTimeout(parseInt(toast.dataset.timer));
+            }
+            
+            // Add hiding animation
+            toast.classList.add('hiding');
+            
+            // Remove from DOM after animation
+            setTimeout(() => {
+                toast.remove();
+            }, 400);
+        }
+        
+        // Display Django messages as toasts on page load
+        {% if messages %}
+            {% for message in messages %}
+                showToast(
+                    "{{ message|escapejs }}", 
+                    "{{ message.tags|default:'info' }}",
+                    5000
+                );
+            {% endfor %}
+        {% endif %}
+
+        // Set date constraints for date of birth field (18-80 years old, no future dates)
+        const dobField = document.querySelector('input[name="date_of_birth"]');
+        if (dobField) {
+            const today = new Date();
+            const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+            const minDate = new Date(today.getFullYear() - 80, today.getMonth(), today.getDate());
+            
+            dobField.max = maxDate.toISOString().split('T')[0];
+            dobField.min = minDate.toISOString().split('T')[0];
+        }
     </script>
 </body>
 </html>

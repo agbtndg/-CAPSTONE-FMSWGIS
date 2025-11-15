@@ -1,0 +1,191 @@
+# ════════════════════════════════════════════════════════════════
+# GITIGNORE FOR SILAY DRRMO PROJECT
+# ════════════════════════════════════════════════════════════════
+# IMPORTANT: This file prevents sensitive data from being committed
+# to version control (Git)
+# ════════════════════════════════════════════════════════════════
+
+# ============================================
+# ENVIRONMENT VARIABLES (CRITICAL!)
+# ============================================
+.env
+.env.local
+.env.*.local
+
+# ============================================
+# PYTHON
+# ============================================
+*.py[cod]
+*$py.class
+*.so
+.Python
+__pycache__/
+*.pyc
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ============================================
+# DJANGO
+# ============================================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Static files (collected)
+/staticfiles/
+/static_root/
+
+# Media files (user uploads)
+/media/
+/media_root/
+
+# Database dumps
+*.sql
+*.dump
+
+# ============================================
+# VIRTUAL ENVIRONMENT
+# ============================================
+venv/
+ENV/
+env/
+.venv/
+
+# ============================================
+# IDE & EDITORS
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# LOGS & TEMPORARY FILES
+# ============================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# ============================================
+# NODE MODULES (if using Node.js tools)
+# ============================================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ============================================
+# POSTGRESQL
+# ============================================
+*.dump
+*.backup
+
+# ============================================
+# SENSITIVE DATA
+# ============================================
+# API keys, passwords, secrets
+secrets.json
+credentials.json
+*.key
+*.pem
+*.cert
+
+# ============================================
+# TESTING
+# ============================================
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+
+# ============================================
+# DOCUMENTATION BUILD
+# ============================================
+docs/_build/
+site/
+
+# ============================================
+# PACKAGE MANAGEMENT
+# ============================================
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ============================================
+# CELERY
+# ============================================
+celerybeat-schedule
+celerybeat.pid
+
+# ============================================
+# SASS/SCSS
+# ============================================
+.sass-cache/
+*.css.map
+
+# ============================================
+# WEBPACK
+# ============================================
+/webpack-stats.json
+
+# ============================================
+# JUPYTER NOTEBOOK
+# ============================================
+.ipynb_checkpoints
+*.ipynb
+
+# ============================================
+# PROJECT-SPECIFIC
+# ============================================
+# Add any project-specific files to ignore here
+profile_images/
+*.geojson.bak
+
+# Backup files
+*.backup
+*.old
+
+# ════════════════════════════════════════════════════════════════
+# END OF GITIGNORE
+# ════════════════════════════════════════════════════════════════
