@@ -2419,3 +2419,163 @@ INFO 2025-11-15 19:56:42 autoreload 18820 13500 Watching for file changes with S
 INFO 2025-11-15 20:17:02 autoreload 22316 30412 Watching for file changes with StatReloader
 INFO 2025-11-15 20:17:04 basehttp 22316 6816 "GET / HTTP/1.1" 302 0
 INFO 2025-11-15 20:17:04 basehttp 22316 6816 "GET /home/ HTTP/1.1" 200 41198
+INFO 2025-11-16 03:27:55 autoreload 19324 26984 Watching for file changes with StatReloader
+INFO 2025-11-16 03:27:56 basehttp 19324 14080 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-16 03:27:56 basehttp 19324 15880 "GET /static/images/drrmo_logo.png HTTP/1.1" 200 96716
+INFO 2025-11-16 03:27:56 basehttp 19324 28320 "GET /static/css/font-awesome.min.css HTTP/1.1" 200 89220
+INFO 2025-11-16 03:27:56 basehttp 19324 14080 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 232948
+INFO 2025-11-16 03:27:57 basehttp 19324 14080 "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 126828
+INFO 2025-11-16 03:29:05 basehttp 19324 14080 "POST / HTTP/1.1" 302 0
+INFO 2025-11-16 03:29:05 basehttp 19324 14080 "GET /home/ HTTP/1.1" 200 41602
+INFO 2025-11-16 03:29:05 basehttp 19324 14080 "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 80663
+INFO 2025-11-16 03:29:05 basehttp 19324 14080 "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 104544
+INFO 2025-11-16 03:29:42 basehttp 19324 14080 "GET /maps/ HTTP/1.1" 200 1035108
+INFO 2025-11-16 03:29:42 basehttp 19324 28320 "GET /static/css/ol.css HTTP/1.1" 200 6284
+INFO 2025-11-16 03:29:42 basehttp 19324 14080 "GET /static/js/ol.js HTTP/1.1" 200 857360
+INFO 2025-11-16 03:29:46 views 19324 14080 Requesting Open-Meteo API for Silay City: https://api.open-meteo.com/v1/forecast
+INFO 2025-11-16 03:29:47 views 19324 14080 API returned - Rain: 0.0mm, Temp: 26.5°C, Humidity: 88%, Wind: 14.7km/h
+INFO 2025-11-16 03:29:47 views 19324 14080 Processed 7 days of weather forecast
+INFO 2025-11-16 03:29:47 views 19324 14080 Created new rainfall record: 0.0mm
+INFO 2025-11-16 03:29:47 views 19324 14080 Created new weather record
+INFO 2025-11-16 03:29:47 views 19324 14080 Requesting WorldTides API for Cebu City: https://www.worldtides.info/api/v3
+INFO 2025-11-16 03:29:48 views 19324 14080 Created new tide record: 0.054m from WorldTides API
+INFO 2025-11-16 03:29:48 basehttp 19324 14080 "GET /monitoring/ HTTP/1.1" 200 83999
+INFO 2025-11-16 03:29:48 basehttp 19324 14080 "GET /static/js/chart.js HTTP/1.1" 200 208522
+INFO 2025-11-16 03:34:49 basehttp 19324 20952 "GET /monitoring/api/data/ HTTP/1.1" 200 53
+INFO 2025-11-16 03:39:49 basehttp 19324 20952 "GET /monitoring/api/data/ HTTP/1.1" 200 53
+INFO 2025-11-16 03:42:23 autoreload 19324 26984 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-16 03:42:24 autoreload 7004 11448 Watching for file changes with StatReloader
+INFO 2025-11-16 03:42:28 autoreload 7004 11448 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-16 03:42:29 autoreload 2832 22860 Watching for file changes with StatReloader
+INFO 2025-11-16 03:42:34 autoreload 2832 22860 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-16 03:42:34 autoreload 16920 16116 Watching for file changes with StatReloader
+INFO 2025-11-16 03:42:39 autoreload 16920 16116 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-16 03:42:39 autoreload 24828 30456 Watching for file changes with StatReloader
+INFO 2025-11-16 03:42:44 autoreload 24828 30456 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-16 03:42:45 autoreload 6812 31660 Watching for file changes with StatReloader
+INFO 2025-11-16 03:42:50 autoreload 6812 31660 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-16 03:42:51 autoreload 6344 4624 Watching for file changes with StatReloader
+INFO 2025-11-16 03:42:56 autoreload 6344 4624 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-16 03:42:57 autoreload 1376 21488 Watching for file changes with StatReloader
+INFO 2025-11-16 03:44:49 basehttp 1376 5724 "GET /monitoring/api/data/ HTTP/1.1" 200 53
+INFO 2025-11-16 03:49:49 basehttp 1376 5724 "GET /monitoring/api/data/ HTTP/1.1" 200 53
+INFO 2025-11-16 03:51:31 autoreload 25452 13816 Watching for file changes with StatReloader
+INFO 2025-11-16 03:51:33 basehttp 1376 5724 "GET / HTTP/1.1" 302 0
+INFO 2025-11-16 03:51:33 basehttp 1376 5724 "GET /home/ HTTP/1.1" 200 41382
+INFO 2025-11-16 03:51:38 basehttp 1376 5724 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-16 03:51:38 basehttp 1376 5724 "GET / HTTP/1.1" 200 13212
+INFO 2025-11-16 03:51:44 basehttp 1376 5724 "GET /admin HTTP/1.1" 301 0
+INFO 2025-11-16 03:51:44 basehttp 1376 7284 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-16 03:51:44 basehttp 1376 7284 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4177
+INFO 2025-11-16 03:51:45 basehttp 1376 22840 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2960
+INFO 2025-11-16 03:51:45 basehttp 1376 21944 "GET /static/admin/css/login.css HTTP/1.1" 200 1012
+INFO 2025-11-16 03:51:45 basehttp 1376 24076 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2938
+INFO 2025-11-16 03:51:45 basehttp 1376 27912 "GET /static/admin/js/theme.js HTTP/1.1" 200 1704
+INFO 2025-11-16 03:51:45 basehttp 1376 7332 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17469
+INFO 2025-11-16 03:51:45 basehttp 1376 7284 "GET /static/admin/css/base.css HTTP/1.1" 200 23300
+INFO 2025-11-16 03:51:45 basehttp 1376 7284 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3142
+INFO 2025-11-16 03:51:54 basehttp 1376 7284 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-11-16 03:51:54 basehttp 1376 7284 "GET /admin/ HTTP/1.1" 200 16378
+INFO 2025-11-16 03:51:54 basehttp 1376 7284 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 470
+INFO 2025-11-16 03:51:54 basehttp 1376 7332 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 383
+INFO 2025-11-16 03:51:54 basehttp 1376 7284 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 334
+INFO 2025-11-16 03:51:54 basehttp 1376 27912 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 395
+INFO 2025-11-16 03:51:57 basehttp 1376 27912 "GET /admin/users/customuser/ HTTP/1.1" 200 14809
+INFO 2025-11-16 03:51:57 basehttp 1376 22840 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 355
+INFO 2025-11-16 03:51:57 basehttp 1376 27912 "GET /static/admin/css/changelists.css HTTP/1.1" 200 7221
+INFO 2025-11-16 03:51:57 basehttp 1376 24076 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 10029
+INFO 2025-11-16 03:51:57 basehttp 1376 21944 "GET /static/admin/js/core.js HTTP/1.1" 200 6392
+INFO 2025-11-16 03:51:57 basehttp 1376 27912 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1574
+INFO 2025-11-16 03:51:57 basehttp 1376 24076 "GET /static/admin/js/urlify.js HTTP/1.1" 200 8056
+INFO 2025-11-16 03:51:57 basehttp 1376 22840 "GET /static/admin/js/actions.js HTTP/1.1" 200 8280
+INFO 2025-11-16 03:51:57 basehttp 1376 7332 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 296030
+INFO 2025-11-16 03:51:57 basehttp 1376 21944 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 331297
+INFO 2025-11-16 03:51:57 basehttp 1376 21944 "GET /static/admin/js/filters.js HTTP/1.1" 200 1008
+INFO 2025-11-16 03:51:57 basehttp 1376 7284 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-16 03:51:57 basehttp 1376 7284 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 334
+INFO 2025-11-16 03:52:03 basehttp 1376 7284 "GET /admin/users/customuser/14/change/ HTTP/1.1" 200 36212
+INFO 2025-11-16 03:52:03 basehttp 1376 21944 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9380
+INFO 2025-11-16 03:52:03 basehttp 1376 7332 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19727
+INFO 2025-11-16 03:52:03 basehttp 1376 24076 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 601
+INFO 2025-11-16 03:52:03 basehttp 1376 7284 "GET /static/admin/css/forms.css HTTP/1.1" 200 9023
+INFO 2025-11-16 03:52:03 basehttp 1376 24076 "GET /static/admin/css/widgets.css HTTP/1.1" 200 12586
+INFO 2025-11-16 03:52:03 basehttp 1376 24076 "GET /static/admin/js/change_form.js HTTP/1.1" 200 622
+INFO 2025-11-16 03:52:03 basehttp 1376 22840 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-16 03:52:03 basehttp 1376 22840 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1095
+INFO 2025-11-16 03:52:03 basehttp 1376 24076 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 686
+INFO 2025-11-16 03:52:06 basehttp 1376 24076 "GET /admin/users/customuser/14/delete/ HTTP/1.1" 200 12933
+INFO 2025-11-16 03:52:06 basehttp 1376 24076 "GET /static/admin/js/cancel.js HTTP/1.1" 200 913
+INFO 2025-11-16 03:52:07 basehttp 1376 24076 "POST /admin/users/customuser/14/delete/ HTTP/1.1" 302 0
+INFO 2025-11-16 03:52:07 basehttp 1376 24076 "GET /admin/users/customuser/ HTTP/1.1" 200 14696
+INFO 2025-11-16 03:52:07 basehttp 1376 24076 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-16 03:52:07 basehttp 1376 24076 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 439
+INFO 2025-11-16 03:52:08 basehttp 1376 24076 "GET /admin/users/customuser/13/change/ HTTP/1.1" 200 36675
+INFO 2025-11-16 03:52:08 basehttp 1376 24076 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-16 03:52:10 basehttp 1376 24076 "GET /admin/users/customuser/13/delete/ HTTP/1.1" 200 13488
+INFO 2025-11-16 03:52:10 basehttp 1376 24076 "POST /admin/users/customuser/13/delete/ HTTP/1.1" 302 0
+INFO 2025-11-16 03:52:11 basehttp 1376 24076 "GET /admin/users/customuser/ HTTP/1.1" 200 14424
+INFO 2025-11-16 03:52:11 basehttp 1376 24076 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-16 03:52:12 basehttp 1376 24076 "GET /admin/users/customuser/1/change/ HTTP/1.1" 200 36539
+INFO 2025-11-16 03:52:12 basehttp 1376 24076 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-11-16 03:52:13 basehttp 1376 24076 "GET /admin/users/customuser/1/delete/ HTTP/1.1" 200 21933
+INFO 2025-11-16 03:52:21 basehttp 1376 24076 "POST /admin/users/customuser/1/delete/ HTTP/1.1" 302 0
+INFO 2025-11-16 03:52:21 basehttp 1376 24076 "GET /admin/users/customuser/ HTTP/1.1" 302 0
+INFO 2025-11-16 03:52:21 basehttp 1376 24076 "GET /admin/login/?next=/admin/users/customuser/ HTTP/1.1" 200 4363
+INFO 2025-11-16 03:52:28 basehttp 1376 24076 "POST /admin/login/?next=/admin/users/customuser/ HTTP/1.1" 200 4379
+INFO 2025-11-16 03:52:31 basehttp 1376 24076 "GET / HTTP/1.1" 200 13317
+INFO 2025-11-16 03:52:34 basehttp 1376 24076 "GET /register/admin/ HTTP/1.1" 200 34398
+INFO 2025-11-16 03:52:41 autoreload 1376 21488 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-16 03:52:41 autoreload 25020 14292 Watching for file changes with StatReloader
+INFO 2025-11-16 03:52:41 autoreload 25452 13816 C:\Users\aldri\-CAPSTONE-FMSWGIS\silay_drrmo\settings.py changed, reloading.
+INFO 2025-11-16 03:52:42 autoreload 4364 13276 Watching for file changes with StatReloader
+INFO 2025-11-16 03:54:49 basehttp 25020 10708 "GET /monitoring/api/data/ HTTP/1.1" 302 0
+INFO 2025-11-16 03:54:49 basehttp 25020 10708 "GET /?next=/monitoring/api/data/ HTTP/1.1" 200 13317
+INFO 2025-11-16 03:57:05 basehttp 25020 10708 "GET /register/admin/ HTTP/1.1" 200 15287
+INFO 2025-11-16 03:59:49 basehttp 25020 10708 "GET /monitoring/api/data/ HTTP/1.1" 302 0
+INFO 2025-11-16 03:59:49 basehttp 25020 10708 "GET /?next=/monitoring/api/data/ HTTP/1.1" 200 13317
+INFO 2025-11-16 04:04:49 basehttp 25020 10708 "GET /monitoring/api/data/ HTTP/1.1" 302 0
+INFO 2025-11-16 04:04:49 basehttp 25020 10708 "GET /?next=/monitoring/api/data/ HTTP/1.1" 200 13317
+INFO 2025-11-16 04:09:49 basehttp 25020 10708 "GET /monitoring/api/data/ HTTP/1.1" 302 0
+INFO 2025-11-16 04:09:49 basehttp 25020 10708 "GET /?next=/monitoring/api/data/ HTTP/1.1" 200 13317
+INFO 2025-11-16 04:10:23 basehttp 25020 10708 "GET /register/admin/ HTTP/1.1" 200 23448
+INFO 2025-11-16 04:11:04 autoreload 25020 14292 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-16 04:11:05 autoreload 3968 7248 Watching for file changes with StatReloader
+INFO 2025-11-16 04:11:09 autoreload 3968 7248 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-16 04:11:10 autoreload 26576 29700 Watching for file changes with StatReloader
+INFO 2025-11-16 04:13:21 basehttp 26576 30964 "GET /register/admin/ HTTP/1.1" 200 23781
+INFO 2025-11-16 04:14:37 basehttp 26576 30964 "GET / HTTP/1.1" 200 13317
+INFO 2025-11-16 04:14:39 basehttp 26576 30964 "GET /register/ HTTP/1.1" 200 23802
+INFO 2025-11-16 04:14:42 basehttp 26576 30964 "GET / HTTP/1.1" 200 13317
+INFO 2025-11-16 04:14:42 basehttp 26576 30964 "GET /register/admin/ HTTP/1.1" 200 23781
+INFO 2025-11-16 04:14:49 basehttp 26576 30964 "GET /monitoring/api/data/ HTTP/1.1" 302 0
+INFO 2025-11-16 04:14:49 basehttp 26576 30964 "GET /?next=/monitoring/api/data/ HTTP/1.1" 200 13317
+INFO 2025-11-16 04:19:27 basehttp 26576 30964 "GET / HTTP/1.1" 200 13317
+INFO 2025-11-16 04:19:28 basehttp 26576 30964 "GET /register/ HTTP/1.1" 200 23802
+INFO 2025-11-16 04:19:30 basehttp 26576 30964 "GET / HTTP/1.1" 200 13317
+INFO 2025-11-16 04:19:31 basehttp 26576 30964 "GET /register/admin/ HTTP/1.1" 200 23781
+INFO 2025-11-16 04:19:49 basehttp 26576 30964 "GET /monitoring/api/data/ HTTP/1.1" 302 0
+INFO 2025-11-16 04:19:49 basehttp 26576 30964 "GET /?next=/monitoring/api/data/ HTTP/1.1" 200 13317
+INFO 2025-11-16 04:24:49 basehttp 26576 30964 "GET /monitoring/api/data/ HTTP/1.1" 302 0
+INFO 2025-11-16 04:24:49 basehttp 26576 30964 "GET /?next=/monitoring/api/data/ HTTP/1.1" 200 13317
+INFO 2025-11-16 04:25:02 basehttp 26576 30964 "GET /register/admin/ HTTP/1.1" 200 27354
+INFO 2025-11-16 04:25:04 basehttp 26576 30964 "GET / HTTP/1.1" 200 13317
+INFO 2025-11-16 04:25:05 basehttp 26576 30964 "GET /register/ HTTP/1.1" 200 26048
+INFO 2025-11-16 04:25:08 basehttp 26576 30964 "GET / HTTP/1.1" 200 13317
+INFO 2025-11-16 04:25:10 basehttp 26576 30964 "GET /register/admin/ HTTP/1.1" 200 27354
+INFO 2025-11-16 04:25:14 autoreload 26576 29700 C:\Users\aldri\-CAPSTONE-FMSWGIS\users\forms.py changed, reloading.
+INFO 2025-11-16 04:25:15 autoreload 4184 9464 Watching for file changes with StatReloader
+INFO 2025-11-16 04:25:20 basehttp 4184 9024 "GET / HTTP/1.1" 200 13317
+INFO 2025-11-16 04:25:21 basehttp 4184 9024 "GET /register/admin/ HTTP/1.1" 200 27354
+INFO 2025-11-16 04:26:40 basehttp 4184 9024 "POST /register/admin/ HTTP/1.1" 200 28166
+INFO 2025-11-16 04:26:53 basehttp 4184 9024 "POST /register/admin/ HTTP/1.1" 302 0
+INFO 2025-11-16 04:26:53 basehttp 4184 9024 "GET / HTTP/1.1" 200 13488
+INFO 2025-11-16 04:27:01 basehttp 4184 9024 "POST / HTTP/1.1" 302 0
+INFO 2025-11-16 04:27:01 basehttp 4184 9024 "GET /home/ HTTP/1.1" 200 44986
+INFO 2025-11-16 04:28:38 basehttp 4184 9024 "GET /maps/my-activity/ HTTP/1.1" 200 38542
+INFO 2025-11-16 04:28:40 basehttp 4184 9024 "GET /maps/all-activities/ HTTP/1.1" 200 43677
+INFO 2025-11-16 04:28:43 basehttp 4184 9024 "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 23900
+INFO 2025-11-16 04:29:49 basehttp 4184 9024 "GET /monitoring/api/data/ HTTP/1.1" 200 53
+INFO 2025-11-16 04:33:48 basehttp 4184 9024 "GET /home/ HTTP/1.1" 200 44772
+INFO 2025-11-16 04:33:50 basehttp 4184 9024 "GET /maps/ HTTP/1.1" 200 1035629
+INFO 2025-11-16 04:33:56 basehttp 4184 9024 "POST /maps/save-assessment/ HTTP/1.1" 200 82
+INFO 2025-11-16 04:33:57 basehttp 4184 9024 "GET /maps/report/?barangay=Eustaquio%20Lopez&lat=10.812154&lon=123.021312&risk=LF HTTP/1.1" 200 10126

@@ -304,9 +304,10 @@
         input[type="text"],
         input[type="email"],
         input[type="password"],
+        input[type="date"],
         select {
             width: 100%;
-            padding: 12px 16px 12px 8px; /* Move placeholder even closer to the left */
+            padding: 12px 16px;
             border: 2px solid var(--border-gray);
             border-radius: 10px;
             font-size: 15px;
@@ -315,9 +316,25 @@
             font-family: inherit;
         }
 
+        input[type="date"] {
+            position: relative;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            color: var(--secondary-blue);
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator:hover {
+            opacity: 1;
+        }
+
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="password"]:focus,
+        input[type="date"]:focus,
         select:focus {
             outline: none;
             border-color: var(--secondary-blue);
@@ -653,12 +670,22 @@
     </div>
 
     <script>
+        // ============================================
+        // CONTACT NUMBER VALIDATION
+        // ============================================
         document.addEventListener('DOMContentLoaded', function() {
             const contactField = document.querySelector('input[name="contact_number"]');
+            const dobField = document.querySelector('input[name="date_of_birth"]');
             
             if (contactField) {
                 contactField.addEventListener('input', function() {
                     validateContactNumber(this);
+                });
+            }
+
+            if (dobField) {
+                dobField.addEventListener('change', function() {
+                    validateDateOfBirth(this);
                 });
             }
 
@@ -677,6 +704,37 @@
                         errorList.className = 'errorlist';
                         const errorItem = document.createElement('li');
                         errorItem.textContent = 'Contact number must be exactly 11 digits';
+                        errorList.appendChild(errorItem);
+                        parent.appendChild(errorList);
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            function validateDateOfBirth(field) {
+                const parent = field.closest('.form-group');
+                parent.classList.remove('error');
+                
+                const existingError = parent.querySelector('.errorlist');
+                if (existingError) existingError.remove();
+
+                if (field.value) {
+                    const birthDate = new Date(field.value);
+                    const today = new Date();
+                    let age = today.getFullYear() - birthDate.getFullYear();
+                    const monthDiff = today.getMonth() - birthDate.getMonth();
+                    
+                    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                        age--;
+                    }
+                    
+                    if (age < 18 || age > 80) {
+                        parent.classList.add('error');
+                        const errorList = document.createElement('ul');
+                        errorList.className = 'errorlist';
+                        const errorItem = document.createElement('li');
+                        errorItem.textContent = 'Age must be between 18 and 80 years old';
                         errorList.appendChild(errorItem);
                         parent.appendChild(errorList);
                         return false;

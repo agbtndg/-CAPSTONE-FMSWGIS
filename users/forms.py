@@ -114,7 +114,10 @@ class AdminRegistrationForm(UserCreationForm):
     Includes date of birth validation (18-80 years old).
     """
     registration_key = forms.CharField(
-        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter registration key'
+        }),
         help_text="Enter the secure registration key provided by the system administrator."
     )
     class Meta:
@@ -130,8 +133,24 @@ class AdminRegistrationForm(UserCreationForm):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field in self.fields.values():
+        
+        placeholders = {
+            'first_name': 'Enter your first name',
+            'last_name': 'Enter your last name',
+            'username': 'Choose a username',
+            'email': 'Enter your email address',
+            'position': 'Select your position',
+            'contact_number': '09xxxxxxxxx',
+            'date_of_birth': 'YYYY-MM-DD',
+            'registration_key': 'Enter registration key',
+            'password1': 'Create a password',
+            'password2': 'Confirm your password',
+        }
+        
+        for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
+            if field_name in placeholders:
+                field.widget.attrs['placeholder'] = placeholders[field_name]
         
         # Make email and other fields required
         self.fields['email'].required = True

@@ -1,7 +1,5 @@
 from pathlib import Path
 import os
-
-import dj_database_url
 import logging.config
 from dotenv import load_dotenv
 load_dotenv()
@@ -50,7 +48,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-        'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'silay_drrmo.urls'
@@ -78,30 +75,16 @@ WSGI_APPLICATION = 'silay_drrmo.wsgi.application'
 # ============================================
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-
-# === DATABASE CONFIGURATION ===
-if os.getenv('DATABASE_URL'):
-    import dj_database_url
-    DATABASES = {
-        'default': dj_database_url.parse(
-            os.getenv('DATABASE_URL'),
-            conn_max_age=600,
-            ssl_require=True  # Required by Render
-        )
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': os.getenv('DB_NAME', 'silaydrrmo_db'),
+        'USER': os.getenv('DB_USER', 'postgres'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'Tndg652611'),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
-else:
-    # Local fallback (only for development)
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.contrib.gis.db.backends.postgis',
-            'NAME': os.getenv('DB_NAME', os.getenv('PGDATABASE', 'silaydrrmo_db')),
-            'USER': os.getenv('DB_USER', os.getenv('PGUSER', 'postgres')),
-            'PASSWORD': os.getenv('DB_PASSWORD', os.getenv('PGPASSWORD', 'Tndg652611')),
-            'HOST': os.getenv('DB_HOST', os.getenv('PGHOST', 'localhost')),
-            'PORT': os.getenv('DB_PORT', os.getenv('PGPORT', '5432')),
-            'CONN_MAX_AGE': 600,
-        }
-    }
+}
 
 
 # Password validation
@@ -145,10 +128,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'silay_drrmo/static')]
 
-
-
-# === PRODUCTION STATIC SETTINGS (ALWAYS ACTIVE) ===
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -398,17 +377,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # ============================================
 # GIS LIBRARY PATHS
 # ============================================
-# Detect platform and set GDAL/GEOS library paths
-# These are required for GeoDjango to work with spatial data
-
-if os.name != "nt":  # Unix/Linux systems (not Windows)
-    os.environ["GDAL_LIBRARY_PATH"] = "/usr/lib/libgdal.so"
-    os.environ["GEOS_LIBRARY_PATH"] = "/usr/lib/libgeos_c.so"
-else:  # Windows systems
-    # Uncomment and set these paths if you're using OSGeo4W on Windows
-    # GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal310.dll"
-    # GEOS_LIBRARY_PATH = r"C:\OSGeo4W\bin\geos_c.dll"
-    pass
+# For local development, GeoDjango will find GDAL/GEOS automatically
+# Ensure PostGIS extension is enabled in your PostgreSQL database
 
 # ============================================
 # AUTHENTICATION SETTINGS
@@ -421,30 +391,10 @@ LOGIN_URL = '/'
 
 
 # ============================================
-# SECURITY SETTINGS FOR PRODUCTION
+# SECURITY SETTINGS
 # ============================================
-
-if not DEBUG:
-    # HTTPS/SSL settings
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    
-    # HSTS settings
-    SECURE_HSTS_SECONDS = 31536000  # 1 year
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    SECURE_HSTS_PRELOAD = True
-    
-    # Other security
-    SECURE_BROWSER_XSS_FILTER = True
-    X_FRAME_OPTIONS = 'DENY'
-    SECURE_CONTENT_SECURITY_POLICY = {
-        'default-src': ("'self'",),
-        'script-src': ("'self'", "'unsafe-inline'", "cdn.jsdelivr.net", "cdnjs.cloudflare.com"),
-        'style-src': ("'self'", "'unsafe-inline'", "cdn.jsdelivr.net", "fonts.googleapis.com"),
-        'font-src': ("'self'", "fonts.gstatic.com"),
-        'img-src': ("'self'", "data:", "https:"),
-    }
+# For local development, use permissive settings
+# Configure proper security settings when deploying to production
 
 
 # ============================================
@@ -455,12 +405,3 @@ SESSION_COOKIE_AGE = 86400  # 24 hours
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_COOKIE_HTTPONLY = True
 CSRF_COOKIE_HTTPONLY = True
-
-# Set paths to system GDAL libraries (Render-specific)
-if os.getenv('DATABASE_URL'):  # Production (Render)
-    os.environ['GDAL_LIBRARY_PATH'] = '/usr/lib/x86_64-linux-gnu/libgdal.so'
-    os.environ['GEOS_LIBRARY_PATH'] = '/usr/lib/x86_64-linux-gnu/libgeos_c.so'
-    GDAL_LIBRARY_PATH = '/usr/lib/x86_64-linux-gnu/libgdal.so'
-    GEOS_LIBRARY_PATH = '/usr/lib/x86_64-linux-gnu/libgeos_c.so'
-else:  # Local development (skip or use your local paths)
-    pass  # Your local setup already works
